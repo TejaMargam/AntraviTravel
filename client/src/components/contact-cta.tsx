@@ -11,7 +11,7 @@ export default function ContactCTA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="contact" className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8">
           Let us craft your Maldives vacation
@@ -29,7 +29,7 @@ export default function ContactCTA() {
               Start Planning with Antravi
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+          <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto bg-white">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
             </DialogHeader>

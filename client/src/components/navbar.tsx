@@ -3,11 +3,22 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToDestinations = () => {
+    const destinationsSection = document.getElementById('destinations');
+    if (destinationsSection) {
+      destinationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -23,12 +34,18 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#destinations" className="text-gray-700 hover:text-black font-medium transition-colors">
+            <button
+              onClick={scrollToDestinations}
+              className="text-gray-700 hover:text-black font-medium transition-colors"
+            >
               Destinations
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-black font-medium transition-colors">
+            </button>
+            <button
+              onClick={scrollToContact}
+              className="text-gray-700 hover:text-black font-medium transition-colors"
+            >
               Contact
-            </a>
+            </button>
             <button
               onClick={scrollToContact}
               className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
@@ -39,11 +56,40 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-gray-700 hover:text-black">
-              <i className="fas fa-bars text-xl"></i>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-700 hover:text-black"
+            >
+              <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t">
+            <div className="px-4 py-4 space-y-4">
+              <button
+                onClick={scrollToDestinations}
+                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+              >
+                Destinations
+              </button>
+              <button
+                onClick={scrollToContact}
+                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+              >
+                Contact
+              </button>
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+              >
+                Start Planning Now
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +22,7 @@ export default function Services() {
               A vacation is where comfort meets care. Whether it's a honeymoon, a family getaway, or a luxury retreat — every moment with Antravi is curated just for you. Choose Antravi to let your vacation feel as special as it truly is.
             </p>
           </div>
-          
+
           <div className="text-center">
             <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
               <DialogTrigger asChild>
@@ -31,7 +30,7 @@ export default function Services() {
                   Start Planning Now
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto bg-white">
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
                 </DialogHeader>
@@ -46,17 +45,17 @@ export default function Services() {
                       <Input id="email" type="email" placeholder="your@email.com" required />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number (Optional but preferred)</Label>
                     <Input id="phone" placeholder="+91 98765 43210" />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="travelDates">Preferred Travel Dates</Label>
                     <Input id="travelDates" placeholder="Flexible / June 2024" />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="occasion">Occasion</Label>
                     <Select>
@@ -71,7 +70,7 @@ export default function Services() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="budget">Preferred Budget Range (Optional)</Label>
                     <Select>
@@ -86,25 +85,25 @@ export default function Services() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="notes">Additional Requests / Notes</Label>
-                    <Textarea 
-                      id="notes" 
+                    <Textarea
+                      id="notes"
                       placeholder="We craft each trip personally. Please share as much detail as you're comfortable with — it helps us serve you better."
                       rows={3}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="verification">To keep our service personal and spam-free, what destination do you want to visit?</Label>
                     <Input id="verification" placeholder="Type the destination name" />
                   </div>
-                  
+
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
                     Start My Maldives Journey
                   </Button>
-                  
+
                   <p className="text-sm text-gray-500 text-center">
                     💬 Note: Final pricing may vary based on your travel dates and availability. We'll share the best available options tailored for you.
                   </p>
@@ -140,7 +139,7 @@ export default function Services() {
               Plan Your Maldives Trip in 3 Simple Steps
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
@@ -151,7 +150,7 @@ export default function Services() {
                 It's your trip, your way. We begin with a conversation to understand what matters to you.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">2</span>
@@ -161,7 +160,7 @@ export default function Services() {
                 Resorts, transfers, experiences— we tailor everything around your preferences.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">3</span>
@@ -172,7 +171,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Dialog>
               <DialogTrigger asChild>
@@ -180,7 +179,7 @@ export default function Services() {
                   Start Planning with Antravi
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto bg-white">
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
                 </DialogHeader>
@@ -195,17 +194,17 @@ export default function Services() {
                       <Input id="email2" type="email" placeholder="your@email.com" required />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="phone2">Phone Number (Optional but preferred)</Label>
                     <Input id="phone2" placeholder="+91 98765 43210" />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="travelDates2">Preferred Travel Dates</Label>
                     <Input id="travelDates2" placeholder="Flexible / June 2024" />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="occasion2">Occasion</Label>
                     <Select>
@@ -220,7 +219,7 @@ export default function Services() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="budget2">Preferred Budget Range (Optional)</Label>
                     <Select>
@@ -235,25 +234,25 @@ export default function Services() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="notes2">Additional Requests / Notes</Label>
-                    <Textarea 
-                      id="notes2" 
+                    <Textarea
+                      id="notes2"
                       placeholder="We craft each trip personally. Please share as much detail as you're comfortable with — it helps us serve you better."
                       rows={3}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="verification2">To keep our service personal and spam-free, what destination do you want to visit?</Label>
                     <Input id="verification2" placeholder="Type the destination name" />
                   </div>
-                  
+
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
                     Start My Maldives Journey
                   </Button>
-                  
+
                   <p className="text-sm text-gray-500 text-center">
                     💬 Note: Final pricing may vary based on your travel dates and availability. We'll share the best available options tailored for you.
                   </p>

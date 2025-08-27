@@ -25,11 +25,13 @@ export default function Hero() {
           autoPlay
           muted
           loop
+          playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://player.vimeo.com/external/313446282.sd.mp4?s=c9d3bf6a4de56e0b1b04dc1b13d5b29c3b83b2a3&profile_id=164" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-blue-900/30"></div>
       </div>
 
       {/* Content */}
@@ -47,7 +49,7 @@ export default function Hero() {
               Start Planning Now
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+          <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto bg-white">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
             </DialogHeader>
