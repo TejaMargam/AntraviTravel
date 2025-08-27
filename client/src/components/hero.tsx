@@ -1,49 +1,132 @@
 
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export default function Hero() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video/Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-blue-900 via-blue-800 to-teal-700"></div>
-        <div className="absolute inset-0 bg-black/30"></div>
+      {/* Background Video */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover"
+        >
+          <source src="https://player.vimeo.com/external/313446282.sd.mp4?s=c9d3bf6a4de56e0b1b04dc1b13d5b29c3b83b2a3&profile_id=164" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-      
+
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="font-heading text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            Explore
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Beyond
-            </span>
-            <span className="block">Boundaries</span>
-          </h1>
-        </div>
-        
-        <p className="text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
-          Embark on extraordinary journeys to the world's most breathtaking destinations. 
-          From hidden gems to luxury escapes, we craft experiences that transform your perspective.
+      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+        <h1 className="font-heading text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+          ANTRAVI
+        </h1>
+        <p className="text-3xl md:text-4xl font-light mb-12 tracking-wide">
+          Live Your Moments.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
-            Start Your Journey
-          </Button>
-          <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-12 py-4 text-lg font-semibold rounded-full backdrop-blur-sm">
-            Discover More
-          </Button>
-        </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <i className="fas fa-chevron-down text-2xl opacity-70"></i>
+        <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+          <DialogTrigger asChild>
+            <Button size="lg" className="bg-white text-black hover:bg-gray-100 text-xl px-12 py-4 rounded-full">
+              Start Planning Now
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
+            </DialogHeader>
+            <form className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="fullName">Full Name *</Label>
+                  <Input id="fullName" placeholder="Your full name" required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address *</Label>
+                  <Input id="email" type="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number (Optional but preferred)</Label>
+                <Input id="phone" placeholder="+91 98765 43210" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="travelDates">Preferred Travel Dates</Label>
+                <Input id="travelDates" placeholder="Flexible / June 2024" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="occasion">Occasion</Label>
+                <Select>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select occasion" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="honeymoon">Honeymoon</SelectItem>
+                    <SelectItem value="family">Family Vacation</SelectItem>
+                    <SelectItem value="luxury">Luxury Break</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="budget">Preferred Budget Range (Optional)</Label>
+                <Select>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select budget range" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="below-1l">Below ₹1L</SelectItem>
+                    <SelectItem value="1l-1.5l">₹1L–₹1.5L</SelectItem>
+                    <SelectItem value="1.5l-2l">₹1.5L–₹2L</SelectItem>
+                    <SelectItem value="2l-plus">₹2L+</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="notes">Additional Requests / Notes</Label>
+                <Textarea 
+                  id="notes" 
+                  placeholder="We craft each trip personally. Please share as much detail as you're comfortable with — it helps us serve you better."
+                  rows={3}
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="verification">To keep our service personal and spam-free, what destination do you want to visit?</Label>
+                <Input id="verification" placeholder="Type the destination name" />
+              </div>
+              
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                Start My Maldives Journey
+              </Button>
+              
+              <p className="text-sm text-gray-500 text-center">
+                💬 Note: Final pricing may vary based on your travel dates and availability. We'll share the best available options tailored for you.
+              </p>
+            </form>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );

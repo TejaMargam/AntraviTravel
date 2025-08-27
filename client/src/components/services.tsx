@@ -1,74 +1,268 @@
 
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from 'react';
+
 export default function Services() {
-  const services = [
-    {
-      icon: "fas fa-globe-americas",
-      title: "Global Adventures",
-      description: "Discover hidden gems and iconic destinations across all seven continents with our expert guides.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: "fas fa-crown",
-      title: "Luxury Experiences",
-      description: "Indulge in premium accommodations, private tours, and exclusive access to extraordinary locations.",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: "fas fa-route",
-      title: "Custom Itineraries",
-      description: "Personalized travel plans tailored to your interests, schedule, and budget preferences.",
-      color: "from-green-500 to-teal-500"
-    },
-    {
-      icon: "fas fa-users",
-      title: "Group Travel",
-      description: "Organize memorable trips for families, friends, corporate teams, and special celebrations.",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: "fas fa-mountain",
-      title: "Adventure Tours",
-      description: "Thrilling expeditions for adrenaline seekers, from mountain climbing to deep-sea exploration.",
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      icon: "fas fa-concierge-bell",
-      title: "Concierge Services",
-      description: "24/7 support, restaurant reservations, event tickets, and local expertise wherever you go.",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Our Services
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From planning to execution, we handle every detail of your journey with precision and care
-          </p>
+    <div className="bg-white">
+      {/* Vacation Description Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+              Your Vacation, by Antravi
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              A vacation is where comfort meets care. Whether it's a honeymoon, a family getaway, or a luxury retreat — every moment with Antravi is curated just for you. Choose Antravi to let your vacation feel as special as it truly is.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full">
+                  Start Planning Now
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
+                </DialogHeader>
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="fullName">Full Name *</Label>
+                      <Input id="fullName" placeholder="Your full name" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input id="email" type="email" placeholder="your@email.com" required />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number (Optional but preferred)</Label>
+                    <Input id="phone" placeholder="+91 98765 43210" />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="travelDates">Preferred Travel Dates</Label>
+                    <Input id="travelDates" placeholder="Flexible / June 2024" />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="occasion">Occasion</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select occasion" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="honeymoon">Honeymoon</SelectItem>
+                        <SelectItem value="family">Family Vacation</SelectItem>
+                        <SelectItem value="luxury">Luxury Break</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="budget">Preferred Budget Range (Optional)</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select budget range" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="below-1l">Below ₹1L</SelectItem>
+                        <SelectItem value="1l-1.5l">₹1L–₹1.5L</SelectItem>
+                        <SelectItem value="1.5l-2l">₹1.5L–₹2L</SelectItem>
+                        <SelectItem value="2l-plus">₹2L+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="notes">Additional Requests / Notes</Label>
+                    <Textarea 
+                      id="notes" 
+                      placeholder="We craft each trip personally. Please share as much detail as you're comfortable with — it helps us serve you better."
+                      rows={3}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="verification">To keep our service personal and spam-free, what destination do you want to visit?</Label>
+                    <Input id="verification" placeholder="Type the destination name" />
+                  </div>
+                  
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                    Start My Maldives Journey
+                  </Button>
+                  
+                  <p className="text-sm text-gray-500 text-center">
+                    💬 Note: Final pricing may vary based on your travel dates and availability. We'll share the best available options tailored for you.
+                  </p>
+                </form>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <i className={`${service.icon} text-2xl text-white`}></i>
+      </section>
+
+      {/* Live Your Moments Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+              Live your Moments
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
+              Travel is more than just reaching a destination — it's about savouring the little moments that stay with you forever.
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              At Antravi, we craft vacations that awaken your senses: the sight of turquoise waters, the soothing sound of gentle waves, and the joy of unhurried time spent with those you love. Every detail is thoughtfully curated to truly experience the world in its most beautiful, heartfelt form.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 Steps Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+              Plan Your Maldives Trip in 3 Simple Steps
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="font-heading text-2xl font-bold mb-4 text-gray-900">
-                {service.title}
-              </h3>
+              <h3 className="text-2xl font-bold text-black mb-4">Tell us what you need</h3>
               <p className="text-gray-600 leading-relaxed">
-                {service.description}
+                It's your trip, your way. We begin with a conversation to understand what matters to you.
               </p>
             </div>
-          ))}
+            
+            <div className="text-center">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold">2</span>
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">We curate options</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Resorts, transfers, experiences— we tailor everything around your preferences.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold">3</span>
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">Confirm and travel</h3>
+              <p className="text-gray-600 leading-relaxed">
+                When you're ready, we'll be there — to guide and support you, so you can focus on what matters most: Live your Moments.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full">
+                  Start Planning with Antravi
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-center mb-4">Start Your Maldives Journey</DialogTitle>
+                </DialogHeader>
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="fullName2">Full Name *</Label>
+                      <Input id="fullName2" placeholder="Your full name" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email2">Email Address *</Label>
+                      <Input id="email2" type="email" placeholder="your@email.com" required />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="phone2">Phone Number (Optional but preferred)</Label>
+                    <Input id="phone2" placeholder="+91 98765 43210" />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="travelDates2">Preferred Travel Dates</Label>
+                    <Input id="travelDates2" placeholder="Flexible / June 2024" />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="occasion2">Occasion</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select occasion" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="honeymoon">Honeymoon</SelectItem>
+                        <SelectItem value="family">Family Vacation</SelectItem>
+                        <SelectItem value="luxury">Luxury Break</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="budget2">Preferred Budget Range (Optional)</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select budget range" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="below-1l">Below ₹1L</SelectItem>
+                        <SelectItem value="1l-1.5l">₹1L–₹1.5L</SelectItem>
+                        <SelectItem value="1.5l-2l">₹1.5L–₹2L</SelectItem>
+                        <SelectItem value="2l-plus">₹2L+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="notes2">Additional Requests / Notes</Label>
+                    <Textarea 
+                      id="notes2" 
+                      placeholder="We craft each trip personally. Please share as much detail as you're comfortable with — it helps us serve you better."
+                      rows={3}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="verification2">To keep our service personal and spam-free, what destination do you want to visit?</Label>
+                    <Input id="verification2" placeholder="Type the destination name" />
+                  </div>
+                  
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                    Start My Maldives Journey
+                  </Button>
+                  
+                  <p className="text-sm text-gray-500 text-center">
+                    💬 Note: Final pricing may vary based on your travel dates and availability. We'll share the best available options tailored for you.
+                  </p>
+                </form>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
