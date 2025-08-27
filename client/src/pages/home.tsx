@@ -1,23 +1,26 @@
+
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
-import FeaturedDestination from "@/components/featured-destination";
-import WhyChoose from "@/components/why-choose";
+import Services from "@/components/services";
+import Destinations from "@/components/destinations";
+import About from "@/components/about-preview";
 import Testimonials from "@/components/testimonials";
-import ContactForm from "@/components/contact-form";
+import ContactCTA from "@/components/contact-cta";
 import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-warm-white">
-      <title>Antravi - Live Your Moments | Luxury Travel Experiences</title>
-      <meta name="description" content="Discover extraordinary luxury travel experiences with Antravi. From pristine Maldives resorts to personalized planning, we create unforgettable moments." />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <title>Antravi - Extraordinary Travel Experiences Worldwide</title>
+      <meta name="description" content="Discover the world's most exclusive destinations with Antravi. Luxury travel planning, bespoke itineraries, and unforgettable experiences await." />
       
       <Navbar />
       <Hero />
-      <FeaturedDestination />
-      <WhyChoose />
+      <Services />
+      <Destinations />
+      <About />
       <Testimonials />
-      <ContactForm />
+      <ContactCTA />
       <Footer />
     </div>
   );
