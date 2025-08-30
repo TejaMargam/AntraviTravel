@@ -48,7 +48,8 @@ export default function Navbar() {
             </button>
             <button
               onClick={scrollToContact}
-              className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors font-medium"
+              className="bg-white text-black px-6 py-2 hover:bg-gray-200 transition-colors font-medium"
+              style={{ borderRadius: '5px' }}
             >
               Start Planning Now
             </button>
@@ -85,7 +86,8 @@ export default function Navbar() {
               </button>
               <button
                 onClick={scrollToContact}
-                className="w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+                className="w-full bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors font-medium"
+                style={{ borderRadius: '5px' }}
               >
                 Start Planning Now
               </button>

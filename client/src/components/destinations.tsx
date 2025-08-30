@@ -109,7 +109,8 @@ export default function Destinations() {
               <DialogTrigger asChild>
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full"
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3"
+                  style={{ borderRadius: '5px' }}
                 >
                   Start Planning with Antravi
                 </Button>

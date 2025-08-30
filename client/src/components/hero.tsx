@@ -68,7 +68,8 @@ export default function Hero() {
           <DialogTrigger asChild>
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 text-xl px-12 py-4 rounded-full"
+              className="bg-white text-black hover:bg-gray-100 text-xl px-12 py-4"
+              style={{ borderRadius: '5px' }}
             >
               Start Planning Now
             </Button>

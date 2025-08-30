@@ -36,7 +36,8 @@ export default function ContactCTA() {
           <DialogTrigger asChild>
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-12 py-4 rounded-full font-semibold"
+              className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-12 py-4 font-semibold"
+              style={{ borderRadius: '5px' }}
             >
               Start Planning with Antravi
             </Button>

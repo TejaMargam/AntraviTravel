@@ -43,9 +43,9 @@
   --sidebar-ring: 217.2 10.6% 64.9%;
 
   /* Typography */
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-sans: "Georgia", serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Georgia", serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace;
 
