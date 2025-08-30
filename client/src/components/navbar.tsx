@@ -27,7 +27,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 w-full">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <a href="/" className="font-heading text-xl sm:text-2xl font-bold text-white">
+            <a
+              href="/"
+              className="font-heading text-xl sm:text-2xl font-bold text-white"
+            >
               Antravi
             </a>
           </div>
