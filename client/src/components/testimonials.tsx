@@ -1,10 +1,9 @@
-
 export default function Testimonials() {
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, i) => (
-      <i 
-        key={i} 
-        className={`fas fa-star ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+      <i
+        key={i}
+        className={`fas fa-star ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
       ></i>
     ));
   };
@@ -15,22 +14,22 @@ export default function Testimonials() {
       occasion: "Honeymoon",
       rating: 5,
       text: "Antravi made our honeymoon absolutely magical! Every detail was perfectly planned, from the overwater villa to the private dinner on the beach. The Maldives exceeded all our expectations.",
-      location: "Maldives"
+      location: "Maldives",
     },
     {
       name: "The Sharma Family",
       occasion: "Family Vacation",
       rating: 5,
       text: "Traveling with kids can be stressful, but Antravi took care of everything. The resort they chose had amazing family facilities, and the kids' club was fantastic. We could actually relax!",
-      location: "Maldives"
+      location: "Maldives",
     },
     {
       name: "Rohit & Meera",
       occasion: "Luxury Break",
       rating: 5,
       text: "The attention to detail was incredible. From the seaplane transfer to the spa treatments, everything was world-class. Antravi truly understands luxury travel.",
-      location: "Maldives"
-    }
+      location: "Maldives",
+    },
   ];
 
   return (
@@ -44,8 +43,8 @@ export default function Testimonials() {
             Real stories from travelers who lived their moments with Antravi
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+
+        {/* <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex justify-between items-start mb-4">
@@ -68,23 +67,24 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Reviews Space Placeholder */}
         <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
             <h3 className="font-heading text-3xl font-bold text-black mb-4">
-              More Reviews Coming Soon
+              Reviews Coming Soon
             </h3>
             <p className="text-gray-600 text-lg">
-              We're collecting more amazing stories from our travelers. Check back soon for more reviews and experiences!
+              We're collecting more amazing stories from our travelers. Check
+              back soon for more reviews and experiences!
             </p>
             <div className="flex justify-center space-x-2 mt-6">
               {[...Array(5)].map((_, i) => (
                 <i key={i} className="fas fa-star text-yellow-400 text-2xl"></i>
               ))}
             </div>
-            <p className="text-gray-500 mt-2">Average rating: 5.0 stars</p>
+            {/* <p className="text-gray-500 mt-2">Average rating: 5.0 stars</p> */}
           </div>
         </div>
       </div>
