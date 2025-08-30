@@ -22,12 +22,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-20 w-full">
           {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="font-heading text-2xl font-bold text-white">
+          <div className="flex items-center flex-shrink-0">
+            <a href="/" className="font-heading text-xl sm:text-2xl font-bold text-white">
               Antravi
             </a>
           </div>
@@ -56,13 +56,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-white"
+              className="text-white hover:text-white p-2"
             >
               <i
-                className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-xl`}
+                className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-lg`}
               ></i>
             </button>
           </div>
@@ -70,8 +70,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <div className="px-4 py-4 space-y-4">
+          <div className="md:hidden bg-white border-t w-full">
+            <div className="px-4 py-4 space-y-4 w-full">
               <button
                 onClick={scrollToDestinations}
                 className="block w-full text-left text-gray-700 hover:text-black font-medium"
@@ -86,7 +86,7 @@ export default function Navbar() {
               </button>
               <button
                 onClick={scrollToContact}
-                className="w-full bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors font-medium"
+                className="w-full bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors font-medium text-sm"
                 style={{ borderRadius: "5px" }}
               >
                 Start Planning Now
