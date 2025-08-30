@@ -49,7 +49,7 @@ export default function Navbar() {
             <button
               onClick={scrollToContact}
               className="bg-white text-black px-6 py-2 hover:bg-gray-200 transition-colors font-medium"
-              style={{ borderRadius: '5px' }}
+              style={{ borderRadius: "5px" }}
             >
               Start Planning Now
             </button>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-black"
+              className="text-white hover:text-white"
             >
               <i
                 className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-xl`}
@@ -87,7 +87,7 @@ export default function Navbar() {
               <button
                 onClick={scrollToContact}
                 className="w-full bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors font-medium"
-                style={{ borderRadius: '5px' }}
+                style={{ borderRadius: "5px" }}
               >
                 Start Planning Now
               </button>
