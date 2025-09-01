@@ -65,13 +65,33 @@ export default function Resorts() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <section className="bg-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-            Maldives Resorts
-          </h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover our handpicked collection of luxury resorts in the Maldives
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Brand and Home Button */}
+          <div className="flex items-center justify-between mb-8">
+            <a
+              href="/"
+              className="font-heading text-2xl md:text-3xl font-bold text-white hover:text-gray-200 transition-colors"
+            >
+              Antravi
+            </a>
+            <a
+              href="/"
+              className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 font-medium transition-colors flex items-center space-x-2"
+              style={{ borderRadius: '5px' }}
+            >
+              <i className="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </div>
+          
+          <div className="text-center">
+            <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+              Maldives Resorts
+            </h1>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Discover our handpicked collection of luxury resorts in the Maldives
+            </p>
+          </div>
         </div>
       </section>
 
@@ -166,58 +186,58 @@ export default function Resorts() {
 
       {/* Resort Details Dialog */}
       <Dialog open={!!selectedResort} onOpenChange={() => setSelectedResort(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white">
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6">
           {selectedResort && (
-            <>
+            <div className="space-y-6">
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold mb-4">
+                <DialogTitle className="text-2xl font-bold text-center md:text-left">
                   {selectedResort.name}
                 </DialogTitle>
               </DialogHeader>
 
-              {/* Image Carousel */}
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-6">
-                <img
-                  src={selectedResort.images[selectedImageIndex]}
-                  alt={selectedResort.name}
-                  className="w-full h-full object-cover"
-                />
-                
-                {selectedResort.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={prevImage}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center"
-                    >
-                      <i className="fas fa-chevron-left"></i>
-                    </button>
-                    <button
-                      onClick={nextImage}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center"
-                    >
-                      <i className="fas fa-chevron-right"></i>
-                    </button>
-                    
-                    {/* Image indicators */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                      {selectedResort.images.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setSelectedImageIndex(index)}
-                          className={`w-2 h-2 rounded-full ${
-                            index === selectedImageIndex ? 'bg-white' : 'bg-white/50'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Left Column - Image Carousel */}
+                <div className="relative aspect-[4/3] lg:aspect-[16/12] rounded-xl overflow-hidden">
+                  <img
+                    src={selectedResort.images[selectedImageIndex]}
+                    alt={selectedResort.name}
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {selectedResort.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center"
+                      >
+                        <i className="fas fa-chevron-left"></i>
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center"
+                      >
+                        <i className="fas fa-chevron-right"></i>
+                      </button>
+                      
+                      {/* Image indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {selectedResort.images.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setSelectedImageIndex(index)}
+                            className={`w-2 h-2 rounded-full ${
+                              index === selectedImageIndex ? 'bg-white' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Left Column */}
-                <div>
-                  <div className="flex items-center justify-between mb-4">
+                {/* Right Column - Content */}
+                <div className="space-y-6">
+                <div className="flex items-center justify-between mb-4">
                     <div className="flex space-x-1">
                       {renderStars(selectedResort.rating)}
                     </div>
@@ -248,13 +268,10 @@ export default function Resorts() {
                       ))}
                     </div>
                   </div>
-                </div>
 
-                {/* Right Column */}
-                <div>
                   <div className="mb-6">
                     <h4 className="font-bold text-lg mb-3">Amenities</h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 max-h-32 overflow-y-auto">
                       {selectedResort.amenities.map((amenity, index) => (
                         <li key={index} className="flex items-center text-gray-700">
                           <i className="fas fa-check text-green-500 mr-2"></i>
@@ -284,7 +301,7 @@ export default function Resorts() {
                   </Button>
                 </div>
               </div>
-            </>
+            </div>
           )}
         </DialogContent>
       </Dialog>
