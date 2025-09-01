@@ -15,28 +15,34 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-2">
               <i className="fas fa-phone mr-2"></i>
-              +91 98765 43210
+              +91 9849981075
             </p>
-            <p className="mb-4">
+            {/* <p className="mb-4">
               <i className="fas fa-envelope mr-2"></i>
               hello@antravi.com
-            </p>
+            </p> */}
           </div>
 
           {/* Social Media */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
+              <a
+                href="https://www.instagram.com/the_antravi?utm_source=qr&igsh=cGpxdzNzMDhmZGV2"
+                className="text-2xl hover:text-blue-200 transition-colors"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
+              {/* <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
                 <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
+              </a> */}
+              {/* <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
+              </a> */}
+              <a
+                href="https://youtube.com/@theantravi?si=pyRpR-qhwvsgnS3v"
+                className="text-2xl hover:text-blue-200 transition-colors"
+              >
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
@@ -46,9 +52,12 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Office Address</h3>
             <address className="not-italic">
-              123 Travel Street<br />
-              Luxury District<br />
-              Mumbai, Maharashtra 400001<br />
+              we work 13th floor, building no :09
+              <br />
+              K Raheja Mindspace, Madhapur
+              <br />
+              Hyderabad, Telangana 500081
+              <br />
               India
             </address>
           </div>
@@ -56,9 +65,12 @@ export default function Footer() {
 
         {/* FAQ Section Placeholder */}
         <div className="mt-16 pt-8 border-t border-blue-500 text-center">
-          <h3 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-semibold mb-4">
+            Frequently Asked Questions
+          </h3>
           <p className="text-blue-200 mb-6">
-            Have questions about your Maldives vacation? Check out our comprehensive FAQ section.
+            Have questions about your Maldives vacation? Check out our
+            comprehensive FAQ section.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
             <p>• Best time to visit Maldives</p>
@@ -74,7 +86,8 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-blue-500 text-center">
           <p className="text-blue-200">
-            © 2024 Antravi. All rights reserved. | Creating extraordinary travel experiences since inception.
+            © 2024 Antravi. All rights reserved. | Creating extraordinary
+            travel experiences since inception.
           </p>
         </div>
       </div>
