@@ -1,0 +1,105 @@
+
+[
+  {
+    "id": "conrad-maldives",
+    "name": "Conrad Maldives Rangali Island",
+    "description": "Experience luxury like never before at this award-winning resort featuring the world's first undersea restaurant.",
+    "shortDescription": "Award-winning luxury resort with undersea restaurant",
+    "images": [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "priceFrom": "₹85,000",
+    "location": "South Ari Atoll",
+    "features": [
+      "Undersea Restaurant",
+      "Overwater Villas",
+      "Private Beach",
+      "Spa Retreat",
+      "Water Sports"
+    ],
+    "amenities": [
+      "Free WiFi",
+      "Airport Transfer",
+      "All Meals Included",
+      "Butler Service",
+      "Infinity Pool"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Sunset Water Villa",
+      "Presidential Suite"
+    ]
+  },
+  {
+    "id": "four-seasons-landaa",
+    "name": "Four Seasons Resort Maldives at Landaa Giraavaru",
+    "description": "A UNESCO Biosphere Reserve location offering unparalleled natural beauty and marine conservation experiences.",
+    "shortDescription": "UNESCO Biosphere Reserve luxury resort",
+    "images": [
+      "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "priceFrom": "₹95,000",
+    "location": "Baa Atoll",
+    "features": [
+      "Marine Discovery Centre",
+      "Kids Club",
+      "Overwater Spa",
+      "Private Yacht",
+      "Surfing"
+    ],
+    "amenities": [
+      "Free WiFi",
+      "Seaplane Transfer",
+      "Half Board",
+      "Concierge Service",
+      "Beach Club"
+    ],
+    "roomTypes": [
+      "Beach Bungalow",
+      "Water Bungalow",
+      "Sunrise Water Villa",
+      "Two-Bedroom Beach Suite"
+    ]
+  },
+  {
+    "id": "soneva-jani",
+    "name": "Soneva Jani",
+    "description": "Innovative overwater villas with slides, retractable roofs, and the largest lagoon in the Maldives.",
+    "shortDescription": "Innovative overwater villas with unique features",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "priceFrom": "₹125,000",
+    "location": "Noonu Atoll",
+    "features": [
+      "Water Slides",
+      "Retractable Roofs",
+      "Observatory",
+      "Cinema",
+      "Organic Gardens"
+    ],
+    "amenities": [
+      "Free WiFi",
+      "Seaplane Transfer",
+      "All Inclusive",
+      "Personal Butlers",
+      "Private Pools"
+    ],
+    "roomTypes": [
+      "One Bedroom Water Reserve",
+      "Two Bedroom Water Villa",
+      "Three Bedroom Water Villa",
+      "Four Bedroom Water Villa"
+    ]
+  }
+]
