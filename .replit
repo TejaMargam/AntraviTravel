@@ -38,5 +38,34 @@ task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
 
+[[workflows.workflow]]
+name = "GitHub Pages Build"
+author = 43864118
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"Build complete! Files are ready in dist/public directory\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"To deploy to GitHub Pages:\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"1. Copy files from dist/public to your GitHub repository\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"2. Push to GitHub and enable GitHub Pages in repository settings\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"3. Set source to deploy from root or docs folder\""
+
 [agent]
 integrations = ["javascript_mem_db==1.0.0"]
