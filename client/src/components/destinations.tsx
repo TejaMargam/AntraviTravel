@@ -33,7 +33,7 @@ export default function Destinations() {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
                 <img
-                  src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&h=750&fit=crop"
+                  src="https://www.rowfortheocean.co.uk/wp-content/uploads/2025/01/a-picturesque-aerial-view-of-a-tropical-island-resort-surrounded-by-clear-blue-ocean-during-a-vibran.jpg"
                   alt="The Maldives"
                   className="w-full h-full object-cover"
                 />
@@ -47,13 +47,14 @@ export default function Destinations() {
                       The Maldives
                     </h3>
                     <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
-                      Paradise found in crystal-clear waters and pristine white sand beaches
+                      Paradise found in crystal-clear waters and pristine white
+                      sand beaches
                     </p>
                   </div>
                   <a
                     href="/resorts"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
-                    style={{ borderRadius: '5px' }}
+                    style={{ borderRadius: "5px" }}
                   >
                     View Resorts
                   </a>
@@ -120,7 +121,7 @@ export default function Destinations() {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3"
-                  style={{ borderRadius: '5px' }}
+                  style={{ borderRadius: "5px" }}
                 >
                   Start Planning with Antravi
                 </Button>

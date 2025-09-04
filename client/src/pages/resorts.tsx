@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Dialog,
@@ -47,16 +46,16 @@ export default function Resorts() {
 
   const nextImage = () => {
     if (selectedResort) {
-      setSelectedImageIndex((prev) => 
-        prev === selectedResort.images.length - 1 ? 0 : prev + 1
+      setSelectedImageIndex((prev) =>
+        prev === selectedResort.images.length - 1 ? 0 : prev + 1,
       );
     }
   };
 
   const prevImage = () => {
     if (selectedResort) {
-      setSelectedImageIndex((prev) => 
-        prev === 0 ? selectedResort.images.length - 1 : prev - 1
+      setSelectedImageIndex((prev) =>
+        prev === 0 ? selectedResort.images.length - 1 : prev - 1,
       );
     }
   };
@@ -64,37 +63,31 @@ export default function Resorts() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Brand and Home Button */}
-          <div className="flex items-center justify-between mb-8">
-            <a
-              href="/"
-              className="font-heading text-2xl md:text-3xl font-bold text-white hover:text-gray-200 transition-colors"
-            >
-              Antravi
-            </a>
-            <a
-              href="/"
-              className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 font-medium transition-colors flex items-center space-x-2"
-              style={{ borderRadius: '5px' }}
-            >
-              <i className="fas fa-home"></i>
-              <span>Home</span>
-            </a>
-          </div>
-          
-          <div className="text-center">
-            <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Maldives Resorts
-            </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover our handpicked collection of luxury resorts in the Maldives
-            </p>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between h-20 w-full min-w-0">
+            {/* Logo */}
+            <div className="flex items-center flex-shrink-0 min-w-0">
+              <a
+                href="/"
+                className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
+              >
+                Antravi
+              </a>
+            </div>
           </div>
         </div>
+      </nav>
+      <section className="bg-gray-100 py-4">
+        <div className="text-center">
+          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+            Maldives Resorts
+          </h1>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover our handpicked collection of luxury resorts in the Maldives
+          </p>
+        </div>
       </section>
-
       {/* Resorts Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,7 +119,7 @@ export default function Resorts() {
                     <p className="text-gray-600 mb-3 text-sm">
                       {resort.shortDescription}
                     </p>
-                    
+
                     <div className="flex items-center text-sm text-gray-500 mb-3">
                       <i className="fas fa-map-marker-alt mr-2"></i>
                       {resort.location}
@@ -134,7 +127,11 @@ export default function Resorts() {
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {resort.features.slice(0, 3).map((feature, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="text-xs"
+                        >
                           {feature}
                         </Badge>
                       ))}
@@ -147,15 +144,17 @@ export default function Resorts() {
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-sm text-gray-500">Starting from</span>
+                        <span className="text-sm text-gray-500">
+                          Starting from
+                        </span>
                         <div className="font-bold text-lg text-blue-600">
                           {resort.priceFrom}
                         </div>
                       </div>
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="bg-blue-600 hover:bg-blue-700"
-                        style={{ borderRadius: '5px' }}
+                        style={{ borderRadius: "5px" }}
                       >
                         View Details
                       </Button>
@@ -171,11 +170,15 @@ export default function Resorts() {
                   Resorts Coming Soon
                 </h3>
                 <p className="text-gray-600 text-lg mb-6">
-                  We're carefully curating the most amazing resorts for you. Check back soon for our exclusive collection!
+                  We're carefully curating the most amazing resorts for you.
+                  Check back soon for our exclusive collection!
                 </p>
                 <div className="flex justify-center space-x-2">
                   {[...Array(5)].map((_, i) => (
-                    <i key={i} className="fas fa-star text-yellow-400 text-2xl"></i>
+                    <i
+                      key={i}
+                      className="fas fa-star text-yellow-400 text-2xl"
+                    ></i>
                   ))}
                 </div>
               </div>
@@ -185,7 +188,10 @@ export default function Resorts() {
       </section>
 
       {/* Resort Details Dialog */}
-      <Dialog open={!!selectedResort} onOpenChange={() => setSelectedResort(null)}>
+      <Dialog
+        open={!!selectedResort}
+        onOpenChange={() => setSelectedResort(null)}
+      >
         <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6">
           {selectedResort && (
             <div className="space-y-6">
@@ -203,7 +209,7 @@ export default function Resorts() {
                     alt={selectedResort.name}
                     className="w-full h-full object-cover"
                   />
-                  
+
                   {selectedResort.images.length > 1 && (
                     <>
                       <button
@@ -218,7 +224,7 @@ export default function Resorts() {
                       >
                         <i className="fas fa-chevron-right"></i>
                       </button>
-                      
+
                       {/* Image indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                         {selectedResort.images.map((_, index) => (
@@ -226,7 +232,9 @@ export default function Resorts() {
                             key={index}
                             onClick={() => setSelectedImageIndex(index)}
                             className={`w-2 h-2 rounded-full ${
-                              index === selectedImageIndex ? 'bg-white' : 'bg-white/50'
+                              index === selectedImageIndex
+                                ? "bg-white"
+                                : "bg-white/50"
                             }`}
                           />
                         ))}
@@ -237,12 +245,14 @@ export default function Resorts() {
 
                 {/* Right Column - Content */}
                 <div className="space-y-6">
-                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <div className="flex space-x-1">
                       {renderStars(selectedResort.rating)}
                     </div>
                     <div className="text-right">
-                      <span className="text-sm text-gray-500">Starting from</span>
+                      <span className="text-sm text-gray-500">
+                        Starting from
+                      </span>
                       <div className="font-bold text-xl text-blue-600">
                         {selectedResort.priceFrom}
                       </div>
@@ -273,7 +283,10 @@ export default function Resorts() {
                     <h4 className="font-bold text-lg mb-3">Amenities</h4>
                     <ul className="space-y-2 max-h-32 overflow-y-auto">
                       {selectedResort.amenities.map((amenity, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
+                        <li
+                          key={index}
+                          className="flex items-center text-gray-700"
+                        >
                           <i className="fas fa-check text-green-500 mr-2"></i>
                           {amenity}
                         </li>
@@ -285,7 +298,10 @@ export default function Resorts() {
                     <h4 className="font-bold text-lg mb-3">Room Types</h4>
                     <ul className="space-y-2">
                       {selectedResort.roomTypes.map((roomType, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
+                        <li
+                          key={index}
+                          className="flex items-center text-gray-700"
+                        >
                           <i className="fas fa-bed text-blue-500 mr-2"></i>
                           {roomType}
                         </li>
@@ -293,9 +309,9 @@ export default function Resorts() {
                     </ul>
                   </div>
 
-                  <Button 
+                  <Button
                     className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
-                    style={{ borderRadius: '5px' }}
+                    style={{ borderRadius: "5px" }}
                   >
                     Book This Resort
                   </Button>
