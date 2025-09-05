@@ -9,6 +9,8 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Resorts from "@/pages/resorts";
 import NotFound from "@/pages/not-found";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsAndConditions from "@/pages/TermsAndConditions";
 
 function Router() {
   return (
@@ -17,6 +19,8 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/resorts" component={Resorts} />
+      <Route path="/terms" component={TermsAndConditions} />
+      <Route path="/privacy" component={PrivacyPolicy} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -28,7 +32,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <WouterRouter base="/AntraviTravel">
-          <Router />
+        <Router />
         </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>

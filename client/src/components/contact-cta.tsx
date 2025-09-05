@@ -22,21 +22,18 @@ export default function ContactCTA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section
-      id="contact"
-      className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
-    >
+    <section id="contact" className="py-24 bg-white text-black">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8">
           Let us craft your vacation
         </h2>
-        <p className="text-2xl font-light mb-8">— beautiful and personal</p>
+        <p className="text-2xl font-light mb-8">beautiful and personal</p>
 
         <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
           <DialogTrigger asChild>
             <Button
               size="sm"
-              className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-12 py-4 font-semibold"
+              className="bg-blue-600 text-white hover:bg-blue-700 text-xl px-12 py-4 font-semibold"
               style={{ borderRadius: "5px" }}
             >
               Start Planning with Antravi

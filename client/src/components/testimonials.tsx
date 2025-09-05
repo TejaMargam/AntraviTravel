@@ -73,7 +73,7 @@ export default function Testimonials() {
                 Reviews Coming Soon
               </h3>
               <p className="text-gray-600 text-lg">
-                We're collecting more amazing stories from our travelers. Check
+                We're collecting more amazing moments from our travelers. Check
                 back soon for more reviews and experiences!
               </p>
               <div className="flex justify-center space-x-2 mt-6">

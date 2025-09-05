@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import resortsData from "@/data/resorts.json";
+import FAQ from "@/components/faq";
 
 interface Resort {
   id: string;
@@ -187,6 +188,10 @@ export default function Resorts() {
         </div>
       </section>
 
+      {/* Maldives FAQ's */}
+      <section className="py-20">
+        <FAQ />
+      </section>
       {/* Resort Details Dialog */}
       <Dialog
         open={!!selectedResort}

@@ -61,7 +61,7 @@ export default function Hero() {
           ANTRAVI
         </h1>
         <p className="text-3xl md:text-4xl font-light mb-12 tracking-wide">
-          Live Your Moments.
+          Live Your Moments
         </p>
 
         <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
@@ -69,7 +69,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-100 text-xl px-12 py-4"
-              style={{ borderRadius: '5px' }}
+              style={{ borderRadius: "5px" }}
             >
               Start Planning Now
             </Button>

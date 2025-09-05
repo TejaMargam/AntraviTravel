@@ -24,7 +24,7 @@ export default function Home() {
       {/* <About /> */}
       <Testimonials />
       <ContactCTA />
-      <FAQ />
+      {/* <FAQ /> */}
       <Footer />
     </div>
   );

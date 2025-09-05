@@ -20,8 +20,11 @@ import { useState } from "react";
 export default function Destinations() {
   return (
     <div className="bg-white">
-      {/* Featured Destinations Section */}
-      <section id="destinations" className="py-24 bg-white">
+      {/* Featured Destinations Section*/}
+      <section
+        id="destinations"
+        className="py-24 bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-black">
@@ -30,7 +33,7 @@ export default function Destinations() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
                 <img
                   src="https://www.rowfortheocean.co.uk/wp-content/uploads/2025/01/a-picturesque-aerial-view-of-a-tropical-island-resort-surrounded-by-clear-blue-ocean-during-a-vibran.jpg"
@@ -47,10 +50,10 @@ export default function Destinations() {
                       The Maldives
                     </h3>
                     <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
-                      Paradise found in crystal-clear waters and pristine white
-                      sand beaches
+                      Crystal-clear waters and pristine white sand beaches
                     </p>
                   </div>
+                    {/* href="/resorts" */}
                   <a
                     href="/AntraviTravel/resorts"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
@@ -96,8 +99,7 @@ export default function Destinations() {
                 We curate options
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Resorts, transfers, experiences— we tailor everything around
-                your preferences.
+                We tailor everything around your preferences.
               </p>
             </div>
 
