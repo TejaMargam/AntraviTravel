@@ -67,17 +67,15 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Legal</h3>
             <p className="mb-2">
-              {/* href="/terms" */}
               <Link
-                href="/AntraviTravel/terms"
+                href="/terms"
                 className="hover:text-blue-200 transition-colors"
               >
                 Terms & Conditions
               </Link>
               <br />
-              {/* href="/privacy" */}
               <Link
-                href="/AntraviTravel/privacy"
+                href="/privacy"  
                 className="hover:text-blue-200 transition-colors"
               >
                 Privacy Policy

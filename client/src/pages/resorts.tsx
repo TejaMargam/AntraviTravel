@@ -197,7 +197,10 @@ export default function Resorts() {
         open={!!selectedResort}
         onOpenChange={() => setSelectedResort(null)}
       >
-        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6">
+        <DialogContent
+          className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6"
+          onOpenAutoFocus={(e) => e.preventDefault()}
+        >
           {selectedResort && (
             <div className="space-y-6">
               <DialogHeader>
