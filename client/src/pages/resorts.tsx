@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import resortsData from "@/data/resorts.json";
 import FAQ from "@/components/faq";
+import ScrollManager from "@/hooks/ScrollManager";
 
 interface Resort {
   id: string;
@@ -63,6 +64,7 @@ export default function Resorts() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollManager/>
       {/* Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
@@ -192,6 +194,7 @@ export default function Resorts() {
       <section className="py-20">
         <FAQ />
       </section>
+      
       {/* Resort Details Dialog */}
       <Dialog
         open={!!selectedResort}

@@ -54,25 +54,17 @@ export default function Destinations() {
                       Crystal-clear waters and pristine white sand beaches
                     </p>
                   </div>
-                  {/* href="/resorts" */}
-                  <a
-                    href="/AntraviTravel/resorts"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
-                    style={{ borderRadius: "5px" }}
-                  >
-                    View Resorts
-                  </a>
-                  {/* <Link
-                    href="/resorts"  
+                  <Link
+                    href="/resorts"
                     className="hover:text-blue-200 transition-colors"
                   >
                     <div
                       className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
                       style={{ borderRadius: "5px" }}
-                      >
+                    >
                       View Resorts
                     </div>
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
