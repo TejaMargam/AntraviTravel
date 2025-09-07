@@ -50,9 +50,9 @@ export default function Destinations() {
                     <h3 className="font-heading text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 sm:mb-4">
                       The Maldives
                     </h3>
-                    <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
+                    {/* <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
                       Crystal-clear waters and pristine white sand beaches
-                    </p>
+                    </p> */}
                   </div>
                   <Link
                     href="/resorts"

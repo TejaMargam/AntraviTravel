@@ -64,7 +64,7 @@ export default function Resorts() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ScrollManager/>
+      <ScrollManager />
       {/* Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
@@ -87,7 +87,7 @@ export default function Resorts() {
             Maldives Resorts
           </h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover our handpicked collection of luxury resorts in the Maldives
+            Discover our handpicked collection resorts
           </p>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function Resorts() {
       <section className="py-20">
         <FAQ />
       </section>
-      
+
       {/* Resort Details Dialog */}
       <Dialog
         open={!!selectedResort}

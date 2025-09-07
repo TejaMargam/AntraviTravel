@@ -75,7 +75,7 @@ export default function Footer() {
               </Link>
               <br />
               <Link
-                href="/privacy"  
+                href="/privacy"
                 className="hover:text-blue-200 transition-colors"
               >
                 Privacy Policy
@@ -106,10 +106,7 @@ export default function Footer() {
         </div> */}
 
         <div className="mt-12 pt-8 border-t border-blue-500 text-center">
-          <p className="text-blue-200">
-            © 2025 Antravi. All rights reserved. | Creating extraordinary
-            travel experiences since inception.
-          </p>
+          <p className="text-blue-200">© 2025 Antravi. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,8 +1,7 @@
-
 [
   {
-    "id": "conrad-maldives",
-    "name": "Conrad Maldives Rangali Island",
+    "id": "Resort-1",
+    "name": "Resort 1",
     "description": "Experience luxury like never before at this award-winning resort featuring the world's first undersea restaurant.",
     "shortDescription": "Award-winning luxury resort with undersea restaurant",
     "images": [
@@ -11,7 +10,7 @@
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "priceFrom": "₹85,000",
+    "priceFrom": "₹__,___",
     "location": "South Ari Atoll",
     "features": [
       "Undersea Restaurant",
@@ -35,8 +34,8 @@
     ]
   },
   {
-    "id": "four-seasons-landaa",
-    "name": "Four Seasons Resort Maldives at Landaa Giraavaru",
+    "id": "Resort-2",
+    "name": "Resort 2",
     "description": "A UNESCO Biosphere Reserve location offering unparalleled natural beauty and marine conservation experiences.",
     "shortDescription": "UNESCO Biosphere Reserve luxury resort",
     "images": [
@@ -45,7 +44,7 @@
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "priceFrom": "₹95,000",
+    "priceFrom": "₹__,___",
     "location": "Baa Atoll",
     "features": [
       "Marine Discovery Centre",
@@ -69,9 +68,9 @@
     ]
   },
   {
-    "id": "soneva-jani",
-    "name": "Soneva Jani",
-    "description": "Innovative overwater villas with slides, retractable roofs, and the largest lagoon in the Maldives.",
+    "id": "Resort-3",
+    "name": "Resort 3",
+    "description": "Innovative overwater villas with slides, retractable roofs, and the largest lagoon.",
     "shortDescription": "Innovative overwater villas with unique features",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
@@ -79,7 +78,7 @@
       "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "priceFrom": "₹125,000",
+    "priceFrom": "₹__,___",
     "location": "Noonu Atoll",
     "features": [
       "Water Slides",

@@ -79,6 +79,10 @@ export default function TermsAndConditions() {
                 non-refundable. You may reschedule within 100 days (subject to
                 charges and availability).
               </p>
+              <p className="text-gray-700">
+                The applicable cancellation policy will be clearly communicated at the time of booking.
+                Antravi reserves the right to update or modify these, We recommend reviewing this page periodically to stay informed.
+              </p>
             </div>
 
             <div>
