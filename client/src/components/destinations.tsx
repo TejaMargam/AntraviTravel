@@ -25,6 +25,7 @@ export default function Destinations() {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCardClicked, setIsCardClicked] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,6 +36,11 @@ export default function Destinations() {
 
     return () => clearInterval(interval);
   }, [carouselImages.length]);
+
+  const handleExploreClick = () => {
+    setIsCardClicked(true);
+    setTimeout(() => setIsCardClicked(false), 500); // Reset after 500ms
+  };
 
   return (
     <div className="bg-white">
@@ -51,7 +57,7 @@ export default function Destinations() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
+            <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? '-translate-y-4 shadow-3xl scale-105' : ''}`}>
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
                 {carouselImages.map((imageSrc, index) => (
                   <img
@@ -80,10 +86,12 @@ export default function Destinations() {
                   <Link
                     href="/resorts"
                     className="hover:text-blue-200 transition-colors"
+                    onClick={handleExploreClick}
                   >
                     <div
                       className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
                       style={{ borderRadius: "5px" }}
+                      data-testid="button-explore-resorts"
                     >
                       Explore Resorts
                     </div>
