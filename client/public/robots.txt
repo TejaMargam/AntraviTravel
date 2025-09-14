@@ -14,5 +14,5 @@ Allow: /
 Allow: /about
 Allow: /resorts
 Allow: /contact
-Allow: /privacy-policy
-Allow: /terms-and-conditions
+Allow: /privacy
+Allow: /terms

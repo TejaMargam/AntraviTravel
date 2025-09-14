@@ -3,6 +3,62 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Security Headers Middleware
+app.use((req, res, next) => {
+  // HTTPS and Security Headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Content Security Policy - different for development vs production
+  const isDevelopment = process.env.NODE_ENV === 'development';
+  
+  if (isDevelopment) {
+    // Development CSP - allows HMR and eval for Vite
+    res.setHeader('Content-Security-Policy', 
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "img-src 'self' data: https:; " +
+      "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
+      "object-src 'none'; " +
+      "base-uri 'self'; " +
+      "frame-src 'none';"
+    );
+  } else {
+    // Production CSP - stricter security
+    res.setHeader('Content-Security-Policy', 
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "img-src 'self' data: https:; " +
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
+      "object-src 'none'; " +
+      "base-uri 'self'; " +
+      "frame-src 'none';"
+    );
+  }
+  
+  // Performance and Caching Headers
+  if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year for static assets
+  } else {
+    // For HTML pages and SPA routes that serve HTML (non-asset requests)
+    const acceptsHtml = req.headers.accept && req.headers.accept.includes('text/html');
+    const isApiRoute = req.path.startsWith('/api');
+    
+    if (acceptsHtml && !isApiRoute) {
+      res.setHeader('Cache-Control', 'no-cache, must-revalidate'); // Force revalidation for HTML/SPA routes
+    }
+  }
+  
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
