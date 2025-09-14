@@ -31,9 +31,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <WouterRouter base="/AntraviTravel">
+        {/* <WouterRouter base="/AntraviTravel"> */}
         <Router />
-        </WouterRouter>
+        {/* </WouterRouter> */}
       </TooltipProvider>
     </QueryClientProvider>
   );
