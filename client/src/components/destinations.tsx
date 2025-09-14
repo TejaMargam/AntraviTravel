@@ -16,9 +16,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 export default function Destinations() {
+  const carouselImages = [
+    "https://www.rowfortheocean.co.uk/wp-content/uploads/2025/01/a-picturesque-aerial-view-of-a-tropical-island-resort-surrounded-by-clear-blue-ocean-during-a-vibran.jpg",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&crop=center"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
   return (
     <div className="bg-white">
       {/* Featured Destinations Section*/}
@@ -36,11 +53,17 @@ export default function Destinations() {
           <div className="max-w-4xl mx-auto">
             <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
-                <img
-                  src="https://www.rowfortheocean.co.uk/wp-content/uploads/2025/01/a-picturesque-aerial-view-of-a-tropical-island-resort-surrounded-by-clear-blue-ocean-during-a-vibran.jpg"
-                  alt="The Maldives"
-                  className="w-full h-full object-cover"
-                />
+                {carouselImages.map((imageSrc, index) => (
+                  <img
+                    key={index}
+                    src={imageSrc}
+                    alt="The Maldives"
+                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    data-testid={`carousel-image-${index}`}
+                  />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               </div>
 
