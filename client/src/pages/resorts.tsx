@@ -324,7 +324,7 @@ export default function Resorts() {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
                     style={{ borderRadius: "5px" }}
                   >
-                    Book This Resort
+                    Plan My Vacation
                   </Button>
                 </div>
               </div>

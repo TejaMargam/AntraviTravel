@@ -62,7 +62,7 @@ export default function Destinations() {
                       className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
                       style={{ borderRadius: "5px" }}
                     >
-                      View Resorts
+                      Explore Resorts
                     </div>
                   </Link>
                 </div>
