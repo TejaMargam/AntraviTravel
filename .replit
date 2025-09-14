@@ -72,4 +72,4 @@ task = "shell.exec"
 args = "echo \"3. Set source to deploy from root or docs folder\""
 
 [agent]
-integrations = ["javascript_mem_db==1.0.0"]
+integrations = ["javascript_mem_db:1.0.0", "javascript_google_analytics:1.0.0"]
