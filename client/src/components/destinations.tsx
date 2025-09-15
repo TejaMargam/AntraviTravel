@@ -23,7 +23,7 @@ import { getImagePath } from "@/utils/paths";
 export default function Destinations() {
   const carouselImages = [
     getImagePath("images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop"),
-    getImagePath("images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop")
+    getImagePath("images/maldives/resorts/westin/westin-image-7.webp?w=800&h=600&fit=crop")
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

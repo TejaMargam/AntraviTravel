@@ -112,11 +112,11 @@ export default function Resorts() {
                       alt={resort.name}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                    {resort.tag && <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                       <div className="flex space-x-1">
                         {resort.tag}
                       </div>
-                    </div>
+                    </div>}
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                       <div className="flex space-x-1">
                         {renderStars(resort.rating)}
