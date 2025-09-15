@@ -6,12 +6,12 @@
     "shortDescription": "Beyond All-Inclusive",
     "tag": "Now Open",
     "images": [
-      "/images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/dusit/dusit-image-2.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/dusit/dusit-image-4.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/dusit/dusit-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/dusit/dusit-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "₹",
@@ -37,12 +37,12 @@
     "shortDescription": "Your Well-Being Haven",
     "tag": "",
     "images": [
-      "/images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
-      "/images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "₹",

@@ -31,7 +31,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <WouterRouter base="/AntraviTravel">
+        <WouterRouter base={import.meta.env.PROD ? "/AntraviTravel" : ""}>
         <Router />
         </WouterRouter>
       </TooltipProvider>

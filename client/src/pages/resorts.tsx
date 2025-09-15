@@ -11,15 +11,17 @@ import { Badge } from "@/components/ui/badge";
 import resortsData from "@/data/resorts.json";
 import FAQ from "@/components/faq";
 import ScrollManager from "@/hooks/ScrollManager";
+import { getImagePath } from "@/utils/paths";
 
 interface Resort {
   id: string;
   name: string;
   description: string;
   shortDescription: string;
+  tag: string;
   images: string[];
   rating: number;
-  priceFrom: string;
+  "StartsFrom ": string;
   location: string;
   features: string[];
   amenities: string[];
@@ -104,10 +106,15 @@ export default function Resorts() {
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img
-                      src={resort.images[0]}
+                      src={getImagePath(resort.images[0])}
                       alt={resort.name}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                      <div className="flex space-x-1">
+                        {resort.tag}
+                      </div>
+                    </div>
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                       <div className="flex space-x-1">
                         {renderStars(resort.rating)}
@@ -151,7 +158,7 @@ export default function Resorts() {
                           Starting from
                         </span>
                         <div className="font-bold text-lg text-blue-600">
-                          {resort.priceFrom}
+                          {resort["StartsFrom "]}
                         </div>
                       </div>
                       <Button
@@ -216,7 +223,7 @@ export default function Resorts() {
                 {/* Left Column - Image Carousel */}
                 <div className="relative aspect-[4/3] lg:aspect-[16/12] rounded-xl overflow-hidden">
                   <img
-                    src={selectedResort.images[selectedImageIndex]}
+                    src={getImagePath(selectedResort.images[selectedImageIndex])}
                     alt={selectedResort.name}
                     className="w-full h-full object-cover"
                   />
@@ -265,7 +272,7 @@ export default function Resorts() {
                         Starting from
                       </span>
                       <div className="font-bold text-xl text-blue-600">
-                        {selectedResort.priceFrom}
+                        {selectedResort["StartsFrom "]}
                       </div>
                     </div>
                   </div>
