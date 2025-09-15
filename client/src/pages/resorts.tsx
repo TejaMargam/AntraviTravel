@@ -12,6 +12,7 @@ import resortsData from "@/data/resorts.json";
 import FAQ from "@/components/faq";
 import ScrollManager from "@/hooks/ScrollManager";
 import { getImagePath } from "@/utils/paths";
+import { useLocation } from "wouter";
 
 interface Resort {
   id: string;
@@ -29,6 +30,7 @@ interface Resort {
 }
 
 export default function Resorts() {
+  const [, navigate] = useLocation();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
 
@@ -74,7 +76,7 @@ export default function Resorts() {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0 min-w-0">
               <a
-                href="/"
+                onClick={() => navigate("/")}
                 className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
               >
                 Antravi

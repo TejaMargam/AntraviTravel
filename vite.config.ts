@@ -42,11 +42,8 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig(async () => {
-  const isProduction = process.env.NODE_ENV === "production";
-  const base = isProduction ? "/AntraviTravel/" : "/";
-  
   return {
-    base,
+    base: "/AntraviTravel/", // 🔧 This is the critical fix
     plugins: [
       react(),
       runtimeErrorOverlay(),

@@ -1,6 +1,9 @@
 import ScrollManager from "@/hooks/ScrollManager";
+import { useLocation } from "wouter";
 
 export default function PrivacyPolicy() {
+  const [, navigate] = useLocation();
+
   return (
     <section className="py-20 bg-white">
       <ScrollManager/>
@@ -11,7 +14,7 @@ export default function PrivacyPolicy() {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0 min-w-0">
               <a
-                href="/"
+                onClick={() => navigate("/")}
                 className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
               >
                 Antravi
