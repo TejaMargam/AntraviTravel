@@ -20,8 +20,8 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 export default function Destinations() {
   const carouselImages = [
-    "https://www.rowfortheocean.co.uk/wp-content/uploads/2025/01/a-picturesque-aerial-view-of-a-tropical-island-resort-surrounded-by-clear-blue-ocean-during-a-vibran.jpg",
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&crop=center"
+    "/images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
+    "/images/maldives/resorts/westin/westin-image-7.webp?w=800&h=600&fit=crop"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

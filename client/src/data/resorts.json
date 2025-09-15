@@ -6,9 +6,12 @@
     "shortDescription": "Beyond All-Inclusive",
     "tag": "Now Open",
     "images": [
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+      "/images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/dusit/dusit-image-2.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/dusit/dusit-image-4.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "₹",
@@ -33,7 +36,14 @@
     "description": "A boutique premium resort in the Baa Atoll UNESCO biosphere reserve. Book today! Everything at Milaidhoo has been custom made crafted around your needs.",
     "shortDescription": "Your Well-Being Haven",
     "tag": "",
-    "images": [],
+    "images": [
+      "/images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
+      "/images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
+    ],
     "rating": 5,
     "StartsFrom ": "₹",
     "location": "Baa Atoll",
