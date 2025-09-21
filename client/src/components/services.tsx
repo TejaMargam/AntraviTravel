@@ -31,6 +31,11 @@ export default function Services() {
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
+                <DialogHeader>
+                    <DialogTitle className="sr-only">
+                        Lead Form
+                    </DialogTitle>
+                </DialogHeader>
                 {/* Form iframe */}
                 <div className="w-full h-[80vh]">
                     <iframe
