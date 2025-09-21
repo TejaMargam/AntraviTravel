@@ -19,27 +19,30 @@ app.use((req, res, next) => {
     // Development CSP - allows HMR and eval for Vite
     res.setHeader('Content-Security-Policy', 
       "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; " +
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-      "font-src 'self' https://fonts.gstatic.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://replit.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " +
+      "font-src 'self' https://fonts.gstatic.com; https://cdnjs.cloudflare.com;" +
       "img-src 'self' data: https:; " +
+      "media-src 'self' https://videos.pexels.com; " +
       "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
       "object-src 'none'; " +
       "base-uri 'self'; " +
-      "frame-src 'none';"
-    );
+      "frame-src 'self' https://forms.zohopublic.in;"
+    );    
   } else {
     // Production CSP - stricter security
     res.setHeader('Content-Security-Policy', 
       "default-src 'self'; " +
       "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; " +
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-      "font-src 'self' https://fonts.gstatic.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " +
+      "font-src 'self' https://fonts.gstatic.com; https://cdnjs.cloudflare.com;" +
       "img-src 'self' data: https:; " +
       "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
       "object-src 'none'; " +
       "base-uri 'self'; " +
-      "frame-src 'none';"
+      "frame-src 'self' https://forms.zohopublic.in; " +
+      "media-src 'self' https://videos.pexels.com; "
+
     );
   }
   

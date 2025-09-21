@@ -9,7 +9,7 @@ export default function Footer() {
           <p className="text-xl font-light">Live your Moments.</p>
         </div>
         {/* Contact Information, Social Media, Office Address, Terms and conditions*/}
-        <div className="flex justify-around text-center md:text-left">
+        <div className="flex justify-around text-center md:text-left flex-wrap">
           <div>
             {/* Social Media */}
             <div>
