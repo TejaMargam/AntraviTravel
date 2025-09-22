@@ -97,7 +97,7 @@ export default function Resorts() {
         </div>
       </section>
       {/* Resorts Grid */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {resorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,7 +201,7 @@ export default function Resorts() {
       </section>
 
       {/* Maldives FAQ's */}
-      <section className="py-20">
+      <section className="py-10">
         <FAQ />
       </section>
 
