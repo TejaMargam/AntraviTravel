@@ -33,6 +33,7 @@ export default function Resorts() {
   const [, navigate] = useLocation();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, i) => (
@@ -329,12 +330,34 @@ export default function Resorts() {
                     </ul>
                   </div>
 
-                  <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
-                    style={{ borderRadius: "5px" }}
-                  >
-                    Plan My Vacation
-                  </Button>
+                  <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+                    <DialogTrigger asChild>
+                      <Button
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
+                        style={{ borderRadius: "5px" }}
+                      >
+                        Plan My Vacation
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
+                      <DialogHeader>
+                        <DialogTitle className="sr-only">
+                            Lead Form
+                        </DialogTitle>
+                      </DialogHeader>
+                      {/* Form iframe */}
+                      <div className="w-full h-[80vh]">
+                          <iframe
+                              src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
+                              className="w-full h-full"
+                              frameBorder="0"
+                              style={{ border: "none" }}
+                              allowFullScreen
+                              title="Maldives Lead Form"
+                          ></iframe>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>

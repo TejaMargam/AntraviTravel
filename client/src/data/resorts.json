@@ -1,5 +1,40 @@
 [
   {
+    "id": "Sheraton Full Moon Resort & Spa",
+    "name": "Sheraton Maldives Full Moon Resort & Spa",
+    "description": "A lush family-friendly island escape just 15 minutes by speedboat from Velana International Airport. The resort features villas, cottages and overwater retreats surrounded by white sandy beaches and coral reefs, with award-winning spa, multiple dining venues, kid-friendly amenities and a vibrant lagoon setting.",
+    "shortDescription": "Island Paradise",
+    "tag": "Private Island Sanctuary",
+    "images": [
+      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹",
+    "location": "Furanafushi Island, North Malé Atoll",
+    "features": [
+      "Secluded Island",
+      "Tennis Court",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Water Sports",
+      "Family-Friendly Activities",
+      "Speed Boat Transfers"
+    ],
+    "roomTypes": [
+      "Deluxe Room / Garden View",
+      "Beachfront Cottage",
+      "Ocean Pool Villa",
+      "Overwater Villa With Pool"
+    ]
+  },
+  {
     "id": "Dusit 2 Feydhoo Maldives",
     "name": "Dusit 2 Feydhoo Maldives",
     "description": "Discover a seamless, spirited getaway designed for those who appreciate ease, energy, and effortless enjoyment.",
@@ -31,6 +66,40 @@
     "roomTypes": ["Beach Villa", "Waterfront Pool Villa", "Beach Pool villa"]
   },
   {
+    "id": "Grand Park Kodhipparu Maldives",
+    "name": "Grand Park Kodhipparu Maldives",
+    "description": "A luxurious one-island-one-resort sanctuary located just 20 minutes by speedboat from Malé International Airport, offering beachfront and overwater villas, elegant design, abundant marine life, and refined amenities for a barefoot luxury escape.",
+    "shortDescription": "Barefoot Luxury in North Malé Atoll",
+    "tag": "Green Globe Certified",
+    "images": [
+      "images/maldives/resorts/grandPark/grandPark-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹",
+    "location": "North Malé Atoll",
+    "features": [
+      "Beach Club",
+      "Sunrise and Sunset",
+      "Yoga Classes",
+      "Speed Boat Transfers"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Fitness Center",
+      "Kids Club Facilities"
+    ],
+    "roomTypes": [
+      "Lagoon Water Villa",
+      "Overwater Villa",
+      "Beach Pool Villa"
+    ]
+  },
+  {
     "id": "The Westin Maldives Miriandhoo",
     "name": "The Westin Maldives Miriandhoo",
     "description": "A boutique premium resort in the Baa Atoll UNESCO biosphere reserve. Book today! Everything at Milaidhoo has been custom made crafted around your needs.",
@@ -39,16 +108,16 @@
     "images": [
       "images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "₹",
     "location": "Baa Atoll",
     "features": [
-      "Award-Winning Heavenly Bed",
+      "Signature Heavenly Bed By Westin",
       "Sunset Bar",
       "Multi-purpose court",
       "Yoga Pavilion"
