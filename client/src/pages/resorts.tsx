@@ -118,11 +118,6 @@ export default function Resorts() {
                         {resort.tag}
                       </div>
                     </div>}
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
-                      <div className="flex space-x-1">
-                        {renderStars(resort.rating)}
-                      </div>
-                    </div>
                   </div>
 
                   <div className="p-6">
@@ -132,6 +127,10 @@ export default function Resorts() {
                     <p className="text-gray-600 mb-3 text-sm">
                       {resort.shortDescription}
                     </p>
+
+                    <div className="flex space-x-1 mb-3">
+                      {renderStars(resort.rating)}
+                    </div>
 
                     <div className="flex items-center text-sm text-gray-500 mb-3">
                       <i className="fas fa-map-marker-alt mr-2"></i>
