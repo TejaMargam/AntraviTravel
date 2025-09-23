@@ -11,6 +11,9 @@ import Resorts from "@/pages/resorts";
 import NotFound from "@/pages/not-found";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsAndConditions from "@/pages/TermsAndConditions";
+import { useEffect } from "react";
+import { initGA } from "./lib/analytics";
+import { useAnalytics } from "./hooks/use-analytics";
 
 function Router() {
   return (
@@ -27,6 +30,13 @@ function Router() {
 }
 
 function App() {
+    // initialize GA once
+    useEffect(() => {
+      initGA();
+    }, []);
+  
+    // hook to track route changes
+    useAnalytics();
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
