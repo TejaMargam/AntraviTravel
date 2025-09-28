@@ -1,6 +1,7 @@
 // Environment-aware path utilities
 export const getBasePath = () => {
-  return import.meta.env.PROD ? "/AntraviTravel" : "";
+  // return import.meta.env.PROD ? "/AntraviTravel" : "";
+  return "";
 };
 
 export const getImagePath = (imagePath: string) => {
