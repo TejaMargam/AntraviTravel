@@ -112,7 +112,19 @@ export default function Resorts() {
                     <img
                       src={getImagePath(resort.images[0])}
                       alt={resort.name}
+                      width={400}
+                      height={300}
+                      loading="eager"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      style={{
+                        contentVisibility: 'auto',
+                        backgroundColor: '#f3f4f6',
+                        transition: 'opacity 0.3s ease-in-out',
+                      }}
+                      onLoad={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.opacity = '1';
+                      }}
                     />
                     {resort.tag && <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                       <div className="flex space-x-1">
@@ -228,7 +240,19 @@ export default function Resorts() {
                   <img
                     src={getImagePath(selectedResort.images[selectedImageIndex])}
                     alt={selectedResort.name}
+                    width={800}
+                    height={600}
+                    loading="lazy"
                     className="w-full h-full object-cover"
+                    style={{
+                      contentVisibility: 'auto',
+                      backgroundColor: '#f3f4f6',
+                      transition: 'opacity 0.3s ease-in-out',
+                    }}
+                    onLoad={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      img.style.opacity = '1';
+                    }}
                   />
 
                   {selectedResort.images.length > 1 && (
