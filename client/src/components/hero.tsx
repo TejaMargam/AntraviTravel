@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
@@ -57,7 +57,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-        <h1 className="font-heading text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+        <h1 className="font-heading text-6xl md:text-6xl font-bold mb-6 tracking-tight">
           ANTRAVI
         </h1>
         <p className="text-3xl md:text-4xl font-light mb-12 tracking-wide">

@@ -37,10 +37,10 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Our travel specialists are here to help
                 </p>
-                <a href="mailto:hello@antravi.com" 
+                <a href="mailto:yashodar@antravi.com" 
                    className="text-primary-blue hover:text-luxury-gold transition-colors"
                    data-testid="link-email">
-                  hello@antravi.com
+                  yashodar@antravi.com
                 </a>
               </div>
               
@@ -54,10 +54,10 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Speak directly with our experts
                 </p>
-                <a href="tel:+1234567890" 
+                <a href="tel:+919849981075" 
                    className="text-primary-blue hover:text-luxury-gold transition-colors"
                    data-testid="link-phone">
-                  +1 (234) 567-890
+                  +91 9849981075
                 </a>
               </div>
               

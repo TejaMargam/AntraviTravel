@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 
 export default function Footer() {
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
   return (
     <footer className="bg-blue-600 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,9 +23,10 @@ export default function Footer() {
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
-                {/* <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
+                <a href="https://www.facebook.com/share/16SQ5QQbaR/" 
+                  className="text-2xl hover:text-blue-200 transition-colors">
                   <i className="fab fa-facebook"></i>
-                </a> */}
+                </a>
                 {/* <a href="#" className="text-2xl hover:text-blue-200 transition-colors">
                   <i className="fab fa-twitter"></i>
                 </a> */}
@@ -40,7 +43,18 @@ export default function Footer() {
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
               <p className="mb-2">
                 <i className="fas fa-phone mr-2"></i>
-                +91 9849981075
+                <a
+                  href={isMobile ? "tel:+919849981075" : undefined}
+                  onClick={(e) => {
+                    if (!isMobile) {
+                      e.preventDefault(); // Prevent redirect
+                    }
+                  }}
+                  className="text-white hover:text-luxury-gold transition-colors"
+                  data-testid="link-phone"
+                >
+                  +91 9849981075
+                </a>
               </p>
               {/* <p className="mb-4">
                 <i className="fas fa-envelope mr-2"></i>

@@ -17,7 +17,7 @@ export default function About() {
               About Antravi
             </h1>
             <p className="text-xl md:text-2xl font-light tracking-wider">
-              Creating Extraordinary Moments Since 2020
+              Creating Extraordinary Moments Since 2025
             </p>
           </div>
         </section>

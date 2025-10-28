@@ -22,10 +22,14 @@ import { getImagePath } from "@/utils/paths";
 
 export default function Destinations() {
   const carouselImages = [
+    getImagePath("images/maldives/resorts/sheraton/sheraton-image-9.webp?w=800&h=600&fit=crop"),
     getImagePath("images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop"),
+    getImagePath("images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop"),
     getImagePath("images/maldives/resorts/westin/westin-image-7.webp?w=800&h=600&fit=crop")
   ];
+  const resortsData = ["Sheraton Full Moon Resort & Spa", "Dusit 2 Feydhoo Maldives", "NOOE Kanaavashi", "The Westin Maldives Miriandhoo"]
 
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isCardClicked, setIsCardClicked] = useState(false);
 
@@ -49,7 +53,7 @@ export default function Destinations() {
       {/* Featured Destinations Section*/}
       <section
         id="destinations"
-        className="py-24 bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out"
+        className="py-24 bg-gray-50 hover:shadow-lg transition-shadow duration-500 ease-in-out"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -78,12 +82,12 @@ export default function Destinations() {
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 lg:p-12 text-white">
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                   <div>
-                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 sm:mb-4">
-                      The Maldives
+                    <h3 className="font-heading text-2xl sm:text-2xl lg:text-4xl font-bold mb-2 sm:mb-4">
+                      {resortsData[currentImageIndex]}
                     </h3>
-                    {/* <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
-                      Crystal-clear waters and pristine white sand beaches
-                    </p> */}
+                    <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
+                      Partnered Resort
+                    </p>
                   </div>
                   <Link
                     href="/resorts"
@@ -105,8 +109,50 @@ export default function Destinations() {
         </div>
       </section>
 
-      {/* 3 Steps Section */}
+      {/* Vacation Description Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+              Your Vacation, by Antravi
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              A vacation is where comfort meets care. Whether it's a honeymoon, a family getaway, or a luxury retreat — every moment with Antravi is curated just for you. Choose Antravi to let your vacation feel as special as it truly is.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3" style={{ borderRadius: '5px' }}>
+                  Start Planning Now
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
+                <DialogHeader>
+                    <DialogTitle className="sr-only">
+                        Lead Form
+                    </DialogTitle>
+                </DialogHeader>
+                {/* Form iframe */}
+                <div className="w-full h-[80vh]">
+                    <iframe
+                        src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        style={{ border: "none" }}
+                        allowFullScreen
+                        title="Maldives Lead Form"
+                    ></iframe>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 Steps Section */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">

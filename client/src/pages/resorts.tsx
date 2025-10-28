@@ -23,6 +23,7 @@ interface Resort {
   images: string[];
   rating: number;
   "StartsFrom ": string;
+  duration: string;
   location: string;
   features: string[];
   amenities: string[];
@@ -276,6 +277,9 @@ export default function Resorts() {
                       <div className="font-bold text-xl text-blue-600">
                         {selectedResort["StartsFrom "]}
                       </div>
+                      {selectedResort.duration && <div className="text-sm text-black">
+                        {selectedResort.duration}
+                      </div>}
                     </div>
                   </div>
 

@@ -62,136 +62,14 @@ export default function ContactForm() {
         </div>
         
         <div className="bg-soft-gray rounded-2xl p-8 md:p-12 luxury-shadow">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">Full Name *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          placeholder="Enter your full name"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
-                          data-testid="input-name"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">Email Address *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          type="email"
-                          placeholder="your@email.com"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
-                          data-testid="input-email"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">Phone Number</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          type="tel"
-                          placeholder="+1 (555) 123-4567"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
-                          data-testid="input-phone"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="travelDates"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">Preferred Travel Dates</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          placeholder="Flexible / June 2024"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
-                          data-testid="input-travel-dates"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-700">Tell us about your dream trip *</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        {...field}
-                        rows={6}
-                        placeholder="Share your destination preferences, travel style, special occasions, group size, and any specific requirements..."
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors resize-none"
-                        data-testid="textarea-message"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <div className="text-center">
-                <Button
-                  type="submit"
-                  disabled={enquiryMutation.isPending}
-                  className="bg-primary-blue hover:bg-blue-700 text-white px-10 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105 luxury-shadow disabled:opacity-50 disabled:cursor-not-allowed"
-                  data-testid="button-submit-enquiry"
-                >
-                  {enquiryMutation.isPending ? (
-                    <>
-                      <i className="fas fa-spinner fa-spin mr-2"></i>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <i className="fas fa-paper-plane mr-2"></i>
-                      Send Enquiry
-                    </>
-                  )}
-                </Button>
-              </div>
-              
-              <p className="text-sm text-gray-500 text-center mt-6">
-                We'll respond within 24 hours with a personalized travel proposal
-              </p>
-            </form>
-          </Form>
+          <iframe
+              src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
+              className="w-full h-full"
+              frameBorder="0"
+              style={{ border: "none" }}
+              allowFullScreen
+              title="Maldives Lead Form"
+          ></iframe>
         </div>
       </div>
     </section>

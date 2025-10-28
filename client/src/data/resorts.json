@@ -6,15 +6,16 @@
     "shortDescription": "Island Paradise",
     "tag": "",
     "images": [
-      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹1,05,000",
+    "StartsFrom ": "₹1,27,000",
+    "duration": "2 Nights/3 Days",
     "location": "Furanafushi Island, North Malé Atoll",
     "features": [
       "Secluded Island",
@@ -49,7 +50,8 @@
       "images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,42,500",
+    "StartsFrom ": "₹2,40,000",
+    "duration": "3 Nights/4 Days",
     "location": "North Malé Atoll",
     "features": [
       "All-Inclusive destination",
@@ -66,37 +68,40 @@
     "roomTypes": ["Beach Villa", "Waterfront Pool Villa", "Beach Pool villa"]
   },
   {
-    "id": "Grand Park Kodhipparu Maldives",
-    "name": "Grand Park Kodhipparu Maldives",
-    "description": "A luxurious one-island-one-resort sanctuary located just 20 minutes by speedboat from Malé International Airport, offering beachfront and overwater villas, elegant design, abundant marine life, and refined amenities for a barefoot luxury escape.",
-    "shortDescription": "Barefoot Luxury in North Malé Atoll",
+    "id": "NOOE Kanaavashi",
+    "name": "NOOE Kanaavashi",
+    "description": "NOOE Maldives Kunaavashi is an island paradise created to help you to rediscover a lifestyle in perfect balance. Our resort encourages guests to be playful, and live light-hearted. A philosophy that is so easy to enjoy when everything for a balanced lifestyle is at your fingertips.",
+    "shortDescription": "A Lifestyle that is Never Odd Or Even",
     "tag": "",
     "images": [
-      "images/maldives/resorts/grandPark/grandPark-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/grandPark/grandPark-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/grandPark/grandPark-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/grandPark/grandPark-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/grandPark/grandPark-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/grandPark/grandPark-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nooe/nooe-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nooe/nooe-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nooe/nooe-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nooe/nooe-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹1,25,140",
-    "location": "North Malé Atoll",
+    "StartsFrom ": "₹2,10,000 / couple",
+    "duration": "3 Nights/4 Days",
+    "location": "Vaavu Atoll",
     "features": [
-      "Beach Club",
-      "Sunrise and Sunset",
-      "Yoga Classes",
-      "Speed Boat Transfers"
+      "Han'dhu - Gym",
+      "Kulhun - Kids Club",
+      "Thari Spa",
+      "Aqua Quest - Water Sports Center"
     ],
     "amenities": [
       "Complimentary WIFI",
-      "Fitness Center",
-      "Kids Club Facilities"
+      "Kids Club Facilities",
+      "Speed Boat Transfers"
     ],
     "roomTypes": [
-      "Lagoon Water Villa",
-      "Overwater Villa",
-      "Beach Pool Villa"
+      "One Bed Room Beach Villa",
+      "One Bed Room Sun Set Beach villa",
+      "Duplex Over Water villa with Private Pool",
+      "2N One Bed Room Beach Villa  + Duplex Over Water villa with Private Pool",
+      "2N One Bed Room Sun Set Beach villa + Duplex Over Water villa with Private Pool"
     ]
   },
   {
@@ -114,7 +119,8 @@
       "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹",
+    "StartsFrom ": "Available on Request",
+    "duration": "",
     "location": "Baa Atoll",
     "features": [
       "Signature Heavenly Bed By Westin",

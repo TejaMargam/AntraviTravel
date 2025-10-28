@@ -14,6 +14,7 @@ import TermsAndConditions from "@/pages/TermsAndConditions";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
+import ThankYou from "@/pages/thankyou";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/resorts" component={Resorts} />
       <Route path="/terms" component={TermsAndConditions} />
       <Route path="/privacy" component={PrivacyPolicy} />
+      <Route path="/thankyou" component={ThankYou} />
       <Route component={NotFound} />
     </Switch>
   );
