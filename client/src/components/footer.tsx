@@ -4,9 +4,9 @@ export default function Footer() {
   const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   return (
-    <footer className="bg-blue-600 text-white py-16">
+    <footer className="bg-blue-600 text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-heading text-4xl font-bold mb-2">ANTRAVI</h2>
           <p className="text-xl font-light">Live your Moments.</p>
         </div>
@@ -56,10 +56,10 @@ export default function Footer() {
                   +91 9849981075
                 </a>
               </p>
-              {/* <p className="mb-4">
+              <p className="mb-4">
                 <i className="fas fa-envelope mr-2"></i>
-                hello@antravi.com
-              </p> */}
+                contact@antravi.com
+              </p>
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export default function Footer() {
           </div>
         </div> */}
 
-        <div className="mt-12 pt-8 border-t border-blue-500 text-center">
+        <div className="mt-8 pt-8 border-t border-blue-500 text-center">
           <p className="text-blue-200">© 2025 Antravi. All rights reserved.</p>
         </div>
       </div>

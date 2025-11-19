@@ -57,12 +57,15 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-        <h1 className="font-heading text-6xl md:text-6xl font-bold mb-6 tracking-tight">
+        <h1 className="font-heading text-5xl md:text-5xl font-bold mb-6 tracking-tight">
           ANTRAVI
         </h1>
-        <p className="text-3xl md:text-4xl font-light mb-12 tracking-wide">
+        <p className="text-2xl md:text-2xl font-light mb-8 tracking-wide">
           Live Your Moments
         </p>
+        {/* <p className="text-2xl md:text-2xl font-light mb-4 tracking-wide">
+          Let's turn your travel dreams into plans
+        </p> */}
 
         <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
           <DialogTrigger asChild>
@@ -71,7 +74,7 @@ export default function Hero() {
               className="bg-white text-black hover:bg-gray-100 text-xl px-12 py-4"
               style={{ borderRadius: "5px" }}
             >
-              Start Planning Now
+              Enquire Now
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">

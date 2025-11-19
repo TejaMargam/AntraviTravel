@@ -1,3 +1,11 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import reviewsData from "@/data/reviews.json";
 
 export default function Testimonials() {
@@ -13,10 +21,10 @@ export default function Testimonials() {
   const testimonials = reviewsData;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-black">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
             What Our Travelers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -25,49 +33,92 @@ export default function Testimonials() {
         </div>
 
         {testimonials.length > 0 ? (
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex items-center">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full mr-4 object-cover"
-                    />
-                    <div>
-                      <h3 className="font-bold text-xl text-black mb-1">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-blue-600 font-medium">
-                        {testimonial.occasion}
-                      </p>
+          <div className="relative">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              className="mySwiper py-8"
+            >
+              {testimonials.map((testimonial) => (
+                <SwiperSlide key={testimonial.id}>
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full mx-4">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="flex items-center">
+                        {/* <img
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full mr-4 object-cover"
+                        /> */}
+                        <div>
+                          <h3 className="font-bold text-xl text-black mb-1">
+                            {testimonial.name}
+                          </h3>
+                          {/* <p className="text-blue-600 font-medium">
+                            {testimonial.occasion}
+                          </p> */}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex space-x-1">
-                    {renderStars(testimonial.rating)}
-                  </div>
-                </div>
+                    <div className="flex space-x-1 mb-4">
+                      {renderStars(testimonial.rating)}
+                    </div>
 
-                <p className="text-gray-700 leading-relaxed mb-4 italic">
-                  "{testimonial.text}"
-                </p>
+                    <p className="text-gray-700 leading-relaxed mb-4 italic">
+                      "{testimonial.text}"
+                    </p>
 
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <i className="fas fa-map-marker-alt mr-2"></i>
-                    {testimonial.location}
+                    {/* <div className="flex items-center justify-between text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <i className="fas fa-map-marker-alt mr-2"></i>
+                        {testimonial.location}
+                      </div>
+                      <span>{testimonial.date}</span>
+                    </div> */}
                   </div>
-                  <span>{testimonial.date}</span>
-                </div>
-              </div>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         ) : (
           <div className="mt-16 text-center">
+            <style jsx global>{`
+              .swiper-pagination-bullet {
+                background: #3b82f6 !important;
+                opacity: 0.3;
+                width: 12px;
+                height: 12px;
+                margin: 0 6px !important;
+              }
+              .swiper-pagination-bullet-active {
+                opacity: 1;
+                background: #3b82f6 !important;
+              }
+              .swiper-button-next,
+              .swiper-button-prev {
+                color: #3b82f6 !important;
+              }
+            `}</style>
             <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
               <h3 className="font-heading text-3xl font-bold text-black mb-4">
                 Reviews Coming Soon

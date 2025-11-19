@@ -80,7 +80,7 @@ export default function Navbar() {
                   className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
                   style={{ borderRadius: "5px" }}
                 >
-                  Start Planning Now
+                  Plan With Antravi
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
@@ -140,7 +140,7 @@ export default function Navbar() {
                     className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
                     style={{ borderRadius: "5px" }}
                   >
-                    Start Planning Now
+                    Plan With Antravi
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">

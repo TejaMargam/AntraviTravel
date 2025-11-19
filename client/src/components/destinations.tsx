@@ -53,15 +53,14 @@ export default function Destinations() {
       {/* Featured Destinations Section*/}
       <section
         id="destinations"
-        className="py-24 bg-gray-50 hover:shadow-lg transition-shadow duration-500 ease-in-out"
+        className="py-16 bg-gray-50 hover:shadow-lg transition-shadow duration-500 ease-in-out"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-black">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
               Our Featured Destinations
             </h2>
           </div>
-
           <div className="max-w-4xl mx-auto">
             <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? '-translate-y-4 shadow-3xl scale-105' : ''}`}>
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
@@ -110,7 +109,7 @@ export default function Destinations() {
       </section>
 
       {/* Vacation Description Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
@@ -152,7 +151,7 @@ export default function Destinations() {
       </section>
 
       {/* 3 Steps Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">

@@ -176,9 +176,10 @@ export default function Resorts() {
                           {resort["StartsFrom "]}
                         </div>
                       </div>
+                      {/* Button with shadow */}
                       <Button
                         size="sm"
-                        className="bg-blue-600 hover:bg-blue-700"
+                        className="bg-white hover:bg-white shadow-lg"
                         style={{ borderRadius: "5px" }}
                       >
                         View Details

@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": "review-1",
+    "name": "Puneeth Kuna",
+    "occasion": "Maldives Getaway",
+    "rating": 5,
+    "text": "Exceptional service from start to finish. Antravi's team handled every detail, making our vacation completely stress-free.",
+    "location": "Maldives",
+    "date": "2025",
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "review-2",
+    "name": "Mohammed Saad",
+    "occasion": "Dream Vacation",
+    "rating": 5,
+    "text": "Antravi exceeded all our expectations with their attention to detail. From booking to return, every aspect was perfectly managed.",
+    "location": "Maldives",
+    "date": "2025",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "review-3",
+    "name": "Krishnanjali M",
+    "occasion": "Family Holiday",
+    "rating": 5,
+    "text": "A truly 5-star experience with Antravi. Our family enjoyed every moment, thanks to their flawless arrangements and local expertise.",
+    "location": "Maldives",
+    "date": "2025",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "review-4",
+    "name": "Ramesh Kumar",
+    "occasion": "Luxury Escape",
+    "rating": 5,
+    "text": "Flawless execution from start to finish. Antravi's local knowledge and attention to detail made our vacation truly memorable.",
+    "location": "Maldives",
+    "date": "2025",
+    "avatar": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "review-5",
+    "name": "Vishal Sirigiri",
+    "occasion": "Luxury Escape",
+    "rating": 5,
+    "text": "Outstanding service that transformed our travel experience. The personalized attention and seamless planning made all the difference.",
+    "location": "Maldives",
+    "date": "2025",
+    "avatar": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?w=100&h=100&fit=crop&crop=face"
+  }
+]
