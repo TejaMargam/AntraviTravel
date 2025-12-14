@@ -46,7 +46,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full overflow-hidden">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#162660] backdrop-blur-md shadow-sm w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between h-20 w-full min-w-0">
           {/* Logo */}
@@ -55,7 +55,7 @@ export default function Navbar() {
               onClick={handleHomeClick}
               className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
             >
-              Antravi
+              <img src="Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{cursor:'pointer'}}/>
             </a>
           </div>
 

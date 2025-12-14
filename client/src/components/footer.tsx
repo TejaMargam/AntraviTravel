@@ -4,14 +4,18 @@ export default function Footer() {
   const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   return (
-    <footer className="bg-blue-600 text-white py-8">
+    <footer className="bg-[#162660] text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        {/* <div className="text-center mb-8">
           <h2 className="font-heading text-4xl font-bold mb-2">ANTRAVI</h2>
           <p className="text-xl font-light">Live your Moments.</p>
-        </div>
+        </div> */}
         {/* Contact Information, Social Media, Office Address, Terms and conditions*/}
-        <div className="flex justify-around text-center md:text-left flex-wrap">
+        <div className="flex justify-around text-center md:text-left flex-wrap pt-4 gap-4">
+          <div className="flex items-center justify-center">
+            <img src="Antravi_Logo_W.png" alt="Antravi" width={150}/>
+          </div>
+
           <div>
             {/* Social Media */}
             <div>
@@ -66,8 +70,8 @@ export default function Footer() {
           {/* Office Address */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Office Address</h3>
-            <address className="not-italic">
-              we work 13th floor, building no :09
+            <address className="not-italic ">
+              We Work 13th floor, Building no :09
               <br />
               K Raheja Mindspace, Madhapur
               <br />
@@ -119,7 +123,7 @@ export default function Footer() {
           </div>
         </div> */}
 
-        <div className="mt-8 pt-8 border-t border-blue-500 text-center">
+        <div className="mt-4 pt-4 border-t border-blue-500 text-center">
           <p className="text-blue-200">© 2025 Antravi. All rights reserved.</p>
         </div>
       </div>

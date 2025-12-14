@@ -1,21 +1,61 @@
 [
   {
+    "id": "NH Collection Maldives Reethi Resort",
+    "name": "NH Collection Maldives Reethi Resort",
+    "description": "A premium 5-star island escape where natural beauty meets contemporary elegance. Enjoy extraordinary experiences with beachfront dining, vibrant sunsets, live DJ sets, fire shows, and a wide range of sports activities on a pristine natural island.",
+    "shortDescription": "Feel the Extraordinary",
+    "tag": "Opening Soon",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹2,75,000 / STC* / Per Couple*",
+    "duration": "03 Nights / 04 Days",
+    "location": "Baa Atoll",
+    "features": [
+      "Natural Island Experience",
+      "Beachfront Grill Dining",
+      "Stunning Sunsets with DJ Sets & Fire Shows",
+      "Direct Beach Access",
+      "Ocean View Villas",
+      "Multi-Sport Courts (Tennis, Badminton, Pickleball, Beach Volleyball)"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Beachfront Grill Restaurant",
+      "Evening Entertainment & Fire Shows",
+      "Water Sports",
+      "Fitness & Sports Courts",
+      "Private Beach Access"
+    ],
+    "roomTypes": [
+      "Sunset Beach Villa",
+      "Over Water Villa",
+      "Sunset Beach Villa With Pool"
+    ]
+  },
+  {
     "id": "Sheraton Full Moon Resort & Spa",
     "name": "Sheraton Maldives Full Moon Resort & Spa",
     "description": "A lush family-friendly island escape just 15 minutes by speedboat from Velana International Airport. The resort features villas, cottages and overwater retreats surrounded by white sandy beaches and coral reefs, with award-winning spa, multiple dining venues, kid-friendly amenities and a vibrant lagoon setting.",
     "shortDescription": "Island Paradise",
     "tag": "",
     "images": [
-      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹1,27,000",
-    "duration": "2 Nights/3 Days",
+    "StartsFrom ": "₹1,77,000 / Couple*",
+    "duration": "3 Nights/4 Days",
     "location": "Furanafushi Island, North Malé Atoll",
     "features": [
       "Secluded Island",
@@ -42,15 +82,15 @@
     "shortDescription": "Beyond All-Inclusive",
     "tag": "Now Open",
     "images": [
+      "images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/dusit/dusit-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/dusit/dusit-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/dusit/dusit-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,40,000",
+    "StartsFrom ": "₹2,50,000 / Couple*",
     "duration": "3 Nights/4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -65,7 +105,11 @@
       "All Meals Included",
       "Infinity Pool with Jacuzzi"
     ],
-    "roomTypes": ["Beach Villa", "Waterfront Pool Villa", "Beach Pool villa"]
+    "roomTypes": [
+      "Beach Villa",
+      "Waterfront Pool Villa",
+      "Beach Pool villa"
+    ]
   },
   {
     "id": "NOOE Kanaavashi",
@@ -74,15 +118,15 @@
     "shortDescription": "A Lifestyle that is Never Odd Or Even",
     "tag": "",
     "images": [
+      "images/maldives/resorts/nooe/nooe-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/nooe/nooe-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/nooe/nooe-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/nooe/nooe-image-4.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/nooe/nooe-image-5.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,10,000 / couple",
+    "StartsFrom ": "₹2,00,000 / Couple*",
     "duration": "3 Nights/4 Days",
     "location": "Vaavu Atoll",
     "features": [
@@ -111,12 +155,12 @@
     "shortDescription": "Your Well-Being Haven",
     "tag": "",
     "images": [
+      "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",

@@ -22,7 +22,7 @@ export default function Enquiry({
             <DialogTrigger asChild>
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3"
+                  className="bg-[#162660] hover:bg-[#162660e6] text-white text-lg px-8 py-3"
                   style={{ borderRadius: "5px" }}
                 >
                   {buttonTitle}

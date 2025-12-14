@@ -21,7 +21,7 @@ export default function Testimonials() {
   const testimonials = reviewsData;
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#F1E4D1]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
@@ -62,7 +62,7 @@ export default function Testimonials() {
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full mx-4">
+                  <div className="bg-[#D0E6FD] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full mx-4">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center">
                         {/* <img
@@ -84,7 +84,7 @@ export default function Testimonials() {
                       {renderStars(testimonial.rating)}
                     </div>
 
-                    <p className="text-gray-700 leading-relaxed mb-4 italic">
+                    <p className="text-gray-700 leading-relaxed mb-4 italic text-justify">
                       "{testimonial.text}"
                     </p>
 
@@ -104,7 +104,7 @@ export default function Testimonials() {
           <div className="mt-16 text-center">
             <style jsx global>{`
               .swiper-pagination-bullet {
-                background: #3b82f6 !important;
+                background: #162660 !important;
                 opacity: 0.3;
                 width: 12px;
                 height: 12px;
@@ -112,11 +112,11 @@ export default function Testimonials() {
               }
               .swiper-pagination-bullet-active {
                 opacity: 1;
-                background: #3b82f6 !important;
+                background: #162660 !important;
               }
               .swiper-button-next,
               .swiper-button-prev {
-                color: #3b82f6 !important;
+                color: #162660 !important;
               }
             `}</style>
             <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">

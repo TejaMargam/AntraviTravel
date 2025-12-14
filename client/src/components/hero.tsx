@@ -57,12 +57,15 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-        <h1 className="font-heading text-5xl md:text-5xl font-bold mb-6 tracking-tight">
+        {/* <h1 className="font-heading text-4xl md:text-4xl font-bold mb-6 tracking-tight">
           ANTRAVI
-        </h1>
-        <p className="text-2xl md:text-2xl font-light mb-8 tracking-wide">
+        </h1> */}
+        {/* <p className="text-2xl md:text-2xl font-light mb-8 tracking-wide">
           Live Your Moments
-        </p>
+        </p> */}
+        <h1 className="font-heading text-4xl md:text-4xl font-bold mb-6 tracking-tight">
+          Let's turn your travel dreams into plans
+        </h1>
         {/* <p className="text-2xl md:text-2xl font-light mb-4 tracking-wide">
           Let's turn your travel dreams into plans
         </p> */}

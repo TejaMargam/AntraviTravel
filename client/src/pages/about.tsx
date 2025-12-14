@@ -11,7 +11,7 @@ export default function About() {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-primary-blue text-white">
+        <section className="py-20 bg-[#162660] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
               About Antravi
@@ -23,10 +23,10 @@ export default function About() {
         </section>
 
         {/* Story Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#F1E4D1]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">
                 Our Story
               </h2>
             </div>
@@ -60,20 +60,20 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-soft-gray">
+        <section className="py-20 bg-[#F1E4D1]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">
                 Our Values
               </h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
-                <div className="bg-primary-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-heart text-2xl"></i>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-primary-blue mb-4">
+                <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Passion
                 </h3>
                 <p className="text-gray-600">
@@ -83,10 +83,10 @@ export default function About() {
               </div>
               
               <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
-                <div className="bg-primary-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-gem text-2xl"></i>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-primary-blue mb-4">
+                <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Excellence
                 </h3>
                 <p className="text-gray-600">
@@ -96,10 +96,10 @@ export default function About() {
               </div>
               
               <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
-                <div className="bg-primary-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-handshake text-2xl"></i>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-primary-blue mb-4">
+                <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Trust
                 </h3>
                 <p className="text-gray-600">

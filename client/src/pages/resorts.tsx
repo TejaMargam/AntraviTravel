@@ -13,6 +13,7 @@ import FAQ from "@/components/faq";
 import ScrollManager from "@/hooks/ScrollManager";
 import { getImagePath } from "@/utils/paths";
 import { useLocation } from "wouter";
+import Navbar from "@/components/navbar";
 
 interface Resort {
   id: string;
@@ -72,40 +73,27 @@ export default function Resorts() {
     <div className="min-h-screen bg-gray-50">
       <ScrollManager />
       {/* Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-700 backdrop-blur-md shadow-sm w-full overflow-hidden">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-          <div className="flex items-center justify-between h-20 w-full min-w-0">
-            {/* Logo */}
-            <div className="flex items-center flex-shrink-0 min-w-0">
-              <a
-                onClick={() => navigate("/")}
-                className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
-              >
-                Antravi
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <section className="bg-gray-100 py-4">
+      <Navbar/>
+      <section className="bg-[#F1E4D1] py-4">
         <div className="text-center">
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+          {/* transparent */}
+          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-transparent">
             Maldives Resorts
           </h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover our handpicked collection resorts
+            Discover our handpicked collection of resorts
           </p>
         </div>
       </section>
       {/* Resorts Grid */}
-      <section className="py-10">
+      <section className="py-10 bg-[#F1E4D1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {resorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {resorts.map((resort) => (
                 <div
                   key={resort.id}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                  className="bg-[#D0E6FD] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
                   onClick={() => handleResortClick(resort)}
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
@@ -172,14 +160,17 @@ export default function Resorts() {
                         <span className="text-sm text-gray-500">
                           Starting from
                         </span>
-                        <div className="font-bold text-lg text-blue-600">
+                        <div className="font-bold text-lg text-[#162660]">
                           {resort["StartsFrom "]}
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          {resort["duration"]}
                         </div>
                       </div>
                       {/* Button with shadow */}
                       <Button
                         size="sm"
-                        className="bg-white hover:bg-white shadow-lg"
+                        className="bg-white hover:bg-white shadow-lg text-[#162660]"
                         style={{ borderRadius: "5px" }}
                       >
                         View Details
@@ -214,7 +205,7 @@ export default function Resorts() {
       </section>
 
       {/* Maldives FAQ's */}
-      <section className="py-10">
+      <section className="py-10 bg-[#F1E4D1]">
         <FAQ />
       </section>
 
@@ -299,7 +290,7 @@ export default function Resorts() {
                       <span className="text-sm text-gray-500">
                         Starting from
                       </span>
-                      <div className="font-bold text-xl text-blue-600">
+                      <div className="font-bold text-xl text-[#162660]">
                         {selectedResort["StartsFrom "]}
                       </div>
                       {selectedResort.duration && <div className="text-sm text-black">
@@ -361,7 +352,7 @@ export default function Resorts() {
                   <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
                     <DialogTrigger asChild>
                       <Button
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
+                        className="w-full bg-[#162660] hover:bg-[#162660e6] text-lg text-white py-3"
                         style={{ borderRadius: "5px" }}
                       >
                         Plan My Vacation
