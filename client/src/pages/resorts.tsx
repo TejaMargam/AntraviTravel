@@ -37,6 +37,17 @@ export default function Resorts() {
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
+    // The direct link to your Freshworks Web Form
+  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
+
+  const handlePlanClick = () => {
+    // Option A: Open in a new tab (Recommended so they don't leave your site)
+    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
+    
+    // Option B: Redirect current tab
+    window.location.href = FRESHWORKS_FORM_URL;
+  };
+
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, i) => (
       <i
@@ -349,7 +360,7 @@ export default function Resorts() {
                     </ul>
                   </div>
 
-                  <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+                  {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
                     <DialogTrigger asChild>
                       <Button
                         className="w-full bg-[#162660] hover:bg-[#162660e6] text-lg text-white py-3"
@@ -364,7 +375,7 @@ export default function Resorts() {
                             Lead Form
                         </DialogTitle>
                       </DialogHeader>
-                      {/* Form iframe */}
+                      
                       <div className="w-full h-[80vh]">
                           <iframe
                               src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
@@ -376,7 +387,15 @@ export default function Resorts() {
                           ></iframe>
                       </div>
                     </DialogContent>
-                  </Dialog>
+                  </Dialog> */}
+                  <Button
+                    onClick={handlePlanClick}
+                    size="lg"
+                    className="w-full bg-[#162660] text-white hover:bg-[#162660e6] text-lg px-8 py-3"
+                    style={{ borderRadius: "5px" }}
+                  >
+                    Plan My Vacation
+                  </Button>
                 </div>
               </div>
             </div>

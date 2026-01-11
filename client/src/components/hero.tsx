@@ -27,6 +27,16 @@ export default function Hero() {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+    // The direct link to your Freshworks Web Form
+  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
+
+  const handlePlanClick = () => {
+    // Option A: Open in a new tab (Recommended so they don't leave your site)
+    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
+    
+    // Option B: Redirect current tab
+    window.location.href = FRESHWORKS_FORM_URL;
+  };
 
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
@@ -70,7 +80,7 @@ export default function Hero() {
           Let's turn your travel dreams into plans
         </p> */}
 
-        <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
           <DialogTrigger asChild>
             <Button
               size="lg"
@@ -86,7 +96,7 @@ export default function Hero() {
                     Lead Form
                 </DialogTitle>
             </DialogHeader>
-              {/* Form iframe */}
+              
               <div className="w-full h-[80vh]">
                   <iframe
                       src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
@@ -98,7 +108,15 @@ export default function Hero() {
                   ></iframe>
               </div>
           </DialogContent>
-        </Dialog>
+        </Dialog> */}
+        <Button
+          onClick={handlePlanClick}
+          size="lg"
+          className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
+          style={{ borderRadius: "5px" }}
+        >
+          Enquire Now
+        </Button>
       </div>
     </section>
   );

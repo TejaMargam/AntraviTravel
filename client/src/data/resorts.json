@@ -4,10 +4,10 @@
     "name": "NH Collection Maldives Reethi Resort",
     "description": "A premium 5-star island escape where natural beauty meets contemporary elegance. Enjoy extraordinary experiences with beachfront dining, vibrant sunsets, live DJ sets, fire shows, and a wide range of sports activities on a pristine natural island.",
     "shortDescription": "Feel the Extraordinary",
-    "tag": "Opening Soon",
+    "tag": "Now Open",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
@@ -54,7 +54,7 @@
       "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹1,77,000 / Couple*",
+    "StartsFrom ": "₹1,77,000 / STC* / Per Couple*",
     "duration": "3 Nights/4 Days",
     "location": "Furanafushi Island, North Malé Atoll",
     "features": [
@@ -90,7 +90,7 @@
       "images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,50,000 / Couple*",
+    "StartsFrom ": "₹2,50,000 / STC* / Per Couple*",
     "duration": "3 Nights/4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -126,7 +126,7 @@
       "images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,00,000 / Couple*",
+    "StartsFrom ": "₹2,00,000 / STC* / Per Couple*",
     "duration": "3 Nights/4 Days",
     "location": "Vaavu Atoll",
     "features": [

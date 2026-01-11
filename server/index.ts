@@ -15,36 +15,35 @@ app.use((req, res, next) => {
   // Content Security Policy - different for development vs production
   const isDevelopment = process.env.NODE_ENV === 'development';
   
-  if (isDevelopment) {
-    // Development CSP - allows HMR and eval for Vite
-    res.setHeader('Content-Security-Policy', 
-      "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://replit.com; " +
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " +
-      "font-src 'self' https://fonts.gstatic.com; https://cdnjs.cloudflare.com;" +
-      "img-src 'self' data: https:; " +
-      "media-src 'self' https://videos.pexels.com; " +
-      "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
-      "object-src 'none'; " +
-      "base-uri 'self'; " +
-      "frame-src 'self' https://forms.zohopublic.in;"
-    );    
-  } else {
-    // Production CSP - stricter security
-    res.setHeader('Content-Security-Policy', 
-      "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; " +
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " +
-      "font-src 'self' https://fonts.gstatic.com; https://cdnjs.cloudflare.com;" +
-      "img-src 'self' data: https:; " +
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; " +
-      "object-src 'none'; " +
-      "base-uri 'self'; " +
-      "frame-src 'self' https://forms.zohopublic.in; " +
-      "media-src 'self' https://videos.pexels.com; "
-
-    );
-  }
+if (isDevelopment) {
+  res.setHeader('Content-Security-Policy', 
+    "default-src 'self'; " +
+    // Added https://*.freshsales.io here
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://replit.com https://*.myfreshworks.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    // Added https://*.freshsales.io here (sometimes they load CSS from there too)
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
+    "img-src 'self' data: https:; " +
+    "media-src 'self' https://videos.pexels.com; " +
+    "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io; " +
+    "object-src 'none'; " +
+    "base-uri 'self'; " +
+    "frame-src 'self' https://*.myfreshworks.com; "
+  );    
+} else {
+  res.setHeader('Content-Security-Policy', 
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.myfreshworks.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
+    "img-src 'self' data: https:; " +
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io; " +
+    "object-src 'none'; " +
+    "base-uri 'self'; " +
+    "frame-src 'self' https://*.myfreshworks.com; " +
+    "media-src 'self' https://videos.pexels.com; "
+  );
+}
   
   // Performance and Caching Headers
   if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
