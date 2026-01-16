@@ -46,13 +46,11 @@ function App() {
     useAnalytics();
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter>
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-          <WhatsAppButton />
-        </TooltipProvider>
-      </WouterRouter>
+      <TooltipProvider>
+        <Toaster />
+        <Router />
+        <WhatsAppButton />
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
