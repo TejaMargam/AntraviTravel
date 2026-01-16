@@ -30,6 +30,9 @@ export default function Destinations() {
   ];
   const resortsData = ["NH Collection Maldives Reethi Resort", "Sheraton Full Moon Resort & Spa", "Dusit 2 Feydhoo Maldives", "NOOE Kanaavashi", "The Westin Maldives Miriandhoo"]
 
+  const baliImage = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=60";
+  const thailandImage = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=60";
+
     // The direct link to your Freshworks Web Form
   const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
 
@@ -61,7 +64,7 @@ export default function Destinations() {
   };
 
   return (
-    <div className="bg-[#F1E4D1]">
+    <div className="bg-white">
       {/* Featured Destinations Section*/}
       <section
         id="destinations"
@@ -73,8 +76,8 @@ export default function Destinations() {
               Featured Destinations
             </h2>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? '-translate-y-4 shadow-3xl scale-105' : ''}`}>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? "-translate-y-4 shadow-3xl scale-105" : ""}`}>
               <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
                 {carouselImages.map((imageSrc, index) => (
                   <img
@@ -82,7 +85,7 @@ export default function Destinations() {
                     src={imageSrc}
                     alt="The Maldives"
                     className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
                     }`}
                     data-testid={`carousel-image-${index}`}
                   />
@@ -90,32 +93,84 @@ export default function Destinations() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 lg:p-12 text-white">
-                {/* make them centered */}
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-center gap-4">
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">The Maldives:</h2>
-                    <h3 className="font-heading text-2xl sm:text-2xl lg:text-4xl font-bold mb-2 sm:mb-4">
-                      {resortsData[currentImageIndex]}
-                    </h3>
-                    <p className="text-sm sm:text-lg lg:text-xl opacity-90 leading-relaxed">
-                      Partnered Resort
-                    </p>
-                    <Link
-                      href="/resorts"
-                      className="hover:text-blue-200 transition-colors"
-                      onClick={handleExploreClick}
-                    >
-                      <div
-                        className="bg-[#162660] hover:bg-[#162660e6 ] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base flex-shrink-0"
-                        style={{ borderRadius: "5px" }}
-                        data-testid="button-explore-resorts"
-                      >
-                        Explore Resorts
-                      </div>
-                    </Link>
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">The Maldives</h2>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                  {resortsData[currentImageIndex]}
+                </p>
+                <Link
+                  href="/destinations/maldives"
+                  className="hover:text-blue-200 transition-colors"
+                  onClick={handleExploreClick}
+                >
+                  <div
+                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                    style={{ borderRadius: "5px" }}
+                    data-testid="button-explore-resorts"
+                  >
+                    Explore Resorts
                   </div>
-                </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
+              <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
+                <img
+                  src={baliImage}
+                  alt="Bali"
+                  className="w-full h-full object-cover absolute inset-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">Bali</h2>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                  Temples, beaches, and culture-packed adventures
+                </p>
+                <Link
+                  href="/destinations/bali"
+                  className="hover:text-blue-200 transition-colors"
+                >
+                  <div
+                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                    style={{ borderRadius: "5px" }}
+                    data-testid="button-explore-bali"
+                  >
+                    Explore Bali
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
+              <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
+                <img
+                  src={thailandImage}
+                  alt="Thailand"
+                  className="w-full h-full object-cover absolute inset-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">Thailand</h2>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                  Island hopping, street food, and iconic beaches
+                </p>
+                <Link
+                  href="/destinations/thailand"
+                  className="hover:text-blue-200 transition-colors"
+                >
+                  <div
+                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                    style={{ borderRadius: "5px" }}
+                    data-testid="button-explore-thailand"
+                  >
+                    Explore Thailand
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -123,7 +178,7 @@ export default function Destinations() {
       </section>
 
       {/* Vacation Description Section */}
-      <section className="py-16 bg-[#F1E4D1]">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
@@ -175,7 +230,7 @@ export default function Destinations() {
       </section>
 
       {/* 3 Steps Section */}
-      <section className="py-8 bg-[#F1E4D1]">
+      <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">

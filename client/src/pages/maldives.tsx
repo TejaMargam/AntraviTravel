@@ -8,12 +8,13 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import resortsData from "@/data/resorts.json";
+import resortsData from "@/data/maldives/resorts.json";
 import FAQ from "@/components/faq";
 import ScrollManager from "@/hooks/ScrollManager";
 import { getImagePath } from "@/utils/paths";
 import { useLocation } from "wouter";
 import Navbar from "@/components/navbar";
+import faqsData from "@/data/maldives/faqs.json";
 
 interface Resort {
   id: string;
@@ -81,23 +82,46 @@ export default function Resorts() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <ScrollManager />
       {/* Header */}
       <Navbar/>
-      <section className="bg-[#F1E4D1] py-4">
-        <div className="text-center">
-          {/* transparent */}
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-transparent">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source
+              src="https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_30fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-blue-900/30"></div>
+        </div>
+
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Maldives Resorts
           </h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl font-light mb-8 tracking-wide">
             Discover our handpicked collection of resorts
           </p>
+          <Button
+            onClick={handlePlanClick}
+            size="lg"
+            className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
+            style={{ borderRadius: "5px" }}
+          >
+            Plan With Antravi
+          </Button>
         </div>
       </section>
       {/* Resorts Grid */}
-      <section className="py-10 bg-[#F1E4D1]">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {resorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,8 +240,8 @@ export default function Resorts() {
       </section>
 
       {/* Maldives FAQ's */}
-      <section className="py-10 bg-[#F1E4D1]">
-        <FAQ />
+      <section className="py-10 bg-white">
+        <FAQ faqsData={faqsData} />
       </section>
 
       {/* Resort Details Dialog */}

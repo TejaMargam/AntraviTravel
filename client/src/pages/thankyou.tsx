@@ -6,7 +6,7 @@ export default function ThankYou() {
     const [, navigate] = useLocation();
   
   return (
-    <div className="min-h-screen bg-warm-white">
+    <div className="min-h-screen bg-white">
       <title>Thank You - Antravi - Luxury Travel Specialists</title>
       <meta name="description" content="Thank you for your booking with Antravi. We look forward to welcoming you to our resorts." />
       
@@ -25,7 +25,7 @@ export default function ThankYou() {
             </p>
           </div>
         </section>
-        <section className="py-20 bg-[#F1E4D1] text-black">
+        <section className="py-20 bg-white text-black">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading text-4xl font-bold mb-6">
               Submission Successful

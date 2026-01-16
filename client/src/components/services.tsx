@@ -10,11 +10,11 @@ export default function Services() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <div className="bg-[#F1E4D1]">
+    <div className="bg-white">
 
 
       {/* Live Your Moments Section */}
-      <section className="pt-16 bg-[#F1E4D1]">
+      <section className="pt-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,6 +20,30 @@ import {
 
 export default function Hero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  const videos = [
+    {
+      src: "https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_30fps.mp4",
+      label: "Maldives",
+    },
+    {
+      src: "https://videos.pexels.com/video-files/4351257/4351257-hd_1920_1080_17fps.mp4",
+      label: "Thailand",
+    },
+    {
+      src: "https://videos.pexels.com/video-files/2949519/2949519-uhd_2560_1440_30fps.mp4",
+      label: "Bali",
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideoIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, [videos.length]);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -42,26 +66,20 @@ export default function Hero() {
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_30fps.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_25fps.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_24fps.mp4"
-            type="video/mp4"
-          />
-        </video>
+        {videos.map((video, index) => (
+          <video
+            key={video.label}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentVideoIndex ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <source src={video.src} type="video/mp4" />
+          </video>
+        ))}
         <div className="absolute inset-0 bg-blue-900/30"></div>
       </div>
 
@@ -76,6 +94,9 @@ export default function Hero() {
         <h1 className="font-heading text-4xl md:text-4xl font-bold mb-6 tracking-tight">
           Let's turn your travel dreams into plans
         </h1>
+        <p className="text-sm md:text-base font-light mb-6 tracking-wide opacity-90">
+          {videos[currentVideoIndex].label}
+        </p>
         {/* <p className="text-2xl md:text-2xl font-light mb-4 tracking-wide">
           Let's turn your travel dreams into plans
         </p> */}

@@ -12,7 +12,9 @@ Disallow: /_internal/
 # Allow important SEO pages
 Allow: /
 Allow: /about
-Allow: /resorts
+Allow: /destinations/maldives
+Allow: /destinations/bali
+Allow: /destinations/thailand
 Allow: /contact
 Allow: /privacy
 Allow: /terms

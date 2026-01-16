@@ -21,7 +21,7 @@ export default function Testimonials() {
   const testimonials = reviewsData;
 
   return (
-    <section className="py-16 bg-[#F1E4D1]">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
@@ -102,7 +102,7 @@ export default function Testimonials() {
           </div>
         ) : (
           <div className="mt-16 text-center">
-            <style jsx global>{`
+            <style>{`
               .swiper-pagination-bullet {
                 background: #162660 !important;
                 opacity: 0.3;

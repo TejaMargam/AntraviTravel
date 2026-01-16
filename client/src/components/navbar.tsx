@@ -66,7 +66,7 @@ export default function Navbar() {
               onClick={handleHomeClick}
               className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
             >
-              <img src="Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{cursor:'pointer'}}/>
+              <img src="/Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{cursor:'pointer'}}/>
             </a>
           </div>
 

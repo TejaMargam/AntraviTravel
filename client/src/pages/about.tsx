@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-warm-white">
+    <div className="min-h-screen bg-white">
       <title>About Antravi - Luxury Travel Specialists</title>
       <meta name="description" content="Learn about Antravi's passion for creating extraordinary luxury travel experiences. Discover our story and commitment to exceptional service." />
       
@@ -23,7 +23,7 @@ export default function About() {
         </section>
 
         {/* Story Section */}
-        <section className="py-20 bg-[#F1E4D1]">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">
@@ -60,7 +60,7 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-[#F1E4D1]">
+        <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">

@@ -1,4 +1,3 @@
-import faqsData from "@/data/faqs.json";
 import {
   Accordion,
   AccordionItem,
@@ -6,7 +5,13 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-export default function FAQ() {
+type FaqItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+export default function FAQ({ faqsData }: { faqsData: FaqItem[] }) {
   const faqs = faqsData;
 
   return (
@@ -24,7 +29,7 @@ export default function FAQ() {
         </AccordionTrigger>
         <AccordionContent className="px-6 pb-6 space-y-4">
           {faqs.map((faq) => (
-            <div key={faq.id} className="bg-gray-50 rounded-xl p-4">
+            <div key={faq.id} className="bg-white rounded-xl p-4">
               <h3 className="text-base font-medium text-black mb-2">
                 {faq.question}
               </h3>

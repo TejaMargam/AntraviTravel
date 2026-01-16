@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-warm-white">
+    <div className="min-h-screen bg-white">
       <title>Contact Antravi - Plan Your Luxury Travel Experience</title>
       <meta name="description" content="Get in touch with Antravi's luxury travel specialists. Start planning your extraordinary journey today." />
       
@@ -24,7 +24,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 bg-[#F1E4D1]">
+        <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <div className="text-center">
