@@ -13,7 +13,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon, Check, User, MapPin, Calendar as CalendarIcon2, DollarSign, Heart, Plane } from "lucide-react";
+import { CalendarIcon, Check, User, MapPin, Calendar as CalendarIcon2, DollarSign, Heart, Plane, Globe, Clock, Users, Map } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 
@@ -199,9 +199,19 @@ export default function TravelForm({ isOpen, onClose }: TravelFormProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold text-[#162660]">
-            Plan Your Dream Vacation
-          </DialogTitle>
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                <Plane className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <DialogTitle className="text-center text-2xl font-bold text-[#162660]">
+              Plan Your Dream Vacation
+            </DialogTitle>
+            <p className="text-center text-gray-600 text-sm mt-2">
+              Let us create your perfect travel experience with personalized itineraries and exclusive deals
+            </p>
+          </div>
         </DialogHeader>
 
         {/* Progress Steps */}
@@ -328,9 +338,24 @@ export default function TravelForm({ isOpen, onClose }: TravelFormProps) {
                   <SelectValue placeholder="Select your destination" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="maldives">Maldives</SelectItem>
-                  <SelectItem value="thailand">Thailand</SelectItem>
-                  <SelectItem value="bali">Bali</SelectItem>
+                  <SelectItem value="maldives">
+                    <div className="flex items-center gap-2">
+                      <Globe className="w-4 h-4 text-blue-500" />
+                      <span>Maldives</span>
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="thailand">
+                    <div className="flex items-center gap-2">
+                      <Map className="w-4 h-4 text-green-500" />
+                      <span>Thailand</span>
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="bali">
+                    <div className="flex items-center gap-2">
+                      <Heart className="w-4 h-4 text-pink-500" />
+                      <span>Bali</span>
+                    </div>
+                  </SelectItem>
                 </SelectContent>
               </Select>
               {errors.destination && (
@@ -353,7 +378,10 @@ export default function TravelForm({ isOpen, onClose }: TravelFormProps) {
                   <SelectContent className="bg-white">
                     {[1, 2, 3, 4, 5, 6].map((num) => (
                       <SelectItem key={num} value={num.toString()}>
-                        {num} {num === 1 ? "Adult" : "Adults"}
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-blue-500" />
+                          <span>{num} {num === 1 ? "Adult" : "Adults"}</span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -465,20 +493,43 @@ export default function TravelForm({ isOpen, onClose }: TravelFormProps) {
                     <SelectValue placeholder="Select budget" />
                   </SelectTrigger>
                   <SelectContent className="bg-white">
-                    <SelectItem value="1-2-lakhs">1-2 Lakhs</SelectItem>
-                    <SelectItem value="2-3-lakhs">2-3 Lakhs</SelectItem>
-                    <SelectItem value="3-4-lakhs">3-4 Lakhs</SelectItem>
-                    <SelectItem value="4-5-lakhs">4-5 Lakhs</SelectItem>
-                    <SelectItem value="5-plus-lakhs">5+ Lakhs</SelectItem>
+                    <SelectItem value="1-2-lakhs">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-500" />
+                        <span>1-2 Lakhs</span>
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="2-3-lakhs">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-500" />
+                        <span>2-3 Lakhs</span>
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="3-4-lakhs">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-500" />
+                        <span>3-4 Lakhs</span>
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="4-5-lakhs">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-500" />
+                        <span>4-5 Lakhs</span>
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="5-plus-lakhs">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-500" />
+                        <span>5+ Lakhs</span>
+                      </div>
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 {errors.preferredBudget && (
                   <p className="text-red-500 text-xs">{errors.preferredBudget}</p>
                 )}
               </div>
-            </div>
 
-            <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label className="text-sm font-medium">
                   Special Occasion, if any
@@ -513,19 +564,19 @@ export default function TravelForm({ isOpen, onClose }: TravelFormProps) {
                   <p className="text-red-500 text-xs">{errors.departureCity}</p>
                 )}
               </div>
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="anyRequest" className="text-sm font-medium">
-                Any Request
-              </Label>
-              <Textarea
-                id="anyRequest"
-                value={formData.anyRequest}
-                onChange={(e) => handleInputChange("anyRequest", e.target.value)}
-                placeholder="Tell us about any special requests or preferences..."
-                rows={3}
-              />
+              <div className="space-y-2">
+                <Label htmlFor="anyRequest" className="text-sm font-medium">
+                  Any Request
+                </Label>
+                <Textarea
+                  id="anyRequest"
+                  value={formData.anyRequest}
+                  onChange={(e) => handleInputChange("anyRequest", e.target.value)}
+                  placeholder="Tell us about any special requests or preferences..."
+                  rows={3}
+                />
+              </div>
             </div>
           </div>
         )}
