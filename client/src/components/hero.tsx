@@ -17,6 +17,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { TravelForm } from "./TravelForm";
 
 export default function Hero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -59,7 +60,8 @@ export default function Hero() {
     // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
     
     // Option B: Redirect current tab
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   return (
@@ -139,6 +141,7 @@ export default function Hero() {
           Enquire Now
         </Button>
       </div>
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </section>
   );
 }

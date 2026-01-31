@@ -1,8 +1,11 @@
 import { DialogContent } from "@radix-ui/react-dialog";
 import Enquiry from "./enquiry";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { TravelForm } from "./TravelForm";
 
 export default function ContactCTA() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
     // The direct link to your Freshworks Web Form
   const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
@@ -12,7 +15,8 @@ export default function ContactCTA() {
     // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
     
     // Option B: Redirect current tab
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
   return (
     <section id="contact" className="pt-8 pb-16 text-black bg-white">
@@ -32,6 +36,7 @@ export default function ContactCTA() {
           Start Planning with Antravi
         </Button>
       </div>
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </section>
   );
 }

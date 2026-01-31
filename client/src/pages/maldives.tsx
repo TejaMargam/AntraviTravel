@@ -15,6 +15,7 @@ import { getImagePath } from "@/utils/paths";
 import { useLocation } from "wouter";
 import Navbar from "@/components/navbar";
 import faqsData from "@/data/maldives/faqs.json";
+import { TravelForm } from "@/components/TravelForm";
 
 interface Resort {
   id: string;
@@ -46,7 +47,8 @@ export default function Resorts() {
     // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
     
     // Option B: Redirect current tab
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   const renderStars = (rating: number) => {
@@ -426,6 +428,7 @@ export default function Resorts() {
           )}
         </DialogContent>
       </Dialog>
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </div>
   );
 }

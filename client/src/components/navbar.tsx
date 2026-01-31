@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { TravelForm } from "./TravelForm";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +34,8 @@ export default function Navbar() {
     // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
     
     // Option B: Redirect current tab
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   const scrollToDestinations = () => {
@@ -190,6 +192,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
+        <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
       </div>
     </nav>
   );

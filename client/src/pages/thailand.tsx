@@ -4,13 +4,17 @@ import { Button } from "@/components/ui/button";
 import ScrollManager from "@/hooks/ScrollManager";
 import FAQ from "@/components/faq";
 import faqsData from "@/data/thailand/faqs.json";
+import { useState } from "react";
+import { TravelForm } from "@/components/TravelForm";
 
 export default function Thailand() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const FRESHWORKS_FORM_URL =
     "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
 
   const handlePlanClick = () => {
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   return (
@@ -300,6 +304,7 @@ export default function Thailand() {
       </main>
 
       <Footer />
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </div>
   );
 }

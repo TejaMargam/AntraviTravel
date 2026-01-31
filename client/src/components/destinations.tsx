@@ -19,16 +19,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { getImagePath } from "@/utils/paths";
+import { TravelForm } from "./TravelForm";
 
 export default function Destinations() {
   const carouselImages = [
     getImagePath("images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop"),
-    getImagePath("images/maldives/resorts/sheraton/sheraton-image-9.webp?w=800&h=600&fit=crop"),
+    // getImagePath("images/maldives/resorts/sheraton/sheraton-image-9.webp?w=800&h=600&fit=crop"),
     getImagePath("images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop"),
     getImagePath("images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop"),
     getImagePath("images/maldives/resorts/westin/westin-image-7.webp?w=800&h=600&fit=crop")
   ];
-  const resortsData = ["NH Collection Maldives Reethi Resort", "Sheraton Full Moon Resort & Spa", "Dusit 2 Feydhoo Maldives", "NOOE Kanaavashi", "The Westin Maldives Miriandhoo"]
+  const resortsData = ["NH Collection Maldives Reethi Resort", 
+    // "Sheraton Full Moon Resort & Spa", 
+    "Dusit 2 Feydhoo Maldives", "NOOE Kanaavashi", "The Westin Maldives Miriandhoo"]
 
   const baliImage = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=60";
   const thailandImage = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=60";
@@ -41,7 +44,8 @@ export default function Destinations() {
     // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
     
     // Option B: Redirect current tab
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -311,6 +315,7 @@ export default function Destinations() {
           </div> */}
         </div>
       </section>
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </div>
   );
 }

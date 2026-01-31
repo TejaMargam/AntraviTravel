@@ -25,7 +25,7 @@ if (isDevelopment) {
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
     "img-src 'self' data: https: https://images.unsplash.com https://plus.unsplash.com; " +
     "media-src 'self' https://videos.pexels.com; " +
-    "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io; " +
+    "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io https://facebookleadimportapi.traviyo.com https://ljivhzufmvrrldkzeiwg.supabase.co; " +
     "object-src 'none'; " +
     "base-uri 'self'; " +
     "frame-src 'self' https://*.myfreshworks.com; "
@@ -37,7 +37,7 @@ if (isDevelopment) {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
     "img-src 'self' data: https: https://images.unsplash.com https://plus.unsplash.com; " +
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io; " +
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io https://facebookleadimportapi.traviyo.com https://ljivhzufmvrrldkzeiwg.supabase.co; " +
     "object-src 'none'; " +
     "base-uri 'self'; " +
     "frame-src 'self' https://*.myfreshworks.com; " +

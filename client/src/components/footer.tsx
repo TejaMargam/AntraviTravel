@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Contact Information, Social Media, Office Address, Terms and conditions*/}
         <div className="flex justify-around text-center md:text-left flex-wrap pt-4 gap-4">
           <div className="flex items-center justify-center">
-            <img src="Antravi_Logo_W.png" alt="Antravi" width={150}/>
+            <img src="/Antravi_Logo_W.png" alt="Antravi" width={150}/>
           </div>
 
           <div>

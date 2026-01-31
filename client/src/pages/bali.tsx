@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import ScrollManager from "@/hooks/ScrollManager";
 import FAQ from "@/components/faq";
 import faqsData from "@/data/bali/faqs.json";
+import { useState } from "react";
+import { TravelForm } from "@/components/TravelForm";
 
 type Place = {
   title: string;
@@ -12,11 +14,13 @@ type Place = {
 };
 
 export default function Bali() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const FRESHWORKS_FORM_URL =
     "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
 
   const handlePlanClick = () => {
-    window.location.href = FRESHWORKS_FORM_URL;
+    // window.location.href = FRESHWORKS_FORM_URL;
+    setIsFormOpen(true);
   };
 
   const places: Place[] = [
@@ -285,6 +289,7 @@ export default function Bali() {
       </main>
 
       <Footer />
+      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
     </div>
   );
 }
