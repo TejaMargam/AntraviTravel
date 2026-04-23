@@ -33,18 +33,10 @@ export default function Destinations() {
     // "Sheraton Full Moon Resort & Spa", 
     "Dusit 2 Feydhoo Maldives", "NOOE Kanaavashi", "The Westin Maldives Miriandhoo"]
 
-  const baliImage = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=60";
-  const thailandImage = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=60";
-
-    // The direct link to your Freshworks Web Form
-  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
+  const baliImage = "/images/bali/bali-cover.webp?w=800&h=600&fit=crop";
+  const thailandImage = "/images/thailand/thailand-cover.webp?w=800&h=600&fit=crop";
 
   const handlePlanClick = () => {
-    // Option A: Open in a new tab (Recommended so they don't leave your site)
-    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
-    
-    // Option B: Redirect current tab
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
 

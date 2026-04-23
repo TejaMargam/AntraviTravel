@@ -26,15 +26,7 @@ export default function Navbar() {
 
   const [, navigate] = useLocation();
 
-  // The direct link to your Freshworks Web Form
-  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
-
   const handlePlanClick = () => {
-    // Option A: Open in a new tab (Recommended so they don't leave your site)
-    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
-    
-    // Option B: Redirect current tab
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
 
@@ -64,28 +56,28 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 w-full min-w-0">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 min-w-0">
-            <a
-              onClick={handleHomeClick}
+            <Link 
+              href="/"
               className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
             >
               <img src="/Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{cursor:'pointer'}}/>
-            </a>
+            </Link>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={scrollToDestinations}
+            <Link 
+              href="/#destinations"
               className="text-white hover:text-black font-medium transition-colors"
             >
               Destinations
-            </button>
-            <button
-              onClick={scrollToContact}
+            </Link>
+            <Link 
+              href="/contact"
               className="text-white hover:text-black font-medium transition-colors"
             >
               Contact
-            </button>
+            </Link>
             {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
               <DialogTrigger asChild>
                 <Button
@@ -120,6 +112,7 @@ export default function Navbar() {
               size="lg"
               className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
               style={{ borderRadius: "5px" }}
+              aria-label="Start planning your trip with Antravi"
             >
               Plan With Antravi
             </Button>
@@ -130,6 +123,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white hover:text-white p-2"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
             >
               <i
                 className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-lg`}
@@ -142,18 +137,20 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t w-full overflow-hidden">
             <div className="px-3 py-4 space-y-4 w-full">
-              <button
-                onClick={scrollToDestinations}
+              <Link 
+                href="/#destinations"
                 className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Destinations
-              </button>
-              <button
-                onClick={scrollToContact}
+              </Link>
+              <Link 
+                href="/contact"
                 className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </button>
+              </Link>
               {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
                 <DialogTrigger asChild>
                   <Button
@@ -186,6 +183,7 @@ export default function Navbar() {
               <Button
                 onClick={handlePlanClick}
                 className="w-full bg-[#162660] text-white"
+                aria-label="Start planning your trip with Antravi"
               >
                 Plan With Antravi
               </Button>

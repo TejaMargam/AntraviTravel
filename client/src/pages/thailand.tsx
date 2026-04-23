@@ -9,19 +9,18 @@ import { TravelForm } from "@/components/TravelForm";
 
 export default function Thailand() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const FRESHWORKS_FORM_URL =
-    "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
 
   const handlePlanClick = () => {
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-white">
+      {/* SEO H1 Heading */}
+      <h1 className="sr-only">Thailand Tour Packages & Private Excursions 2026</h1>
       <ScrollManager />
       <title>
-        Thailand Tour Packages 2026 – Bangkok, Pattaya, Phuket &amp; Krabi |
+        Thailand Tour Packages 2026 - Bangkok, Pattaya, Phuket &amp; Krabi |
         Thailand vacation
       </title>
       <meta
@@ -42,16 +41,17 @@ export default function Thailand() {
               className="w-full h-full object-cover"
             >
               <source
-                src="https://videos.pexels.com/video-files/4351257/4351257-hd_1920_1080_17fps.mp4"
+                src="/videos/thailand.mp4"
                 type="video/mp4"
               />
+              <track kind="captions" src="/captions/thailand.vtt" srcLang="en" label="English captions" default />
             </video>
             <div className="absolute inset-0 bg-blue-900/30"></div>
           </div>
 
           <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              Thailand Tour Packages – Bangkok, Pattaya, Phuket &amp; Krabi
+              Thailand Tour Packages - Bangkok, Pattaya, Phuket &amp; Krabi
             </h1>
             <p className="text-lg md:text-xl font-light mb-8 tracking-wide">
               Thailand vacation Packages - By Antravi
@@ -74,14 +74,14 @@ export default function Thailand() {
                 Thailand vacation Packages - By Antravi
               </h2>
               <p className="text-lg text-gray-700 max-w-5xl mx-auto">
-                Thailand is one of Asia’s most loved destinations a perfect mix of
+                Thailand is one of Asia's most loved destinations a perfect mix of
                 luxury brands, nightlife, food, islands, temples, culture, and
                 world-class hospitality. Whether you want beach relaxation, city
                 shopping, nightlife, adventure, or a romantic honeymoon, Thailand
                 delivers it all effortlessly.
               </p>
               <p className="text-lg text-gray-700 max-w-5xl mx-auto mt-4">
-                At Antravi, your Thailand vacation isn’t just a package — It’s a
+                At Antravi, your Thailand vacation isn't just a package — It's a
                 curated experience designed exactly around your preferences.
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function Thailand() {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=60"
+                    src="/images/thailand/bangkok.webp?auto=format&fit=crop&w=1600&q=60"
                     alt="Bangkok city at night Thailand tour package"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -137,7 +137,7 @@ export default function Thailand() {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1596879857570-7b6b9018bcb6?auto=format&fit=crop&w=1600&q=60"
+                    src="/images/thailand/pattaya.webp?auto=format&fit=crop&w=1600&q=60"
                     alt="Pattaya coral island water sports tour Thailand"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -167,7 +167,7 @@ export default function Thailand() {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1676220022985-f8de09546464?auto=format&fit=crop&w=1600&q=60"
+                    src="/images/thailand/phuket.webp?auto=format&fit=crop&w=1600&q=60"
                     alt="Phuket Phi Phi Island tour package Antravi"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -175,10 +175,10 @@ export default function Thailand() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-heading text-xl font-bold text-black mb-2">
-                    Phuket – Luxury Resorts &amp; Island Experiences
+                    Phuket - Luxury Resorts &amp; Island Experiences
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Phuket is Thailand’s most luxurious island destination, ideal
+                    Phuket is Thailand's most luxurious island destination, ideal
                     for honeymoons and upscale vacations. Known for Patong Beach,
                     Kata Beach, and Karon Beach, Phuket offers premium shopping,
                     nightlife, beach clubs, and gourmet dining.
@@ -196,7 +196,7 @@ export default function Thailand() {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
-                    src="https://plus.unsplash.com/premium_photo-1661962958462-9e52fda9954d?auto=format&fit=crop&w=1600&q=60"
+                    src="/images/thailand/krabi.webp?auto=format&fit=crop&w=1600&q=60"
                     alt="Krabi 4 Island tour Thailand holiday"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -204,7 +204,7 @@ export default function Thailand() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-heading text-xl font-bold text-black mb-2">
-                    Krabi – Peaceful, Scenic &amp; Relaxing
+                    Krabi - Peaceful, Scenic &amp; Relaxing
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Krabi is the perfect destination for travelers who want a calm
@@ -227,7 +227,7 @@ export default function Thailand() {
 
             <div className="mt-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <h3 className="font-heading text-2xl font-bold text-black mb-4">
-                Thailand Itinerary – 5 to 7 Days Travel Plan
+                Thailand Itinerary - 5 to 7 Days Travel Plan
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 A well-planned itinerary helps make the most of your Thailand
@@ -259,7 +259,7 @@ export default function Thailand() {
                 <li>Private transfers</li>
                 <li>Transparent pricing</li>
                 <li>Dedicated travel consultant</li>
-                <li>24×7 assistance before &amp; during vacation</li>
+                <li>24x7 assistance before &amp; during vacation</li>
               </ul>
             </div>
 

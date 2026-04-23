@@ -14,7 +14,7 @@
       "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,75,000 / STC* / Per Couple*",
+    "StartsFrom ": "₹1,00,000 / STC* / Per Adult*",
     "duration": "03 Nights / 04 Days",
     "location": "Baa Atoll",
     "features": [
@@ -31,7 +31,9 @@
       "Evening Entertainment & Fire Shows",
       "Water Sports",
       "Fitness & Sports Courts",
-      "Private Beach Access"
+      "Private Beach Access",
+      "Breakfast + Dinner Included",
+      "Round-trip Domestic + Speed Boat Transfers"
     ],
     "roomTypes": [
       "Sunset Beach Villa",
@@ -54,7 +56,7 @@
       "images/maldives/resorts/dusit/dusit-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,50,000 / STC* / Per Couple*",
+    "StartsFrom ": "₹1,15,000 / STC* / Per Adult*",
     "duration": "3 Nights/4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -67,7 +69,8 @@
       "Complimentary WIFI",
       "Shared Speed Boat Airport Transfers",
       "All Meals Included",
-      "Infinity Pool with Jacuzzi"
+      "Infinity Pool with Jacuzzi",
+      "Round-trip Speedboat Transfers"
     ],
     "roomTypes": [
       "Beach Villa",
@@ -90,7 +93,7 @@
       "images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "₹2,00,000 / STC* / Per Couple*",
+    "StartsFrom ": "₹1,00,000 / STC* / Per Adult*",
     "duration": "3 Nights/4 Days",
     "location": "Vaavu Atoll",
     "features": [
@@ -102,7 +105,8 @@
     "amenities": [
       "Complimentary WIFI",
       "Kids Club Facilities",
-      "Speed Boat Transfers"
+      "Round-trip Speed Boat Transfers",
+      "Breakfast + Dinner Included"
     ],
     "roomTypes": [
       "One Bed Room Beach Villa",
@@ -110,6 +114,43 @@
       "Duplex Over Water villa with Private Pool",
       "2N One Bed Room Beach Villa  + Duplex Over Water villa with Private Pool",
       "2N One Bed Room Sun Set Beach villa + Duplex Over Water villa with Private Pool"
+    ]
+  },
+  {
+    "id": "Sheraton Full Moon Resort & Spa",
+    "name": "Sheraton Maldives Full Moon Resort & Spa",
+    "description": "A lush family-friendly island escape just 15 minutes by speedboat from Velana International Airport. The resort features villas, cottages and overwater retreats surrounded by white sandy beaches and coral reefs, with award-winning spa, multiple dining venues, kid-friendly amenities and a vibrant lagoon setting.",
+    "shortDescription": "Island Paradise",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹95,000 / STC* / Per Adult*",
+    "duration": "3 Nights/4 Days",
+    "location": "Furanafushi Island, North Malé Atoll",
+    "features": [
+      "Secluded Island",
+      "Tennis Court",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Water Sports",
+      "Family-Friendly Activities",
+      "Round-trip Speed Boat Transfers",
+      "Breakfast + Dinner Included"
+    ],
+    "roomTypes": [
+      "Deluxe Room / Garden View",
+      "Beachfront Cottage",
+      "Ocean Pool Villa",
+      "Overwater Villa With Pool"
     ]
   },
   {
@@ -147,6 +188,200 @@
       "Beach Villa Pool",
       "Over Water villa Pool",
       "Deluxe Beach villa pool"
+    ]
+  },
+  {
+    "id": "SAii Lagoon Maldives, Curio Collection by Hilton",
+    "name": "SAii Lagoon Maldives, Curio Collection by Hilton",
+    "description": "A vibrant island escape offering relaxed luxury with stylish beachfront and overwater villas, lively bars, diverse dining venues, and unique experiences surrounded by the turquoise lagoons of the Maldives.",
+    "shortDescription": "Stylish Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/saii/saii-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "",
+    "location": "Maldives",
+
+    "features": [
+      "Pool Bar",
+      "Gelato Bar",
+      "Swim Up Bar"
+    ],
+
+    "amenities": [
+      "Maldives' First Padel Tennis Court",
+      "14 Dining Venues with Western to Asian Flavors",
+      "Organic Garden"
+    ],
+
+    "roomTypes": [
+      "Beach Room with Pool",
+      "Over Water Villa",
+      "2BR Family Beach Villa with Pool"
+    ]
+  },
+  {
+    "id": "Arrival Beach Hotel & Spa",
+    "name": "Arrival Beach Hotel & Spa",
+    "description": "A relaxing beachside hotel offering comfortable stays with scenic views, exciting marine experiences, and convenient speedboat transfers. Perfect for travelers looking for a short Maldives getaway with snorkeling adventures and dolphin cruises.",
+    "shortDescription": "Relaxed Beachside Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/arrival/arrival-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹50,000 per adult",
+    "duration": "3 Nights / 4 Days",
+    "location": "Maldives",
+
+    "features": [
+      "Breakfast + Dinner Included",
+      "Superior Room with Mini Balcony View",
+      "Return Combined Speed Boat Transfer"
+    ],
+
+    "amenities": [
+      "Snorkelling with Nurse Sharks & Stingrays",
+      "Lucky Dolphin Cruise",
+      "Beach Access",
+      "Water Activities"
+    ],
+
+    "roomTypes": [
+      "Superior Room with Mini Balcony View"
+    ]
+  },
+  {
+    "id": "Hard Rock Hotel Maldives",
+    "name": "Hard Rock Hotel Maldives",
+    "description": "A vibrant island getaway packed with music, style, and tropical energy. Enjoy unforgettable experiences with lively poolside vibes, iconic dining, and signature wellness in a resort designed for travelers who want fun, comfort, and entertainment in one place.",
+    "shortDescription": "Tropical Experience You Won't Forget",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/hardRock/hardRock-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Maldives",
+
+    "features": [
+      "Pool Bar with Underwater Stools & Tunes",
+      "Hard Rock Cafe",
+      "Rock Spa"
+    ],
+
+    "amenities": [
+      "Complimentary WIFI",
+      "Pool Bar",
+      "Signature Spa Experience",
+      "Dining & Entertainment"
+    ],
+
+    "roomTypes": [
+      "Silver Sky Studio",
+      "Gold Beach Pool Villa",
+      "Platinum Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "OBLU XPERIENCE Ailafushi",
+    "name": "OBLU XPERIENCE Ailafushi",
+    "description": "A lively all-inclusive island escape just minutes from Malé Airport, offering fun-filled dining, entertainment, family-friendly facilities, and vibrant leisure experiences. Perfect for travelers looking for convenience, activity, and great value in the Maldives.",
+    "shortDescription": "Fun All-Inclusive Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/obluAila/obluAila-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on request",
+    "duration": "3 Nights / 4 Days",
+    "location": "15 Minutes from Malé Airport",
+
+    "features": [
+      "All Inclusive Resort",
+      "Unique Food Truck Dining Experience",
+      "X360 Bar, Pool, Beach and Sports Bar",
+      "Under Ocean Restaurant",
+      "Kids Club with Pool",
+      "Live Band & DJ"
+    ],
+
+    "amenities": [
+      "Complimentary WIFI",
+      "Over Water Gym",
+      "Tennis Court",
+      "Football Pitch",
+      "Kids Club",
+      "Pool Access"
+    ],
+
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "OBLU SELECT Sangeli",
+    "name": "OBLU SELECT Sangeli",
+    "description": "A luxurious 5-star private island resort in North Malé Atoll, offering stylish villas, scenic sunset experiences, live entertainment, and effortless speedboat transfers for a premium Maldives holiday.",
+    "shortDescription": "Private Island Luxury Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/obluSelect/obluSelect-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluSelect/obluSelect-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluSelect/obluSelect-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluSelect/obluSelect-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluSelect/obluSelect-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluSelect/obluSelect-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+
+    "features": [
+      "5 Star Private Island Resort",
+      "Speed Boat Transfers",
+      "Sunset Bar",
+      "Sunset Fishing",
+      "Live Music Performances"
+    ],
+
+    "amenities": [
+      "Complimentary WIFI",
+      "Private Island Experience",
+      "Live Entertainment",
+      "Boat Transfers"
+    ],
+
+    "roomTypes": [
+      "Beach Villa",
+      "Deluxe Beach Pool Villa",
+      "Water Villa",
+      "Deluxe Over Water Pool Villa"
     ]
   }
 ]

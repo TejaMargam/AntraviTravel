@@ -7,15 +7,7 @@ import { TravelForm } from "./TravelForm";
 export default function ContactCTA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-    // The direct link to your Freshworks Web Form
-  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
-
   const handlePlanClick = () => {
-    // Option A: Open in a new tab (Recommended so they don't leave your site)
-    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
-    
-    // Option B: Redirect current tab
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
   return (

@@ -4,6 +4,17 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
+// 301 Redirects for www/non-www
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host && host.startsWith('www.')) {
+    const nonWwwHost = host.replace('www.', '');
+    const redirectUrl = `https://${nonWwwHost}${req.originalUrl}`;
+    return res.redirect(301, redirectUrl);
+  }
+  next();
+});
+
 // Security Headers Middleware
 app.use((req, res, next) => {
   // HTTPS and Security Headers
@@ -18,29 +29,27 @@ app.use((req, res, next) => {
 if (isDevelopment) {
   res.setHeader('Content-Security-Policy', 
     "default-src 'self'; " +
-    // Added https://*.freshsales.io here
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://replit.com https://*.myfreshworks.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
-    // Added https://*.freshsales.io here (sometimes they load CSS from there too)
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://replit.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " +
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
     "img-src 'self' data: https: https://images.unsplash.com https://plus.unsplash.com; " +
     "media-src 'self' https://videos.pexels.com; " +
-    "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io https://facebookleadimportapi.traviyo.com https://ljivhzufmvrrldkzeiwg.supabase.co; " +
+    "connect-src 'self' ws: wss: https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://facebookleadimportapi.traviyo.com https://hook.eu1.make.com; " +
     "object-src 'none'; " +
     "base-uri 'self'; " +
-    "frame-src 'self' https://*.myfreshworks.com; "
+    "frame-src 'self'; "
   );    
 } else {
   res.setHeader('Content-Security-Policy', 
     "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.myfreshworks.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://*.freshsales.io; " +
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.fw-cdn.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " +
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
     "img-src 'self' data: https: https://images.unsplash.com https://plus.unsplash.com; " +
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.freshsales.io https://facebookleadimportapi.traviyo.com https://ljivhzufmvrrldkzeiwg.supabase.co; " +
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://facebookleadimportapi.traviyo.com https://hook.eu1.make.com; " +
     "object-src 'none'; " +
     "base-uri 'self'; " +
-    "frame-src 'self' https://*.myfreshworks.com; " +
+    "frame-src 'self'; " +
     "media-src 'self' https://videos.pexels.com; "
   );
 }
@@ -49,14 +58,14 @@ if (isDevelopment) {
   if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year for static assets
   } else {
-    // For HTML pages and SPA routes that serve HTML (non-asset requests)
-    const acceptsHtml = req.headers.accept && req.headers.accept.includes('text/html');
-    const isApiRoute = req.path.startsWith('/api');
-    
-    if (acceptsHtml && !isApiRoute) {
-      res.setHeader('Cache-Control', 'no-cache, must-revalidate'); // Force revalidation for HTML/SPA routes
-    }
+    // Better caching for HTML pages
+    res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate'); // 1 hour for HTML
   }
+  
+  // Compression and performance headers
+  res.setHeader('Vary', 'Accept-Encoding');
+  res.setHeader('Keep-Alive', 'timeout=5, max=1000');
+  res.removeHeader('X-Powered-By'); // Remove server signature for security
   
   next();
 });

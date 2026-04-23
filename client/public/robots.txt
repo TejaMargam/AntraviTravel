@@ -2,19 +2,9 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: /sitemap.xml
+Sitemap: https://antravi.com/sitemap.xml
 
 # Disallow admin or sensitive areas
 Disallow: /api/
 Disallow: /admin/
 Disallow: /_internal/
-
-# Allow important SEO pages
-Allow: /
-Allow: /about
-Allow: /destinations/maldives
-Allow: /destinations/bali
-Allow: /destinations/thailand
-Allow: /contact
-Allow: /privacy
-Allow: /terms

@@ -71,7 +71,7 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
-        heading: ["Playfair Display", "serif"],
+        heading: ["Cormorant Garamond", "serif"],
       },
       keyframes: {
         "accordion-down": {

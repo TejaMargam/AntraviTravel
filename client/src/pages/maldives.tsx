@@ -39,15 +39,7 @@ export default function Resorts() {
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-    // The direct link to your Freshworks Web Form
-  const FRESHWORKS_FORM_URL = "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
-
   const handlePlanClick = () => {
-    // Option A: Open in a new tab (Recommended so they don't leave your site)
-    // window.open(FRESHWORKS_FORM_URL, '_blank', 'noopener,noreferrer');
-    
-    // Option B: Redirect current tab
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
 
@@ -98,9 +90,10 @@ export default function Resorts() {
             className="w-full h-full object-cover"
           >
             <source
-              src="https://videos.pexels.com/video-files/1675427/1675427-hd_1920_1080_30fps.mp4"
+              src="/videos/maldives.mp4"
               type="video/mp4"
             />
+            <track kind="captions" src="/captions/maldives.vtt" srcLang="en" label="English captions" default />
           </video>
           <div className="absolute inset-0 bg-blue-900/30"></div>
         </div>

@@ -7,66 +7,12 @@ import faqsData from "@/data/bali/faqs.json";
 import { useState } from "react";
 import { TravelForm } from "@/components/TravelForm";
 
-type Place = {
-  title: string;
-  description: string;
-  image: string;
-};
-
 export default function Bali() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const FRESHWORKS_FORM_URL =
-    "https://antraviprivatelimited.myfreshworks.com/crm/sales/web_forms/1b242fefa94aa8cd060f4b81be4befd03bc011fc84f8a1490fa433e1abcc364b/form.html";
 
   const handlePlanClick = () => {
-    // window.location.href = FRESHWORKS_FORM_URL;
     setIsFormOpen(true);
   };
-
-  const places: Place[] = [
-    {
-      title: "Ubud",
-      description:
-        "Rice terraces, art markets, and serene jungle stays in Bali’s cultural heart.",
-      image:
-        "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=1600&q=60",
-    },
-    {
-      title: "Uluwatu",
-      description:
-        "Clifftop sunsets, surf breaks, and the iconic Uluwatu Temple overlooking the sea.",
-      image:
-        "https://images.unsplash.com/photo-1591624197700-6fc997314981?auto=format&fit=crop&w=1600&q=60",
-    },
-    {
-      title: "Nusa Penida",
-      description:
-        "Dramatic coastal viewpoints, turquoise bays, and day trips made effortless.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1668883189152-d771c402c385?auto=format&fit=crop&w=1600&q=60",
-    },
-    {
-      title: "Seminyak",
-      description:
-        "Beach clubs, boutique shopping, and stylish stays for a vibrant Bali escape.",
-      image:
-        "https://images.unsplash.com/photo-1552272492-3053fbacbf4b?auto=format&fit=crop&w=1600&q=60",
-    },
-    {
-      title: "Tegallalang Rice Terraces",
-      description:
-        "Picture-perfect terraces and scenic walks—an iconic Bali landscape.",
-      image:
-        "https://images.unsplash.com/photo-1715755455989-76413081ad10?auto=format&fit=crop&w=1600&q=60",
-    },
-    {
-      title: "Tanah Lot",
-      description:
-        "A sea temple at golden hour—one of Bali’s most photographed landmarks.",
-      image:
-        "https://images.unsplash.com/photo-1711948769532-025d4792c7c2?auto=format&fit=crop&w=1600&q=60",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -89,16 +35,17 @@ export default function Bali() {
               className="w-full h-full object-cover"
             >
               <source
-                src="https://videos.pexels.com/video-files/2949519/2949519-uhd_2560_1440_30fps.mp4"
+                src="/videos/bali.mp4"
                 type="video/mp4"
               />
+              <track kind="captions" src="/captions/bali.vtt" srcLang="en" label="English captions" default />
             </video>
             <div className="absolute inset-0 bg-blue-900/30"></div>
           </div>
 
           <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              Bali Tour Packages – Ubud, Seminyak, Nusa Penida & Luxury Stays
+              Bali Tour Packages - Ubud, Seminyak, Nusa Penida & Luxury Stays
             </h1>
             <p className="text-lg md:text-xl font-light mb-8 tracking-wide">
               Bali is one of the most beautiful and culturally rich islands in Southeast Asia, known for its tropical beaches, volcanic mountains, lush forests, luxury pool villas, unique temples, and world-class hospitality. At Antravi, we create premium Bali packages customised for honeymoon couples, families, and luxury travellers who want comfort, privacy, and unforgettable experiences.
@@ -135,7 +82,7 @@ export default function Bali() {
                 </div>
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1558819392-f4ebe3801687?auto=format&fit=crop&w=800&q=60" 
+                    src="/images/bali/ubud.webp?auto=format&fit=crop&w=800&q=60"
                     alt="Ubud Bali rice terrace tour package Antravi"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
@@ -148,7 +95,7 @@ export default function Bali() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <img 
-                    src="https://images.unsplash.com/photo-1662950267280-0cdf5f7139b4?auto=format&fit=crop&w=800&q=60" 
+                    src="/images/bali/seminyak.webp?auto=format&fit=crop&w=800&q=60" 
                     alt="Seminyak beach Bali tour for couples"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
@@ -179,7 +126,7 @@ export default function Bali() {
                 </div>
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1649594496075-5fe875274f7a?auto=format&fit=crop&w=800&q=60" 
+                    src="/images/bali/nusa.webp?auto=format&fit=crop&w=800&q=60" 
                     alt="Nusa Penida Bali honeymoon package"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
@@ -192,7 +139,7 @@ export default function Bali() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <img 
-                    src="https://images.unsplash.com/photo-1604842937136-1648761a6256?auto=format&fit=crop&w=800&q=60" 
+                    src="/images/bali/uluwatu.webp?auto=format&fit=crop&w=800&q=60" 
                     alt="Uluwatu sunset Bali itinerary"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
@@ -253,7 +200,7 @@ export default function Bali() {
             </div>
             <div className="text-center mt-12">
               <img 
-                src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=60" 
+                src="/images/bali/bali-end.webp?auto=format&fit=crop&w=800&q=60" 
                 alt="Bali private pool villa honeymoon"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />

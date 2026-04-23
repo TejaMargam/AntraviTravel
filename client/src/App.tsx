@@ -5,19 +5,32 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import WhatsAppButton from "./components/WhatsAppButton";
-import Home from "@/pages/home";
-import About from "@/pages/about";
-import Contact from "@/pages/contact";
-import Resorts from "@/pages/maldives";
-import NotFound from "@/pages/not-found";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import TermsAndConditions from "@/pages/TermsAndConditions";
+import { Suspense, lazy } from "react";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
-import ThankYou from "@/pages/thankyou";
-import Bali from "@/pages/bali";
-import Thailand from "@/pages/thailand";
+
+// Lazy load non-critical components
+const Home = lazy(() => import("@/pages/home"));
+const About = lazy(() => import("@/pages/about"));
+const Contact = lazy(() => import("@/pages/contact"));
+const Resorts = lazy(() => import("@/pages/maldives"));
+const NotFound = lazy(() => import("@/pages/not-found"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("@/pages/TermsAndConditions"));
+const ThankYou = lazy(() => import("@/pages/thankyou"));
+const Bali = lazy(() => import("@/pages/bali"));
+const Thailand = lazy(() => import("@/pages/thailand"));
+
+// Loading component for lazy loaded routes
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <p className="text-gray-600 font-medium">Loading your travel experience...</p>
+    </div>
+  </div>
+);
 
 function Router() {
   return (
@@ -45,13 +58,22 @@ function App() {
     // hook to track route changes
     useAnalytics();
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-        <WhatsAppButton />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <main id="main-content">
+            <Suspense fallback={<LoadingFallback />}>
+              <Router />
+            </Suspense>
+          </main>
+          <WhatsAppButton />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </>
   );
 }
 
