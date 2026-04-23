@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @tailwind base;
 @tailwind components;
@@ -43,19 +43,19 @@
   --sidebar-ring: 217.2 10.6% 64.9%;
 
   /* Typography */
-  --font-sans: "Poppins", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
 
   /* Design system */
-  --radius: 0.75rem;
+  --radius: 1rem;
   --spacing: 0.25rem;
 
   /* Brand colors */
-  --primary-blue: #0053AE;
-  --luxury-gold: #C29D4F;
-  --warm-white: #FEFCF9;
-  --soft-gray: #F8F9FA;
+  --primary-blue: #1C1C1A;
+  --luxury-gold: #C9A96E;
+  --warm-white: #FAFAF7;
+  --soft-gray: #F3F1EC;
   --gradient-primary: linear-gradient(135deg, #0053AE 0%, #14B8A6 100%);
   --gradient-secondary: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
   --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
@@ -87,6 +87,150 @@
 }
 
 @layer components {
+  .luxury-cta {
+    background: #c9a96e;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .luxury-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .luxury-cta:hover::before {
+    left: 130%;
+  }
+
+  .luxury-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.24);
+  }
+
+  .luxury-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .luxury-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .luxury-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.11);
+  }
+
+  .luxury-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 600;
+  }
+
+  .luxury-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border-radius: 999px;
+    padding: 10px 16px;
+    color: #1c1c1a;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+  }
+
+  .luxury-pill:hover {
+    color: #c9a96e;
+    transform: translateY(-2px);
+  }
+
+  .glass-search {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+  }
+
+  .luxury-search-input {
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0 14px;
+    color: #fff;
+    outline: none;
+  }
+
+  .luxury-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav-link-luxury {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link-luxury::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: #c9a96e;
+    transition: width 0.25s ease;
+  }
+
+  .nav-link-luxury:hover::after {
+    width: 100%;
+  }
+
+  .marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    padding: 20px 26px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1c1c1a;
+    white-space: nowrap;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
   /* Custom gradient backgrounds */
   .gradient-primary {
     background: var(--gradient-primary);
@@ -180,6 +324,13 @@
   /* Custom spacing */
   .section-padding { @apply py-24; }
   .container-padding { @apply px-4 sm:px-6 lg:px-8; }
+}
+
+@media (max-width: 768px) {
+  .luxury-section {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
 }
 
 /* Dark mode support */

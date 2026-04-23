@@ -24,10 +24,10 @@ const Thailand = lazy(() => import("@/pages/thailand"));
 
 // Loading component for lazy loaded routes
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50">
+  <div className="min-h-screen flex items-center justify-center bg-[#FAFAF7]">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 font-medium">Loading your travel experience...</p>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#C9A96E] mx-auto mb-4"></div>
+      <p className="text-[#5a564f] font-medium">Curating your travel experience...</p>
     </div>
   </div>
 );

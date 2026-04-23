@@ -12,8 +12,7 @@ import resortsData from "@/data/maldives/resorts.json";
 import FAQ from "@/components/faq";
 import ScrollManager from "@/hooks/ScrollManager";
 import { getImagePath } from "@/utils/paths";
-import { useLocation } from "wouter";
-import Navbar from "@/components/navbar";
+import { Link } from "wouter";
 import faqsData from "@/data/maldives/faqs.json";
 import { TravelForm } from "@/components/TravelForm";
 
@@ -34,7 +33,6 @@ interface Resort {
 }
 
 export default function Resorts() {
-  const [, navigate] = useLocation();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -76,11 +74,15 @@ export default function Resorts() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#FAFAF7] text-[#1C1C1A]">
       <ScrollManager />
-      {/* Header */}
-      <Navbar/>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <header className="sticky top-0 z-40 border-b border-[#ece5d8] bg-white/95 backdrop-blur">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
+          <Link href="/" className="flex items-center"><img src="/Antravi_Logo.png" alt="Antravi" className="h-10 w-auto" /></Link>
+          <Link href="/" className="text-sm uppercase tracking-[0.08em] hover:text-[#C9A96E]">Back to home</Link>
+        </div>
+      </header>
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -95,35 +97,29 @@ export default function Resorts() {
             />
             <track kind="captions" src="/captions/maldives.vtt" srcLang="en" label="English captions" default />
           </video>
-          <div className="absolute inset-0 bg-blue-900/30"></div>
+          <div className="absolute inset-0 bg-black/35"></div>
         </div>
 
         <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          <p className="luxury-label !text-white/85">Maldives</p>
+          <h1 className="font-serif text-[44px] md:text-[72px] font-light mb-6 tracking-tight leading-[1.05]">
             Maldives Resorts
           </h1>
-          <p className="text-lg md:text-xl font-light mb-8 tracking-wide">
-            Discover our handpicked collection of resorts
+          <p className="text-lg md:text-xl font-light mb-8 tracking-wide text-white/90">
+            Discover handpicked island stays, private water villas, and seamless concierge planning.
           </p>
-          <Button
-            onClick={handlePlanClick}
-            size="lg"
-            className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
-            style={{ borderRadius: "5px" }}
-          >
-            Plan With Antravi
-          </Button>
+          <button onClick={handlePlanClick} className="luxury-cta rounded-full px-8 py-3 text-sm font-semibold text-white">Plan my Maldives escape</button>
         </div>
       </section>
       {/* Resorts Grid */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section bg-[#F3F1EC]">
+        <div className="max-w-7xl mx-auto px-5 md:px-8">
           {resorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {resorts.map((resort) => (
                 <div
                   key={resort.id}
-                  className="bg-[#D0E6FD] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                  className="luxury-card overflow-hidden cursor-pointer group"
                   onClick={() => handleResortClick(resort)}
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
@@ -133,7 +129,7 @@ export default function Resorts() {
                       width={400}
                       height={300}
                       loading="eager"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-300"
                       style={{
                         contentVisibility: 'auto',
                         backgroundColor: '#f3f4f6',
@@ -144,7 +140,7 @@ export default function Resorts() {
                         img.style.opacity = '1';
                       }}
                     />
-                    {resort.tag && <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                    {resort.tag && <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.08em] text-[#6b665f]">
                       <div className="flex space-x-1">
                         {resort.tag}
                       </div>
@@ -152,10 +148,10 @@ export default function Resorts() {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-black mb-2">
+                    <h3 className="font-serif text-[28px] font-normal text-[#1C1C1A] mb-2">
                       {resort.name}
                     </h3>
-                    <p className="text-gray-600 mb-3 text-sm">
+                    <p className="text-[#5b564f] mb-3 text-sm leading-relaxed">
                       {resort.shortDescription}
                     </p>
 
@@ -163,7 +159,7 @@ export default function Resorts() {
                       {renderStars(resort.rating)}
                     </div>
 
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <div className="flex items-center text-sm text-[#746e63] mb-3">
                       <i className="fas fa-map-marker-alt mr-2"></i>
                       {resort.location}
                     </div>
@@ -173,7 +169,7 @@ export default function Resorts() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="text-xs"
+                          className="text-xs border-[#e8e0d1]"
                         >
                           {feature}
                         </Badge>
@@ -185,26 +181,19 @@ export default function Resorts() {
                       )}
                     </div>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2">
                       <div>
-                        <span className="text-sm text-gray-500">
+                        <span className="text-sm text-[#746e63]">
                           Starting from
                         </span>
-                        <div className="font-bold text-lg text-[#162660]">
+                        <div className="font-semibold text-lg text-[#C9A96E]">
                           {resort["StartsFrom "]}
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-[#746e63]">
                           {resort["duration"]}
                         </div>
                       </div>
-                      {/* Button with shadow */}
-                      <Button
-                        size="sm"
-                        className="bg-white hover:bg-white shadow-lg text-[#162660]"
-                        style={{ borderRadius: "5px" }}
-                      >
-                        View Details
-                      </Button>
+                      <span className="text-sm font-medium text-[#1C1C1A]">View details</span>
                     </div>
                   </div>
                 </div>
@@ -212,11 +201,11 @@ export default function Resorts() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
-                <h3 className="font-heading text-3xl font-bold text-black mb-4">
+              <div className="luxury-card p-12 max-w-4xl mx-auto">
+                <h3 className="font-serif text-3xl text-black mb-4">
                   Resorts Coming Soon
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-[#5b564f] text-lg mb-6">
                   We're carefully curating the most amazing resorts for you.
                   Check back soon for our exclusive collection!
                 </p>
@@ -235,7 +224,7 @@ export default function Resorts() {
       </section>
 
       {/* Maldives FAQ's */}
-      <section className="py-10 bg-white">
+      <section className="py-12 bg-[#FAFAF7]">
         <FAQ faqsData={faqsData} />
       </section>
 
@@ -245,7 +234,7 @@ export default function Resorts() {
         onOpenChange={() => setSelectedResort(null)}
       >
         <DialogContent
-          className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6"
+          className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6 border-[#efe6d8]"
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           {selectedResort && (
@@ -320,26 +309,26 @@ export default function Resorts() {
                       <span className="text-sm text-gray-500">
                         Starting from
                       </span>
-                      <div className="font-bold text-xl text-[#162660]">
+                      <div className="font-semibold text-xl text-[#C9A96E]">
                         {selectedResort["StartsFrom "]}
                       </div>
-                      {selectedResort.duration && <div className="text-sm text-black">
+                      {selectedResort.duration && <div className="text-sm text-[#6f695e]">
                         {selectedResort.duration}
                       </div>}
                     </div>
                   </div>
 
-                  <div className="flex items-center text-gray-600 mb-4">
+                  <div className="flex items-center text-[#6f695e] mb-4">
                     <i className="fas fa-map-marker-alt mr-2"></i>
                     {selectedResort.location}
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-[#58544d] leading-relaxed mb-6">
                     {selectedResort.description}
                   </p>
 
                   <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-3">Key Features</h4>
+                    <h4 className="font-serif text-2xl mb-3">Key Features</h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedResort.features.map((feature, index) => (
                         <Badge key={index} variant="outline">
@@ -350,12 +339,12 @@ export default function Resorts() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-3">Amenities</h4>
+                    <h4 className="font-serif text-2xl mb-3">Amenities</h4>
                     <ul className="space-y-2 max-h-32 overflow-y-auto">
                       {selectedResort.amenities.map((amenity, index) => (
                         <li
                           key={index}
-                          className="flex items-center text-gray-700"
+                          className="flex items-center text-[#58544d]"
                         >
                           <i className="fas fa-check text-green-500 mr-2"></i>
                           {amenity}
@@ -365,12 +354,12 @@ export default function Resorts() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-3">Room Types</h4>
+                    <h4 className="font-serif text-2xl mb-3">Room Types</h4>
                     <ul className="space-y-2">
                       {selectedResort.roomTypes.map((roomType, index) => (
                         <li
                           key={index}
-                          className="flex items-center text-gray-700"
+                          className="flex items-center text-[#58544d]"
                         >
                           <i className="fas fa-bed text-blue-500 mr-2"></i>
                           {roomType}
@@ -407,12 +396,7 @@ export default function Resorts() {
                       </div>
                     </DialogContent>
                   </Dialog> */}
-                  <Button
-                    onClick={handlePlanClick}
-                    size="lg"
-                    className="w-full bg-[#162660] text-white hover:bg-[#162660e6] text-lg px-8 py-3"
-                    style={{ borderRadius: "5px" }}
-                  >
+                  <Button onClick={handlePlanClick} size="lg" className="luxury-cta w-full text-lg px-8 py-3 text-white rounded-full">
                     Plan My Vacation
                   </Button>
                 </div>

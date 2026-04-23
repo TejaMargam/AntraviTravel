@@ -1,61 +1,35 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import { useLocation } from "wouter";
+import { Link } from "wouter";
+import ScrollManager from "@/hooks/ScrollManager";
 
 export default function ThankYou() {
-    const [, navigate] = useLocation();
-  
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#FAFAF7] text-[#1C1C1A]">
+      <ScrollManager />
       <title>Thank You - Antravi - Luxury Travel Specialists</title>
       <meta name="description" content="Thank you for your booking with Antravi. We look forward to welcoming you to our resorts." />
-      
-      {/* Header */}
-      <Navbar/>
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 bg-[#162660] text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
-              Thank You
-            </h1>
-            <p className="text-xl md:text-2xl font-light tracking-wider">
-              for your booking with Antravi
-            </p>
-          </div>
-        </section>
-        <section className="py-20 bg-white text-black">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-4xl font-bold mb-6">
-              Submission Successful
-            </h2>
-            <p className="text-xl md:text-2xl font-light tracking-wider">
-              Our team is reviewing your inquiry and will reach out shortly.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12">
-            <p className="text-xl md:text-2xl font-light tracking-wider">
-              Continue Exploring:
-              <a href="/" className="ml-2">
-                <i className="fas fa-home"></i>
-              </a>
-              <a href="https://www.instagram.com/the_antravi?utm_source=qr&igsh=cGpxdzNzMDhmZGV2" className="ml-2">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/share/16SQ5QQbaR/" className="ml-2">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="https://share.google/ci7bXoZ3vdkrJuv1C" className="ml-2">
-                <i className="fab fa-google"></i>
-              </a>
-            </p>
-          </div>
-        </section>
 
+      <main className="flex min-h-screen items-center px-5 py-20 md:px-8">
+        <section className="mx-auto w-full max-w-4xl">
+          <div className="luxury-card p-8 text-center md:p-14">
+            <p className="luxury-label">Thank you</p>
+            <h1 className="mt-4 font-serif text-[42px] font-light leading-tight md:text-[64px]">Your journey starts here.</h1>
+            <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-[1.75] text-[#555149]">
+              Submission successful. Our team is reviewing your preferences and will reach out shortly with a curated plan.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/" className="luxury-cta rounded-full px-7 py-3 text-sm font-semibold text-white">
+                Explore home
+              </Link>
+              <a href="https://www.instagram.com/the_antravi" className="rounded-full border border-[#e1d7c6] px-6 py-3 text-sm hover:text-[#C9A96E]">
+                Instagram
+              </a>
+              <a href="https://wa.me/917674811075?text=Hi%20Antravi%2C%20I%20just%20submitted%20my%20trip%20request." className="rounded-full border border-[#e1d7c6] px-6 py-3 text-sm hover:text-[#C9A96E]">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </section>        
       </main>
-      
-      <Footer />
     </div>
   );
 }
