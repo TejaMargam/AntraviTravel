@@ -1,304 +1,79 @@
-import { Button } from "@/components/ui/button";
 import ScrollManager from "@/hooks/ScrollManager";
 import FAQ from "@/components/faq";
 import faqsData from "@/data/thailand/faqs.json";
 import { useState } from "react";
 import { TravelForm } from "@/components/TravelForm";
 import { Link } from "wouter";
+import ThailandPageContent from "@/pages/ThailandPageContent";
 
 export default function Thailand() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const handlePlanClick = () => {
-    setIsFormOpen(true);
-  };
+  const openForm = () => setIsFormOpen(true);
 
   return (
     <div className="min-h-screen bg-[#FAFAF7] text-[#1C1C1A]">
-      {/* SEO H1 Heading */}
-      <h1 className="sr-only">Thailand Tour Packages & Private Excursions 2026</h1>
+      <h1 className="sr-only">Thailand Tour Packages & Private Journeys 2026</h1>
       <ScrollManager />
-      <title>
-        Thailand Tour Packages 2026 - Bangkok, Pattaya, Phuket &amp; Krabi |
-        Thailand vacation
-      </title>
+      <title>Thailand Tour Packages 2026 - Bangkok, Pattaya, Phuket &amp; Krabi | Antravi</title>
       <meta
         name="description"
-        content="Explore Thailand tour packages with Bangkok, Pattaya, Phuket & Krabi. Luxury resorts, island tours & personalised itineraries. Book your Thailand vacation with Antravi."
+        content="Personalised Thailand holidays — Bangkok temples to Phuket coves. Visa guidance, custom itineraries, and on-trip support from Antravi."
       />
 
       <header className="sticky top-0 z-40 border-b border-[#ece5d8] bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
-          <Link href="/" className="flex items-center"><img src="/Antravi_Logo.png" alt="Antravi" className="h-10 w-auto" /></Link>
-          <Link href="/" className="text-sm uppercase tracking-[0.08em] hover:text-[#C9A96E]">Back to home</Link>
+          <Link href="/" className="flex items-center">
+            <img src="/Antravi_Logo.png" alt="Antravi" className="h-10 w-auto" />
+          </Link>
+          <Link href="/" className="text-sm uppercase tracking-[0.08em] hover:text-[#C9A96E]">
+            Back to home
+          </Link>
         </div>
       </header>
 
       <main>
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <section className="relative flex min-h-[62vh] items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source
-                src="/videos/thailand.mp4"
-                type="video/mp4"
-              />
+            <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+              <source src="/videos/thailand.mp4" type="video/mp4" />
               <track kind="captions" src="/captions/thailand.vtt" srcLang="en" label="English captions" default />
             </video>
-            <div className="absolute inset-0 bg-black/35"></div>
+            <div className="absolute inset-0 bg-black/38" />
           </div>
-
-          <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-            <p className="luxury-label !text-white/85">Thailand</p>
-            <h1 className="font-serif text-[42px] md:text-[72px] font-light mb-6 tracking-tight leading-[1.05]">
-              Thailand Tour Packages - Bangkok, Pattaya, Phuket &amp; Krabi
-            </h1>
-            <p className="text-lg md:text-xl font-light mb-8 tracking-wide text-white/90">
-              Thailand vacation Packages - By Antravi
+          <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
+            <h2 className="font-serif text-[40px] font-light leading-[1.1] tracking-tight md:text-[58px]">
+              Ready to Experience
+              <br />
+              the Land of Smiles?
+            </h2>
+            <p className="mx-auto mt-8 max-w-2xl text-lg font-light text-white/92 md:text-xl">
+              Our Thailand specialists craft personalised journeys — from Bangkok&apos;s golden temples to Phuket&apos;s hidden coves — built exactly around you.
             </p>
-            <Button onClick={handlePlanClick} size="lg" className="luxury-cta text-white text-sm px-8 py-3 rounded-full">
-              Plan With Antravi
-            </Button>
+            <button
+              type="button"
+              onClick={openForm}
+              className="luxury-cta mt-10 rounded-full px-8 py-3 text-sm font-semibold text-white"
+            >
+              Plan with Antravi
+            </button>
           </div>
         </section>
 
-        <section className="luxury-section bg-white">
-          <div className="max-w-7xl mx-auto px-5 md:px-8">
-            <div className="text-center mb-10">
-              <h2 className="font-serif text-[38px] md:text-[50px] mb-4">
-                Thailand vacation Packages - By Antravi
-              </h2>
-              <p className="text-lg text-[#5e5a52] max-w-5xl mx-auto">
-                Thailand is one of Asia's most loved destinations a perfect mix of
-                luxury brands, nightlife, food, islands, temples, culture, and
-                world-class hospitality. Whether you want beach relaxation, city
-                shopping, nightlife, adventure, or a romantic honeymoon, Thailand
-                delivers it all effortlessly.
-              </p>
-              <p className="text-lg text-[#5e5a52] max-w-5xl mx-auto mt-4">
-                At Antravi, your Thailand vacation isn't just a package — It's a
-                curated experience designed exactly around your preferences.
-              </p>
-            </div>
+        <ThailandPageContent onOpenForm={openForm} />
 
-            <div className="luxury-card p-6 md:p-8 mb-12">
-              <h3 className="font-serif text-[34px] mb-4">
-                Why Visit Thailand :
-              </h3>
-              <ol className="list-decimal pl-6 space-y-2 text-[#5e5a52]">
-                <li>World-class beaches (Phuket, Krabi, Phi Phi Island)</li>
-                <li>Vibrant nightlife & shopping (Bangkok, Pattaya)</li>
-                <li>beachfront resorts (Phuket, Krabi)</li>
-                <li>Incredible food experiences</li>
-                <li>Budget-friendly yet premium hospitality</li>
-                <li>Easy visa process for Indians</li>
-                <li>Short flight duration from India</li>
-              </ol>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div className="luxury-card overflow-hidden">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
-                    src="/images/thailand/bangkok.webp?auto=format&fit=crop&w=1600&q=60"
-                    alt="Bangkok city at night Thailand tour package"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-[30px] mb-2">
-                    Bangkok — The Heart of Thailand :
-                  </h3>
-                  <p className="text-[#5e5a52] leading-[1.75]">
-                    Bangkok is the most popular starting point for a Thailand
-                    holiday. The city is known for its modern skyline, luxurious
-                    shopping malls, ancient temples, night markets, and delicious
-                    street food. With attractions like the Grand Palace, Wat Arun,
-                    and Chao Phraya River cruise, Bangkok blends tradition with
-                    modern lifestyle.
-                  </p>
-                  <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                    Travellers looking for shopping can explore Siam Paragon, MBK
-                    Mall, IconSiam, and Chatuchak Weekend Market. Bangkok is also
-                    famous for its nightlife, rooftop bars, floating markets, and
-                    temple tours. Including Bangkok in your Thailand tour package
-                    ensures a perfect balance of culture, entertainment, and city
-                    experiences.
-                  </p>
-                </div>
-              </div>
-
-              <div className="luxury-card overflow-hidden">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
-                    src="/images/thailand/pattaya.webp?auto=format&fit=crop&w=1600&q=60"
-                    alt="Pattaya coral island water sports tour Thailand"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-[30px] mb-2">
-                    Pattaya — Beaches, Nightlife &amp; Water Sports
-                  </h3>
-                  <p className="text-[#5e5a52] leading-[1.75]">
-                    Just two hours from Bangkok, Pattaya is a vibrant beach city
-                    renowned for its water sports, shows, nightlife, and adventure
-                    activities. One of the most popular experiences is the Coral
-                    Island tour, which offers parasailing and jet skiing.
-                  </p>
-                  <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                    Pattaya is also home to attractions like the Sanctuary of
-                    Truth, Nong Nooch Garden, and the Alcazar &amp; Tiffany Shows.
-                    Families, couples, and groups love Pattaya because it provides
-                    a mix of beach relaxation and entertainment. Including Pattaya
-                    in your Bangkok Pattaya tour package gives you the perfect
-                    combination of thrill and relaxation.
-                  </p>
-                </div>
-              </div>
-
-              <div className="luxury-card overflow-hidden">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
-                    src="/images/thailand/phuket.webp?auto=format&fit=crop&w=1600&q=60"
-                    alt="Phuket Phi Phi Island tour package Antravi"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-[30px] mb-2">
-                    Phuket - Luxury Resorts &amp; Island Experiences
-                  </h3>
-                  <p className="text-[#5e5a52] leading-[1.75]">
-                    Phuket is Thailand's most luxurious island destination, ideal
-                    for honeymoons and upscale vacations. Known for Patong Beach,
-                    Kata Beach, and Karon Beach, Phuket offers premium shopping,
-                    nightlife, beach clubs, and gourmet dining.
-                  </p>
-                  <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                    The most iconic experiences in Phuket include the Phi Phi
-                    Island tour, the James Bond Island canoeing trip, Big Buddha
-                    temple, and exciting adventure activities. With its beautiful
-                    beaches, nightlife, and island tours, Phuket is a must-visit
-                    in any Thailand honeymoon package.
-                  </p>
-                </div>
-              </div>
-
-              <div className="luxury-card overflow-hidden">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
-                    src="/images/thailand/krabi.webp?auto=format&fit=crop&w=1600&q=60"
-                    alt="Krabi 4 Island tour Thailand holiday"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-[30px] mb-2">
-                    Krabi - Peaceful, Scenic &amp; Relaxing
-                  </h3>
-                  <p className="text-[#5e5a52] leading-[1.75]">
-                    Krabi is the perfect destination for travelers who want a calm
-                    and scenic island escape. With stunning limestone cliffs,
-                    crystal-clear waters, and soft sandy beaches, Krabi is ideal
-                    for honeymooners and nature lovers.
-                  </p>
-                  <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                    The most famous attractions include the 4-Island Tour, Railay
-                    Beach, Emerald Pool, Hot Springs, and the Tiger Cave Temple
-                    viewpoint. Krabi offers a slower pace compared to Phuket,
-                    making it perfect for relaxation and long-tail boat trips.
-                    When combined with Phuket, Krabi creates a balanced and
-                    memorable Phuket Krabi vacation package with a mix of
-                    adventure and serenity.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 luxury-card p-6 md:p-8">
-              <h3 className="font-serif text-[34px] mb-4">
-                Thailand Itinerary - 5 to 7 Days Travel Plan
-              </h3>
-              <p className="text-[#5e5a52] leading-[1.75]">
-                A well-planned itinerary helps make the most of your Thailand
-                holiday. For a short trip, the recommended plan is 5 Days Bangkok
-                Pattaya, covering city tours, shopping, shows, and water sports.
-                For a longer trip, the ideal itinerary is 7 Days Bangkok Phuket
-                Krabi, which includes temple visits, island tours, nightlife, and
-                premium resort stays.
-              </p>
-              <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                Travelers looking for a romantic experience can also choose a
-                5-day Phuket honeymoon itinerary, which includes Phi Phi Island,
-                James Bond Island, romantic dinners, and sightseeing. Each
-                itinerary can be fully customized based on your travel style,
-                budget, and preferred pace.
-              </p>
-              <p className="text-[#5e5a52] leading-[1.75] mt-3">
-                Bangkok Pattaya Phuket Krabi itinerary
-              </p>
-            </div>
-
-            <div className="mt-12 luxury-card p-6 md:p-8">
-              <h3 className="font-serif text-[34px] mb-4">
-                Why Choose Antravi for Thailand?
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-[#5e5a52]">
-                <li>Luxury hand-picked resorts</li>
-                <li>Personalized itineraries based on your travel style</li>
-                <li>Private transfers</li>
-                <li>Transparent pricing</li>
-                <li>Dedicated travel consultant</li>
-                <li>24x7 assistance before &amp; during vacation</li>
-              </ul>
-            </div>
-
-            {/* <div className="text-center mt-14">
-              <Button
-                onClick={handlePlanClick}
-                size="lg"
-                className="bg-[#162660] text-white hover:bg-[#162660e6] text-lg px-8 py-3"
-                style={{ borderRadius: "5px" }}
-              >
-                Enquire Now
-              </Button>
-            </div> */}
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-5 md:px-8">
-            <div className="luxury-card p-6 md:p-10 text-center">
-              <h3 className="font-serif text-[34px] md:text-[44px] mb-4">
-                Plan your Thailand vacation with Antravi
-              </h3>
-              <p className="text-[#5e5a52] text-lg mb-8">
-                Tell us your travel dates &amp; preferences — we’ll create a
-                personalized itinerary just for you.
-              </p>
-              <Button onClick={handlePlanClick} size="lg" className="luxury-cta text-white text-sm px-8 py-3 rounded-full">
-                Enquire Now
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 bg-white">
+        <section className="py-12 bg-white">
           <FAQ faqsData={faqsData} />
+        </section>
+
+        <section className="border-t border-[#e8e0d1] bg-[#f0ebe2] py-6 text-center text-[11px] leading-relaxed text-[#4a463f] md:text-xs">
+          <p>© 2026 Antravi Travel Experiences · antravi.com · Content accurate as of May 2026.</p>
+          <p className="mx-auto mt-2 max-w-3xl px-4">
+            Visa, activities, and flight information are subject to change — always verify with official sources before travel.
+          </p>
         </section>
       </main>
 
-      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
+      <TravelForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} defaultDestination="thailand" />
     </div>
   );
 }

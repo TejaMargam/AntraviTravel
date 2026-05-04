@@ -33,7 +33,7 @@ export default function FAQ({ faqsData }: { faqsData: FaqItem[] }) {
               <h3 className="text-base font-medium text-black mb-2">
                 {faq.question}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="whitespace-pre-line text-gray-700 text-sm leading-relaxed">
                 {faq.answer}
               </p>
             </div>

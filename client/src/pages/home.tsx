@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { TravelForm } from "@/components/TravelForm";
+import reviewsData from "@/data/reviews.json";
 import {
   CalendarDays,
   ChevronDown,
@@ -84,13 +85,6 @@ export default function Home() {
     { name: "Phuket Island Hopping", badge: "Thailand", price: "From ₹12,000", image: "/images/thailand/phuket.webp" },
   ];
 
-  const reviews = [
-    { quote: "Your Maldives moment is waiting - and they made ours unforgettable from airport to private dinner.", name: "Rhea & Karthik", destination: "Maldives" },
-    { quote: "Every detail, handled. We just showed up and lived the dream.", name: "Ananya Sharma", destination: "Bali" },
-    { quote: "Made for the ones who travel well. The concierge support was exceptional.", name: "Kunal Mehta", destination: "Thailand" },
-    { quote: "No hidden surprises, only polished service and incredible stays.", name: "Pranav & Nisha", destination: "Maldives" },
-  ];
-
   return (
     <div className="bg-[#FAFAF7] text-[#1C1C1A]">
       <h1 className="sr-only">Antravi luxury travel packages for Maldives, Bali and Thailand</h1>
@@ -136,7 +130,7 @@ export default function Home() {
       </header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster="/images/maldives/resorts/arrival/arrival-image-1.webp">
+        <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster="/images/hero/hero.webp">
           <source src="/videos/maldives.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/15 md:from-black/45" />
@@ -227,20 +221,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="packages" className="luxury-section px-5 md:px-8">
-          <div className="mx-auto max-w-7xl">
-            <p className="luxury-label text-center">We work with the world&apos;s finest hotels</p>
-            <div className="marquee mt-8">
-              <div className="marquee-track">
-                {["Ritz-Carlton", "Four Seasons", "Six Senses", "Oberoi", "Aman", "St. Regis", "Conrad", "Taj", "Ritz-Carlton", "Four Seasons", "Six Senses", "Oberoi", "Aman", "St. Regis", "Conrad", "Taj"].map((brand, index) => (
-                  <span key={`${brand}-${index}`} className="marquee-item">{brand}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="luxury-section bg-[#F3F1EC] px-5 md:px-8">
+        <section className="luxury-section px-5 md:px-8">
           <div className="mx-auto max-w-7xl">
             <p className="luxury-label">Guest stories</p>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
@@ -258,20 +239,28 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {reviews.map((review) => (
-                <article key={review.name} className="luxury-card p-6">
-                  <div className="text-[#C9A96E]">★★★★★</div>
-                  <p className="mt-3 text-[16px] leading-[1.75] text-[#504c45]">&quot;{review.quote}&quot;</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+              {reviewsData.map((review) => (
+                <article key={review.id} className="luxury-card p-6">
+                  <div className="text-[#C9A96E]" aria-hidden>
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <span key={i} className={i < review.rating ? "text-[#C9A96E]" : "text-[#e5dfd3]"}>
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[16px] leading-[1.75] text-[#504c45]">&quot;{review.text}&quot;</p>
                   <p className="mt-4 text-sm font-semibold">{review.name}</p>
-                  <p className="text-xs uppercase tracking-[0.08em] text-[#7a7467]">{review.destination}</p>
+                  <p className="text-xs uppercase tracking-[0.08em] text-[#7a7467]">
+                    {review.occasion} · {review.location}
+                  </p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="luxury-section px-5 md:px-8">
+        <section className="luxury-section bg-[#F3F1EC] px-5 md:px-8">
           <div className="mx-auto grid max-w-7xl overflow-hidden rounded-2xl bg-white shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:grid-cols-2">
             <img src="/images/maldives/resorts/arrival/arrival-image-4.webp" alt="Maldives overwater bungalow" className="h-full min-h-[360px] w-full object-cover" />
             <div className="flex items-center p-8 md:p-14">

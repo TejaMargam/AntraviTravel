@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -39,6 +39,8 @@ interface FormData {
 interface TravelFormProps {
   isOpen: boolean;
   onClose: () => void;
+  /** When opening the form from a destination page, pre-fill step 2 destination */
+  defaultDestination?: "maldives" | "thailand" | "bali";
 }
 
 interface Step {
@@ -62,7 +64,7 @@ const luxuryInputClass = `
 const luxuryLabelClass = "block text-[10px] uppercase tracking-[0.2em] text-[#C9A96E] font-medium mb-1";
 const luxuryErrorClass = "text-red-400 text-[10px] mt-1 tracking-wide";
 
-export function TravelForm({ isOpen, onClose }: TravelFormProps) {
+export function TravelForm({ isOpen, onClose, defaultDestination }: TravelFormProps) {
   const [, navigate] = useLocation();
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [formData, setFormData] = useState<FormData>({
@@ -82,6 +84,12 @@ export function TravelForm({ isOpen, onClose }: TravelFormProps) {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    if (isOpen && defaultDestination) {
+      setFormData((prev) => ({ ...prev, destination: defaultDestination }));
+    }
+  }, [isOpen, defaultDestination]);
 
   const validateStep = (step: number): boolean => {
     const newErrors: Record<string, string> = {};

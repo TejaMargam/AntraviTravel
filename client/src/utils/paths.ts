@@ -5,6 +5,9 @@ export const getBasePath = () => {
 };
 
 export const getImagePath = (imagePath: string) => {
+  if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+    return imagePath;
+  }
   const basePath = getBasePath();
   // Remove leading slash if present to avoid double slashes
   const cleanPath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;

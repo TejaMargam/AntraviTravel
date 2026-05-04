@@ -39,6 +39,10 @@
       "Sunset Beach Villa",
       "Over Water Villa",
       "Sunset Beach Villa With Pool"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
     ]
   },
   {
@@ -76,6 +80,472 @@
       "Beach Villa",
       "Waterfront Pool Villa",
       "Beach Pool villa"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
+    ]
+  },
+  {
+    "id": "le-meridien-maldives",
+    "name": "Le Méridien Maldives Resort & Spa",
+    "description": "Antravi works with Le Méridien Maldives Resort & Spa. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Thilamaafushi",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmrd1/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Thilamaafushi, Lhaviyani Atoll",
+    "features": [
+      "Lagoon villas",
+      "House reef",
+      "Seaplane"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "grand-park-kodhipparu",
+    "name": "Grand Park Kodhipparu Maldives",
+    "description": "Antravi works with Grand Park Kodhipparu Maldives. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "North Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmgp2/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Pool water villas",
+      "Reef snorkelling"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "furaveri-maldives",
+    "name": "Furaveri Maldives",
+    "description": "Antravi works with Furaveri Maldives. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Raa Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmfr3/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Private island",
+      "House reef"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
+    ]
+  },
+  {
+    "id": "OBLU XPERIENCE Ailafushi",
+    "name": "OBLU XPERIENCE Ailafushi",
+    "description": "A lively all-inclusive island escape just minutes from Malé Airport, offering fun-filled dining, entertainment, family-friendly facilities, and vibrant leisure experiences. Perfect for travelers looking for convenience, activity, and great value in the Maldives.",
+    "shortDescription": "Fun All-Inclusive Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/obluAila/obluAila-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/obluAila/obluAila-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on request",
+    "duration": "3 Nights / 4 Days",
+    "location": "15 Minutes from Malé Airport",
+    "features": [
+      "All Inclusive Resort",
+      "Unique Food Truck Dining Experience",
+      "X360 Bar, Pool, Beach and Sports Bar",
+      "Under Ocean Restaurant",
+      "Kids Club with Pool",
+      "Live Band & DJ"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Over Water Gym",
+      "Tennis Court",
+      "Football Pitch",
+      "Kids Club",
+      "Pool Access"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "villa-nautica",
+    "name": "Villa Nautica Paradise Island Resort",
+    "description": "Antravi works with Villa Nautica Paradise Island Resort. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "North Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmvn4/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Water villas",
+      "Marina"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "reethi-faru",
+    "name": "Reethi Faru Resort",
+    "description": "Antravi works with Reethi Faru Resort. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Raa Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmrf5/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Natural island",
+      "Diving"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "Sheraton Full Moon Resort & Spa",
+    "name": "Sheraton Maldives Full Moon Resort & Spa",
+    "description": "A lush family-friendly island escape just 15 minutes by speedboat from Velana International Airport. The resort features villas, cottages and overwater retreats surrounded by white sandy beaches and coral reefs, with award-winning spa, multiple dining venues, kid-friendly amenities and a vibrant lagoon setting.",
+    "shortDescription": "Island Paradise",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹95,000 / STC* / Per Adult*",
+    "duration": "3 Nights/4 Days",
+    "location": "Furanafushi Island, North Malé Atoll",
+    "features": [
+      "Secluded Island",
+      "Tennis Court",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Water Sports",
+      "Family-Friendly Activities",
+      "Round-trip Speed Boat Transfers",
+      "Breakfast + Dinner Included"
+    ],
+    "roomTypes": [
+      "Deluxe Room / Garden View",
+      "Beachfront Cottage",
+      "Ocean Pool Villa",
+      "Overwater Villa With Pool"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "Hard Rock Hotel Maldives",
+    "name": "Hard Rock Hotel Maldives",
+    "description": "A vibrant island getaway packed with music, style, and tropical energy. Enjoy unforgettable experiences with lively poolside vibes, iconic dining, and signature wellness in a resort designed for travelers who want fun, comfort, and entertainment in one place.",
+    "shortDescription": "Tropical Experience You Won't Forget",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/hardRock/hardRock-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hardRock/hardRock-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Maldives",
+    "features": [
+      "Pool Bar with Underwater Stools & Tunes",
+      "Hard Rock Cafe",
+      "Rock Spa"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Pool Bar",
+      "Signature Spa Experience",
+      "Dining & Entertainment"
+    ],
+    "roomTypes": [
+      "Silver Sky Studio",
+      "Gold Beach Pool Villa",
+      "Platinum Overwater Pool Villa"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "nh-kuda-rah",
+    "name": "NH Collection Maldives Kuda Rah Resort",
+    "description": "Antravi works with NH Collection Maldives Kuda Rah Resort. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "South Ari Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmnh6/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Ari Atoll",
+    "features": [
+      "Boutique luxury",
+      "House reef"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "centara-ras-fushi",
+    "name": "Centara Ras Fushi Resort & Spa Maldives",
+    "description": "Antravi works with Centara Ras Fushi Resort & Spa Maldives. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "North Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmcr7/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Adults-oriented",
+      "Diving"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "SAii Lagoon Maldives, Curio Collection by Hilton",
+    "name": "SAii Lagoon Maldives, Curio Collection by Hilton",
+    "description": "A vibrant island escape offering relaxed luxury with stylish beachfront and overwater villas, lively bars, diverse dining venues, and unique experiences surrounded by the turquoise lagoons of the Maldives.",
+    "shortDescription": "Stylish Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/saii/saii-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/saii/saii-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "",
+    "location": "Maldives",
+    "features": [
+      "Pool Bar",
+      "Gelato Bar",
+      "Swim Up Bar"
+    ],
+    "amenities": [
+      "Maldives' First Padel Tennis Court",
+      "14 Dining Venues with Western to Asian Flavors",
+      "Organic Garden"
+    ],
+    "roomTypes": [
+      "Beach Room with Pool",
+      "Over Water Villa",
+      "2BR Family Beach Villa with Pool"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "hilton-amingiri",
+    "name": "Hilton Maldives Amingiri Resort & Spa",
+    "description": "Antravi works with Hilton Maldives Amingiri Resort & Spa. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "North Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmha8/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Family pools",
+      "Lagoon villas"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
+    ]
+  },
+  {
+    "id": "adaaran-prestige-vadoo",
+    "name": "Adaaran Prestige Vadoo",
+    "description": "Antravi works with Adaaran Prestige Vadoo. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "South Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmad9/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Overwater focus",
+      "Quick transfer"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "The Westin Maldives Miriandhoo",
+    "name": "The Westin Maldives Miriandhoo",
+    "description": "A boutique premium resort in the Baa Atoll UNESCO biosphere reserve. Book today! Everything at Milaidhoo has been custom made crafted around your needs.",
+    "shortDescription": "Your Well-Being Haven",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "",
+    "location": "Baa Atoll",
+    "features": [
+      "Signature Heavenly Bed By Westin",
+      "Sunset Bar",
+      "Multi-purpose court",
+      "Yoga Pavilion"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Beach Volleyball",
+      "Shared seaplane transfers",
+      " Water Sports",
+      " Beach Bar"
+    ],
+    "roomTypes": [
+      "Beach Villa Pool",
+      "Over Water villa Pool",
+      "Deluxe Beach villa pool"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
     ]
   },
   {
@@ -114,233 +584,38 @@
       "Duplex Over Water villa with Private Pool",
       "2N One Bed Room Beach Villa  + Duplex Over Water villa with Private Pool",
       "2N One Bed Room Sun Set Beach villa + Duplex Over Water villa with Private Pool"
+    ],
+    "filterTags": [
+      "5-star"
     ]
   },
   {
-    "id": "Sheraton Full Moon Resort & Spa",
-    "name": "Sheraton Maldives Full Moon Resort & Spa",
-    "description": "A lush family-friendly island escape just 15 minutes by speedboat from Velana International Airport. The resort features villas, cottages and overwater retreats surrounded by white sandy beaches and coral reefs, with award-winning spa, multiple dining venues, kid-friendly amenities and a vibrant lagoon setting.",
-    "shortDescription": "Island Paradise",
+    "id": "brennia-kottefaru",
+    "name": "Brennia Kottefaru",
+    "description": "Antravi works with Brennia Kottefaru. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Raa Atoll",
     "tag": "",
     "images": [
-      "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop"
+      "https://picsum.photos/seed/mvmbk10/800/600"
     ],
     "rating": 5,
-    "StartsFrom ": "₹95,000 / STC* / Per Adult*",
-    "duration": "3 Nights/4 Days",
-    "location": "Furanafushi Island, North Malé Atoll",
-    "features": [
-      "Secluded Island",
-      "Tennis Court",
-      "Family Friendly Resort"
-    ],
-    "amenities": [
-      "Complimentary WIFI",
-      "Water Sports",
-      "Family-Friendly Activities",
-      "Round-trip Speed Boat Transfers",
-      "Breakfast + Dinner Included"
-    ],
-    "roomTypes": [
-      "Deluxe Room / Garden View",
-      "Beachfront Cottage",
-      "Ocean Pool Villa",
-      "Overwater Villa With Pool"
-    ]
-  },
-  {
-    "id": "The Westin Maldives Miriandhoo",
-    "name": "The Westin Maldives Miriandhoo",
-    "description": "A boutique premium resort in the Baa Atoll UNESCO biosphere reserve. Book today! Everything at Milaidhoo has been custom made crafted around your needs.",
-    "shortDescription": "Your Well-Being Haven",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/westin/westin-image-8.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "",
-    "location": "Baa Atoll",
-    "features": [
-      "Signature Heavenly Bed By Westin",
-      "Sunset Bar",
-      "Multi-purpose court",
-      "Yoga Pavilion"
-    ],
-    "amenities": [
-      "Complimentary WIFI",
-      "Beach Volleyball",
-      "Shared seaplane transfers",
-      " Water Sports",
-      " Beach Bar"
-    ],
-    "roomTypes": [
-      "Beach Villa Pool",
-      "Over Water villa Pool",
-      "Deluxe Beach villa pool"
-    ]
-  },
-  {
-    "id": "SAii Lagoon Maldives, Curio Collection by Hilton",
-    "name": "SAii Lagoon Maldives, Curio Collection by Hilton",
-    "description": "A vibrant island escape offering relaxed luxury with stylish beachfront and overwater villas, lively bars, diverse dining venues, and unique experiences surrounded by the turquoise lagoons of the Maldives.",
-    "shortDescription": "Stylish Island Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/saii/saii-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/saii/saii-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/saii/saii-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/saii/saii-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/saii/saii-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "",
-    "location": "Maldives",
-
-    "features": [
-      "Pool Bar",
-      "Gelato Bar",
-      "Swim Up Bar"
-    ],
-
-    "amenities": [
-      "Maldives' First Padel Tennis Court",
-      "14 Dining Venues with Western to Asian Flavors",
-      "Organic Garden"
-    ],
-
-    "roomTypes": [
-      "Beach Room with Pool",
-      "Over Water Villa",
-      "2BR Family Beach Villa with Pool"
-    ]
-  },
-  {
-    "id": "Arrival Beach Hotel & Spa",
-    "name": "Arrival Beach Hotel & Spa",
-    "description": "A relaxing beachside hotel offering comfortable stays with scenic views, exciting marine experiences, and convenient speedboat transfers. Perfect for travelers looking for a short Maldives getaway with snorkeling adventures and dolphin cruises.",
-    "shortDescription": "Relaxed Beachside Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/arrival/arrival-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/arrival/arrival-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/arrival/arrival-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/arrival/arrival-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/arrival/arrival-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/arrival/arrival-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "₹50,000 per adult",
+    "StartsFrom ": "On request",
     "duration": "3 Nights / 4 Days",
-    "location": "Maldives",
-
+    "location": "Raa Atoll",
     "features": [
-      "Breakfast + Dinner Included",
-      "Superior Room with Mini Balcony View",
-      "Return Combined Speed Boat Transfer"
+      "Private island",
+      "Wellness"
     ],
-
     "amenities": [
-      "Snorkelling with Nurse Sharks & Stingrays",
-      "Lucky Dolphin Cruise",
-      "Beach Access",
-      "Water Activities"
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
     ],
-
     "roomTypes": [
-      "Superior Room with Mini Balcony View"
-    ]
-  },
-  {
-    "id": "Hard Rock Hotel Maldives",
-    "name": "Hard Rock Hotel Maldives",
-    "description": "A vibrant island getaway packed with music, style, and tropical energy. Enjoy unforgettable experiences with lively poolside vibes, iconic dining, and signature wellness in a resort designed for travelers who want fun, comfort, and entertainment in one place.",
-    "shortDescription": "Tropical Experience You Won't Forget",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/hardRock/hardRock-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/hardRock/hardRock-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/hardRock/hardRock-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/hardRock/hardRock-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/hardRock/hardRock-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/hardRock/hardRock-image-6.webp?w=800&h=600&fit=crop"
+      "Villa categories — on consultation"
     ],
-    "rating": 5,
-    "StartsFrom ": "Available on request",
-    "duration": "3 Nights / 4 Days",
-    "location": "Maldives",
-
-    "features": [
-      "Pool Bar with Underwater Stools & Tunes",
-      "Hard Rock Cafe",
-      "Rock Spa"
-    ],
-
-    "amenities": [
-      "Complimentary WIFI",
-      "Pool Bar",
-      "Signature Spa Experience",
-      "Dining & Entertainment"
-    ],
-
-    "roomTypes": [
-      "Silver Sky Studio",
-      "Gold Beach Pool Villa",
-      "Platinum Overwater Pool Villa"
-    ]
-  },
-  {
-    "id": "OBLU XPERIENCE Ailafushi",
-    "name": "OBLU XPERIENCE Ailafushi",
-    "description": "A lively all-inclusive island escape just minutes from Malé Airport, offering fun-filled dining, entertainment, family-friendly facilities, and vibrant leisure experiences. Perfect for travelers looking for convenience, activity, and great value in the Maldives.",
-    "shortDescription": "Fun All-Inclusive Island Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/obluAila/obluAila-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/obluAila/obluAila-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/obluAila/obluAila-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/obluAila/obluAila-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/obluAila/obluAila-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/obluAila/obluAila-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on request",
-    "duration": "3 Nights / 4 Days",
-    "location": "15 Minutes from Malé Airport",
-
-    "features": [
-      "All Inclusive Resort",
-      "Unique Food Truck Dining Experience",
-      "X360 Bar, Pool, Beach and Sports Bar",
-      "Under Ocean Restaurant",
-      "Kids Club with Pool",
-      "Live Band & DJ"
-    ],
-
-    "amenities": [
-      "Complimentary WIFI",
-      "Over Water Gym",
-      "Tennis Court",
-      "Football Pitch",
-      "Kids Club",
-      "Pool Access"
-    ],
-
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
+    "filterTags": [
+      "5-star"
     ]
   },
   {
@@ -361,7 +636,6 @@
     "StartsFrom ": "Available on request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
-
     "features": [
       "5 Star Private Island Resort",
       "Speed Boat Transfers",
@@ -369,19 +643,176 @@
       "Sunset Fishing",
       "Live Music Performances"
     ],
-
     "amenities": [
       "Complimentary WIFI",
       "Private Island Experience",
       "Live Entertainment",
       "Boat Transfers"
     ],
-
     "roomTypes": [
       "Beach Villa",
       "Deluxe Beach Pool Villa",
       "Water Villa",
       "Deluxe Over Water Pool Villa"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
+    ]
+  },
+  {
+    "id": "holiday-inn-kandooma",
+    "name": "Holiday Inn Resort Kandooma Maldives",
+    "description": "Antravi works with Holiday Inn Resort Kandooma Maldives. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "South Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmhi11/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Family friendly",
+      "Surf nearby"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "4-star",
+      "5-star"
+    ]
+  },
+  {
+    "id": "sun-siyam-olhuveli",
+    "name": "Sun Siyam Olhuveli",
+    "description": "Antravi works with Sun Siyam Olhuveli. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "South Malé Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmsu12/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Twin islands",
+      "Lagoon suites"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star"
+    ]
+  },
+  {
+    "id": "siyam-world",
+    "name": "Siyam World Maldives",
+    "description": "Antravi works with Siyam World Maldives. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Noonu Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmsw13/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Noonu Atoll",
+    "features": [
+      "Largest natural island",
+      "WOW 24h"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "5-star",
+      "Luxury"
+    ]
+  },
+  {
+    "id": "Arrival Beach Hotel & Spa",
+    "name": "Arrival Beach Hotel & Spa",
+    "description": "A relaxing beachside hotel offering comfortable stays with scenic views, exciting marine experiences, and convenient speedboat transfers. Perfect for travelers looking for a short Maldives getaway with snorkeling adventures and dolphin cruises.",
+    "shortDescription": "Relaxed Beachside Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/arrival/arrival-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/arrival/arrival-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "₹50,000 per adult",
+    "duration": "3 Nights / 4 Days",
+    "location": "Maldives",
+    "features": [
+      "Breakfast + Dinner Included",
+      "Superior Room with Mini Balcony View",
+      "Return Combined Speed Boat Transfer"
+    ],
+    "amenities": [
+      "Snorkelling with Nurse Sharks & Stingrays",
+      "Lucky Dolphin Cruise",
+      "Beach Access",
+      "Water Activities"
+    ],
+    "roomTypes": [
+      "Superior Room with Mini Balcony View"
+    ],
+    "filterTags": [
+      "4-star"
+    ]
+  },
+  {
+    "id": "medhufushi",
+    "name": "Medhufushi Island Resort & Spa",
+    "description": "Antravi works with Medhufushi Island Resort & Spa. Share your travel dates, villa preference, and budget for a tailored proposal including transfers and meal plan.",
+    "shortDescription": "Meemu Atoll",
+    "tag": "",
+    "images": [
+      "https://picsum.photos/seed/mvmmh14/800/600"
+    ],
+    "rating": 5,
+    "StartsFrom ": "On request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Meemu Atoll",
+    "features": [
+      "Classic Maldives",
+      "Lagoon villas"
+    ],
+    "amenities": [
+      "Dining",
+      "Water sports",
+      "Spa (where available)"
+    ],
+    "roomTypes": [
+      "Villa categories — on consultation"
+    ],
+    "filterTags": [
+      "4-star",
+      "5-star"
     ]
   }
 ]
