@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,7 +35,19 @@ export default function Navbar() {
     if (destinationsSection) {
       destinationsSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleDestinationsClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     setIsMobileMenuOpen(false);
+
+    if (window.location.pathname === "/") {
+      window.history.replaceState(null, "", "/#destinations");
+      scrollToDestinations();
+      return;
+    }
+
+    navigate("/#destinations");
   };
 
   const scrollToContact = () => {
@@ -66,12 +78,13 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
+            <a
               href="/#destinations"
+              onClick={handleDestinationsClick}
               className="text-white hover:text-black font-medium transition-colors"
             >
               Destinations
-            </Link>
+            </a>
             <Link 
               href="/contact"
               className="text-white hover:text-black font-medium transition-colors"
@@ -137,13 +150,13 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t w-full overflow-hidden">
             <div className="px-3 py-4 space-y-4 w-full">
-              <Link 
+              <a
                 href="/#destinations"
+                onClick={handleDestinationsClick}
                 className="block w-full text-left text-gray-700 hover:text-black font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Destinations
-              </Link>
+              </a>
               <Link 
                 href="/contact"
                 className="block w-full text-left text-gray-700 hover:text-black font-medium"

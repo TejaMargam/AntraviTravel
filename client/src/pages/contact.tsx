@@ -37,10 +37,10 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Our travel specialists are here to help
                 </p>
-                <a href="mailto:yashodar@antravi.com" 
+                <a href="mailto:contact@antravi.com" 
                    className="text-[#162660] hover:text-luxury-gold transition-colors"
                    data-testid="link-email">
-                  yashodar@antravi.com
+                  contact@antravi.com
                 </a>
               </div>
               
@@ -80,7 +80,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Form */}
-        <ContactForm />
+        
       </main>
       
       <Footer />

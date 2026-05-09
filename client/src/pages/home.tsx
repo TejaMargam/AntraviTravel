@@ -43,6 +43,26 @@ export default function Home() {
       document.head.appendChild(canonical);
     }
     canonical.href = 'https://antravi.com/';
+
+    const scrollToDestinations = () => {
+      const destinationsSection = document.getElementById('destinations');
+      if (destinationsSection) {
+        destinationsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    const handleHashChange = () => {
+      if (window.location.hash === '#destinations') {
+        scrollToDestinations();
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   return (
