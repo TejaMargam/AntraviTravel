@@ -9,9 +9,11 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
   
   const form = useForm<InsertEnquiry>({
     resolver: zodResolver(insertEnquirySchema),
@@ -50,18 +52,18 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section ref={sectionRef} id="contact" className={`py-20 bg-gray-900 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#162660] mb-4">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
             Start Your Journey
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-300">
             Tell us about your dream destination and we'll create the perfect experience
           </p>
         </div>
         
-        <div className="bg-soft-gray rounded-2xl p-8 md:p-12 luxury-shadow h-[900px]">
+        <div className="bg-gray-800 rounded-2xl p-8 md:p-12 luxury-shadow h-[900px] border border-gray-700">
           <iframe
               src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
               className="w-full h-full"

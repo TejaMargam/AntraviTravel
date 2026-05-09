@@ -21,13 +21,13 @@ export default function Testimonials() {
   const testimonials = reviewsData;
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
             What Our Travelers Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real stories from travelers who lived their moments with Antravi
           </p>
         </div>

@@ -20,8 +20,16 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { getImagePath } from "@/utils/paths";
 import { TravelForm } from "./TravelForm";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Destinations() {
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
+  const [maldivesRef, maldivesVisible] = useIntersectionObserver();
+  const [baliRef, baliVisible] = useIntersectionObserver();
+  const [thailandRef, thailandVisible] = useIntersectionObserver();
+  const [descriptionRef, descriptionVisible] = useIntersectionObserver();
+  const [stepsRef, stepsVisible] = useIntersectionObserver();
+
   const carouselImages = [
     getImagePath("images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop"),
     // getImagePath("images/maldives/resorts/sheraton/sheraton-image-9.webp?w=800&h=600&fit=crop"),
@@ -60,113 +68,123 @@ export default function Destinations() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-900">
       {/* Featured Destinations Section*/}
       <section
+        ref={sectionRef}
         id="destinations"
-        className="py-16 hover:shadow-lg transition-shadow duration-500 ease-in-out"
+        className={`py-16 hover:shadow-lg transition-shadow duration-500 ease-in-out ${sectionVisible ? "animate-fade-in-up" : ""}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
               Featured Destinations
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? "-translate-y-4 shadow-3xl scale-105" : ""}`}>
-              <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
-                {carouselImages.map((imageSrc, index) => (
+          <div className="space-y-16">
+            {/* Maldives Section */}
+            <div ref={maldivesRef} className={maldivesVisible ? "animate-fade-in-up animation-delay-200" : ""}>
+              <div className={`relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl ${isCardClicked ? "-translate-y-4 shadow-3xl scale-105" : ""}`}>
+                <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
+                  {carouselImages.map((imageSrc, index) => (
+                    <img
+                      key={index}
+                      src={imageSrc}
+                      alt="The Maldives"
+                      className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                        index === currentImageIndex ? "opacity-100" : "opacity-0"
+                      }`}
+                      data-testid={`carousel-image-${index}`}
+                    />
+                  ))}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">The Maldives</h2>
+                  <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                    {resortsData[currentImageIndex]}
+                  </p>
+                  <Link
+                    href="/destinations/maldives"
+                    className="hover:text-blue-200 transition-colors"
+                    onClick={handleExploreClick}
+                  >
+                    <div
+                      className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                      style={{ borderRadius: "5px" }}
+                      data-testid="button-explore-resorts"
+                    >
+                      Explore Resorts
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Bali Section */}
+            <div ref={baliRef} className={baliVisible ? "animate-fade-in-up animation-delay-400" : ""}>
+              <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
+                <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
                   <img
-                    key={index}
-                    src={imageSrc}
-                    alt="The Maldives"
-                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                      index === currentImageIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                    data-testid={`carousel-image-${index}`}
+                    src={baliImage}
+                    alt="Bali"
+                    className="w-full h-full object-cover absolute inset-0"
                   />
-                ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
-                <h2 className="text-xl sm:text-2xl font-bold mb-2">The Maldives</h2>
-                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
-                  {resortsData[currentImageIndex]}
-                </p>
-                <Link
-                  href="/destinations/maldives"
-                  className="hover:text-blue-200 transition-colors"
-                  onClick={handleExploreClick}
-                >
-                  <div
-                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
-                    style={{ borderRadius: "5px" }}
-                    data-testid="button-explore-resorts"
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">Bali</h2>
+                  <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                    Temples, beaches, and culture-packed adventures
+                  </p>
+                  <Link
+                    href="/destinations/bali"
+                    className="hover:text-blue-200 transition-colors"
                   >
-                    Explore Resorts
-                  </div>
-                </Link>
+                    <div
+                      className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                      style={{ borderRadius: "5px" }}
+                      data-testid="button-explore-bali"
+                    >
+                      Explore Bali
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
-              <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
-                <img
-                  src={baliImage}
-                  alt="Bali"
-                  className="w-full h-full object-cover absolute inset-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </div>
+            {/* Thailand Section */}
+            <div ref={thailandRef} className={thailandVisible ? "animate-fade-in-up animation-delay-600" : ""}>
+              <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
+                <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
+                  <img
+                    src={thailandImage}
+                    alt="Thailand"
+                    className="w-full h-full object-cover absolute inset-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
-                <h2 className="text-xl sm:text-2xl font-bold mb-2">Bali</h2>
-                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
-                  Temples, beaches, and culture-packed adventures
-                </p>
-                <Link
-                  href="/destinations/bali"
-                  className="hover:text-blue-200 transition-colors"
-                >
-                  <div
-                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
-                    style={{ borderRadius: "5px" }}
-                    data-testid="button-explore-bali"
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">Thailand</h2>
+                  <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
+                    Island hopping, street food, and iconic beaches
+                  </p>
+                  <Link
+                    href="/destinations/thailand"
+                    className="hover:text-blue-200 transition-colors"
                   >
-                    Explore Bali
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
-              <div className="aspect-[16/10] sm:aspect-[16/10] aspect-[4/3] relative">
-                <img
-                  src={thailandImage}
-                  alt="Thailand"
-                  className="w-full h-full object-cover absolute inset-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
-                <h2 className="text-xl sm:text-2xl font-bold mb-2">Thailand</h2>
-                <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-4">
-                  Island hopping, street food, and iconic beaches
-                </p>
-                <Link
-                  href="/destinations/thailand"
-                  className="hover:text-blue-200 transition-colors"
-                >
-                  <div
-                    className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
-                    style={{ borderRadius: "5px" }}
-                    data-testid="button-explore-thailand"
-                  >
-                    Explore Thailand
-                  </div>
-                </Link>
+                    <div
+                      className="bg-[#162660] hover:bg-[#162660e6] text-white px-4 py-2 sm:px-6 sm:py-3 font-medium transition-colors text-sm sm:text-base inline-block"
+                      style={{ borderRadius: "5px" }}
+                      data-testid="button-explore-thailand"
+                    >
+                      Explore Thailand
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -174,13 +192,13 @@ export default function Destinations() {
       </section>
 
       {/* Vacation Description Section */}
-      <section className="py-16 bg-white">
+      <section ref={descriptionRef} className={`py-16 bg-gray-900 ${descriptionVisible ? "animate-fade-in-up" : ""}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-8">
               Your Journey, Perfected by Antravi
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed text-justify">
               Every getaway deserves more than just a plan- it deserves thought, warmth, and a personal touch. Whether it’s a romantic honeymoon, a family retreat, or a luxurious escape, every moment with 
               Antravi is designed to feel effortless and truly memorable.
               Let your journey be as special as the memories you'll bring home.
@@ -226,10 +244,10 @@ export default function Destinations() {
       </section>
 
       {/* 3 Steps Section */}
-      <section className="py-8 bg-white">
+      <section ref={stepsRef} className={`py-8 bg-gray-900 ${stepsVisible ? "animate-fade-in-up" : ""}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-8">
               Plan Your Trip in 3 Simple Steps
             </h2>
           </div>
@@ -239,10 +257,10 @@ export default function Destinations() {
               <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Tell us what you need
               </h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
+              <p className="text-gray-300 leading-relaxed text-justify">
                 It's your trip, your way. We begin with a conversation to
                 understand what matters to you.
               </p>
@@ -252,10 +270,10 @@ export default function Destinations() {
               <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 We curate options
               </h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
+              <p className="text-gray-300 leading-relaxed text-justify">
                 We tailor everything around your preferences.
               </p>
             </div>
@@ -264,10 +282,10 @@ export default function Destinations() {
               <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Confirm and travel
               </h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
+              <p className="text-gray-300 leading-relaxed text-justify">
                 When you're ready, we'll be there — to guide and support you, so
                 you can focus on what matters most: Live your Moments.
               </p>

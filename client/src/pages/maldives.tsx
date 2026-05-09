@@ -16,6 +16,7 @@ import { useLocation } from "wouter";
 import Navbar from "@/components/navbar";
 import faqsData from "@/data/maldives/faqs.json";
 import { TravelForm } from "@/components/TravelForm";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 interface Resort {
   id: string;
@@ -38,6 +39,14 @@ export default function Resorts() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [heroRef, heroVisible] = useIntersectionObserver();
+  const [resortsRef, resortsVisible] = useIntersectionObserver();
+
+  // Custom hook for individual card animations
+  const useCardAnimation = () => {
+    const [ref, isVisible] = useIntersectionObserver();
+    return { ref, isVisible };
+  };
 
   const handlePlanClick = () => {
     setIsFormOpen(true);
@@ -76,11 +85,11 @@ export default function Resorts() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <ScrollManager />
       {/* Header */}
       <Navbar/>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className={`relative min-h-[60vh] flex items-center justify-center overflow-hidden ${heroVisible ? "animate-fade-in-up" : ""}`}>
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -98,7 +107,7 @@ export default function Resorts() {
           <div className="absolute inset-0 bg-blue-900/30"></div>
         </div>
 
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+        <div className={`relative z-10 text-center text-white max-w-6xl mx-auto px-4 ${heroVisible ? "animate-fade-in-up" : ""}`}>
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Maldives Resorts
           </h1>
@@ -116,15 +125,19 @@ export default function Resorts() {
         </div>
       </section>
       {/* Resorts Grid */}
-      <section className="py-10 bg-white">
+      <section ref={resortsRef} className={`py-10 bg-gray-900 ${resortsVisible ? "animate-fade-in-up" : ""}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {resorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {resorts.map((resort) => (
+              {resorts.map((resort, index) => {
+                const { ref: cardRef, isVisible: cardVisible } = useCardAnimation();
+                return (
                 <div
                   key={resort.id}
-                  className="bg-[#D0E6FD] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                  ref={cardRef}
+                  className={`bg-[#D0E6FD] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer ${cardVisible ? "animate-fade-in-up" : ""}`}
                   onClick={() => handleResortClick(resort)}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img
@@ -208,15 +221,16 @@ export default function Resorts() {
                     </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <div className="text-center py-20">
-              <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
-                <h3 className="font-heading text-3xl font-bold text-black mb-4">
+              <div className="bg-gray-800 rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
+                <h3 className="font-heading text-3xl font-bold text-white mb-4">
                   Resorts Coming Soon
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-300 text-lg mb-6">
                   We're carefully curating the most amazing resorts for you.
                   Check back soon for our exclusive collection!
                 </p>
@@ -235,7 +249,7 @@ export default function Resorts() {
       </section>
 
       {/* Maldives FAQ's */}
-      <section className="py-10 bg-white">
+      <section className="py-10 bg-gray-900">
         <FAQ faqsData={faqsData} />
       </section>
 
@@ -245,7 +259,7 @@ export default function Resorts() {
         onOpenChange={() => setSelectedResort(null)}
       >
         <DialogContent
-          className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white p-6"
+          className="max-w-6xl max-h-[90vh] overflow-y-auto bg-gray-800 p-6"
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           {selectedResort && (

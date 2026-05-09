@@ -143,10 +143,75 @@
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpFloat 1.5s ease-out forwards;
+  }
+
+  .animate-fade-in-out {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpFloat 1.5s ease-out forwards;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUpFloat {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes fadeInOutFloat {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(-10px);
+    }
+    75% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  /* Animation delays */
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animation-delay-1200 { animation-delay: 1200ms; }
 
   /* Text effects */
   .text-gradient-primary {

@@ -1,9 +1,12 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function About() {
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <title>About Antravi - Luxury Travel Specialists</title>
       <meta name="description" content="Learn about Antravi's passion for creating extraordinary luxury travel experiences. Discover our story and commitment to exceptional service." />
       
@@ -11,7 +14,7 @@ export default function About() {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-[#162660] text-white">
+        <section ref={sectionRef} className={`py-20 bg-[#162660] text-white ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
               About Antravi
@@ -23,9 +26,9 @@ export default function About() {
         </section>
 
         {/* Story Section */}
-        <section className="py-20 bg-white">
+        <section ref={sectionRef} className={`py-20 bg-gray-900 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className={`text-center mb-16 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
               <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">
                 Our Story
               </h2>
@@ -51,7 +54,7 @@ export default function About() {
                 dreams, and desires, translating them into meticulously planned journeys.
               </p>
               
-              <p>
+              <p className={`text-gray-300 leading-relaxed mt-3 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                 With Antravi, you're not just booking a trip - you're investing in memories that 
                 will last a lifetime. Let us help you live your moments to the fullest.
               </p>
@@ -60,49 +63,49 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-white">
+        <section ref={sectionRef} className={`py-20 bg-gray-900 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className={`text-center mb-16 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
               <h2 className="font-heading text-4xl font-bold text-[#162660] mb-6">
                 Our Values
               </h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
+              <div className={`text-center bg-gray-900 p-8 rounded-xl luxury-shadow ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-heart text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Passion
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   We're genuinely passionate about travel and creating extraordinary experiences 
                   that exceed expectations.
                 </p>
               </div>
               
-              <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
+              <div className="text-center bg-gray-900 p-8 rounded-xl luxury-shadow">
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-gem text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Excellence
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   Every detail is carefully considered and executed to the highest standards 
                   of luxury and service.
                 </p>
               </div>
               
-              <div className="text-center bg-white p-8 rounded-xl luxury-shadow">
+              <div className="text-center bg-gray-900 p-8 rounded-xl luxury-shadow">
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-handshake text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Trust
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   We build lasting relationships with our clients through transparency, 
                   reliability, and unwavering commitment.
                 </p>

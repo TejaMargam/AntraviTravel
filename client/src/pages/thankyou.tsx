@@ -1,12 +1,14 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useLocation } from "wouter";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function ThankYou() {
-    const [, navigate] = useLocation();
-  
+  const [, navigate] = useLocation();
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <title>Thank You - Antravi - Luxury Travel Specialists</title>
       <meta name="description" content="Thank you for your booking with Antravi. We look forward to welcoming you to our resorts." />
       
@@ -15,7 +17,7 @@ export default function ThankYou() {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-[#162660] text-white">
+        <section ref={sectionRef} className={`py-20 bg-[#162660] text-white ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
               Thank You
@@ -25,7 +27,7 @@ export default function ThankYou() {
             </p>
           </div>
         </section>
-        <section className="py-20 bg-white text-black">
+        <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading text-4xl font-bold mb-6">
               Submission Successful
@@ -37,10 +39,10 @@ export default function ThankYou() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12">
             <p className="text-xl md:text-2xl font-light tracking-wider">
               Continue Exploring:
-              <a href="/" className="ml-2">
+              <a href="/" className="ml-2 text-white">
                 <i className="fas fa-home"></i>
               </a>
-              <a href="https://www.instagram.com/the_antravi?utm_source=qr&igsh=cGpxdzNzMDhmZGV2" className="ml-2">
+              <a href="https://www.instagram.com/the_antravi?utm_source=qr&igsh=cGpxdzNzMDhmZGV2" className="ml-2 text-white">
                 <i className="fab fa-instagram"></i>
               </a>
               <a href="https://www.facebook.com/share/16SQ5QQbaR/" className="ml-2">

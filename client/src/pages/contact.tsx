@@ -1,10 +1,13 @@
 import Navbar from "@/components/navbar";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Contact() {
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <title>Contact Antravi - Plan Your Luxury Travel Experience</title>
       <meta name="description" content="Get in touch with Antravi's luxury travel specialists. Start planning your extraordinary journey today." />
       
@@ -12,7 +15,7 @@ export default function Contact() {
       
       <main className="pt-20">
         {/* Contact Hero */}
-        <section className="py-20 bg-[#162660] text-white">
+        <section ref={sectionRef} className={`py-20 bg-[#162660] text-white ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
               Contact Us
@@ -24,17 +27,17 @@ export default function Contact() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 bg-white">
+        <section ref={sectionRef} className={`py-20 bg-gray-900 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="text-center">
+              <div className={`text-center ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-envelope text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Email Us
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className={`text-gray-300 mb-4 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                   Our travel specialists are here to help
                 </p>
                 <a href="mailto:contact@antravi.com" 
@@ -44,14 +47,14 @@ export default function Contact() {
                 </a>
               </div>
               
-              <div className="text-center">
+              <div className={`text-center ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-phone text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Call Us
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className={`text-gray-300 mb-4 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                   Speak directly with our experts
                 </p>
                 <a href="tel:+919849981075" 
@@ -61,14 +64,14 @@ export default function Contact() {
                 </a>
               </div>
               
-              <div className="text-center">
+              <div className={`text-center ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="bg-[#162660] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-clock text-2xl"></i>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-[#162660] mb-4">
                   Response Time
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className={`text-gray-300 mb-4 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
                   We typically respond within
                 </p>
                 <span className="text-[#162660] font-semibold">

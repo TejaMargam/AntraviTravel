@@ -8,8 +8,16 @@ import Testimonials from "@/components/testimonials";
 import ContactCTA from "@/components/contact-cta";
 import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Home() {
+  const [heroRef, heroVisible] = useIntersectionObserver();
+  const [servicesRef, servicesVisible] = useIntersectionObserver();
+  const [testimonialsRef, testimonialsVisible] = useIntersectionObserver();
+  const [contactCTARef, contactCTAVisible] = useIntersectionObserver();
+  const [faqRef, faqVisible] = useIntersectionObserver();
+  const [footerRef, footerVisible] = useIntersectionObserver();
+
   useEffect(() => {
     // Set page title and meta description
     document.title = "Antravi - Premium Travel & Hospitality service";
@@ -66,44 +74,56 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Main H1 heading for SEO */}
       <h1 className="sr-only">Antravi - Luxury Travel Packages for Maldives, Bali & Thailand</h1>
       
       <Navbar />
-      <Hero />
-      <Services />
+      <div ref={heroRef} className={heroVisible ? "animate-fade-in-up" : ""}>
+        <Hero />
+      </div>
+      <div ref={servicesRef} className={servicesVisible ? "animate-fade-in-out animation-delay-200" : ""}>
+        <Services />
+      </div>
       <Destinations />
-      <Testimonials />
-      <ContactCTA />
-      <FAQ faqsData={[
-        {
-          id: "1",
-          question: "What destinations does Antravi specialize in?",
-          answer: "We specialize in luxury travel packages to Maldives, Bali, and Thailand, offering exclusive experiences and personalized service."
-        },
-        {
-          id: "2", 
-          question: "Do you offer honeymoon packages?",
-          answer: "Yes, we offer romantic honeymoon packages to all our destinations with special amenities and experiences designed for couples."
-        },
-        {
-          id: "3",
-          question: "How do I book a travel package?",
-          answer: "You can book through our website by filling out the enquiry form, or contact our travel experts directly for personalized assistance."
-        },
-        {
-          id: "4",
-          question: "What is included in your travel packages?",
-          answer: "Our packages typically include accommodation, transfers, selected meals, and guided tours. Specific inclusions vary by destination and package type."
-        },
-        {
-          id: "5",
-          question: "Do you provide travel insurance?",
-          answer: "We recommend and can arrange comprehensive travel insurance for all our clients to ensure a worry-free travel experience."
-        }
-      ]} />
-      <Footer />
+      <div ref={testimonialsRef} className={testimonialsVisible ? "animate-fade-in-out animation-delay-600" : ""}>
+        <Testimonials />
+      </div>
+      <div ref={contactCTARef} className={contactCTAVisible ? "animate-fade-in-up animation-delay-800" : ""}>
+        <ContactCTA />
+      </div>
+      <div ref={faqRef} className={faqVisible ? "animate-fade-in-out animation-delay-1000" : ""}>
+        <FAQ faqsData={[
+          {
+            id: "1",
+            question: "What destinations does Antravi specialize in?",
+            answer: "We specialize in luxury travel packages to Maldives, Bali, and Thailand, offering exclusive experiences and personalized service."
+          },
+          {
+            id: "2", 
+            question: "Do you offer honeymoon packages?",
+            answer: "Yes, we offer romantic honeymoon packages to all our destinations with special amenities and experiences designed for couples."
+          },
+          {
+            id: "3",
+            question: "How do I book a travel package?",
+            answer: "You can book through our website by filling out the enquiry form, or contact our travel experts directly for personalized assistance."
+          },
+          {
+            id: "4",
+            question: "What is included in your travel packages?",
+            answer: "Our packages typically include accommodation, transfers, selected meals, and guided tours. Specific inclusions vary by destination and package type."
+          },
+          {
+            id: "5",
+            question: "Do you provide travel insurance?",
+            answer: "We recommend and can arrange comprehensive travel insurance for all our clients to ensure a worry-free travel experience."
+          }
+        ]} />
+      </div>
+      <div ref={footerRef} className={footerVisible ? "animate-fade-in-up animation-delay-1200" : ""}>
+        <Footer />
+      </div>
     </div>
   );
 }

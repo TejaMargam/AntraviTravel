@@ -1,21 +1,31 @@
+import { useState } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import ScrollManager from "@/hooks/ScrollManager";
 import FAQ from "@/components/faq";
 import faqsData from "@/data/thailand/faqs.json";
-import { useState } from "react";
 import { TravelForm } from "@/components/TravelForm";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Thailand() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [heroRef, heroVisible] = useIntersectionObserver();
+  const [destinationsRef, destinationsVisible] = useIntersectionObserver();
+  const [bangkokRef, bangkokVisible] = useIntersectionObserver();
+  const [pattayaRef, pattayaVisible] = useIntersectionObserver();
+  const [phuketRef, phuketVisible] = useIntersectionObserver();
+  const [krabiRef, krabiVisible] = useIntersectionObserver();
+  const [itineraryRef, itineraryVisible] = useIntersectionObserver();
+  const [whyChooseRef, whyChooseVisible] = useIntersectionObserver();
+  const [ctaRef, ctaVisible] = useIntersectionObserver();
 
   const handlePlanClick = () => {
     setIsFormOpen(true);
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* SEO H1 Heading */}
       <h1 className="sr-only">Thailand Tour Packages & Private Excursions 2026</h1>
       <ScrollManager />
@@ -31,7 +41,7 @@ export default function Thailand() {
       <Navbar />
 
       <main className="pt-20">
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <section ref={heroRef} className={`relative min-h-[60vh] flex items-center justify-center overflow-hidden ${heroVisible ? "animate-fade-in-up" : ""}`}>
           <div className="absolute inset-0">
             <video
               autoPlay
@@ -49,7 +59,7 @@ export default function Thailand() {
             <div className="absolute inset-0 bg-blue-900/30"></div>
           </div>
 
-          <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+          <div className={`relative z-10 text-center text-white max-w-6xl mx-auto px-4 ${heroVisible ? "animate-fade-in-up" : ""}`}>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               Thailand Tour Packages - Bangkok, Pattaya, Phuket &amp; Krabi
             </h1>
@@ -67,30 +77,30 @@ export default function Thailand() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section ref={destinationsRef} className={`py-16 bg-gray-900 ${destinationsVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-black mb-4">
+            <div className={`text-center mb-10 ${destinationsVisible ? "animate-fade-in-up" : ""}`}>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
                 Thailand vacation Packages - By Antravi
               </h2>
-              <p className="text-lg text-gray-700 max-w-5xl mx-auto">
+              <p className="text-lg text-gray-300 max-w-5xl mx-auto">
                 Thailand is one of Asia's most loved destinations a perfect mix of
                 luxury brands, nightlife, food, islands, temples, culture, and
                 world-class hospitality. Whether you want beach relaxation, city
                 shopping, nightlife, adventure, or a romantic honeymoon, Thailand
                 delivers it all effortlessly.
               </p>
-              <p className="text-lg text-gray-700 max-w-5xl mx-auto mt-4">
+              <p className="text-lg text-gray-300 max-w-5xl mx-auto mt-4">
                 At Antravi, your Thailand vacation isn't just a package — It's a
                 curated experience designed exactly around your preferences.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12">
-              <h3 className="font-heading text-2xl font-bold text-black mb-4">
+            <div className="bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 mb-12">
+              <h3 className="font-heading text-2xl font-bold text-white mb-4">
                 Why Visit Thailand :
               </h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
                 <li>World-class beaches (Phuket, Krabi, Phi Phi Island)</li>
                 <li>Vibrant nightlife & shopping (Bangkok, Pattaya)</li>
                 <li>beachfront resorts (Phuket, Krabi)</li>
@@ -102,7 +112,7 @@ export default function Thailand() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div ref={bangkokRef} className={`bg-gray-800 rounded-2xl shadow-lg overflow-hidden ${bangkokVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src="/images/thailand/bangkok.webp?auto=format&fit=crop&w=1600&q=60"
@@ -112,10 +122,10 @@ export default function Thailand() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-black mb-2">
+                  <h3 className="font-heading text-xl font-bold text-white mb-2">
                     Bangkok — The Heart of Thailand :
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     Bangkok is the most popular starting point for a Thailand
                     holiday. The city is known for its modern skyline, luxurious
                     shopping malls, ancient temples, night markets, and delicious
@@ -123,7 +133,7 @@ export default function Thailand() {
                     and Chao Phraya River cruise, Bangkok blends tradition with
                     modern lifestyle.
                   </p>
-                  <p className="text-gray-600 leading-relaxed mt-3">
+                  <p className="text-gray-300 leading-relaxed mt-3">
                     Travellers looking for shopping can explore Siam Paragon, MBK
                     Mall, IconSiam, and Chatuchak Weekend Market. Bangkok is also
                     famous for its nightlife, rooftop bars, floating markets, and
@@ -134,7 +144,7 @@ export default function Thailand() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div ref={pattayaRef} className={`bg-gray-800 rounded-2xl shadow-lg overflow-hidden ${pattayaVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src="/images/thailand/pattaya.webp?auto=format&fit=crop&w=1600&q=60"
@@ -144,16 +154,16 @@ export default function Thailand() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-black mb-2">
+                  <h3 className="font-heading text-xl font-bold text-white mb-2">
                     Pattaya — Beaches, Nightlife &amp; Water Sports
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     Just two hours from Bangkok, Pattaya is a vibrant beach city
                     renowned for its water sports, shows, nightlife, and adventure
                     activities. One of the most popular experiences is the Coral
                     Island tour, which offers parasailing and jet skiing.
                   </p>
-                  <p className="text-gray-600 leading-relaxed mt-3">
+                  <p className="text-gray-300 leading-relaxed mt-3">
                     Pattaya is also home to attractions like the Sanctuary of
                     Truth, Nong Nooch Garden, and the Alcazar &amp; Tiffany Shows.
                     Families, couples, and groups love Pattaya because it provides
@@ -164,7 +174,7 @@ export default function Thailand() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div ref={phuketRef} className={`bg-gray-800 rounded-2xl shadow-lg overflow-hidden ${phuketVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src="/images/thailand/phuket.webp?auto=format&fit=crop&w=1600&q=60"
@@ -174,16 +184,16 @@ export default function Thailand() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-black mb-2">
+                  <h3 className="font-heading text-xl font-bold text-white mb-2">
                     Phuket - Luxury Resorts &amp; Island Experiences
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     Phuket is Thailand's most luxurious island destination, ideal
                     for honeymoons and upscale vacations. Known for Patong Beach,
                     Kata Beach, and Karon Beach, Phuket offers premium shopping,
                     nightlife, beach clubs, and gourmet dining.
                   </p>
-                  <p className="text-gray-600 leading-relaxed mt-3">
+                  <p className="text-gray-300 leading-relaxed mt-3">
                     The most iconic experiences in Phuket include the Phi Phi
                     Island tour, the James Bond Island canoeing trip, Big Buddha
                     temple, and exciting adventure activities. With its beautiful
@@ -193,7 +203,7 @@ export default function Thailand() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div ref={krabiRef} className={`bg-gray-800 rounded-2xl shadow-lg overflow-hidden ${krabiVisible ? "animate-fade-in-up" : ""}`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src="/images/thailand/krabi.webp?auto=format&fit=crop&w=1600&q=60"
@@ -203,16 +213,16 @@ export default function Thailand() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-black mb-2">
+                  <h3 className="font-heading text-xl font-bold text-white mb-2">
                     Krabi - Peaceful, Scenic &amp; Relaxing
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     Krabi is the perfect destination for travelers who want a calm
                     and scenic island escape. With stunning limestone cliffs,
                     crystal-clear waters, and soft sandy beaches, Krabi is ideal
                     for honeymooners and nature lovers.
                   </p>
-                  <p className="text-gray-600 leading-relaxed mt-3">
+                  <p className="text-gray-300 leading-relaxed mt-3">
                     The most famous attractions include the 4-Island Tour, Railay
                     Beach, Emerald Pool, Hot Springs, and the Tiger Cave Temple
                     viewpoint. Krabi offers a slower pace compared to Phuket,
@@ -225,11 +235,11 @@ export default function Thailand() {
               </div>
             </div>
 
-            <div className="mt-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h3 className="font-heading text-2xl font-bold text-black mb-4">
+            <div ref={itineraryRef} className={`mt-12 bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 ${itineraryVisible ? "animate-fade-in-up" : ""}`}>
+              <h3 className="font-heading text-2xl font-bold text-white mb-4">
                 Thailand Itinerary - 5 to 7 Days Travel Plan
               </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 A well-planned itinerary helps make the most of your Thailand
                 holiday. For a short trip, the recommended plan is 5 Days Bangkok
                 Pattaya, covering city tours, shopping, shows, and water sports.
@@ -237,23 +247,23 @@ export default function Thailand() {
                 Krabi, which includes temple visits, island tours, nightlife, and
                 premium resort stays.
               </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
+              <p className="text-gray-300 leading-relaxed mt-3">
                 Travelers looking for a romantic experience can also choose a
                 5-day Phuket honeymoon itinerary, which includes Phi Phi Island,
                 James Bond Island, romantic dinners, and sightseeing. Each
                 itinerary can be fully customized based on your travel style,
                 budget, and preferred pace.
               </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
+              <p className="text-gray-300 leading-relaxed mt-3">
                 Bangkok Pattaya Phuket Krabi itinerary
               </p>
             </div>
 
-            <div className="mt-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h3 className="font-heading text-2xl font-bold text-black mb-4">
+            <div ref={whyChooseRef} className={`mt-12 bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 ${whyChooseVisible ? "animate-fade-in-up" : ""}`}>
+              <h3 className="font-heading text-2xl font-bold text-white mb-4">
                 Why Choose Antravi for Thailand?
               </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <ul className="list-disc pl-6 space-y-2 text-gray-300">
                 <li>Luxury hand-picked resorts</li>
                 <li>Personalized itineraries based on your travel style</li>
                 <li>Private transfers</li>
@@ -276,13 +286,13 @@ export default function Thailand() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section ref={ctaRef} className={`py-16 bg-gray-900 ${ctaVisible ? "animate-fade-in-up" : ""}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 text-center">
-              <h3 className="font-heading text-2xl md:text-3xl font-bold text-black mb-4">
+            <div className={`bg-gray-800 rounded-2xl shadow-lg p-6 md:p-10 text-center ${ctaVisible ? "animate-fade-in-up" : ""}`}>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
                 Plan your Thailand vacation with Antravi
               </h3>
-              <p className="text-gray-700 text-lg mb-8">
+              <p className="text-gray-300 text-lg mb-8">
                 Tell us your travel dates &amp; preferences — we’ll create a
                 personalized itinerary just for you.
               </p>
@@ -298,7 +308,7 @@ export default function Thailand() {
           </div>
         </section>
 
-        <section className="py-10 bg-white">
+        <section className="py-10 bg-gray-900">
           <FAQ faqsData={faqsData} />
         </section>
       </main>

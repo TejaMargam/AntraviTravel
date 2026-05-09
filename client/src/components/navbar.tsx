@@ -63,7 +63,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#162660] backdrop-blur-md shadow-sm w-full overflow-hidden">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass bg-[#162660]/20 backdrop-blur-xl border-b border-white/10 shadow-lg w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between h-20 w-full min-w-0">
           {/* Logo */}
@@ -148,18 +148,18 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t w-full overflow-hidden">
+          <div className="md:hidden glass bg-[#162660]/20 backdrop-blur-xl border-t border-white/10 w-full overflow-hidden">
             <div className="px-3 py-4 space-y-4 w-full">
               <a
                 href="/#destinations"
                 onClick={handleDestinationsClick}
-                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                className="block w-full text-left text-white hover:text-gray-200 font-medium"
               >
                 Destinations
               </a>
               <Link 
                 href="/contact"
-                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                className="block w-full text-left text-white hover:text-gray-200 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact

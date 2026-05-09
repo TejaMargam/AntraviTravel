@@ -1,9 +1,12 @@
 
 import { Button } from "@/components/ui/button";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function AboutPreview() {
+  const [sectionRef, sectionVisible] = useIntersectionObserver();
+
   return (
-    <section className="py-24 bg-white">
+    <section ref={sectionRef} className={`py-24 bg-gray-900 ${sectionVisible ? "animate-fade-in-up" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -21,8 +24,8 @@ export default function AboutPreview() {
                   <i className="fas fa-star text-white text-xl"></i>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Expert Curation</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white mb-2">Expert Curation</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Our travel specialists have personally visited every destination we recommend, ensuring authentic experiences.
                   </p>
                 </div>
@@ -33,8 +36,8 @@ export default function AboutPreview() {
                   <i className="fas fa-shield-alt text-white text-xl"></i>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Complete Protection</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white mb-2">Complete Protection</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Travel with confidence knowing you're covered by comprehensive insurance and 24/7 support.
                   </p>
                 </div>
@@ -45,8 +48,8 @@ export default function AboutPreview() {
                   <i className="fas fa-heart text-white text-xl"></i>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Personalized Service</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white mb-2">Personalized Service</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Every journey is tailored to your unique preferences, interests, and travel style.
                   </p>
                 </div>
