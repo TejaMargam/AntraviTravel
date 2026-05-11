@@ -1,12 +1,10 @@
-// import { Switch, Route } from "wouter";
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import WhatsAppButton from "./components/WhatsAppButton";
-import { Suspense, lazy } from "react";
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 
@@ -24,15 +22,20 @@ const Thailand = lazy(() => import("@/pages/thailand"));
 
 // Loading component for lazy loaded routes
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50">
+  <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--warm-cream)' }}>
     <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 font-medium">Loading your travel experience...</p>
+      <div style={{ width: '2.5rem', height: '1px', background: 'var(--luxury-gold)', margin: '0 auto 1.5rem' }} />
+      <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--mid-gray)' }}>
+        Loading your travel experience...
+      </p>
     </div>
   </div>
 );
 
+// Router must be inside wouter context so useAnalytics (which calls useLocation) works correctly
 function Router() {
+  useAnalytics();
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -50,13 +53,11 @@ function Router() {
 }
 
 function App() {
-    // initialize GA once
-    useEffect(() => {
-      initGA();
-    }, []);
-  
-    // hook to track route changes
-    useAnalytics();
+  // initialize GA once
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <>
       <a href="#main-content" className="skip-link">

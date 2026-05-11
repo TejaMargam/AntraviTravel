@@ -1,6 +1,3 @@
-import { DialogContent } from "@radix-ui/react-dialog";
-import Enquiry from "./enquiry";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { TravelForm } from "./TravelForm";
 
@@ -10,25 +7,40 @@ export default function ContactCTA() {
   const handlePlanClick = () => {
     setIsFormOpen(true);
   };
+
   return (
-    <section id="contact" className="pt-8 pb-16 text-black bg-white">
-      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8">
+    <section id="contact" className="py-24" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <span className="section-label">Get In Touch</span>
+        <div className="editorial-divider" />
+        <h2
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+            fontWeight: 400,
+            color: 'var(--charcoal)',
+            lineHeight: 1.2,
+            marginBottom: '1rem',
+          }}
+        >
           Let us craft your vacation
         </h2>
-        <p className="text-xl font-light mb-8">beautiful and personal</p>
-
-        {/* <Enquiry buttonTitle="Start Planning with Antravi" params={{}} /> */}
-        <Button
-          onClick={handlePlanClick}
-          size="lg"
-          className="bg-[#162660] text-white hover:bg-[#162660e6] text-lg px-8 py-3"
-          style={{ borderRadius: "5px" }}
+        <p
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontSize: '0.9rem',
+            letterSpacing: '0.1em',
+            color: 'var(--mid-gray)',
+            marginBottom: '2.5rem',
+          }}
         >
+          beautiful and personal
+        </p>
+        <button onClick={handlePlanClick} className="btn-editorial-solid">
           Start Planning with Antravi
-        </Button>
+        </button>
       </div>
-      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
+      <TravelForm isOpen={isFormOpen} onClose={() => { setIsFormOpen(false); }} />
     </section>
   );
 }

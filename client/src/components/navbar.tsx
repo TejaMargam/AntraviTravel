@@ -1,23 +1,5 @@
 import { useState, type MouseEvent } from "react";
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { TravelForm } from "./TravelForm";
 
 export default function Navbar() {
@@ -50,160 +32,124 @@ export default function Navbar() {
     navigate("/#destinations");
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   const handleHomeClick = () => {
     navigate("/");
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#162660] backdrop-blur-md shadow-sm w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-        <div className="flex items-center justify-between h-20 w-full min-w-0">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full overflow-hidden" style={{ backgroundColor: 'var(--navy)' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-20 w-full">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0 min-w-0">
-            <Link 
-              href="/"
-              className="font-heading text-lg xs:text-xl sm:text-2xl font-bold text-white truncate"
-            >
-              <img src="/Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{cursor:'pointer'}}/>
+          <div className="flex items-center flex-shrink-0">
+            <Link href="/" className="block">
+              <img src="/Antravi_Logo_W.png" alt="Antravi Logo" height={50} width={150} style={{ cursor: 'pointer' }} />
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center" style={{ gap: '2.5rem' }}>
             <a
               href="/#destinations"
               onClick={handleDestinationsClick}
-              className="text-white hover:text-black font-medium transition-colors"
+              className="transition-colors"
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.7rem',
+                fontWeight: 500,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.85)',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#ffffff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
             >
               Destinations
             </a>
-            <Link 
+            <Link
               href="/contact"
-              className="text-white hover:text-black font-medium transition-colors"
+              className="transition-colors"
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.7rem',
+                fontWeight: 500,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.85)',
+              }}
+              onMouseEnter={(e: MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = '#ffffff')}
+              onMouseLeave={(e: MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
             >
               Contact
             </Link>
-            {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-              <DialogTrigger asChild>
-                <Button
-                  size="lg"
-                  className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
-                  style={{ borderRadius: "5px" }}
-                >
-                  Plan With Antravi
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
-                <DialogHeader>
-                    <DialogTitle className="sr-only">
-                        Lead Form
-                    </DialogTitle>
-                </DialogHeader>
-               
-                <div className="w-full h-[80vh]">
-                    <iframe
-                        src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        style={{ border: "none" }}
-                        allowFullScreen
-                        title="Maldives Lead Form"
-                    ></iframe>
-                </div>
-              </DialogContent>
-            </Dialog> */}
-            <Button
+            <button
               onClick={handlePlanClick}
-              size="lg"
-              className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
-              style={{ borderRadius: "5px" }}
               aria-label="Start planning your trip with Antravi"
+              className="btn-editorial-white"
             >
               Plan With Antravi
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-white p-2"
+              className="p-2 transition-opacity"
+              style={{ color: 'rgba(255,255,255,0.85)' }}
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
-              <i
-                className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-lg`}
-              ></i>
+              <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-lg`}></i>
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t w-full overflow-hidden">
-            <div className="px-3 py-4 space-y-4 w-full">
+          <div className="md:hidden w-full" style={{ borderTop: '1px solid rgba(255,255,255,0.12)', backgroundColor: 'var(--navy)' }}>
+            <div className="px-4 py-6 space-y-5 w-full">
               <a
                 href="/#destinations"
                 onClick={handleDestinationsClick}
-                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                className="block w-full"
+                style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.7rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.85)',
+                }}
               >
                 Destinations
               </a>
-              <Link 
+              <Link
                 href="/contact"
-                className="block w-full text-left text-gray-700 hover:text-black font-medium"
+                className="block w-full"
+                style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.7rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.85)',
+                }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
-              {/* <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
-                    style={{ borderRadius: "5px" }}
-                  >
-                    Plan With Antravi
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[900px] w-full max-h-[90vh] bg-white p-0 overflow-hidden rounded-2xl shadow-xl">
-                  <DialogHeader>
-                    <DialogTitle className="sr-only">
-                        Lead Form
-                    </DialogTitle>
-                  </DialogHeader>
-                 
-                  <div className="w-full h-[80vh]">
-                      <iframe
-                          src="https://forms.zohopublic.in/antraviprivatelimited1/form/MaldivesLeadform/formperma/_a_99D1bGodoxLFMFMHjBHMTesbFNNo3qxhrECPTfi0?zf_rszfm=1"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          style={{ border: "none" }}
-                          allowFullScreen
-                          title="Maldives Lead Form"
-                      ></iframe>
-                  </div>
-                </DialogContent>
-              </Dialog> */}
-              <Button
+              <button
                 onClick={handlePlanClick}
-                className="w-full bg-[#162660] text-white"
+                className="btn-editorial-white w-full text-center"
                 aria-label="Start planning your trip with Antravi"
               >
                 Plan With Antravi
-              </Button>
+              </button>
             </div>
           </div>
         )}
-        <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
+        <TravelForm isOpen={isFormOpen} onClose={() => { setIsFormOpen(false); }} />
       </div>
     </nav>
   );

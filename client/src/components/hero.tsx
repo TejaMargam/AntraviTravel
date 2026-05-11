@@ -1,12 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { TravelForm } from "./TravelForm";
 
 export default function Hero() {
@@ -17,44 +9,58 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-screen md:h-[75vh] flex items-center justify-center overflow-hidden" style={{ animation: 'none' }}>
+    <section className="relative w-full h-screen md:h-[75vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full" style={{ animation: 'none' }}>
-        <div className="absolute inset-0 w-full h-full" style={{ animation: 'none' }}>
-          <img
-            src="/images/hero/hero.webp"
-            alt="Antravi - Live Your Moments"
-            className="w-full h-full object-cover"
-            style={{ animation: 'none', transition: 'none' }}
-          />
-        </div>
-        
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" style={{ animation: 'none' }} />
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <img
+          src="/images/hero/hero.webp"
+          alt="Antravi - Live Your Moments"
+          className="w-full h-full object-cover aerial-drift"
+        />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4" style={{ animation: 'none' }}>
-        <div style={{ animation: 'none', transition: 'none' }}>
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 tracking-tight" style={{ animation: 'none', transition: 'none' }}>
-            Antravi
-          </h1>
-          <p className="text-lg md:text-xl font-light mb-2 tracking-wide opacity-90" style={{ animation: 'none', transition: 'none' }}>
-            Live Your Moments
-          </p>
-        </div>
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="cinematic-rule" style={{ width: '2.5rem', height: '1px', background: 'rgba(184,150,62,0.9)', margin: '0 auto 1.5rem' }} />
 
-        <Button
-          onClick={handlePlanClick}
-          size="lg"
-          className="bg-white hover:bg-gray-100 text-black text-lg px-8 py-3"
-          style={{ borderRadius: "5px", animation: 'none', transition: 'none' }}
+        <h1
+          className="cinematic-title"
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontSize: 'clamp(2.8rem, 6vw, 4.5rem)',
+            fontWeight: 400,
+            letterSpacing: '0.04em',
+            lineHeight: 1.1,
+            marginBottom: '1rem',
+          }}
         >
-          Enquire Now
-        </Button>
+          Antravi
+        </h1>
+
+        <p
+          className="cinematic-subtitle"
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontSize: '0.72rem',
+            fontWeight: 400,
+            letterSpacing: '0.3em',
+            textTransform: 'uppercase',
+            opacity: 0.85,
+            marginBottom: '2.5rem',
+          }}
+        >
+          Live Your Moments
+        </p>
+
+        <div className="cinematic-cta">
+          <button onClick={handlePlanClick} className="btn-editorial-white">
+            Enquire Now
+          </button>
+        </div>
       </div>
-      
-      <TravelForm isOpen={isFormOpen} onClose={() => {setIsFormOpen(false)}} />
+
+      <TravelForm isOpen={isFormOpen} onClose={() => { setIsFormOpen(false); }} />
     </section>
   );
 }
