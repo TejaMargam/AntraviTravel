@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -31,6 +31,10 @@ interface Resort {
   roomTypes: string[];
 }
 
+const Resorts1 = lazy(() => import("@/pages/maldives2"));
+const Resorts2 = lazy(() => import("@/pages/maldives3"));
+
+
 export default function Resorts() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
@@ -51,6 +55,60 @@ export default function Resorts() {
   };
 
   const resorts: Resort[] = resortsData;
+
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+  const resortFilters = [
+    { label: "All", value: "All" },
+    { label: "4-Star", value: "4-star" },
+    { label: "5-Star", value: "5-star" },
+    { label: "Luxury", value: "Luxury" },
+  ];
+
+  const filteredResorts = resorts.filter((resort) => {
+    if (activeFilter === "All") return true;
+    if (activeFilter === "4-star") return resort.rating === 4;
+    if (activeFilter === "5-star") return resort.rating === 5;
+    if (activeFilter === "Luxury") return resort["StartsFrom "].includes("Available on Request") || resort.rating === 5;
+    return true;
+  });
+
+  const experienceCards = [
+    {
+      title: "Overwater Villas",
+      image: "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop",
+      subtitle: "Private deck and lagoon access",
+    },
+    {
+      title: "All Inclusive Resorts",
+      image: "images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop",
+      subtitle: "Meals, activities, and transfers included",
+    },
+    {
+      title: "Luxury Resorts",
+      image: "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop",
+      subtitle: "Top-tier island living",
+    },
+    {
+      title: "Private Pool Villas",
+      image: "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      subtitle: "Secluded space for couples",
+    },
+    {
+      title: "Honeymoon Escapes",
+      image: "images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop",
+      subtitle: "Romantic island moments",
+    },
+    {
+      title: "Family Vacations",
+      image: "images/maldives/resorts/arrival/arrival-image-1.webp?w=800&h=600&fit=crop",
+      subtitle: "Fun for every age",
+    },
+    {
+      title: "Activities",
+      image: "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop",
+      subtitle: "Diving, spa, and sunset cruises",
+    },
+  ];
 
   const handleResortClick = (resort: Resort) => {
     setSelectedResort(resort);
@@ -114,11 +172,89 @@ export default function Resorts() {
       </section>
 
       {/* Resorts Grid */}
+      <section className="py-16" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="section-label">Experience the Maldives</span>
+            <div className="editorial-divider" />
+            <h2
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: 400,
+                color: 'var(--charcoal)',
+                marginBottom: '1rem',
+              }}
+            >
+              Experience the Maldives with Antravi
+            </h2>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', color: 'var(--mid-gray)', maxWidth: '56rem', margin: '0 auto', lineHeight: 1.9 }}>
+              Where every part of your vacation is thoughtfully arranged, before you even arrive.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {experienceCards.map((card) => (
+              <div key={card.title} className="relative overflow-hidden rounded-3xl shadow-lg group" style={{ minHeight: '18rem' }}>
+                <img
+                  src={getImagePath(card.image)}
+                  alt={card.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/85 to-transparent">
+                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: '#E5E7EB', textTransform: 'uppercase', letterSpacing: '0.18em', marginBottom: '0.5rem' }}>
+                    Explore by Experience
+                  </p>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', color: '#ffffff', marginBottom: '0.5rem' }}>
+                    {card.title}
+                  </h3>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: '#D1D5DB', lineHeight: 1.75 }}>
+                    {card.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {resorts.length > 0 ? (
+          <div className="text-center mb-12">
+            <span className="section-label">Maldives — The World’s Most Exclusive Island Escape</span>
+            <div className="editorial-divider" />
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', color: 'var(--mid-gray)', maxWidth: '56rem', margin: '0 auto 1rem', lineHeight: 1.9 }}>
+              The Maldives is the definition of luxury travel — a collection of 1,000+ coral islands in the Indian Ocean, known for overwater villas, crystal-clear lagoons, and private island resorts.
+            </p>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', color: 'var(--mid-gray)', maxWidth: '56rem', margin: '0 auto', lineHeight: 1.9 }}>
+              For Indian travellers, Maldives is the fastest way to experience internationally — just a short flight, but a completely different world. No crowds, no noise, just ocean, privacy, and world-class hospitality.
+            </p>
+          </div>
+
+          <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.3rem', color: 'var(--charcoal)', marginBottom: '0.5rem' }}>Filter resorts</h3>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)' }}>
+                Find the Maldives stay that matches your occasion and budget.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {resortFilters.map((filter) => (
+                <button
+                  key={filter.value}
+                  onClick={() => setActiveFilter(filter.value)}
+                  className={`rounded-full border px-4 py-2 text-sm font-medium transition ${activeFilter === filter.value ? 'border-transparent bg-slate-900 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-slate-400'}`}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {filteredResorts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {resorts.map((resort) => (
+              {filteredResorts.map((resort) => (
                 <div
                   key={resort.id}
                   className="editorial-card overflow-hidden cursor-pointer"
@@ -252,7 +388,167 @@ export default function Resorts() {
         </div>
       </section>
 
-      {/* Maldives FAQs */}
+      <section className="py-16" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <span className="section-label">Luxury Resorts</span>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 500, color: 'var(--charcoal)', margin: '1rem 0' }}>
+                Available upon private consultation
+              </h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--mid-gray)', lineHeight: 1.9 }}>
+                <li>JW Marriott Kaafu Atoll</li>
+                <li>Anantara Kiaviah</li>
+                <li>St. Regis</li>
+                <li>Anantara Veli</li>
+                <li>Furaveri</li>
+                <li>Anantara Dhigu</li>
+                <li>The Ritz-Carlton</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <span className="section-label">Brands we work with</span>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.9, marginTop: '1rem' }}>
+                JW Marriott Kaafu Atoll, Anantara Kiaviah, Anantara Veli, Anantara Dhigu, Le Méridien, Hilton, The Westin, NH Collection, NH Hotels & Resorts, St. Regis, Sun Siyam, Centara Collection, Reeti Faru, Hard Rock, Sheraton, SAii, Halcyon Private Island, Colours of Oblu, Brennia Kottefaru, Grand Park Kodhipparu, Holiday Inn Kandooma, Nooe Kanaavashi, Villa Nautica, Medhufushi Island Resort, Furaveri Maldives.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <span className="section-label">Maldives Fast Facts</span>
+              <div className="grid gap-3 mt-4 text-sm" style={{ color: 'var(--mid-gray)' }}>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Location</p>
+                  <p>Indian Ocean, southwest of India</p>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Islands</p>
+                  <p>1,000+ coral islands</p>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Known for</p>
+                  <p>Private island resorts, marine life, luxury villas</p>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Language</p>
+                  <p>Dhivehi, English widely spoken</p>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Currency</p>
+                  <p>Maldivian Rufiyaa (MVR), USD accepted</p>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--charcoal)' }}>Travel time</p>
+                  <p>Mumbai / Bangalore / Delhi → Maldives: 2 to 4 hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3 mt-10">
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--charcoal)', marginBottom: '0.75rem' }}>Best Season to Visit</h3>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85, marginBottom: '0.75rem' }}>
+                November to April — Peak Season. Sunny weather, calm waters, best for honeymoon and water activities.
+              </p>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85 }}>
+                May to October — Value Season. Lower prices, short tropical rains, great deals in shoulder months.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--charcoal)', marginBottom: '0.75rem' }}>Important Info</h3>
+              <ul className="space-y-3 text-sm" style={{ color: 'var(--mid-gray)', lineHeight: 1.85 }}>
+                <li>Visa: Free on arrival for Indians</li>
+                <li>Passport validity: Minimum 6 months</li>
+                <li>Return ticket required</li>
+              </ul>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85, marginTop: '0.75rem' }}>
+                No complicated visa process — very smooth entry.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--charcoal)', marginBottom: '0.75rem' }}>Transfers to Resorts</h3>
+              <ul className="space-y-3 text-sm" style={{ color: 'var(--mid-gray)', lineHeight: 1.85 }}>
+                <li><strong>Speedboat:</strong> 15–60 minutes, budget-friendly, resorts near Malé.</li>
+                <li><strong>Seaplane:</strong> 30–60 minutes, scenic premium experience.</li>
+                <li><strong>Domestic flight + boat:</strong> For far islands, combines flight with boat transfer.</li>
+              </ul>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85, marginTop: '0.75rem' }}>
+                Antravi selects resorts based on transfer convenience and budget — a critical decision factor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16" style={{ backgroundColor: '#ffffff' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-3xl overflow-hidden bg-slate-950 text-white" style={{ minHeight: '22rem' }}>
+              <img src={getImagePath('images/maldives/resorts/nooe/nooe-image-2.webp?w=800&h=600&fit=crop')} alt="Private island resort" className="w-full h-52 object-cover" />
+              <div className="p-6">
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.3rem', color: 'white', marginBottom: '0.75rem' }}>Private Island Resorts</h3>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: '#CBD5E1', lineHeight: 1.85 }}>
+                  Entire island = one resort. Ultimate privacy, luxury, and service built around your stay.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl overflow-hidden bg-slate-950 text-white" style={{ minHeight: '22rem' }}>
+              <img src={getImagePath('images/maldives/resorts/saii/saii-image-5.webp?w=800&h=600&fit=crop')} alt="Public island guesthouse" className="w-full h-52 object-cover" />
+              <div className="p-6">
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.3rem', color: 'white', marginBottom: '0.75rem' }}>Public Islands</h3>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: '#CBD5E1', lineHeight: 1.85 }}>
+                  Guesthouses on local islands offer a budget-friendly experience with a more authentic side of Maldives life.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <span className="section-label">Top Experiences</span>
+              <ul className="space-y-3 text-sm mt-4" style={{ color: 'var(--mid-gray)', lineHeight: 1.85 }}>
+                <li>Overwater Villa Stay</li>
+                <li>Floating Breakfast</li>
+                <li>Snorkelling & Diving</li>
+                <li>Dolphin Sunset Cruise</li>
+                <li>Spa & Wellness</li>
+                <li>Private Sandbank Experience</li>
+                <li>Cinema Under the Stars</li>
+                <li>Candlelight Dinner</li>
+                <li>Underwater Restaurant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--charcoal)', marginBottom: '1rem' }}>Why Book Maldives with Antravi</h3>
+          <div className="grid gap-6 lg:grid-cols-3 mt-10 text-left">
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', marginBottom: '0.75rem' }}>Built for Indian Travellers</h4>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85 }}>We understand food, flights, and expectations.</p>
+            </div>
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', marginBottom: '0.75rem' }}>Right Resort Selection</h4>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85 }}>We match budget, occasion, and experience preference.</p>
+            </div>
+            <div className="rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+              <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', marginBottom: '0.75rem' }}>End-to-End Planning</h4>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', color: 'var(--mid-gray)', lineHeight: 1.85 }}>Flights → Resort → Transfers → Activities → Support.</p>
+            </div>
+          </div>
+          <div className="mt-10">
+            <button onClick={handlePlanClick} className="btn-editorial-solid">
+              Reserve Your Maldives Vacation Now
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-10" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <FAQ faqsData={faqsData} />
       </section>
@@ -412,6 +708,8 @@ export default function Resorts() {
 
       <Footer />
       <TravelForm isOpen={isFormOpen} onClose={() => { setIsFormOpen(false); }} />
+      <Resorts1 />
+      <Resorts2 />
     </div>
   );
 }
