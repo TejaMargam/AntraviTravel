@@ -13,6 +13,9 @@ import { TravelForm } from "@/components/TravelForm";
 import resortsData from "@/data/maldives/resorts.json";
 import faqsData from "@/data/maldives/faqs.json";
 import { getImagePath } from "@/utils/paths";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 interface Resort {
   id: string;
@@ -82,13 +85,39 @@ export default function Maldives() {
     { id: 7, title: "Activities", image: "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop" }
   ];
 
-  // Brands we work with
-  const brands = [
-    "JW Marriott Kaafu Atoll", "Anantara Kiaviah", "Anantara Veli", "Anantara Dhigu", "Le Meridien", "Hilton", 
-    "The Westin", "NH Collection", "NH Hotels & Resorts", "St. Regis", "Sun Siyam", "Centara Collection", 
-    "Reeti Faru", "Hard Rock", "Sheraton", "SAii", "Halcyon Private Island", "Colours of Oblu", "Brennia Kottefaru", 
-    "Grand Park Kodhipparu", "Holiday Inn Kandooma", "Nooe Kunaavashi", "Villa Nautica", "Medhufushi Island Resort", "Furaveri Maldives"
-  ];
+  const brandLogos = [
+    "Anantara Dhigu.png",
+    "Anantara Kihavah Maldives Villas.png",
+    "Anantara Veli Maldives. .png",
+    "Brennia Kottefaru.png",
+    "Centara Mirage Lagoon.png",
+    "Centara Ras fushi Maldives.png",
+    "Furaveri Maldives.png",
+    "Grand Park Kodhipparu Maldives.png",
+    "Hard Rock Maldives.png",
+    "Hilton Maldives Amingiri.png",
+    "Holiday Inn Kandoma .png",
+    "JW Marriott Kaafu Atoll.png",
+    "Le Meridean Maldives.png",
+    "Medhufushi Island Resort.png",
+    "NH Collection Maldives Reeti Resort.png",
+    "nh Maldives Kuda Rah.png",
+    "Nooe Maldives Kunaavashi.png",
+    "Oblu Select sangeli.png",
+    "Oblu Xperence Aliafushi.png",
+    "Reethi Faru .png",
+    "Saii Lagoon Maldives.png",
+    "Sheraton Maldives Full Moon Resort & Spa.png",
+    "Siyam world.png",
+    "St. Regis.png",
+    "Sun siyam .png",
+    "The Ritz Carlton Maldives Fari Islands.png",
+    "Villa Nautica.png",
+    "Westin Maldives Logo.png",
+  ].map((fileName) => ({
+    name: fileName.replace(/\s*\.\s*png$/i, "").trim(),
+    image: `images/maldives/resortLogos/${fileName}`,
+  }));
 
   const resorts: Resort[] = resortsData;
 
@@ -328,16 +357,40 @@ export default function Maldives() {
               Brands We Work With
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {brands.map((brand, index) => (
-              <span 
-                key={index}
-                className="bg-white px-4 py-2 rounded-full text-sm border border-gray-200"
-                style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}
-              >
-                {brand}
-              </span>
-            ))}
+          <div className="overflow-hidden">
+            <Swiper
+              modules={[Autoplay]}
+              loop
+              speed={2600}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              grabCursor
+              spaceBetween={18}
+              slidesPerView={2}
+              breakpoints={{
+                640: { slidesPerView: 3, spaceBetween: 20 },
+                768: { slidesPerView: 4, spaceBetween: 22 },
+                1024: { slidesPerView: 5, spaceBetween: 24 },
+                1280: { slidesPerView: 6, spaceBetween: 24 },
+              }}
+              className="py-2"
+            >
+              {[...brandLogos, ...brandLogos].map((brand, index) => (
+                <SwiperSlide key={`${brand.name}-${index}`}>
+                  <div className="h-24 rounded-lg border border-gray-200 bg-white px-6 flex items-center justify-center">
+                    <img
+                      src={getImagePath(brand.image)}
+                      alt={`${brand.name} logo`}
+                      className="max-h-14 w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>

@@ -391,12 +391,10 @@
     "shortDescription": "All-Inclusive Tropical Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/olhuveli/olhuveli-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/olhuveli/olhuveli-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/olhuveli/olhuveli-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/olhuveli/olhuveli-image-4.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
     "StartsFrom ": "Available on Request",
@@ -428,12 +426,12 @@
     "shortDescription": "Adults Only Island Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/centara/centara-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/centara/centara-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/centara/centara-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/centara/centara-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/centara/centara-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/centara/centara-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
     "StartsFrom ": "Available on Request",
@@ -458,178 +456,47 @@
     ]
   },
   {
-    "id": "Medhufushi Island Resort",
-    "name": "Medhufushi Island Resort",
-    "description": "A serene island retreat surrounded by vibrant coral reefs and marine life, perfect for snorkeling, diving, and peaceful tropical escapes.",
-    "shortDescription": "Authentic Island Serenity",
-    "tag": "",
+    "id": "Adaaran Prestige Vadoo",
+    "name": "Adaaran Prestige Vadoo",
+    "description": "An exclusive adults-focused luxury resort offering intimate overwater villa experiences, direct lagoon access, personalized butler service, and breathtaking ocean views just minutes away from Malé.",
+    "shortDescription": "Luxury Overwater Escape",
+    "tag": "Premium Adults Retreat",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/adaaran/adaaran-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/adaaran/adaaran-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/adaaran/adaaran-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/adaaran/adaaran-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/adaaran/adaaran-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/adaaran/adaaran-image-6.webp?w=800&h=600&fit=crop"
     ],
-    "rating": 4,
+    "rating": 5,
     "StartsFrom ": "Available on Request",
     "duration": "3 Nights / 4 Days",
-    "location": "Meemu Atoll",
+    "location": "South Malé Atoll",
+
     "features": [
-      "Excellent House Reef",
-      "Rich Coral & Marine Life",
-      "Beach & Water Villas",
-      "Relaxed Island Atmosphere"
+      "Luxury Overwater Villas",
+      "Private Plunge Pools",
+      "Glass Floor Panels",
+      "Japanese Restaurant",
+      "Adults-Friendly Romantic Resort",
+      "Personalized Butler Service"
     ],
+
     "amenities": [
-      "HB + FB + AI Meal Plans",
-      "45 Minute Seaplane Transfers",
-      "2.5 Hour Speed Boat Option",
-      "Complimentary WIFI"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
-    ]
-  },
-  {
-    "id": "Cinnamon Dhonveli Maldives",
-    "name": "Cinnamon Dhonveli Maldives",
-    "description": "A laid-back tropical island famous for surfing, snorkeling, diving, and vibrant house reefs surrounded by crystal-clear lagoons.",
-    "shortDescription": "Surf & Snorkel Paradise",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 4,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "North Malé Atoll",
-    "features": [
-      "Excellent House Reef",
-      "Snorkeling & Diving",
-      "Beach & Water Villas",
-      "Surfing Destination"
-    ],
-    "amenities": [
-      "HB + FB + AI Meal Plans",
-      "25 Minute Speed Boat Transfers",
       "Complimentary WIFI",
-      "Water Sports"
+      "Premium All Inclusive Options",
+      "15 Minute Speed Boat Transfers",
+      "Spa & Wellness Centre",
+      "Direct Lagoon Access",
+      "Water Sports & Diving"
     ],
+
     "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
-    ]
-  },
-  {
-    "id": "Adaaran Select Meedhupparu",
-    "name": "Adaaran Select Meedhupparu",
-    "description": "A classic Maldivian island resort known for exceptional snorkeling, marine biodiversity, and authentic island experiences.",
-    "shortDescription": "Classic Reef Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 4,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "Raa Atoll",
-    "features": [
-      "Excellent House Reef",
-      "Indian Specialty Restaurant",
-      "Snorkeling & Diving",
-      "Beach & Water Villas"
-    ],
-    "amenities": [
-      "AI Meal Plan",
-      "45 Minute Seaplane Transfers",
-      "Complimentary WIFI",
-      "Spa & Water Sports"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
-    ]
-  },
-  {
-    "id": "Adaaran Select Hudhuran Fushi",
-    "name": "Adaaran Select Hudhuran Fushi",
-    "description": "A tropical island getaway with lush vegetation, coral gardens, surfing experiences, and direct beach snorkeling opportunities.",
-    "shortDescription": "Surfing & Nature Retreat",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 4,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "North Malé Atoll",
-    "features": [
-      "Coral Gardens & House Reef",
-      "Direct Beach Snorkeling",
-      "Indian Specialty Restaurant",
-      "Surfing Experiences"
-    ],
-    "amenities": [
-      "AI Meal Plan",
-      "25 Minute Speedboat Transfers",
-      "Complimentary WIFI",
-      "Water Sports"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
-    ]
-  },
-  {
-    "id": "Reethi Faru Resort",
-    "name": "Reethi Faru Resort",
-    "description": "A peaceful eco-friendly island resort with pristine beaches, lush vegetation, and strong coral reef ecosystems ideal for marine adventures.",
-    "shortDescription": "Eco Luxury Island Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 4,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "Raa Atoll",
-    "features": [
-      "Strong Coral Coverage",
-      "Beach & Water Villas",
-      "Eco-Friendly Resort",
-      "Relaxed Island Atmosphere"
-    ],
-    "amenities": [
-      "HB + FB + AI Meal Plans",
-      "45 Minute Seaplane Transfers",
-      "Complimentary WIFI",
-      "Water Activities"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa"
+      "Sunrise Water Villa",
+      "Sunset Water Villa",
+      "Honeymoon Villa",
+      "Overwater Villa with Private Pool"
     ]
   },
   {
@@ -639,12 +506,12 @@
     "shortDescription": "Fun Family Island Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/hirkm/hirkm-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hirkm/hirkm-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hirkm/hirkm-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hirkm/hirkm-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hirkm/hirkm-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hirkm/hirkm-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
     "StartsFrom ": "Available on Request",
@@ -674,12 +541,11 @@
     "shortDescription": "Modern Island Serenity",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/brennia/brennia-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/brennia/brennia-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/brennia/brennia-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/brennia/brennia-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/brennia/brennia-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -705,54 +571,18 @@
     ]
   },
   {
-    "id": "Oaga Art Resort",
-    "name": "Oaga Art Resort",
-    "description": "A boutique art-inspired island resort blending Maldivian culture, creativity, luxury, and immersive island experiences in a vibrant tropical atmosphere.",
-    "shortDescription": "Art Meets Island Luxury",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "North Malé Atoll",
-    "features": [
-      "Boutique Art Resort",
-      "Creative Island Experiences",
-      "Beach & Water Villas",
-      "Cultural Entertainment"
-    ],
-    "amenities": [
-      "Complimentary WIFI",
-      "Spa & Wellness",
-      "Water Activities",
-      "Island Dining Experiences"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa",
-      "Pool Villa"
-    ]
-  },
-  {
     "id": "Le Méridien Maldives Resort & Spa",
     "name": "Le Méridien Maldives Resort & Spa",
     "description": "A chic luxury resort offering world-class dining, vibrant marine life, and elegant villas surrounded by turquoise lagoons and lush tropical beauty.",
     "shortDescription": "Chic Modern Island Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/leMeridien/leMeridien-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/leMeridien/leMeridien-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/leMeridien/leMeridien-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/leMeridien/leMeridien-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/leMeridien/leMeridien-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/leMeridien/leMeridien-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -784,12 +614,12 @@
     "shortDescription": "Nature Inspired Luxury",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/furaveri/furaveri-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/furaveri/furaveri-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/furaveri/furaveri-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/furaveri/furaveri-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/furaveri/furaveri-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/furaveri/furaveri-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -821,12 +651,12 @@
     "shortDescription": "Vibrant Luxury Island Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/nautica/nautica-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nautica/nautica-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nautica/nautica-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nautica/nautica-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nautica/nautica-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/nautica/nautica-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -857,12 +687,12 @@
     "shortDescription": "Private Pool Villa Retreat",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/kudaRah/kudaRah-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kudaRah/kudaRah-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kudaRah/kudaRah-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kudaRah/kudaRah-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kudaRah/kudaRah-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kudaRah/kudaRah-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -886,53 +716,18 @@
     ]
   },
   {
-    "id": "Centara Grand Lagoon Maldives",
-    "name": "Centara Grand Lagoon Maldives",
-    "description": "A premium all-overwater luxury resort offering uninterrupted ocean views, elegant villas, and elevated island experiences in the Maldives.",
-    "shortDescription": "All Overwater Luxury Escape",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "North Malé Atoll",
-    "features": [
-      "All Overwater Resort",
-      "Luxury Ocean Experiences",
-      "Elegant Water Villas",
-      "Premium Dining"
-    ],
-    "amenities": [
-      "HB + FB + AI Meal Plans",
-      "30 Minute Speed Boat Transfers",
-      "Complimentary WIFI",
-      "Spa & Wellness"
-    ],
-    "roomTypes": [
-      "Water Villa",
-      "Overwater Pool Villa"
-    ]
-  },
-  {
     "id": "Hilton Amingiri Maldives Resort & Spa",
     "name": "Hilton Amingiri Maldives Resort & Spa",
     "description": "A premium luxury retreat offering all-pool villas, signature dining experiences, and stylish island living close to Malé.",
     "shortDescription": "Luxury Pool Villa Escape",
     "tag": "",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/hilton/hilton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hilton/hilton-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hilton/hilton-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hilton/hilton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hilton/hilton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/hilton/hilton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -957,55 +752,18 @@
     ]
   },
   {
-    "id": "Siyam World Maldives",
-    "name": "Siyam World Maldives",
-    "description": "A massive all-inclusive island destination packed with entertainment, dining, water sports, and vibrant experiences for couples, groups, and families.",
-    "shortDescription": "Unlimited Island Entertainment",
-    "tag": "",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "Noonu Atoll",
-    "features": [
-      "Premium All Inclusive",
-      "Floating Water Park",
-      "Live Entertainment",
-      "Multiple Dining Experiences"
-    ],
-    "amenities": [
-      "Complimentary WIFI",
-      "Water Sports",
-      "Kids Club",
-      "Spa & Wellness"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Water Villa",
-      "Beach Pool Villa",
-      "Overwater Pool Villa"
-    ]
-  },
-  {
     "id": "JW Marriott Maldives Kaafu Atoll Island Resort",
     "name": "JW Marriott Maldives Kaafu Atoll Island Resort",
     "description": "An ultra-luxury island sanctuary offering sophisticated villas, exceptional dining, and elevated personalized experiences surrounded by pristine lagoons.",
     "shortDescription": "Refined Luxury Sanctuary",
     "tag": "5-Star Luxury",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/marriott/marriott-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/marriott/marriott-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/marriott/marriott-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/marriott/marriott-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/marriott/marriott-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/marriott/marriott-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -1036,12 +794,10 @@
     "shortDescription": "Iconic Underwater Luxury",
     "tag": "5-Star Luxury",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/kihavah/kihavah-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kihavah/kihavah-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kihavah/kihavah-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kihavah/kihavah-image-4.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -1072,12 +828,12 @@
     "shortDescription": "Signature Luxury Escape",
     "tag": "5-Star Luxury",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/regis/regis-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/regis/regis-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/regis/regis-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/regis/regis-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/regis/regis-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/regis/regis-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -1108,12 +864,12 @@
     "shortDescription": "Modern Ultra Luxury",
     "tag": "5-Star Luxury",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/ritzCarlton/ritzCarlton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
@@ -1137,54 +893,18 @@
     ]
   },
   {
-    "id": "Anantara Dhigu Maldives Resort",
-    "name": "Anantara Dhigu Maldives Resort",
-    "description": "A luxurious tropical retreat offering spacious villas, family-friendly experiences, and easy access to turquoise lagoons and vibrant coral reefs.",
-    "shortDescription": "Luxury Family Island Retreat",
-    "tag": "5-Star Luxury",
-    "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
-    ],
-    "rating": 5,
-    "StartsFrom ": "Available on Request",
-    "duration": "3 Nights / 4 Days",
-    "location": "South Malé Atoll",
-    "features": [
-      "Luxury Beachfront Villas",
-      "Overwater Suites",
-      "Family Friendly Experiences",
-      "Premium Dining"
-    ],
-    "amenities": [
-      "Complimentary WIFI",
-      "Luxury Spa",
-      "Speed Boat Transfers",
-      "Water Activities"
-    ],
-    "roomTypes": [
-      "Beach Villa",
-      "Overwater Suite",
-      "Pool Villa"
-    ]
-  },
-  {
     "id": "Grand Park Kodhipparu Maldives",
     "name": "Grand Park Kodhipparu Maldives",
     "description": "A luxurious island sanctuary known for stylish villas, rich marine experiences, and elegant hospitality just minutes away from Malé.",
     "shortDescription": "Elegant Private Island Escape",
     "tag": "5-Star Luxury",
     "images": [
-      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/grandPark/grandPark-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/grandPark/grandPark-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
     "StartsFrom ": "Available on Request",
