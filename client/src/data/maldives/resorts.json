@@ -383,5 +383,829 @@
       "Water Villa",
       "Deluxe Over Water Pool Villa"
     ]
+  },
+  {
+    "id": "Sun Siyam Olhuveli",
+    "name": "Sun Siyam Olhuveli",
+    "description": "A vibrant island resort offering exciting marine adventures, spacious villas, and authentic Maldivian hospitality with stunning beaches and crystal-clear lagoons.",
+    "shortDescription": "All-Inclusive Tropical Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Speciality Indian Cuisine",
+      "Beach & Water Villas",
+      "House Reef Snorkeling",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "24 Hour All Inclusive",
+      "45 Minute Speed Boat Transfers",
+      "Water Sports",
+      "Complimentary WIFI"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Beach Villa with Pool",
+      "Water Villa with Pool"
+    ]
+  },
+  {
+    "id": "Centara Ras Fushi Resort & Spa",
+    "name": "Centara Ras Fushi Resort & Spa",
+    "description": "An adults-only paradise designed for couples and honeymooners with stylish villas, turquoise lagoons, and premium all-inclusive experiences.",
+    "shortDescription": "Adults Only Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Adults Only Resort",
+      "Beach & Water Villas",
+      "Swim-Up Pool",
+      "Romantic Dining Experiences"
+    ],
+    "amenities": [
+      "Premium AI Meal Plan",
+      "15 Minute Speed Boat Transfers",
+      "Complimentary WIFI",
+      "Spa & Wellness"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Water Villa with Swim-Up Pool"
+    ]
+  },
+  {
+    "id": "Medhufushi Island Resort",
+    "name": "Medhufushi Island Resort",
+    "description": "A serene island retreat surrounded by vibrant coral reefs and marine life, perfect for snorkeling, diving, and peaceful tropical escapes.",
+    "shortDescription": "Authentic Island Serenity",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Meemu Atoll",
+    "features": [
+      "Excellent House Reef",
+      "Rich Coral & Marine Life",
+      "Beach & Water Villas",
+      "Relaxed Island Atmosphere"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "45 Minute Seaplane Transfers",
+      "2.5 Hour Speed Boat Option",
+      "Complimentary WIFI"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "Cinnamon Dhonveli Maldives",
+    "name": "Cinnamon Dhonveli Maldives",
+    "description": "A laid-back tropical island famous for surfing, snorkeling, diving, and vibrant house reefs surrounded by crystal-clear lagoons.",
+    "shortDescription": "Surf & Snorkel Paradise",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Excellent House Reef",
+      "Snorkeling & Diving",
+      "Beach & Water Villas",
+      "Surfing Destination"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "25 Minute Speed Boat Transfers",
+      "Complimentary WIFI",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "Adaaran Select Meedhupparu",
+    "name": "Adaaran Select Meedhupparu",
+    "description": "A classic Maldivian island resort known for exceptional snorkeling, marine biodiversity, and authentic island experiences.",
+    "shortDescription": "Classic Reef Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Excellent House Reef",
+      "Indian Specialty Restaurant",
+      "Snorkeling & Diving",
+      "Beach & Water Villas"
+    ],
+    "amenities": [
+      "AI Meal Plan",
+      "45 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Spa & Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "Adaaran Select Hudhuran Fushi",
+    "name": "Adaaran Select Hudhuran Fushi",
+    "description": "A tropical island getaway with lush vegetation, coral gardens, surfing experiences, and direct beach snorkeling opportunities.",
+    "shortDescription": "Surfing & Nature Retreat",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Coral Gardens & House Reef",
+      "Direct Beach Snorkeling",
+      "Indian Specialty Restaurant",
+      "Surfing Experiences"
+    ],
+    "amenities": [
+      "AI Meal Plan",
+      "25 Minute Speedboat Transfers",
+      "Complimentary WIFI",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "Reethi Faru Resort",
+    "name": "Reethi Faru Resort",
+    "description": "A peaceful eco-friendly island resort with pristine beaches, lush vegetation, and strong coral reef ecosystems ideal for marine adventures.",
+    "shortDescription": "Eco Luxury Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Strong Coral Coverage",
+      "Beach & Water Villas",
+      "Eco-Friendly Resort",
+      "Relaxed Island Atmosphere"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "45 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Water Activities"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa"
+    ]
+  },
+  {
+    "id": "Holiday Inn Resort Kandooma Maldives",
+    "name": "Holiday Inn Resort Kandooma Maldives",
+    "description": "A lively island resort known for surfing, family-friendly stays, and exciting marine adventures surrounded by turquoise lagoons.",
+    "shortDescription": "Fun Family Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 4,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Surfing Experiences",
+      "Family Friendly Resort",
+      "Beachfront Dining",
+      "Island Activities"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Speed Boat Transfers",
+      "Kids Club",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Overwater Villa"
+    ]
+  },
+  {
+    "id": "Brennia Kottefaru",
+    "name": "Brennia Kottefaru Maldives",
+    "description": "A stylish island resort in Raa Atoll designed for couples and families, offering spacious villas, crystal lagoons, and relaxing tropical experiences in a serene natural setting.",
+    "shortDescription": "Modern Island Serenity",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Multi-Purpose Resort",
+      "Ideal for Couples & Families",
+      "Beach & Water Villas",
+      "Natural Island Experience"
+    ],
+    "amenities": [
+      "AI Meal Plan",
+      "40 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Water Sports & Spa"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Beach Pool Villa",
+      "Water Pool Villa"
+    ]
+  },
+  {
+    "id": "Oaga Art Resort",
+    "name": "Oaga Art Resort",
+    "description": "A boutique art-inspired island resort blending Maldivian culture, creativity, luxury, and immersive island experiences in a vibrant tropical atmosphere.",
+    "shortDescription": "Art Meets Island Luxury",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Boutique Art Resort",
+      "Creative Island Experiences",
+      "Beach & Water Villas",
+      "Cultural Entertainment"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Spa & Wellness",
+      "Water Activities",
+      "Island Dining Experiences"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Pool Villa"
+    ]
+  },
+  {
+    "id": "Le Méridien Maldives Resort & Spa",
+    "name": "Le Méridien Maldives Resort & Spa",
+    "description": "A chic luxury resort offering world-class dining, vibrant marine life, and elegant villas surrounded by turquoise lagoons and lush tropical beauty.",
+    "shortDescription": "Chic Modern Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Lhaviyani Atoll",
+    "features": [
+      "360 Degree Beach",
+      "Rich House Reef",
+      "Dedicated Lounge at Seaplane Terminal",
+      "Padel Court"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "35 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Water Sports & Diving"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Overwater Villa",
+      "Beach Pool Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "Furaveri Maldives",
+    "name": "Furaveri Maldives",
+    "description": "A lush natural island retreat surrounded by tropical greenery, turquoise waters, and spacious villas designed for relaxing luxury escapes.",
+    "shortDescription": "Nature Inspired Luxury",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Raa Atoll",
+    "features": [
+      "Natural Island Experience",
+      "Lush Greenery",
+      "Beach & Water Villas",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "HB + FB + PAI Meal Plans",
+      "45 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Spa & Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Beach Pool Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "Villa Nautica Paradise Island",
+    "name": "Villa Nautica Paradise Island",
+    "description": "A lively luxury island resort famous for its award-winning infinity pool, vibrant atmosphere, and easy access from Malé.",
+    "shortDescription": "Vibrant Luxury Island Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Award-Winning Infinity Pool",
+      "Beach & Water Villas",
+      "Whirlpool Water Villas",
+      "Family Friendly Resort"
+    ],
+    "amenities": [
+      "FB + AI Meal Plans",
+      "20 Minute Speed Boat Transfers",
+      "Complimentary WIFI",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Water Villa with Whirlpool"
+    ]
+  },
+  {
+    "id": "NH Maldives Kuda Rah",
+    "name": "NH Maldives Kuda Rah Resort",
+    "description": "A boutique premium resort featuring private pool villas, personalized luxury experiences, and authentic Maldivian hospitality in a tranquil island setting.",
+    "shortDescription": "Private Pool Villa Retreat",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Ari Atoll",
+    "features": [
+      "All Villas with Private Pools",
+      "Indian Food Available",
+      "Boutique Resort Experience",
+      "Beach & Water Villas"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "45 Minute Seaplane Transfers",
+      "Complimentary WIFI",
+      "Water Activities"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Water Pool Villa"
+    ]
+  },
+  {
+    "id": "Centara Grand Lagoon Maldives",
+    "name": "Centara Grand Lagoon Maldives",
+    "description": "A premium all-overwater luxury resort offering uninterrupted ocean views, elegant villas, and elevated island experiences in the Maldives.",
+    "shortDescription": "All Overwater Luxury Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "All Overwater Resort",
+      "Luxury Ocean Experiences",
+      "Elegant Water Villas",
+      "Premium Dining"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "30 Minute Speed Boat Transfers",
+      "Complimentary WIFI",
+      "Spa & Wellness"
+    ],
+    "roomTypes": [
+      "Water Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "Hilton Amingiri Maldives Resort & Spa",
+    "name": "Hilton Amingiri Maldives Resort & Spa",
+    "description": "A premium luxury retreat offering all-pool villas, signature dining experiences, and stylish island living close to Malé.",
+    "shortDescription": "Luxury Pool Villa Escape",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "All Pool Villas",
+      "Signature Dining",
+      "Luxury Family Experiences",
+      "Modern Island Design"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Spa & Wellness",
+      "Speed Boat Transfers",
+      "Kids Club"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Overwater Pool Villa",
+      "Two Bedroom Pool Villa"
+    ]
+  },
+  {
+    "id": "Siyam World Maldives",
+    "name": "Siyam World Maldives",
+    "description": "A massive all-inclusive island destination packed with entertainment, dining, water sports, and vibrant experiences for couples, groups, and families.",
+    "shortDescription": "Unlimited Island Entertainment",
+    "tag": "",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Noonu Atoll",
+    "features": [
+      "Premium All Inclusive",
+      "Floating Water Park",
+      "Live Entertainment",
+      "Multiple Dining Experiences"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Water Sports",
+      "Kids Club",
+      "Spa & Wellness"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Water Villa",
+      "Beach Pool Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "JW Marriott Maldives Kaafu Atoll Island Resort",
+    "name": "JW Marriott Maldives Kaafu Atoll Island Resort",
+    "description": "An ultra-luxury island sanctuary offering sophisticated villas, exceptional dining, and elevated personalized experiences surrounded by pristine lagoons.",
+    "shortDescription": "Refined Luxury Sanctuary",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Kaafu Atoll",
+    "features": [
+      "Luxury Beach & Overwater Villas",
+      "Signature Fine Dining",
+      "Private Pools",
+      "Personalized Experiences"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Luxury Spa",
+      "Private Transfers",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Overwater Pool Villa",
+      "Duplex Villa"
+    ]
+  },
+  {
+    "id": "Anantara Kihavah Maldives Villas",
+    "name": "Anantara Kihavah Maldives Villas",
+    "description": "An iconic luxury resort famous for underwater dining, private pool villas, and extraordinary marine experiences in the UNESCO Biosphere Reserve.",
+    "shortDescription": "Iconic Underwater Luxury",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Baa Atoll",
+    "features": [
+      "Underwater Dining Experience",
+      "Private Pool Villas",
+      "Luxury Spa",
+      "UNESCO Biosphere Reserve"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Seaplane Transfers",
+      "Water Sports",
+      "Fine Dining"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Overwater Pool Villa",
+      "Family Villa"
+    ]
+  },
+  {
+    "id": "The St. Regis Maldives Vommuli Resort",
+    "name": "The St. Regis Maldives Vommuli Resort",
+    "description": "A world-renowned ultra-luxury private island resort offering exceptional service, iconic overwater villas, and refined Maldivian elegance.",
+    "shortDescription": "Signature Luxury Escape",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "Dhaalu Atoll",
+    "features": [
+      "Private Island Luxury",
+      "Signature Butler Service",
+      "Iridium Spa",
+      "Fine Dining Experiences"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Seaplane Transfers",
+      "Luxury Spa",
+      "Infinity Pool"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Overwater Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "The Ritz-Carlton Maldives",
+    "name": "The Ritz-Carlton Maldives, Fari Islands",
+    "description": "An architectural masterpiece offering ultra-modern villas, legendary service, and elevated island experiences in the exclusive Fari Islands.",
+    "shortDescription": "Modern Ultra Luxury",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Luxury Circular Villas",
+      "Personal Aris Meeha Service",
+      "Fine Dining",
+      "Fari Marina Access"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Luxury Spa",
+      "Speed Boat Transfers",
+      "Water Sports"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Overwater Pool Villa"
+    ]
+  },
+  {
+    "id": "Anantara Dhigu Maldives Resort",
+    "name": "Anantara Dhigu Maldives Resort",
+    "description": "A luxurious tropical retreat offering spacious villas, family-friendly experiences, and easy access to turquoise lagoons and vibrant coral reefs.",
+    "shortDescription": "Luxury Family Island Retreat",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "South Malé Atoll",
+    "features": [
+      "Luxury Beachfront Villas",
+      "Overwater Suites",
+      "Family Friendly Experiences",
+      "Premium Dining"
+    ],
+    "amenities": [
+      "Complimentary WIFI",
+      "Luxury Spa",
+      "Speed Boat Transfers",
+      "Water Activities"
+    ],
+    "roomTypes": [
+      "Beach Villa",
+      "Overwater Suite",
+      "Pool Villa"
+    ]
+  },
+  {
+    "id": "Grand Park Kodhipparu Maldives",
+    "name": "Grand Park Kodhipparu Maldives",
+    "description": "A luxurious island sanctuary known for stylish villas, rich marine experiences, and elegant hospitality just minutes away from Malé.",
+    "shortDescription": "Elegant Private Island Escape",
+    "tag": "5-Star Luxury",
+    "images": [
+      "images/maldives/resorts/reethi/reethi-image-1.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-2.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop"
+    ],
+    "rating": 5,
+    "StartsFrom ": "Available on Request",
+    "duration": "3 Nights / 4 Days",
+    "location": "North Malé Atoll",
+    "features": [
+      "Glass Bottom Overwater Villas",
+      "In-Villa Check-In",
+      "Green Globe Certified Resort",
+      "Private Pool Villas"
+    ],
+    "amenities": [
+      "HB + FB + AI Meal Plans",
+      "20 Minute Speed Boat Transfers",
+      "Complimentary WIFI",
+      "Luxury Spa"
+    ],
+    "roomTypes": [
+      "Beach Pool Villa",
+      "Overwater Villa",
+      "Overwater Pool Villa"
+    ]
   }
 ]
