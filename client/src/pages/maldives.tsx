@@ -76,13 +76,13 @@ export default function Maldives() {
 
   // Experience options
   const experiences = [
-    { id: 1, title: "Overwater Villas", image: "images/maldives/resorts/westin/westin-image-2.webp?w=800&h=600&fit=crop" },
-    { id: 2, title: "All Inclusive Resorts", image: "images/maldives/resorts/dusit/dusit-image-1.webp?w=800&h=600&fit=crop" },
-    { id: 3, title: "Luxury Resorts", image: "images/maldives/resorts/sheraton/sheraton-image-4.webp?w=800&h=600&fit=crop" },
-    { id: 4, title: "Private Pool Villas", image: "images/maldives/resorts/reethi/reethi-image-3.webp?w=800&h=600&fit=crop" },
-    { id: 5, title: "Honeymoon Escapes", image: "images/maldives/resorts/nooe/nooe-image-1.webp?w=800&h=600&fit=crop" },
-    { id: 6, title: "Family Vacation", image: "images/maldives/resorts/arrival/arrival-image-1.webp?w=800&h=600&fit=crop" },
-    { id: 7, title: "Activities", image: "images/maldives/resorts/saii/saii-image-2.webp?w=800&h=600&fit=crop" }
+    { id: 1, title: "Overwater Villas", image: "images/maldives/resorts/hilton/hilton-image-4.webp?w=800&h=600&fit=crop" },
+    { id: 2, title: "All Inclusive Resorts", image: "images/maldives/resorts/leMeridien/leMeridien-image-6.webp?w=800&h=600&fit=crop" },
+    { id: 3, title: "Luxury Resorts", image: "images/maldives/resorts/regis/regis-image-5.webp?w=800&h=600&fit=crop" },
+    { id: 4, title: "Private Pool Villas", image: "images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop" },
+    { id: 5, title: "Honeymoon Escapes", image: "images/maldives/resorts/reethi/reethi-image-6.webp?w=800&h=600&fit=crop" },
+    { id: 6, title: "Family Vacation", image: "images/maldives/resorts/westin/westin-image-4.webp?w=800&h=600&fit=crop" },
+    { id: 7, title: "Activities", image: "images/maldives/resorts/ritzCarlton/ritzCarlton-image-6.webp?w=800&h=600&fit=crop" }
   ];
 
   const brandLogos = [
@@ -123,15 +123,15 @@ export default function Maldives() {
 
   // Top experiences
   const topExperiences = [
-    { title: "Overwater Villa Stay", image: "images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop", description: "Direct access to lagoon, private deck, ocean views — signature Maldives experience." },
-    { title: "Floating Breakfast", image: "images/maldives/resorts/reethi/reethi-image-4.webp?w=800&h=600&fit=crop", description: "Served in your private pool — iconic luxury moment." },
-    { title: "Snorkelling & Diving", image: "images/maldives/resorts/saii/saii-image-3.webp?w=800&h=600&fit=crop", description: "World-class reefs, turtles, manta rays, reef sharks." },
-    { title: "Dolphin Sunset Cruise", image: "images/maldives/resorts/nooe/nooe-image-2.webp?w=800&h=600&fit=crop", description: "Magical evening with dolphins and sunset views." },
-    { title: "Spa & Wellness", image: "images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop", description: "Overwater spa treatments designed for deep relaxation." },
-    { title: "Private Sandbank Experience", image: "images/maldives/resorts/grandPark/grandPark-image-2.webp?w=800&h=600&fit=crop", description: "A tiny island in the middle of the ocean — just you and the sea." },
-    { title: "Cinema Under the Stars", image: "images/maldives/resorts/dusit/dusit-image-3.webp?w=800&h=600&fit=crop", description: "Outdoor movie nights on the beach." },
-    { title: "Candlelight Dinner", image: "images/maldives/resorts/hardRock/hardRock-image-4.webp?w=800&h=600&fit=crop", description: "Private beachfront dining setup — perfect for couples." },
-    { title: "Underwater Restaurant", image: "images/maldives/resorts/obluSelect/obluSelect-image-2.webp?w=800&h=600&fit=crop", description: "Dine surrounded by marine life — once-in-a-lifetime experience." }
+    { title: "Overwater Villa Stay", image: "images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop", description: "Direct access to lagoon, private deck, ocean views - signature Maldives experience." },
+    { title: "Floating Breakfast", image: "images/maldives/siteSeeing/Floating_Breakfast.webp?w=800&h=600&fit=crop", description: "Served in your private pool - iconic luxury moment." },
+    { title: "Snorkelling & Diving", image: "images/maldives/siteSeeing/Snorkelling_Diving.webp?w=800&h=600&fit=crop", description: "World-class reefs, turtles, manta rays, reef sharks." },
+    { title: "Dolphin Sunset Cruise", image: "images/maldives/siteSeeing/Dolphin_Sunset_Cruise.webp?w=800&h=600&fit=crop", description: "Magical evening with dolphins and sunset views." },
+    { title: "Spa & Wellness", image: "images/maldives/resorts/sheraton/sheraton-image-1.webp?w=800&h=600&fit=crop", description: "Overwater spa treatments designed for deep relaxation." },
+    { title: "Private Sandbank Experience", image: "images/maldives/siteSeeing/Private_Sandbank_Experience.webp?w=800&h=600&fit=crop", description: "A tiny island in the middle of the ocean - just you and the sea." },
+    { title: "Cinema Under the Stars", image: "images/maldives/siteSeeing/Cinema_Under_the_Stars.webp?w=800&h=600&fit=crop", description: "Outdoor movie nights on the beach." },
+    { title: "Candlelight Dinner", image: "images/maldives/resorts/nooe/nooe-image-5.webp?w=800&h=600&fit=crop", description: "Private beachfront dining setup - perfect for couples." },
+    { title: "Underwater Restaurant", image: "images/maldives/siteSeeing/Underwater_Restaurant.webp?w=800&h=600&fit=crop", description: "Dine surrounded by marine life - once-in-a-lifetime experience." }
   ];
 
   const isLuxuryResort = (resort: Resort) =>
@@ -158,7 +158,8 @@ export default function Maldives() {
       {/* Hero Section */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '100vh' }}>
         <div className="absolute inset-0 overflow-hidden">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+          {/* Video Background with preload image /videos/maldives2.png */}
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover" poster={getImagePath("images/maldives/videos/maldives2.png")}>
             <source src="/videos/maldives.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(22,38,96,0.7) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)' }} />
@@ -211,15 +212,15 @@ export default function Maldives() {
             <span className="section-label">About</span>
             <div className="editorial-divider" />
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--charcoal)', marginBottom: '1rem' }}>
-              Maldives — The World's Most Exclusive Island Escape
+              Maldives  The World's Most Exclusive Island Escape
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.1rem', color: 'var(--mid-gray)', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-              The Maldives is the definition of luxury travel — a collection of 1,000+ coral islands in the Indian Ocean, known for overwater villas, crystal-clear lagoons, and private island resorts.
+              The Maldives is the definition of luxury travel - a collection of 1,000+ coral islands in the Indian Ocean, known for overwater villas, crystal-clear lagoons, and private island resorts.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.1rem', color: 'var(--mid-gray)', lineHeight: 1.8 }}>
-              For Indian travellers, Maldives is the fastest way to experience internationally — just a short flight, but a completely different world. No crowds, no noise, just ocean, privacy, and world-class hospitality.
+              For travellers, Maldives is the fastest way to experience internationally - just a short flight, but a completely different world. No crowds, no noise, just ocean, privacy, and world-class hospitality.
             </p>
           </div>
         </div>
@@ -238,7 +239,7 @@ export default function Maldives() {
           {/* Filters */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex rounded-lg border border-gray-200 bg-white p-1">
-              {["all", "5-star", "4-star"].map((filter) => (
+              {["all", "4-star", "5-star"].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setSelectedFilter(filter)}
@@ -252,12 +253,26 @@ export default function Maldives() {
                   {filter === "all" ? "All Resorts" : filter}
                 </button>
               ))}
+              {/* seperate button functionality for luxury, to scroll to luxury resorts id: luxury-resorts*/}
+              <button
+                onClick={() => {
+                  const luxurySection = document.getElementById("luxury-resorts");
+                  if (luxurySection) {
+                    luxurySection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:bg-gray-100"
+                style={{ textTransform: 'capitalize' }}
+              >
+                Luxury Resorts
+              </button>
+              
             </div>
           </div>
 
           {/* Resorts Grid */}
           {filteredResorts.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
               {filteredResorts.map((resort) => (
                 <div
                   key={resort.id}
@@ -286,9 +301,14 @@ export default function Maldives() {
                     <div className="flex space-x-1 mt-3">
                       {renderStars(resort.rating)}
                     </div>
-                    <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: 'var(--luxury-gold)', marginTop: '0.75rem' }}>
+                    {/* dark and bold */}
+                    <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', color: 'var(--charcoal)', marginTop: '0.75rem', fontWeight: 700 }}>
                       {resort["StartsFrom "]}
                     </p>
+                    {/* Explore This Resort button */}
+                    <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium transition-opacity hover:opacity-80">
+                      Explore This Resort
+                    </button>
                   </div>
                 </div>
               ))}
@@ -296,7 +316,7 @@ export default function Maldives() {
           )}
 
           {filteredLuxuryResorts.length > 0 && (
-            <div className="mt-16">
+            <div className="mt-16" id="luxury-resorts">
               <div className="text-center mb-10">
                 <span className="section-label">Private Collection</span>
                 <div className="editorial-divider" />
@@ -308,7 +328,7 @@ export default function Maldives() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
                 {filteredLuxuryResorts.map((resort) => (
                   <div
                     key={resort.id}
@@ -321,11 +341,11 @@ export default function Maldives() {
                         alt={resort.name}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
-                      <div className="absolute top-3 right-3">
+                      {/* <div className="absolute top-3 right-3">
                         <span className="bg-white/90 px-2 py-1 rounded text-xs font-medium" style={{ textTransform: 'capitalize' }}>
                           {resort.tag}
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="p-4">
                       <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', fontWeight: 500, color: 'var(--charcoal)' }}>
@@ -337,9 +357,23 @@ export default function Maldives() {
                       <div className="flex space-x-1 mt-3">
                         {renderStars(resort.rating)}
                       </div>
-                      <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: 'var(--luxury-gold)', marginTop: '0.75rem' }}>
-                        {resort["StartsFrom "]}
+                      {/* first feature as Highlight*/}
+                      <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: 'var(--blue)', marginTop: '0.75rem', fontWeight: 500 }}>
+                        {/* mention Hightlight if it as Private word in it */}
+                        {resort.features[0].toLowerCase().includes("private") ? "Highlight: " : ""}
+                        {resort.features[0].toLowerCase().includes("luxury") ? "Highlight: " : ""}
+                        {resort.features[0]}
                       </p>
+                      {/* the below two need to place in right side */}
+                      {/* dark and bold */}
+                      <div className="flex items-center justify-between mt-4">
+                        <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', color: 'var(--charcoal)', marginTop: '0.75rem', fontWeight: 700 }}>
+                          {resort["StartsFrom "]}
+                        </p>
+                        <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium transition-opacity hover:opacity-80">
+                          Explore This Resort
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -476,7 +510,7 @@ export default function Maldives() {
                   Capital City
                 </h3>
                 <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
-                  Male – A compact island city — this is where your international flight lands before transferring to your resort island.
+                  Male - A compact island city - this is where your international flight lands before transferring to your resort island.
                 </p>
               </div>
             </div>
@@ -494,10 +528,10 @@ export default function Maldives() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Grand Friday Mosque", image: "images/maldives/resorts/grandPark/grandPark-image-5.webp?w=800&h=600&fit=crop" },
-              { title: "Malé Local Market", image: "images/maldives/resorts/arrival/arrival-image-4.webp?w=800&h=600&fit=crop" },
-              { title: "Artificial Beach", image: "images/maldives/resorts/saii/saii-image-5.webp?w=800&h=600&fit=crop" },
-              { title: "National Museum", image: "images/maldives/resorts/sheraton/sheraton-image-2.webp?w=800&h=600&fit=crop" }
+              { title: "Grand Friday Mosque", image: "images/maldives/siteSeeing/Grand_Friday_Mosque.webp?w=800&h=600&fit=crop" },
+              { title: "Malé Local Market", image: "images/maldives/siteSeeing/Male_Local_Market.webp?w=800&h=600&fit=crop" },
+              { title: "Artificial Beach", image: "images/maldives/siteSeeing/Artificial_Beach.webp?w=800&h=600&fit=crop" },
+              { title: "National Museum", image: "images/maldives/siteSeeing/National_Museum.webp?w=800&h=600&fit=crop" }
             ].map((place, index) => (
               <div key={index} className="text-center">
                 <img
@@ -526,12 +560,12 @@ export default function Maldives() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/nooe/nooe-image-4.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop")}
                 alt="Sunny Maldives resort lagoon"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 500, color: 'var(--charcoal)', marginBottom: '1rem' }}>
-                November to April — Peak Season
+                November to April - Peak Season
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
                 Sunny weather, calm waters<br />
@@ -541,23 +575,19 @@ export default function Maldives() {
             
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/saii/saii-image-6.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop")}
                 alt="Maldives resort beach"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 500, color: 'var(--charcoal)', marginBottom: '1rem' }}>
-                May to October — Value Season
+                May to October - Value Season
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
-                Lower prices (30–40% cheaper)<br />
+                Lower prices (30-40% cheaper)<br />
                 Short tropical rains
               </p>
             </div>
           </div>
-          
-          <p className="text-center mt-8" style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: 'var(--mid-gray)' }}>
-            Smart travellers choose shoulder months for better deals.
-          </p>
         </div>
       </section>
 
@@ -584,7 +614,7 @@ export default function Maldives() {
           </div>
           
           <p className="text-center mt-8" style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: 'var(--mid-gray)' }}>
-            No complicated visa process — very smooth entry.
+            No complicated visa process, very smooth entry.
           </p>
         </div>
       </section>
@@ -605,9 +635,9 @@ export default function Maldives() {
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
-                { title: "Mas Huni", desc: "tuna + coconut breakfast", image: "images/maldives/resorts/dusit/dusit-image-4.webp?w=800&h=600&fit=crop" },
-                { title: "Fresh grilled seafood", desc: "", image: "images/maldives/resorts/reethi/reethi-image-5.webp?w=800&h=600&fit=crop" },
-                { title: "Coconut-based curries", desc: "", image: "images/maldives/resorts/sheraton/sheraton-image-6.webp?w=800&h=600&fit=crop" }
+                { title: "Mas Huni", desc: "tuna + coconut breakfast", image: "images/maldives/siteSeeing/Mas_Huni.webp?w=800&h=600&fit=crop" },
+                { title: "Fresh grilled seafood", desc: "", image: "images/maldives/siteSeeing/Fresh_grilled_seafood.webp?w=800&h=600&fit=crop" },
+                { title: "Coconut-based curries", desc: "", image: "images/maldives/siteSeeing/Coconut_based_curries.webp?w=800&h=600&fit=crop" }
               ].map((food, index) => (
                 <div key={index} className="text-center">
                   <img
@@ -624,7 +654,7 @@ export default function Maldives() {
             </div>
             
             <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)', lineHeight: 1.8 }}>
-              Resorts also offer Indian, Jain, and international cuisine — zero food concern.
+              Resorts also offer Indian, Jain, and international cuisine - zero food concern.
             </p>
             
             <div className="mt-6 p-4 bg-yellow-50 rounded-lg">
@@ -641,7 +671,7 @@ export default function Maldives() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 400, color: 'var(--charcoal)' }}>
-              Transfers to Resorts
+              Transfers Options To Resorts
             </h2>
           </div>
           
@@ -651,9 +681,9 @@ export default function Maldives() {
                 Speedboat Transfer
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
-                15–60 minutes<br />
+                15-60 minutes<br />
                 Budget-friendly<br />
-                Resorts near Malé
+                Resorts near to Malé city
               </p>
             </div>
             
@@ -662,7 +692,7 @@ export default function Maldives() {
                 Seaplane Transfer
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
-                30–60 minutes (scenic flight)<br />
+                30-60 minutes (scenic flight)<br />
                 Premium experience<br />
                 Aerial views of islands
               </p>
@@ -670,7 +700,7 @@ export default function Maldives() {
             
             <div className="text-center">
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.3rem', fontWeight: 500, color: 'var(--charcoal)', marginBottom: '1rem' }}>
-                Domestic Flight + Boat
+                Domestic Flight + Speed Boat
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
                 For far islands<br />
@@ -680,7 +710,7 @@ export default function Maldives() {
           </div>
           
           <p className="text-center mt-8" style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: 'var(--mid-gray)' }}>
-            👉 Antravi selects resorts based on transfer convenience + budget, a critical decision factor.
+            Antravi selects resorts based on transfer convenience + budget.
           </p>
         </div>
       </section>
@@ -697,7 +727,7 @@ export default function Maldives() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/westin/westin-image-5.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/adaaran/adaaran-image-2.webp?w=800&h=600&fit=crop")}
                 alt="Private island resort"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
@@ -721,8 +751,7 @@ export default function Maldives() {
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--mid-gray)' }}>
                 Guesthouses<br />
-                Local experience<br />
-                Limited luxury
+                Local experience
               </p>
             </div>
           </div>
@@ -738,7 +767,7 @@ export default function Maldives() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--charcoal)' }}>
-              Top Experiences in Maldives
+              Top Experiences to do in Maldives
             </h2>
           </div>
           
@@ -771,13 +800,12 @@ export default function Maldives() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--charcoal)' }}>
-              Why Book Maldives with Antravi
+              Why to reserve your Maldives with Antravi
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Built for Indian Travellers", desc: "We understand food, flights, and expectations." },
               { title: "Right Resort Selection", desc: "We match: Budget, Occasion (honeymoon/family vacation), Experience preference" },
               { title: "End-to-End Planning", desc: "Flights → Resort → Transfers → Activities → Support" },
               { title: "Support During Trip", desc: "You're never stuck or confused." },
@@ -806,7 +834,7 @@ export default function Maldives() {
             Plan Your Maldives Vacation with Antravi
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.1rem', color: 'var(--mid-gray)', marginBottom: '2rem', lineHeight: 1.8 }}>
-            Tell us your travel dates & preferences — we'll design a personalised experience tailored exactly for you.
+            Tell us your travel dates & preferences - we'll design a personalised experience tailored exactly for you.
           </p>
           <button onClick={handlePlanClick} className="btn-editorial-solid">
             Reserve Your Maldives Vacation Now
@@ -822,7 +850,7 @@ export default function Maldives() {
             {
               id: "maldives-1",
               question: "How much does a Maldives trip cost from India?",
-              answer: "A Maldives trip from India typically costs ₹60,000 to ₹2,50,000+ per person, depending on resort category, villa type, and inclusions.\n• Budget (Public Island): ₹60K–₹1L\n• Premium Resort: ₹1L–₹1.8L\n• Luxury Overwater Villa: ₹2L+\nAt Antravi, we customise based on your budget — no fixed packages."
+              answer: "A Maldives trip from India typically costs ₹60,000 to ₹2,50,000+ per person, depending on resort category, villa type, and inclusions.\n• Budget (Public Island): ₹60K-₹1L\n• Premium Resort: ₹1L-₹1.8L\n• Luxury Overwater Villa: ₹2L+\nAt Antravi, we customise based on your budget - no fixed packages."
             },
             {
               id: "maldives-2",
@@ -852,12 +880,12 @@ export default function Maldives() {
             {
               id: "maldives-7",
               question: "How do you reach resorts from Malé airport?",
-              answer: "There are 3 types of transfers:\n• Speedboat (15–60 mins)\n• Seaplane (40–60 mins, scenic)\n• Domestic flight + boat (60+minutes)\nChoosing the right transfer is critical. Antravi helps you pick the best option."
+              answer: "There are 3 types of transfers:\n• Speedboat (15-60 mins)\n• Seaplane (40-60 mins, scenic)\n• Domestic flight + boat (60+minutes)\nChoosing the right transfer is critical. Antravi helps you pick the best option."
             },
             {
               id: "maldives-8",
               question: "Is Maldives expensive for Indian travellers?",
-              answer: "Maldives can be affordable or ultra-luxury, depending on how you plan.\nSmart resort selection + right travel dates can reduce costs by 30–40%."
+              answer: "Maldives can be affordable or ultra-luxury, depending on how you plan.\nSmart resort selection + right travel dates can reduce costs by 30-40%."
             },
             {
               id: "maldives-9",
@@ -877,7 +905,7 @@ export default function Maldives() {
       <footer className="py-8 text-center" style={{ backgroundColor: '#ffffff', borderTop: '1px solid var(--warm-border)' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: 'var(--mid-gray)' }}>
           © 2026 Antravi Travel Experiences · antravi.com · Content accurate as of May 2026.<br />
-          Visa, activities, and flight information are subject to change — always verify with official sources before travel.
+          Visa, activities, and flight information are subject to change - always verify with official sources before travel.
         </p>
       </footer>
 

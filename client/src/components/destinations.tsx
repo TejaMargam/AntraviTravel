@@ -88,7 +88,7 @@ export default function Destinations() {
                 </p>
                 <Link href="/destinations/maldives" className="transition-opacity hover:opacity-80">
                   <span className="btn-editorial-white" data-testid="button-explore-resorts">
-                    Explore Resorts
+                    Explore
                   </span>
                 </Link>
               </div>
@@ -118,7 +118,7 @@ export default function Destinations() {
                 </p>
                 <Link href="/destinations/bali" className="transition-opacity hover:opacity-80">
                   <span className="btn-editorial-white" data-testid="button-explore-bali">
-                    Explore Bali
+                    Explore
                   </span>
                 </Link>
               </div>
@@ -148,7 +148,7 @@ export default function Destinations() {
                 </p>
                 <Link href="/destinations/thailand" className="transition-opacity hover:opacity-80">
                   <span className="btn-editorial-white" data-testid="button-explore-thailand">
-                    Explore Thailand
+                    Explore
                   </span>
                 </Link>
               </div>

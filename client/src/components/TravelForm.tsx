@@ -1,23 +1,42 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon, Check, User, MapPin, Heart, Plane, Globe, DollarSign, Users, Map, LucideIcon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
 
-function cn(...classes: (string | boolean | undefined)[]): string {
-  return classes.filter(Boolean).join(' ');
-}
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-function formatDate(date: Date | undefined): string {
-  if (!date) return '';
-  const options: Intl.DateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString('en-US', options);
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+
+import {
+  User,
+  Phone,
+  Mail,
+  CalendarDays,
+  MoonStar,
+  Users,
+  MapPin,
+  Plane,
+  ChevronRight,
+  ArrowLeft,
+  Sparkles,
+} from "lucide-react";
+
+interface TravelFormProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 interface FormData {
@@ -36,155 +55,219 @@ interface FormData {
   anyRequest: string;
 }
 
-interface TravelFormProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-interface Step {
-  number: number;
-  title: string;
-  icon: LucideIcon;
-}
-
-// Luxury styling constants
-const goldColor = "#cc8500";
-const navyColor = "#162660";
-const ivoryColor = "#ffffff";
-
-const luxuryInputClass = `
-  w-full bg-transparent border-0 border-b border-[#C9A96E]/40 rounded-none px-0 py-2
-  text-[#0D1B2A] placeholder:text-[#0D1B2A]/30 text-sm tracking-wide
-  focus:outline-none focus:border-[#C9A96E] focus:ring-0
-  transition-colors duration-300
-`;
-
-const luxuryLabelClass = "block text-[10px] uppercase tracking-[0.2em] text-[#C9A96E] font-medium mb-1";
-const luxuryErrorClass = "text-red-400 text-[10px] mt-1 tracking-wide";
-
-export function TravelForm({ isOpen, onClose }: TravelFormProps) {
+export function TravelForm({
+  isOpen,
+  onClose,
+}: TravelFormProps) {
   const [, navigate] = useLocation();
-  const [currentStep, setCurrentStep] = useState<number>(1);
-  const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    mobile: "",
-    email: "",
-    destination: "",
-    numberOfAdults: "",
-    travelDates: undefined,
-    numberOfNights: "",
-    lookingToBook: "",
-    preferredBudget: "",
-    specialOccasion: "",
-    departureCity: "",
-    anyRequest: "",
-  });
 
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [currentStep, setCurrentStep] =
+    useState<number>(1);
 
-  const validateStep = (step: number): boolean => {
-    const newErrors: Record<string, string> = {};
+  const [formData, setFormData] =
+    useState<FormData>({
+      firstName: "",
+      lastName: "",
+      mobile: "",
+      email: "",
+      destination: "",
+      numberOfAdults: "",
+      travelDates: undefined,
+      numberOfNights: "",
+      lookingToBook: "",
+      preferredBudget: "",
+      specialOccasion: "",
+      departureCity: "",
+      anyRequest: "",
+    });
+
+  const [errors, setErrors] = useState<
+    Record<string, string>
+  >({});
+
+  const bgImage =
+    "/images/maldives/resorts/centara/centara-image-1.webp";
+  const smallImage =
+    "/images/maldives/resorts/adaaran/adaaran-image-1.webp";
+
+  const nightOptions: string[] = [
+    "2 Nights / 3 Days",
+    "3 Nights / 4 Days",
+    "4 Nights / 5 Days",
+    "5 Nights / 6 Days",
+    "6 Nights / 7 Days",
+    "7 Nights / 8 Days",
+    "8 Nights / 9 Days",
+  ];
+
+  /* =========================================================
+      VALIDATION
+  ========================================================= */
+
+  const validateStep = (
+    step: number
+  ): boolean => {
+    const newErrors: Record<string, string> =
+      {};
+
     if (step === 1) {
-      if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
-      if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
+      if (!formData.firstName.trim()) {
+        newErrors.firstName =
+          "First name is required";
+      }
+
+      if (!formData.lastName.trim()) {
+        newErrors.lastName =
+          "Last name is required";
+      }
+
       if (!formData.mobile.trim()) {
-        newErrors.mobile = "Mobile number is required";
-      } else if (!/^\+91\d{10}$/.test(formData.mobile)) {
-        newErrors.mobile = "Mobile number must have 10 digits";
+        newErrors.mobile =
+          "Mobile number is required";
+      } else if (
+        !/^\+91\d{10}$/.test(formData.mobile)
+      ) {
+        newErrors.mobile =
+          "Mobile number must have 10 digits";
       }
+
       if (!formData.email.trim()) {
-        newErrors.email = "Email is required";
-      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-        newErrors.email = "Please enter a valid email address";
+        newErrors.email =
+          "Email is required";
+      } else if (
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+          formData.email
+        )
+      ) {
+        newErrors.email =
+          "Please enter a valid email address";
       }
     }
+
     if (step === 2) {
-      if (!formData.destination) newErrors.destination = "Destination is required";
-      if (!formData.numberOfAdults) newErrors.numberOfAdults = "Number of adults is required";
-      if (!formData.travelDates) newErrors.travelDates = "Travel dates are required";
-      if (!formData.numberOfNights) newErrors.numberOfNights = "Number of nights is required";
+      if (!formData.destination) {
+        newErrors.destination =
+          "Destination is required";
+      }
+
+      if (!formData.numberOfAdults) {
+        newErrors.numberOfAdults =
+          "Number of adults is required";
+      }
+
+      if (!formData.travelDates) {
+        newErrors.travelDates =
+          "Travel dates are required";
+      }
+
+      if (!formData.numberOfNights) {
+        newErrors.numberOfNights =
+          "Number of nights is required";
+      }
     }
+
     if (step === 3) {
-      if (!formData.lookingToBook) newErrors.lookingToBook = "Booking timeline is required";
-      if (!formData.preferredBudget) newErrors.preferredBudget = "Budget is required";
-      if (!formData.departureCity.trim()) newErrors.departureCity = "Departure city is required";
+      if (!formData.lookingToBook) {
+        newErrors.lookingToBook =
+          "Booking timeline is required";
+      }
+
+      if (!formData.preferredBudget) {
+        newErrors.preferredBudget =
+          "Budget is required";
+      }
+
+      if (!formData.departureCity.trim()) {
+        newErrors.departureCity =
+          "Departure city is required";
+      }
     }
+
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
-  const isStepValid = (step: number): boolean => {
+  /* =========================================================
+      STEP VALID
+  ========================================================= */
+
+  const isStepValid = (
+    step: number
+  ): boolean => {
     if (step === 1) {
-      return !!(formData.firstName.trim() && formData.lastName.trim() && formData.mobile.trim() &&
-        /^\+91\d{10}$/.test(formData.mobile) && formData.email.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email));
+      return !!(
+        formData.firstName.trim() &&
+        formData.lastName.trim() &&
+        formData.mobile.trim() &&
+        /^\+91\d{10}$/.test(
+          formData.mobile
+        ) &&
+        formData.email.trim() &&
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+          formData.email
+        )
+      );
     }
+
     if (step === 2) {
-      return !!(formData.destination && formData.numberOfAdults && formData.travelDates && formData.numberOfNights);
+      return !!(
+        formData.destination &&
+        formData.numberOfAdults &&
+        formData.travelDates &&
+        formData.numberOfNights
+      );
     }
+
     if (step === 3) {
-      return !!(formData.lookingToBook && formData.preferredBudget && formData.departureCity.trim());
+      return !!(
+        formData.lookingToBook &&
+        formData.preferredBudget &&
+        formData.departureCity.trim()
+      );
     }
+
     return false;
   };
 
+  /* =========================================================
+      HANDLERS
+  ========================================================= */
+
   const handleNext = (): void => {
-    if (validateStep(currentStep)) setCurrentStep(currentStep + 1);
+    if (validateStep(currentStep)) {
+      setCurrentStep(currentStep + 1);
+    }
   };
 
   const handlePrevious = (): void => {
     setCurrentStep(currentStep - 1);
   };
 
-  const handleSubmit = async (): Promise<void> => {
-    if (validateStep(currentStep)) {
-      const payload = {
-        fullName: `${formData.firstName} ${formData.lastName}`,
-        mobile: formData.mobile,
-        email: formData.email,
-        destination: formData.destination,
-        numberOfAdults: formData.numberOfAdults,
-        numberOfNights: formData.numberOfNights,
-        travelDates: new Date(formData.travelDates || '').toLocaleDateString(),
-        lookingToBook: formData.lookingToBook,
-        preferredBudget: formData.preferredBudget,
-        specialOccasion: formData.specialOccasion,
-        departureCity: formData.departureCity,
-        anyRequest: formData.anyRequest
-      };
+  const handleInputChange = (
+    field: keyof FormData,
+    value: string | Date | undefined
+  ): void => {
+    if (
+      field === "mobile" &&
+      typeof value === "string"
+    ) {
+      const cleanNumber =
+        value.replace(/\D/g, "");
 
-      try {
-        await fetch("https://hook.eu1.make.com/8qt45gw9dkmr4ix1hswa98m772f7vz6p", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        }).then(response => response.json()).catch(err => {
-          console.log('error while sending smooth action', err);
-        });
-      } catch (err) {
-        console.log('error while sending just dial lead', err);
-      }
-
-      navigate("/thankyou");
-      onClose();
-      setFormData({
-        firstName: "", lastName: "", mobile: "", email: "", destination: "",
-        numberOfAdults: "", travelDates: undefined, numberOfNights: "",
-        lookingToBook: "", preferredBudget: "", specialOccasion: "",
-        departureCity: "", anyRequest: ""
-      });
-      setCurrentStep(1);
-    }
-  };
-
-  const handleInputChange = (field: keyof FormData, value: string | Date | undefined): void => {
-    if (field === 'mobile' && typeof value === 'string') {
-      const cleanNumber = value.replace(/\D/g, '');
-      if (cleanNumber.length === 10 && !value.startsWith('+91')) {
+      if (
+        cleanNumber.length === 10 &&
+        !value.startsWith("+91")
+      ) {
         value = `+91${cleanNumber}`;
       }
     }
-    setFormData((prev) => ({ ...prev, [field]: value }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+
     if (errors[field]) {
       setErrors((prev) => {
         const newErrors = { ...prev };
@@ -194,439 +277,1076 @@ export function TravelForm({ isOpen, onClose }: TravelFormProps) {
     }
   };
 
-  const steps: Step[] = [
-    { number: 1, title: "Your Details", icon: User },
-    { number: 2, title: "The Journey", icon: MapPin },
-    { number: 3, title: "Preferences", icon: Heart },
-  ];
+  /* =========================================================
+      SUBMIT
+  ========================================================= */
 
-  const nightOptions: string[] = [
-    "2 Nights / 3 Days", "3 Nights / 4 Days", "4 Nights / 5 Days",
-    "5 Nights / 6 Days", "6 Nights / 7 Days", "7 Nights / 8 Days", "8 Nights / 9 Days"
-  ];
+  const handleSubmit = async (): Promise<void> => {
+    if (validateStep(currentStep)) {
+      const payload = {
+        fullName: `${formData.firstName} ${formData.lastName}`,
+        mobile: formData.mobile,
+        email: formData.email,
+        destination: formData.destination,
+        numberOfAdults:
+          formData.numberOfAdults,
+        numberOfNights:
+          formData.numberOfNights,
+        travelDates: new Date(
+          formData.travelDates || ""
+        ).toLocaleDateString(),
 
-  const selectTriggerClass = cn(
-    "w-full bg-transparent border-0 border-b border-[#C9A96E]/40 rounded-none px-0 h-9",
-    "text-[#0D1B2A] text-sm tracking-wide",
-    "focus:outline-none focus:border-[#C9A96E] focus:ring-0",
-    "transition-colors duration-300 hover:border-[#C9A96E]/70"
-  );
+        lookingToBook:
+          formData.lookingToBook,
+
+        preferredBudget:
+          formData.preferredBudget,
+
+        specialOccasion:
+          formData.specialOccasion,
+
+        departureCity:
+          formData.departureCity,
+
+        anyRequest: formData.anyRequest,
+      };
+
+      try {
+        await fetch(
+          "https://hook.eu1.make.com/8qt45gw9dkmr4ix1hswa98m772f7vz6p",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+            body: JSON.stringify(payload),
+          }
+        );
+      } catch (err) {
+        console.log(err);
+      }
+
+      navigate("/thankyou");
+
+      onClose();
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        mobile: "",
+        email: "",
+        destination: "",
+        numberOfAdults: "",
+        travelDates: undefined,
+        numberOfNights: "",
+        lookingToBook: "",
+        preferredBudget: "",
+        specialOccasion: "",
+        departureCity: "",
+        anyRequest: "",
+      });
+
+      setCurrentStep(1);
+    }
+  };
+
+  /* =========================================================
+      INPUT STYLE
+  ========================================================= */
+
+  const inputClass = `
+    w-full h-14 rounded-full
+    bg-[#EEF3FF]
+    border border-[#DCE6FF]
+    px-5
+    text-[14px]
+    outline-none
+    transition-all duration-300
+    focus:border-[#4F7CFF]
+    focus:ring-4 focus:ring-[#4F7CFF]/10
+    placeholder:text-[#97A3B6]
+    text-[#13254A]
+  `;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="p-0 border-0 overflow-hidden"
+        className="
+          p-0
+          border-0
+          overflow-hidden
+        "
         style={{
-          maxWidth: "620px",
-          maxHeight: "90vh",
-          background: ivoryColor,
-          borderRadius: "2px",
-          boxShadow: "0 30px 80px rgba(13,27,42,0.25), 0 0 0 1px rgba(201,169,110,0.2)",
-          fontFamily: "'Georgia', 'Times New Roman', serif",
+          width: "96vw",
+          maxWidth: "1180px",
+          height: "92vh",
+          maxHeight: "880px",
+          borderRadius: "34px",
+          background: "#FFFFFF",
+          overflow: "hidden",
+          boxShadow:
+            "0 40px 120px rgba(0,0,0,0.18)",
         }}
       >
-        {/* Gold top bar */}
-        <div style={{ height: "3px", background: `linear-gradient(90deg, transparent, ${goldColor}, transparent)` }} />
+        <div
+          className="
+            grid
+            lg:grid-cols-[46%_54%]
+            h-full
+          "
+        >
+          {/* =========================================================
+              LEFT SIDE
+          ========================================================= */}
 
-        <div className="overflow-y-auto" style={{ maxHeight: "calc(90vh - 3px)" }}>
-
-          {/* Header */}
           <div
-            className="relative px-10 pt-10 pb-8 text-center"
-            style={{ background: navyColor }}
+            className="
+              relative
+              hidden
+              lg:flex
+              flex-col
+              justify-between
+              p-12
+              overflow-hidden
+            "
+            style={{
+              backgroundImage: `
+                linear-gradient(
+                  180deg,
+                  rgba(13,32,77,0.72),
+                  rgba(10,24,60,0.82)
+                ),
+                url(${bgImage})
+              `,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            {/* Decorative corner lines */}
-            <div className="absolute top-4 left-4 w-8 h-8" style={{ borderTop: `1px solid ${goldColor}40`, borderLeft: `1px solid ${goldColor}40` }} />
-            <div className="absolute top-4 right-4 w-8 h-8" style={{ borderTop: `1px solid ${goldColor}40`, borderRight: `1px solid ${goldColor}40` }} />
+            {/* overlays */}
 
-            <div className="flex justify-center mb-4">
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(54,88,175,0.15), rgba(11,25,56,0.45))",
+              }}
+            />
+
+            <div
+              className="
+                absolute
+                top-[-80px]
+                right-[-60px]
+                w-[220px]
+                h-[220px]
+                rounded-full
+              "
+              style={{
+                background:
+                  "rgba(114,149,255,0.18)",
+                filter: "blur(20px)",
+              }}
+            />
+
+            {/* brand */}
+
+            <div className="relative z-10">
               <div
-                className="flex items-center justify-center"
+                className="
+                  w-16 h-16
+                  rounded-full
+                  flex items-center justify-center
+                  backdrop-blur-md
+                "
                 style={{
-                  width: "56px", height: "56px",
-                  border: `1px solid ${goldColor}60`,
-                  borderRadius: "50%",
-                  background: "rgba(201,169,110,0.08)"
+                  background:
+                    "rgba(255,255,255,0.10)",
+                  border:
+                    "1px solid rgba(255,255,255,0.15)",
                 }}
               >
-                <Plane style={{ color: goldColor, width: "22px", height: "22px", transform: "rotate(45deg)" }} />
+                <Plane
+                  size={22}
+                  color="#FFFFFF"
+                />
               </div>
-            </div>
 
-            <DialogTitle
-              className="text-2xl font-normal mb-2 tracking-widest uppercase"
-              style={{ color: goldColor, letterSpacing: "0.25em", fontSize: "13px" }}
-            >
-              Antravi
-            </DialogTitle>
-            <p
-              className="text-3xl font-normal mt-1"
-              style={{ color: "#FAF7F0", fontFamily: "'Georgia', serif", letterSpacing: "0.02em" }}
-            >
-              Plan Your Journey
-            </p>
-            <div className="mt-4 flex items-center justify-center gap-3">
-              <div style={{ height: "1px", width: "40px", background: `${goldColor}40` }} />
-              <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: goldColor }} />
-              <div style={{ height: "1px", width: "40px", background: `${goldColor}40` }} />
-            </div>
-          </div>
-
-          {/* Step Indicator */}
-          <div
-            className="flex items-center justify-center gap-0 px-10 py-6"
-            style={{ background: navyColor, borderBottom: `1px solid ${goldColor}20` }}
-          >
-            {steps.map((step, idx) => {
-              const isActive = currentStep === step.number;
-              const isCompleted = currentStep > step.number;
-              return (
-                <div key={step.number} className="flex items-center">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className="flex items-center justify-center transition-all duration-500"
-                      style={{
-                        width: "32px", height: "32px",
-                        borderRadius: "50%",
-                        border: `1px solid ${isActive || isCompleted ? goldColor : `${goldColor}30`}`,
-                        background: isCompleted ? goldColor : isActive ? "rgba(201,169,110,0.15)" : "transparent",
-                        color: isCompleted ? navyColor : isActive ? goldColor : `${goldColor}40`,
-                      }}
-                    >
-                      {isCompleted
-                        ? <Check style={{ width: "14px", height: "14px" }} />
-                        : <span style={{ fontSize: "11px", fontFamily: "sans-serif" }}>{step.number}</span>
-                      }
-                    </div>
-                    <span
-                      className="mt-2 uppercase tracking-widest"
-                      style={{
-                        fontSize: "9px",
-                        color: isActive ? goldColor : isCompleted ? `${goldColor}80` : `${goldColor}30`,
-                        letterSpacing: "0.15em"
-                      }}
-                    >
-                      {step.title}
-                    </span>
-                  </div>
-                  {idx < steps.length - 1 && (
-                    <div
-                      className="mx-4 mb-5"
-                      style={{
-                        width: "60px", height: "1px",
-                        background: currentStep > step.number
-                          ? `linear-gradient(90deg, ${goldColor}, ${goldColor}60)`
-                          : `${goldColor}20`
-                      }}
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Form Body */}
-          <div className="px-10 py-8">
-
-            {/* Step Labels */}
-            <div className="mb-8">
-              <p className="uppercase tracking-[0.25em] text-[10px] mb-1" style={{ color: goldColor }}>
-                Step {currentStep} of 3
-              </p>
-              <h3 className="text-xl font-normal" style={{ color: navyColor, fontFamily: "'Georgia', serif" }}>
-                {currentStep === 1 && "Tell us about yourself"}
-                {currentStep === 2 && "Where do you wish to go?"}
-                {currentStep === 3 && "Curate your experience"}
-              </h3>
-              <div className="mt-2" style={{ width: "32px", height: "1px", background: goldColor }} />
-            </div>
-
-            {/* Step 1 */}
-            {currentStep === 1 && (
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <label className={luxuryLabelClass}>First Name <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <input
-                      value={formData.firstName}
-                      onChange={(e) => handleInputChange("firstName", e.target.value)}
-                      placeholder="First name"
-                      className={luxuryInputClass}
-                      style={{ borderColor: errors.firstName ? "#f87171" : undefined }}
-                    />
-                    {errors.firstName && <p className={luxuryErrorClass}>{errors.firstName}</p>}
-                  </div>
-                  <div>
-                    <label className={luxuryLabelClass}>Last Name <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <input
-                      value={formData.lastName}
-                      onChange={(e) => handleInputChange("lastName", e.target.value)}
-                      placeholder="Last name"
-                      className={luxuryInputClass}
-                      style={{ borderColor: errors.lastName ? "#f87171" : undefined }}
-                    />
-                    {errors.lastName && <p className={luxuryErrorClass}>{errors.lastName}</p>}
-                  </div>
-                </div>
-                <div>
-                  <label className={luxuryLabelClass}>Mobile Number <span style={{ color: "#C9A96E" }}>*</span></label>
-                  <input
-                    value={formData.mobile}
-                    onChange={(e) => handleInputChange("mobile", e.target.value)}
-                    placeholder="+91XXXXXXXXXX"
-                    className={luxuryInputClass}
-                    style={{ borderColor: errors.mobile ? "#f87171" : undefined }}
-                  />
-                  {errors.mobile && <p className={luxuryErrorClass}>{errors.mobile}</p>}
-                </div>
-                <div>
-                  <label className={luxuryLabelClass}>Email Address <span style={{ color: "#C9A96E" }}>*</span></label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="your@email.com"
-                    className={luxuryInputClass}
-                    style={{ borderColor: errors.email ? "#f87171" : undefined }}
-                  />
-                  {errors.email && <p className={luxuryErrorClass}>{errors.email}</p>}
-                </div>
-              </div>
-            )}
-
-            {/* Step 2 */}
-            {currentStep === 2 && (
-              <div className="space-y-6">
-                <div>
-                  <label className={luxuryLabelClass}>Destination <span style={{ color: "#C9A96E" }}>*</span></label>
-                  <Select value={formData.destination} onValueChange={(value) => handleInputChange("destination", value)}>
-                    <SelectTrigger
-                      className={selectTriggerClass}
-                      style={{ borderColor: errors.destination ? "#f87171" : undefined }}
-                    >
-                      <SelectValue placeholder="Select your destination" />
-                    </SelectTrigger>
-                    <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                      <SelectItem value="maldives">Maldives</SelectItem>
-                      <SelectItem value="thailand">Thailand</SelectItem>
-                      <SelectItem value="bali">Bali</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  {errors.destination && <p className={luxuryErrorClass}>{errors.destination}</p>}
-                </div>
-
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <label className={luxuryLabelClass}>Number of Adults <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <Select value={formData.numberOfAdults} onValueChange={(value) => handleInputChange("numberOfAdults", value)}>
-                      <SelectTrigger
-                        className={selectTriggerClass}
-                        style={{ borderColor: errors.numberOfAdults ? "#f87171" : undefined }}
-                      >
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                        {[1, 2, 3, 4, 5, 6].map((num) => (
-                          <SelectItem key={num} value={num.toString()}>
-                            {num} {num === 1 ? "Adult" : "Adults"}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {errors.numberOfAdults && <p className={luxuryErrorClass}>{errors.numberOfAdults}</p>}
-                  </div>
-
-                  <div>
-                    <label className={luxuryLabelClass}>Duration <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <Select value={formData.numberOfNights} onValueChange={(value) => handleInputChange("numberOfNights", value)}>
-                      <SelectTrigger
-                        className={selectTriggerClass}
-                        style={{ borderColor: errors.numberOfNights ? "#f87171" : undefined }}
-                      >
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                        {nightOptions.map((option) => (
-                          <SelectItem key={option} value={option}>{option}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {errors.numberOfNights && <p className={luxuryErrorClass}>{errors.numberOfNights}</p>}
-                  </div>
-                </div>
-
-                <div>
-                  <label className={luxuryLabelClass}>Travel Date <span style={{ color: "#C9A96E" }}>*</span></label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <button
-                        className={cn(
-                          "w-full text-left text-sm tracking-wide py-2 border-b transition-colors duration-300",
-                          "bg-transparent focus:outline-none",
-                          errors.travelDates ? "border-red-400" : "border-[#C9A96E]/40 hover:border-[#C9A96E]"
-                        )}
-                        style={{ color: formData.travelDates ? navyColor : `${navyColor}40`, fontFamily: "'Georgia', serif" }}
-                      >
-                        <span className="flex items-center gap-2">
-                          <CalendarIcon style={{ width: "14px", height: "14px", color: goldColor }} />
-                          {formData.travelDates ? formatDate(formData.travelDates) : "Select departure date"}
-                        </span>
-                      </button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                      <Calendar
-                        mode="single"
-                        selected={formData.travelDates}
-                        onSelect={(date) => handleInputChange("travelDates", date)}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  {errors.travelDates && <p className={luxuryErrorClass}>{errors.travelDates}</p>}
-                </div>
-              </div>
-            )}
-
-            {/* Step 3 */}
-            {currentStep === 3 && (
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <label className={luxuryLabelClass}>Booking Timeline <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <Select value={formData.lookingToBook} onValueChange={(value) => handleInputChange("lookingToBook", value)}>
-                      <SelectTrigger
-                        className={selectTriggerClass}
-                        style={{ borderColor: errors.lookingToBook ? "#f87171" : undefined }}
-                      >
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                        <SelectItem value="3-days">Within 3 days</SelectItem>
-                        <SelectItem value="7-days">Within a week</SelectItem>
-                        <SelectItem value="15-days">Within 15 days</SelectItem>
-                        <SelectItem value="1-month">Within a month</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    {errors.lookingToBook && <p className={luxuryErrorClass}>{errors.lookingToBook}</p>}
-                  </div>
-
-                  <div>
-                    <label className={luxuryLabelClass}>Preferred Budget <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <Select value={formData.preferredBudget} onValueChange={(value) => handleInputChange("preferredBudget", value)}>
-                      <SelectTrigger
-                        className={selectTriggerClass}
-                        style={{ borderColor: errors.preferredBudget ? "#f87171" : undefined }}
-                      >
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                        <SelectItem value="1-2-lakhs">₹1 – 2 Lakhs</SelectItem>
-                        <SelectItem value="2-3-lakhs">₹2 – 3 Lakhs</SelectItem>
-                        <SelectItem value="3-4-lakhs">₹3 – 4 Lakhs</SelectItem>
-                        <SelectItem value="4-5-lakhs">₹4 – 5 Lakhs</SelectItem>
-                        <SelectItem value="5-plus-lakhs">₹5 Lakhs & above</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    {errors.preferredBudget && <p className={luxuryErrorClass}>{errors.preferredBudget}</p>}
-                  </div>
-
-                  <div>
-                    <label className={luxuryLabelClass}>Special Occasion</label>
-                    <Select value={formData.specialOccasion} onValueChange={(value) => handleInputChange("specialOccasion", value)}>
-                      <SelectTrigger className={selectTriggerClass}>
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent style={{ background: ivoryColor, border: `1px solid ${goldColor}30`, borderRadius: "2px" }}>
-                        <SelectItem value="honeymoon">Honeymoon</SelectItem>
-                        <SelectItem value="anniversary">Anniversary</SelectItem>
-                        <SelectItem value="family-vacation">Family Vacation</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <label className={luxuryLabelClass}>Departure City <span style={{ color: "#C9A96E" }}>*</span></label>
-                    <input
-                      value={formData.departureCity}
-                      onChange={(e) => handleInputChange("departureCity", e.target.value)}
-                      placeholder="City of departure"
-                      className={luxuryInputClass}
-                      style={{ borderColor: errors.departureCity ? "#f87171" : undefined }}
-                    />
-                    {errors.departureCity && <p className={luxuryErrorClass}>{errors.departureCity}</p>}
-                  </div>
-                </div>
-
-                <div>
-                  <label className={luxuryLabelClass}>Special Requests</label>
-                  <textarea
-                    value={formData.anyRequest}
-                    onChange={(e) => handleInputChange("anyRequest", e.target.value)}
-                    placeholder="Any special arrangements, dietary preferences, or bespoke requests..."
-                    rows={3}
-                    className="w-full bg-transparent border-b border-[#C9A96E]/40 px-0 py-2 text-sm tracking-wide text-[#0D1B2A] placeholder:text-[#0D1B2A]/30 focus:outline-none focus:border-[#C9A96E] transition-colors duration-300 resize-none"
-                    style={{ fontFamily: "'Georgia', serif" }}
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* Navigation */}
-            <div className="flex items-center justify-between mt-10 pt-6" style={{ borderTop: `1px solid ${goldColor}20` }}>
-              <button
-                onClick={handlePrevious}
-                disabled={currentStep === 1}
-                className="uppercase tracking-[0.2em] text-[10px] transition-all duration-300 disabled:opacity-20"
-                style={{ color: navyColor, fontFamily: "sans-serif", letterSpacing: "0.2em" }}
+              <p
+                className="mt-10"
+                style={{
+                  fontSize: "12px",
+                  letterSpacing: "0.45em",
+                  color:
+                    "rgba(255,255,255,0.85)",
+                  fontWeight: 500,
+                }}
               >
-                ← Previous
-              </button>
+                ANTRAVI
+              </p>
 
-              {currentStep < 3 ? (
-                <button
-                  onClick={handleNext}
-                  disabled={!isStepValid(currentStep)}
-                  className="flex items-center gap-3 uppercase tracking-[0.2em] text-[11px] px-8 py-3 transition-all duration-300 disabled:opacity-30 hover:opacity-90"
+              <h1
+                className="
+                  mt-10
+                  leading-[0.95]
+                "
+                style={{
+                  fontFamily:
+                    "'DM Serif Display', serif",
+                  fontSize: "84px",
+                  color: "#FFFFFF",
+                  fontWeight: 400,
+                }}
+              >
+                Where to
+                <br />
+                next?
+              </h1>
+
+              <p
+                className="mt-8 max-w-[400px]"
+                style={{
+                  color:
+                    "rgba(255,255,255,0.82)",
+                  fontSize: "22px",
+                  lineHeight: "1.7",
+                }}
+              >
+                Curated luxury escapes crafted
+                exclusively for modern travelers
+                seeking unforgettable experiences.
+              </p>
+            </div>
+
+            {/* bottom card */}
+
+            <div className="relative z-10">
+              <div
+                className="
+                  backdrop-blur-md
+                  rounded-[32px]
+                  p-6
+                  flex items-center gap-5
+                "
+                style={{
+                  background:
+                    "rgba(255,255,255,0.10)",
+                  border:
+                    "1px solid rgba(255,255,255,0.15)",
+                }}
+              >
+                {/* place smallImage */}
+                <div
+                  className="
+                    w-16 h-16 rounded-2xl
+                  "
                   style={{
-                    background: navyColor,
-                    color: goldColor,
-                    fontFamily: "sans-serif",
-                    letterSpacing: "0.2em",
-                    borderRadius: "1px",
+                    backgroundImage: `url(${smallImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+
                   }}
-                >
-                  Continue
-                  <span style={{ color: goldColor }}>→</span>
-                </button>
-              ) : (
-                <button
-                  onClick={handleSubmit}
-                  disabled={!isStepValid(currentStep)}
-                  className="flex items-center gap-3 uppercase tracking-[0.2em] text-[11px] px-8 py-3 transition-all duration-300 disabled:opacity-30 hover:opacity-90"
-                  style={{
-                    background: goldColor,
-                    color: navyColor,
-                    fontFamily: "sans-serif",
-                    letterSpacing: "0.2em",
-                    borderRadius: "1px",
-                  }}
-                >
-                  Reserve My Vacation Now
-                </button>
-              )}
+                />
+
+                <div>
+                  <h3
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "22px",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Luxury Escape
+                  </h3>
+
+                  <p
+                    className="mt-1"
+                    style={{
+                      color:
+                        "rgba(255,255,255,0.72)",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Start with Antravi's signature
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Footer accent */}
-          <div className="px-10 pb-6 text-center">
-            <p className="uppercase tracking-[0.2em] text-[9px]" style={{ color: `${navyColor}40`, letterSpacing: "0.2em" }}>
-              Crafted for the discerning traveller
-            </p>
+          {/* =========================================================
+              RIGHT SIDE
+          ========================================================= */}
+
+          <div
+            className="
+              relative
+              bg-[#FAFBFF]
+              overflow-y-auto
+            "
+          >
+
+            <div
+              className="
+                px-6
+                lg:px-14
+                py-10
+                lg:py-12
+                min-h-full
+                flex flex-col
+                justify-center
+              "
+            >
+              {/* step */}
+
+              <div className="mb-8">
+                <p
+                  className="
+                    uppercase
+                    tracking-[0.28em]
+                    text-[11px]
+                    font-semibold
+                  "
+                  style={{
+                    color: "#4E73DF",
+                  }}
+                >
+                  Begin Your Journey
+                </p>
+
+                <h2
+                  className="
+                    mt-4
+                    leading-[1]
+                  "
+                  style={{
+                    fontFamily:
+                      "'DM Serif Display', serif",
+                    fontSize:
+                      "clamp(42px,4vw,68px)",
+                    color: "#10244A",
+                    fontWeight: 400,
+                  }}
+                >
+                  {currentStep === 1 &&
+                    "Let’s plan your dream vacation"}
+
+                  {currentStep === 2 &&
+                    "Choose your perfect getaway"}
+
+                  {currentStep === 3 &&
+                    "Complete your luxury journey"}
+                </h2>
+              </div>
+
+              {/* progress */}
+
+              <div className="flex gap-3 mb-10">
+                {[1, 2, 3].map((step) => (
+                  <div
+                    key={step}
+                    className="flex-1 h-[5px] rounded-full"
+                    style={{
+                      background:
+                        currentStep >= step
+                          ? "linear-gradient(90deg,#5C84FF,#2349AA)"
+                          : "#E6EBF8",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* =========================================================
+                  FORM CONTENT
+              ========================================================= */}
+
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentStep}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: -20,
+                  }}
+                  transition={{
+                    duration: 0.35,
+                  }}
+                >
+                  {/* =========================================================
+                      STEP 1
+                  ========================================================= */}
+
+                  {currentStep === 1 && (
+                    <div className="space-y-5">
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <div>
+                          <div
+                            className="
+                              relative
+                              flex items-center
+                            "
+                          >
+                            <User
+                              size={18}
+                              className="absolute left-5 text-[#4E73DF]"
+                            />
+
+                            <input
+                              value={
+                                formData.firstName
+                              }
+                              onChange={(e) =>
+                                handleInputChange(
+                                  "firstName",
+                                  e.target.value
+                                )
+                              }
+                              placeholder="First Name"
+                              className={`${inputClass} pl-14`}
+                            />
+                          </div>
+
+                          {errors.firstName && (
+                            <p className="text-red-500 text-xs mt-2 ml-3">
+                              {
+                                errors.firstName
+                              }
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <div
+                            className="
+                              relative
+                              flex items-center
+                            "
+                          >
+                            <User
+                              size={18}
+                              className="absolute left-5 text-[#4E73DF]"
+                            />
+
+                            <input
+                              value={
+                                formData.lastName
+                              }
+                              onChange={(e) =>
+                                handleInputChange(
+                                  "lastName",
+                                  e.target.value
+                                )
+                              }
+                              placeholder="Last Name"
+                              className={`${inputClass} pl-14`}
+                            />
+                          </div>
+
+                          {errors.lastName && (
+                            <p className="text-red-500 text-xs mt-2 ml-3">
+                              {
+                                errors.lastName
+                              }
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div>
+                        <div
+                          className="
+                            relative
+                            flex items-center
+                          "
+                        >
+                          <Phone
+                            size={18}
+                            className="absolute left-5 text-[#4E73DF]"
+                          />
+
+                          <input
+                            value={formData.mobile}
+                            onChange={(e) =>
+                              handleInputChange(
+                                "mobile",
+                                e.target.value
+                              )
+                            }
+                            placeholder="+91 9876543210"
+                            className={`${inputClass} pl-14`}
+                          />
+                        </div>
+
+                        {errors.mobile && (
+                          <p className="text-red-500 text-xs mt-2 ml-3">
+                            {errors.mobile}
+                          </p>
+                        )}
+                      </div>
+
+                      <div>
+                        <div
+                          className="
+                            relative
+                            flex items-center
+                          "
+                        >
+                          <Mail
+                            size={18}
+                            className="absolute left-5 text-[#4E73DF]"
+                          />
+
+                          <input
+                            type="email"
+                            value={formData.email}
+                            onChange={(e) =>
+                              handleInputChange(
+                                "email",
+                                e.target.value
+                              )
+                            }
+                            placeholder="you@example.com"
+                            className={`${inputClass} pl-14`}
+                          />
+                        </div>
+
+                        {errors.email && (
+                          <p className="text-red-500 text-xs mt-2 ml-3">
+                            {errors.email}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* =========================================================
+                      STEP 2
+                  ========================================================= */}
+
+                  {currentStep === 2 && (
+                    <div className="space-y-5">
+                      {/* destination */}
+
+                      <div>
+                        <Select
+                          value={
+                            formData.destination
+                          }
+                          onValueChange={(value) =>
+                            handleInputChange(
+                              "destination",
+                              value
+                            )
+                          }
+                        >
+                          <SelectTrigger
+                            className="
+                              h-14 rounded-full border-0
+                              bg-[#EEF3FF]
+                              px-5
+                              shadow-none
+                            "
+                          >
+                            <div className="flex items-center gap-3">
+                              <MapPin
+                                size={18}
+                                color="#4E73DF"
+                              />
+
+                              <SelectValue placeholder="Select destination" />
+                            </div>
+                          </SelectTrigger>
+
+                          <SelectContent>
+                            <SelectItem value="maldives">
+                              Maldives
+                            </SelectItem>
+
+                            <SelectItem value="bali">
+                              Bali
+                            </SelectItem>
+
+                            <SelectItem value="thailand">
+                              Thailand
+                            </SelectItem>
+
+                            <SelectItem value="switzerland">
+                              Switzerland
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+
+                        {errors.destination && (
+                          <p className="text-red-500 text-xs mt-2 ml-3">
+                            {
+                              errors.destination
+                            }
+                          </p>
+                        )}
+                      </div>
+
+                      {/* row */}
+
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <div>
+                          <Popover>
+                            <PopoverTrigger asChild>
+                              <button
+                                className={`
+                                  ${inputClass}
+                                  flex items-center gap-3
+                                  text-left
+                                `}
+                              >
+                                <CalendarDays
+                                  size={18}
+                                  color="#4E73DF"
+                                />
+
+                                <span
+                                  className={
+                                    formData.travelDates
+                                      ? "text-[#13254A]"
+                                      : "text-[#97A3B6]"
+                                  }
+                                >
+                                  {formData.travelDates
+                                    ? formData.travelDates.toLocaleDateString()
+                                    : "Travel Date"}
+                                </span>
+                              </button>
+                            </PopoverTrigger>
+
+                            <PopoverContent
+                              className="w-auto p-0"
+                              align="start"
+                            >
+                              <Calendar
+                                mode="single"
+                                selected={
+                                  formData.travelDates
+                                }
+                                onSelect={(
+                                  date
+                                ) =>
+                                  handleInputChange(
+                                    "travelDates",
+                                    date
+                                  )
+                                }
+                                initialFocus
+                              />
+                            </PopoverContent>
+                          </Popover>
+
+                          {errors.travelDates && (
+                            <p className="text-red-500 text-xs mt-2 ml-3">
+                              {
+                                errors.travelDates
+                              }
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <Select
+                            value={
+                              formData.numberOfNights
+                            }
+                            onValueChange={(value) =>
+                              handleInputChange(
+                                "numberOfNights",
+                                value
+                              )
+                            }
+                          >
+                            <SelectTrigger
+                              className="
+                                h-14 rounded-full border-0
+                                bg-[#EEF3FF]
+                                px-5
+                                shadow-none
+                              "
+                            >
+                              <div className="flex items-center gap-3">
+                                <MoonStar
+                                  size={18}
+                                  color="#4E73DF"
+                                />
+
+                                <SelectValue placeholder="Nights" />
+                              </div>
+                            </SelectTrigger>
+
+                            <SelectContent>
+                              {nightOptions.map(
+                                (option) => (
+                                  <SelectItem
+                                    key={option}
+                                    value={
+                                      option
+                                    }
+                                  >
+                                    {option}
+                                  </SelectItem>
+                                )
+                              )}
+                            </SelectContent>
+                          </Select>
+
+                          {errors.numberOfNights && (
+                            <p className="text-red-500 text-xs mt-2 ml-3">
+                              {
+                                errors.numberOfNights
+                              }
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* travelers */}
+
+                      <div>
+                        <Select
+                          value={
+                            formData.numberOfAdults
+                          }
+                          onValueChange={(value) =>
+                            handleInputChange(
+                              "numberOfAdults",
+                              value
+                            )
+                          }
+                        >
+                          <SelectTrigger
+                            className="
+                              h-14 rounded-full border-0
+                              bg-[#EEF3FF]
+                              px-5
+                              shadow-none
+                            "
+                          >
+                            <div className="flex items-center gap-3">
+                              <Users
+                                size={18}
+                                color="#4E73DF"
+                              />
+
+                              <SelectValue placeholder="Select travelers" />
+                            </div>
+                          </SelectTrigger>
+
+                          <SelectContent>
+                            {[1, 2, 3, 4, 5, 6].map(
+                              (num) => (
+                                <SelectItem
+                                  key={num}
+                                  value={String(
+                                    num
+                                  )}
+                                >
+                                  {num}{" "}
+                                  {num === 1
+                                    ? "Traveler"
+                                    : "Travelers"}
+                                </SelectItem>
+                              )
+                            )}
+                          </SelectContent>
+                        </Select>
+
+                        {errors.numberOfAdults && (
+                          <p className="text-red-500 text-xs mt-2 ml-3">
+                            {
+                              errors.numberOfAdults
+                            }
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* =========================================================
+                      STEP 3
+                  ========================================================= */}
+
+                  {currentStep === 3 && (
+                    <div className="space-y-5">
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <Select
+                          value={
+                            formData.lookingToBook
+                          }
+                          onValueChange={(value) =>
+                            handleInputChange(
+                              "lookingToBook",
+                              value
+                            )
+                          }
+                        >
+                          <SelectTrigger
+                            className="
+                              h-14 rounded-full border-0
+                              bg-[#EEF3FF]
+                              px-5
+                              shadow-none
+                            "
+                          >
+                            <SelectValue placeholder="Booking Timeline" />
+                          </SelectTrigger>
+
+                          <SelectContent>
+                            <SelectItem value="3-days">
+                              Within 3 Days
+                            </SelectItem>
+
+                            <SelectItem value="7-days">
+                              Within a Week
+                            </SelectItem>
+
+                            <SelectItem value="15-days">
+                              Within 15 Days
+                            </SelectItem>
+
+                            <SelectItem value="1-month">
+                              Within a Month
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+
+                        <Select
+                          value={
+                            formData.preferredBudget
+                          }
+                          onValueChange={(value) =>
+                            handleInputChange(
+                              "preferredBudget",
+                              value
+                            )
+                          }
+                        >
+                          <SelectTrigger
+                            className="
+                              h-14 rounded-full border-0
+                              bg-[#EEF3FF]
+                              px-5
+                              shadow-none
+                            "
+                          >
+                            <SelectValue placeholder="Preferred Budget" />
+                          </SelectTrigger>
+
+                          <SelectContent>
+                            <SelectItem value="1-2-lakhs">
+                              ₹1 – 2 Lakhs
+                            </SelectItem>
+
+                            <SelectItem value="2-3-lakhs">
+                              ₹2 – 3 Lakhs
+                            </SelectItem>
+
+                            <SelectItem value="3-4-lakhs">
+                              ₹3 – 4 Lakhs
+                            </SelectItem>
+
+                            <SelectItem value="4-5-lakhs">
+                              ₹4 – 5 Lakhs
+                            </SelectItem>
+
+                            <SelectItem value="5-plus-lakhs">
+                              ₹5 Lakhs &
+                              Above
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <input
+                        value={
+                          formData.departureCity
+                        }
+                        onChange={(e) =>
+                          handleInputChange(
+                            "departureCity",
+                            e.target.value
+                          )
+                        }
+                        placeholder="Departure City"
+                        className={inputClass}
+                      />
+
+                      <Select
+                        value={
+                          formData.specialOccasion
+                        }
+                        onValueChange={(value) =>
+                          handleInputChange(
+                            "specialOccasion",
+                            value
+                          )
+                        }
+                      >
+                        <SelectTrigger
+                          className="
+                            h-14 rounded-full border-0
+                            bg-[#EEF3FF]
+                            px-5
+                            shadow-none
+                          "
+                        >
+                          <div className="flex items-center gap-3">
+                            <Sparkles
+                              size={18}
+                              color="#4E73DF"
+                            />
+
+                            <SelectValue placeholder="Special Occasion" />
+                          </div>
+                        </SelectTrigger>
+
+                        <SelectContent>
+                          <SelectItem value="honeymoon">
+                            Honeymoon
+                          </SelectItem>
+
+                          <SelectItem value="anniversary">
+                            Anniversary
+                          </SelectItem>
+
+                          <SelectItem value="family-vacation">
+                            Family Vacation
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+
+                      <textarea
+                        value={formData.anyRequest}
+                        onChange={(e) =>
+                          handleInputChange(
+                            "anyRequest",
+                            e.target.value
+                          )
+                        }
+                        placeholder="Any special requests?"
+                        rows={4}
+                        className="
+                          w-full
+                          rounded-[28px]
+                          bg-[#EEF3FF]
+                          border border-[#DCE6FF]
+                          p-5
+                          outline-none
+                          resize-none
+                          text-[#13254A]
+                          placeholder:text-[#97A3B6]
+                        "
+                      />
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+
+              {/* =========================================================
+                  BUTTONS
+              ========================================================= */}
+
+              <div className="flex items-center gap-4 mt-10">
+                {currentStep > 1 && (
+                  <button
+                    onClick={handlePrevious}
+                    className="
+                      h-14 w-14 rounded-full
+                      flex items-center justify-center
+                      bg-[#EEF3FF]
+                      text-[#2349AA]
+                    "
+                  >
+                    <ArrowLeft size={20} />
+                  </button>
+                )}
+
+                {currentStep < 3 ? (
+                  <motion.button
+                    whileHover={{
+                      scale: 1.01,
+                    }}
+                    whileTap={{
+                      scale: 0.98,
+                    }}
+                    onClick={handleNext}
+                    disabled={
+                      !isStepValid(currentStep)
+                    }
+                    className="
+                      flex-1
+                      h-14
+                      rounded-full
+                      text-white
+                      font-semibold
+                      tracking-[0.12em]
+                      uppercase
+                      text-[12px]
+                      disabled:opacity-40
+                    "
+                    style={{
+                      background:
+                        "linear-gradient(135deg,#5C84FF,#2349AA)",
+                      boxShadow:
+                        "0 15px 35px rgba(78,115,223,0.28)",
+                    }}
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      Continue Your Journey
+                      <ChevronRight
+                        size={18}
+                      />
+                    </span>
+                  </motion.button>
+                ) : (
+                  <motion.button
+                    whileHover={{
+                      scale: 1.01,
+                    }}
+                    whileTap={{
+                      scale: 0.98,
+                    }}
+                    onClick={handleSubmit}
+                    disabled={
+                      !isStepValid(currentStep)
+                    }
+                    className="
+                      flex-1
+                      h-14
+                      rounded-full
+                      text-white
+                      font-semibold
+                      tracking-[0.12em]
+                      uppercase
+                      text-[12px]
+                      disabled:opacity-40
+                    "
+                    style={{
+                      background:
+                        "linear-gradient(135deg,#5C84FF,#2349AA)",
+                      boxShadow:
+                        "0 15px 35px rgba(78,115,223,0.28)",
+                    }}
+                  >
+                    Reserve My Vacation
+                  </motion.button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Gold bottom bar */}
-        <div style={{ height: "1px", background: `linear-gradient(90deg, transparent, ${goldColor}60, transparent)` }} />
       </DialogContent>
     </Dialog>
   );

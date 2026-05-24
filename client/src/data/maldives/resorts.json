@@ -168,7 +168,7 @@
       "images/maldives/resorts/westin/westin-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "",
     "location": "Baa Atoll",
     "features": [
@@ -205,7 +205,7 @@
       "images/maldives/resorts/saii/saii-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "",
     "location": "Maldives",
 
@@ -278,7 +278,7 @@
       "images/maldives/resorts/hardRock/hardRock-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Maldives",
 
@@ -315,8 +315,8 @@
       "images/maldives/resorts/obluAila/obluAila-image-5.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/obluAila/obluAila-image-6.webp?w=800&h=600&fit=crop"
     ],
-    "rating": 5,
-    "StartsFrom ": "Available on request",
+    "rating": 4,
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "15 Minutes from Malé Airport",
 
@@ -358,7 +358,7 @@
       "images/maldives/resorts/obluSelect/obluSelect-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
 
@@ -397,7 +397,7 @@
       "images/maldives/resorts/olhuveli/olhuveli-image-4.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "South Malé Atoll",
     "features": [
@@ -434,7 +434,7 @@
       "images/maldives/resorts/centara/centara-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -470,7 +470,7 @@
       "images/maldives/resorts/adaaran/adaaran-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "South Malé Atoll",
 
@@ -514,7 +514,7 @@
       "images/maldives/resorts/hirkm/hirkm-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 4,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "South Malé Atoll",
     "features": [
@@ -548,7 +548,7 @@
       "images/maldives/resorts/brennia/brennia-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Raa Atoll",
     "features": [
@@ -585,7 +585,7 @@
       "images/maldives/resorts/leMeridien/leMeridien-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Lhaviyani Atoll",
     "features": [
@@ -622,7 +622,7 @@
       "images/maldives/resorts/furaveri/furaveri-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Raa Atoll",
     "features": [
@@ -659,7 +659,7 @@
       "images/maldives/resorts/nautica/nautica-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -695,7 +695,7 @@
       "images/maldives/resorts/kudaRah/kudaRah-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "South Ari Atoll",
     "features": [
@@ -730,7 +730,7 @@
       "images/maldives/resorts/hilton/hilton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
     "features": [
@@ -766,10 +766,11 @@
       "images/maldives/resorts/marriott/marriott-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Kaafu Atoll",
     "features": [
+      "Speed Boat Transfers",
       "Luxury Beach & Overwater Villas",
       "Signature Fine Dining",
       "Private Pools",
@@ -791,19 +792,21 @@
     "id": "Anantara Kihavah Maldives Villas",
     "name": "Anantara Kihavah Maldives Villas",
     "description": "An iconic luxury resort famous for underwater dining, private pool villas, and extraordinary marine experiences in the UNESCO Biosphere Reserve.",
-    "shortDescription": "Iconic Underwater Luxury",
+    "shortDescription": "Iconic Underwater Restaurant",
     "tag": "5-Star Luxury",
     "images": [
       "images/maldives/resorts/kihavah/kihavah-image-1.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/kihavah/kihavah-image-2.webp?w=800&h=600&fit=crop",
       "images/maldives/resorts/kihavah/kihavah-image-3.webp?w=800&h=600&fit=crop",
-      "images/maldives/resorts/kihavah/kihavah-image-4.webp?w=800&h=600&fit=crop"
+      "images/maldives/resorts/kihavah/kihavah-image-4.webp?w=800&h=600&fit=crop",
+      "images/maldives/resorts/kihavah/kihavah-image-5.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Baa Atoll",
     "features": [
+      "Private Sea Plane Transfers",
       "Underwater Dining Experience",
       "Private Pool Villas",
       "Luxury Spa",
@@ -836,10 +839,11 @@
       "images/maldives/resorts/regis/regis-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "Dhaalu Atoll",
     "features": [
+      "Sea Plane Transfers",
       "Private Island Luxury",
       "Signature Butler Service",
       "Iridium Spa",
@@ -872,10 +876,11 @@
       "images/maldives/resorts/ritzCarlton/ritzCarlton-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
     "features": [
+      "Luxury yacht transfers",
       "Luxury Circular Villas",
       "Personal Aris Meeha Service",
       "Fine Dining",
@@ -907,10 +912,11 @@
       "images/maldives/resorts/grandPark/grandPark-image-6.webp?w=800&h=600&fit=crop"
     ],
     "rating": 5,
-    "StartsFrom ": "Available on Request",
+    "StartsFrom ": "Available Up on Request",
     "duration": "3 Nights / 4 Days",
     "location": "North Malé Atoll",
     "features": [
+      "Speed Boat Transfers",
       "Glass Bottom Overwater Villas",
       "In-Villa Check-In",
       "Green Globe Certified Resort",

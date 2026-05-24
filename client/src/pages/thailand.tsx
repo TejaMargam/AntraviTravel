@@ -6,8 +6,6 @@ import faqsData from "@/data/thailand/faqs.json";
 import { lazy, useState } from "react";
 import { TravelForm } from "@/components/TravelForm";
 
-const Thailand1 = lazy(() => import("@/pages/thailand2"));
-const Thailand2 = lazy(() => import("@/pages/thailand3"));
 
 export default function Thailand() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -29,27 +27,27 @@ export default function Thailand() {
     {
       title: 'Pad Thai',
       description: 'Stir-fried rice noodles with egg, bean sprouts, green onions and your choice of tofu, prawn or chicken — topped with crushed peanuts and a squeeze of lime.',
-      image: '/images/thailand/bangkok.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Pad_Thai.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Green Curry',
       description: 'Aromatic green chilli paste cooked in rich coconut milk with Thai basil, kaffir lime leaves and vegetables. Fragrant, creamy, and deceptively spicy.',
-      image: '/images/thailand/phuket.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Green_Curry.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Som Tum',
       description: 'Shredded unripe papaya pounded with dried shrimp, chillies, lime juice, fish sauce and palm sugar. Explosive flavour in every bite.',
-      image: '/images/thailand/krabi.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Som_Tum.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Khao Pad',
       description: 'Jasmine rice wok-fried with garlic, egg, soy sauce and your choice of protein — finished with cucumber slices, spring onion and a wedge of lime.',
-      image: '/images/thailand/pattaya.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Khao_Pad.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Mango Sticky Rice',
       description: 'Glutinous sticky rice soaked in sweet coconut milk, served with perfectly ripe mango slices. Simple, seasonal and absolutely sublime.',
-      image: '/images/thailand/thailand-cover.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Mango_Sticky_Rice.webp?auto=format&fit=crop&w=800&q=60',
     },
   ];
 
@@ -57,27 +55,27 @@ export default function Thailand() {
     {
       title: 'The Wai — Thai Greeting',
       description: 'Press palms together at chest level, fingers pointing up, and bow slightly. Return a wai when given to show respect.',
-      image: '/images/thailand/bangkok.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/The_Wai_ThaiGreeting.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Royal Family — Profound Respect',
       description: 'Thailand reveres the monarchy. Stand when the royal anthem plays and avoid public criticism of royal family members.',
-      image: '/images/thailand/pattaya.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Royal_Family_Profound_Respect.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Head & Feet — Sacred Hierarchy',
       description: 'Never touch a person’s head. Don’t point your feet at people, monks or Buddha images. Remove shoes before entering temples.',
-      image: '/images/thailand/krabi.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Head_Feet_Sacred_Hierarchy.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Temple Etiquette',
       description: 'Dress conservatively, speak quietly, and treat temples as places of worship rather than photo backdrops.',
-      image: '/images/thailand/phuket.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Temple_Etiquette.webp?auto=format&fit=crop&w=800&q=60',
     },
     {
       title: 'Saving Face',
       description: 'Thais avoid confrontation to preserve harmony. A smile often means courtesy, not agreement.',
-      image: '/images/thailand/thailand-cover.webp?auto=format&fit=crop&w=800&q=60',
+      image: '/images/thailand/Saving_Face.webp?auto=format&fit=crop&w=800&q=60',
     },
   ];
 
@@ -218,7 +216,7 @@ export default function Thailand() {
                 </p>
               </div>
               <div className="overflow-hidden rounded-3xl">
-                <img src="/images/thailand/thailand-cover.webp?auto=format&fit=crop&w=1200&q=60" alt="Thailand landscape" className="w-full h-full object-cover" />
+                <img src="/images/thailand/A_Kingdom_Unlike_Any_Other.webp?auto=format&fit=crop&w=1200&q=60" alt="Thailand landscape" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -237,7 +235,7 @@ export default function Thailand() {
                 </p>
               </div>
               <div className="rounded-3xl overflow-hidden bg-slate-950 text-white">
-                <img src="/images/thailand/bangkok.webp?auto=format&fit=crop&w=1200&q=60" alt="Thai language" className="w-full h-64 object-cover" />
+                <img src="/images/thailand/Speak_a_Little_Thai.webp?auto=format&fit=crop&w=1200&q=60" alt="Thai language" className="w-full h-64 object-cover" />
                 <div className="p-8">
                   <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.45rem', marginBottom: '0.75rem' }}>Thai is welcoming.</h3>
                   <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.85, color: '#CBD5E1' }}>
@@ -414,8 +412,6 @@ export default function Thailand() {
 
       <Footer />
       <TravelForm isOpen={isFormOpen} onClose={() => { setIsFormOpen(false); }} />
-      <Thailand1 />
-      <Thailand2 />
     </div>
   );
 }

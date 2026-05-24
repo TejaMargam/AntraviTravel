@@ -4,6 +4,13 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
+const noIndexPaths = new Set([
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/thankyou",
+]);
+
 // 301 Redirects for www/non-www
 app.use((req, res, next) => {
   const host = req.headers.host;
@@ -66,6 +73,11 @@ if (isDevelopment) {
   res.setHeader('Vary', 'Accept-Encoding');
   res.setHeader('Keep-Alive', 'timeout=5, max=1000');
   res.removeHeader('X-Powered-By'); // Remove server signature for security
+
+  const normalizedPath = req.path === "/" ? req.path : req.path.replace(/\/$/, "");
+  if (noIndexPaths.has(normalizedPath)) {
+    res.setHeader('X-Robots-Tag', 'noindex, follow');
+  }
   
   next();
 });
