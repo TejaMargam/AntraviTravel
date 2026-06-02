@@ -5,7 +5,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig(async () => {
   return {
-    base: "./", // 👈 important for Hostinger
+    base: "/",
     plugins: [
       react(),
       runtimeErrorOverlay(),

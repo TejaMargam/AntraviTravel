@@ -21,7 +21,7 @@ export default function Home() {
       metaDesc.name = 'description';
       document.head.appendChild(metaDesc);
     }
-    metaDesc.content = "Plan your dream luxury vacation with Antravi. Exclusive Maldives honeymoon packages, Bali luxury holidays, and Thailand private tours. Best prices guaranteed with personalized service.";
+    metaDesc.content = "Plan your dream vacation with Antravi. Exclusive Maldives honeymoon packages, Bali holidays, and Thailand private tours. Best prices guaranteed with personalized service.";
     
     // Add language meta tag
     let langMeta = document.querySelector('meta[http-equiv="content-language"]') as HTMLMetaElement;

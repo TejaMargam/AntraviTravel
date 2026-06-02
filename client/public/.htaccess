@@ -1,6 +1,30 @@
 RewriteEngine On
 RewriteBase /
+
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/png .png
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+</IfModule>
+
+<IfModule mod_headers.c>
+  SetEnvIfNoCase Request_URI "^/(contact|privacy|terms|thankyou)/?$" noindex_route=1
+  Header set X-Robots-Tag "noindex, follow" env=noindex_route
+</IfModule>
+
+RedirectMatch 301 ^/maldives-honeymoon-packages/?$ /destinations/maldives
+RedirectMatch 301 ^/bali-luxury-holidays/?$ /destinations/bali
+RedirectMatch 301 ^/thailand-private-tours/?$ /destinations/thailand
+
 RewriteRule ^index\.html$ - [L]
+
+# Do not rewrite missing asset/file requests to index.html.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule \.[^/]+$ - [R=404,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]

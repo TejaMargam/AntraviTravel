@@ -81,7 +81,7 @@ export default function Destinations() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Resort Collection</p>
+                {/* <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Resort Collection</p> */}
                 <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', fontWeight: 400, marginBottom: '0.4rem' }}>The Maldives</h2>
                 <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', opacity: 0.8, marginBottom: '1rem', lineHeight: 1.5 }}>
                   {resortsData[currentImageIndex]}
@@ -111,7 +111,7 @@ export default function Destinations() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Island Escapes</p>
+                {/* <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Island Escapes</p> */}
                 <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', fontWeight: 400, marginBottom: '0.4rem' }}>Bali</h2>
                 <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', opacity: 0.8, marginBottom: '1rem', lineHeight: 1.5 }}>
                   Temples, beaches, and culture-packed adventures
@@ -141,7 +141,7 @@ export default function Destinations() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Curated Journeys</p>
+                {/* <p className="section-label" style={{ color: 'rgba(184,150,62,0.9)', marginBottom: '0.4rem' }}>Curated Journeys</p> */}
                 <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', fontWeight: 400, marginBottom: '0.4rem' }}>Thailand</h2>
                 <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', opacity: 0.8, marginBottom: '1rem', lineHeight: 1.5 }}>
                   Island hopping, street food, and iconic beaches

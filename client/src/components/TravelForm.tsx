@@ -87,8 +87,6 @@ export function TravelForm({
 
   const bgImage =
     "/images/maldives/resorts/centara/centara-image-1.webp";
-  const smallImage =
-    "/images/maldives/resorts/adaaran/adaaran-image-1.webp";
 
   const nightOptions: string[] = [
     "2 Nights / 3 Days",
@@ -369,6 +367,29 @@ export function TravelForm({
     text-[#13254A]
   `;
 
+  const selectContentClass = `
+    border border-white/35
+    bg-white/75
+    text-[#13254A]
+    shadow-[0_24px_70px_rgba(16,36,74,0.18)]
+    backdrop-blur-xl
+  `;
+
+  const datePopoverClass = `
+    w-auto p-0
+    border border-white/35
+    bg-white/75
+    shadow-[0_24px_70px_rgba(16,36,74,0.18)]
+    backdrop-blur-xl
+  `;
+
+  const primaryButtonStyle = {
+    background:
+      "linear-gradient(135deg,#18346F,#071A42)",
+    boxShadow:
+      "0 18px 42px rgba(7,26,66,0.34)",
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
@@ -503,76 +524,12 @@ export function TravelForm({
                 next?
               </h1>
 
-              <p
-                className="mt-8 max-w-[400px]"
-                style={{
-                  color:
-                    "rgba(255,255,255,0.82)",
-                  fontSize: "22px",
-                  lineHeight: "1.7",
-                }}
-              >
-                Curated luxury escapes crafted
-                exclusively for modern travelers
-                seeking unforgettable experiences.
-              </p>
+
             </div>
 
             {/* bottom card */}
 
-            <div className="relative z-10">
-              <div
-                className="
-                  backdrop-blur-md
-                  rounded-[32px]
-                  p-6
-                  flex items-center gap-5
-                "
-                style={{
-                  background:
-                    "rgba(255,255,255,0.10)",
-                  border:
-                    "1px solid rgba(255,255,255,0.15)",
-                }}
-              >
-                {/* place smallImage */}
-                <div
-                  className="
-                    w-16 h-16 rounded-2xl
-                  "
-                  style={{
-                    backgroundImage: `url(${smallImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-
-                  }}
-                />
-
-                <div>
-                  <h3
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "22px",
-                      fontWeight: 600,
-                    }}
-                  >
-                    Luxury Escape
-                  </h3>
-
-                  <p
-                    className="mt-1"
-                    style={{
-                      color:
-                        "rgba(255,255,255,0.72)",
-                      fontSize: "15px",
-                    }}
-                  >
-                    Start with Antravi's signature
-                  </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           {/* =========================================================
@@ -636,7 +593,7 @@ export function TravelForm({
                     "Choose your perfect getaway"}
 
                   {currentStep === 3 &&
-                    "Complete your luxury journey"}
+                    "Complete your journey"}
                 </h2>
               </div>
 
@@ -650,7 +607,7 @@ export function TravelForm({
                     style={{
                       background:
                         currentStep >= step
-                          ? "linear-gradient(90deg,#5C84FF,#2349AA)"
+                          ? "linear-gradient(90deg,#18346F,#071A42)"
                           : "#E6EBF8",
                     }}
                   />
@@ -865,7 +822,9 @@ export function TravelForm({
                             </div>
                           </SelectTrigger>
 
-                          <SelectContent>
+                          <SelectContent
+                            className={selectContentClass}
+                          >
                             <SelectItem value="maldives">
                               Maldives
                             </SelectItem>
@@ -878,9 +837,6 @@ export function TravelForm({
                               Thailand
                             </SelectItem>
 
-                            <SelectItem value="switzerland">
-                              Switzerland
-                            </SelectItem>
                           </SelectContent>
                         </Select>
 
@@ -926,7 +882,7 @@ export function TravelForm({
                             </PopoverTrigger>
 
                             <PopoverContent
-                              className="w-auto p-0"
+                              className={datePopoverClass}
                               align="start"
                             >
                               <Calendar
@@ -986,7 +942,9 @@ export function TravelForm({
                               </div>
                             </SelectTrigger>
 
-                            <SelectContent>
+                            <SelectContent
+                              className={selectContentClass}
+                            >
                               {nightOptions.map(
                                 (option) => (
                                   <SelectItem
@@ -1044,7 +1002,9 @@ export function TravelForm({
                             </div>
                           </SelectTrigger>
 
-                          <SelectContent>
+                          <SelectContent
+                            className={selectContentClass}
+                          >
                             {[1, 2, 3, 4, 5, 6].map(
                               (num) => (
                                 <SelectItem
@@ -1103,7 +1063,9 @@ export function TravelForm({
                             <SelectValue placeholder="Booking Timeline" />
                           </SelectTrigger>
 
-                          <SelectContent>
+                          <SelectContent
+                            className={selectContentClass}
+                          >
                             <SelectItem value="3-days">
                               Within 3 Days
                             </SelectItem>
@@ -1144,7 +1106,9 @@ export function TravelForm({
                             <SelectValue placeholder="Preferred Budget" />
                           </SelectTrigger>
 
-                          <SelectContent>
+                          <SelectContent
+                            className={selectContentClass}
+                          >
                             <SelectItem value="1-2-lakhs">
                               ₹1 – 2 Lakhs
                             </SelectItem>
@@ -1169,63 +1133,68 @@ export function TravelForm({
                         </Select>
                       </div>
 
-                      <input
-                        value={
-                          formData.departureCity
-                        }
-                        onChange={(e) =>
-                          handleInputChange(
-                            "departureCity",
-                            e.target.value
-                          )
-                        }
-                        placeholder="Departure City"
-                        className={inputClass}
-                      />
+                      <div className="grid md:grid-cols-2 gap-5">
+                        
+                        <input
+                          value={
+                            formData.departureCity
+                          }
+                          onChange={(e) =>
+                            handleInputChange(
+                              "departureCity",
+                              e.target.value
+                            )
+                          }
+                          placeholder="Departure City"
+                          className={inputClass}
+                        />
 
-                      <Select
-                        value={
-                          formData.specialOccasion
-                        }
-                        onValueChange={(value) =>
-                          handleInputChange(
-                            "specialOccasion",
-                            value
-                          )
-                        }
-                      >
-                        <SelectTrigger
-                          className="
-                            h-14 rounded-full border-0
-                            bg-[#EEF3FF]
-                            px-5
-                            shadow-none
-                          "
+                        <Select
+                          value={
+                            formData.specialOccasion
+                          }
+                          onValueChange={(value) =>
+                            handleInputChange(
+                              "specialOccasion",
+                              value
+                            )
+                          }
                         >
-                          <div className="flex items-center gap-3">
-                            <Sparkles
-                              size={18}
-                              color="#4E73DF"
-                            />
+                          <SelectTrigger
+                            className="
+                              h-14 rounded-full border-0
+                              bg-[#EEF3FF]
+                              px-5
+                              shadow-none
+                            "
+                          >
+                            <div className="flex items-center gap-3">
+                              <Sparkles
+                                size={18}
+                                color="#4E73DF"
+                              />
 
-                            <SelectValue placeholder="Special Occasion" />
-                          </div>
-                        </SelectTrigger>
+                              <SelectValue placeholder="Special Occasion" />
+                            </div>
+                          </SelectTrigger>
 
-                        <SelectContent>
-                          <SelectItem value="honeymoon">
-                            Honeymoon
-                          </SelectItem>
+                          <SelectContent
+                            className={selectContentClass}
+                          >
+                            <SelectItem value="honeymoon">
+                              Honeymoon
+                            </SelectItem>
 
-                          <SelectItem value="anniversary">
-                            Anniversary
-                          </SelectItem>
+                            <SelectItem value="anniversary">
+                              Anniversary
+                            </SelectItem>
 
-                          <SelectItem value="family-vacation">
-                            Family Vacation
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
+                            <SelectItem value="family-vacation">
+                              Family Vacation
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
 
                       <textarea
                         value={formData.anyRequest}
@@ -1236,7 +1205,7 @@ export function TravelForm({
                           )
                         }
                         placeholder="Any special requests?"
-                        rows={4}
+                        rows={1}
                         className="
                           w-full
                           rounded-[28px]
@@ -1265,8 +1234,9 @@ export function TravelForm({
                     className="
                       h-14 w-14 rounded-full
                       flex items-center justify-center
-                      bg-[#EEF3FF]
-                      text-[#2349AA]
+                      bg-[#10244A]
+                      text-white
+                      shadow-[0_14px_32px_rgba(16,36,74,0.28)]
                     "
                   >
                     <ArrowLeft size={20} />
@@ -1296,12 +1266,7 @@ export function TravelForm({
                       text-[12px]
                       disabled:opacity-40
                     "
-                    style={{
-                      background:
-                        "linear-gradient(135deg,#5C84FF,#2349AA)",
-                      boxShadow:
-                        "0 15px 35px rgba(78,115,223,0.28)",
-                    }}
+                    style={primaryButtonStyle}
                   >
                     <span className="flex items-center justify-center gap-2">
                       Continue Your Journey
@@ -1333,14 +1298,9 @@ export function TravelForm({
                       text-[12px]
                       disabled:opacity-40
                     "
-                    style={{
-                      background:
-                        "linear-gradient(135deg,#5C84FF,#2349AA)",
-                      boxShadow:
-                        "0 15px 35px rgba(78,115,223,0.28)",
-                    }}
+                    style={primaryButtonStyle}
                   >
-                    Reserve My Vacation
+                    Reserve Your Vacation
                   </motion.button>
                 )}
               </div>

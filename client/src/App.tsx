@@ -35,19 +35,19 @@ const LoadingFallback = () => (
 const routeSeo: Record<string, { title: string; description: string; robots?: string }> = {
   "/": {
     title: "Antravi - Luxury Travel Experiences | Maldives, Bali & Thailand",
-    description: "Plan your dream luxury vacation with Antravi. Explore premium Maldives resorts, Bali luxury holidays, and Thailand private tours.",
+    description: "Plan your dream luxury vacation with Antravi. Explore premium Maldives resorts, Bali holidays, and Thailand private tours.",
   },
   "/about": {
     title: "About Antravi | Luxury Travel Planning",
     description: "Meet Antravi, a boutique luxury travel consultancy designing personalized Maldives, Bali, and Thailand vacations.",
   },
   "/destinations/maldives": {
-    title: "Maldives Resorts & Luxury Packages | Antravi",
+    title: "Maldives Resorts & Packages | Antravi",
     description: "Explore handpicked Maldives resorts, overwater villas, private island stays, and luxury honeymoon packages with Antravi.",
   },
   "/destinations/bali": {
-    title: "Bali Luxury Holidays | Antravi",
-    description: "Discover curated Bali luxury holidays with private stays, beaches, culture, wellness, and seamless travel planning.",
+    title: "Bali Holidays | Antravi",
+    description: "Discover curated Bali holidays with private stays, beaches, culture, wellness, and seamless travel planning.",
   },
   "/destinations/thailand": {
     title: "Thailand Private Tours | Antravi",
@@ -67,7 +67,12 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
     title: "Terms & Conditions | Antravi",
     description: "Antravi terms and conditions.",
     robots: "noindex, follow",
-  }
+  },
+  "/thankyou": {
+    title: "Thank You | Antravi",
+    description: "Thank you for contacting Antravi.",
+    robots: "noindex, follow",
+  },
 };
 
 function setMeta(name: string, content: string) {

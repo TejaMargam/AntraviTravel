@@ -36,6 +36,7 @@ interface Resort {
 export default function Maldives() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedExperienceResortNames, setSelectedExperienceResortNames] = useState<string[] | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedResort, setSelectedResort] = useState<Resort | null>(null);
 
@@ -72,6 +73,61 @@ export default function Maldives() {
         prev === 0 ? selectedResort.images.length - 1 : prev - 1,
       );
     }
+  };
+
+  const scrollToSection = (id: string) => {
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  };
+
+  const allInclusiveResortNames = [
+    "Dusit 2 Feydhoo Maldives",
+    "Brennia Kottefaru Maldives",
+    "OBLU SELECT Sangeli",
+    "OBLU XPERIENCE Ailafushi",
+    "Centara Ras Fushi Resort & Spa",
+  ];
+
+  const privatePoolVillaResortNames = [
+    "Dusit 2 Feydhoo Maldives",
+    "Le Méridien Maldives Resort & Spa",
+    "NH Maldives Kuda Rah Resort",
+    "Furaveri Maldives",
+    "Brennia Kottefaru Maldives",
+    "Villa Nautica Paradise Island",
+    "Sheraton Maldives Full Moon Resort & Spa",
+    "Hard Rock Hotel Maldives",
+    "Hilton Amingiri Maldives Resort & Spa",
+    "The Westin Maldives Miriandhoo",
+    "NOOE Kanaavashi",
+    "OBLU SELECT Sangeli",
+    "Sun Siyam Olhuveli",
+  ];
+
+  const handleExperienceClick = (title: string) => {
+    setSelectedFilter("all");
+
+    if (title === "All Inclusive Resorts") {
+      setSelectedExperienceResortNames(allInclusiveResortNames);
+      scrollToSection("resorts");
+      return;
+    }
+
+    if (title === "Luxury Resorts") {
+      setSelectedExperienceResortNames(null);
+      scrollToSection("luxury-resorts");
+      return;
+    }
+
+    if (title === "Private Pool Villas") {
+      setSelectedExperienceResortNames(privatePoolVillaResortNames);
+      scrollToSection("resorts");
+      return;
+    }
+
+    setSelectedExperienceResortNames(null);
+    scrollToSection("resorts");
   };
 
   // Experience options
@@ -123,7 +179,7 @@ export default function Maldives() {
 
   // Top experiences
   const topExperiences = [
-    { title: "Overwater Villa Stay", image: "images/maldives/resorts/westin/westin-image-3.webp?w=800&h=600&fit=crop", description: "Direct access to lagoon, private deck, ocean views - signature Maldives experience." },
+    { title: "Overwater Villa Stay", image: "images/maldives/resorts/nautica/nautica-image-4.webp?w=800&h=600&fit=crop", description: "Direct access to lagoon, private deck, ocean views - signature Maldives experience." },
     { title: "Floating Breakfast", image: "images/maldives/siteSeeing/Floating_Breakfast.webp?w=800&h=600&fit=crop", description: "Served in your private pool - iconic luxury moment." },
     { title: "Snorkelling & Diving", image: "images/maldives/siteSeeing/Snorkelling_Diving.webp?w=800&h=600&fit=crop", description: "World-class reefs, turtles, manta rays, reef sharks." },
     { title: "Dolphin Sunset Cruise", image: "images/maldives/siteSeeing/Dolphin_Sunset_Cruise.webp?w=800&h=600&fit=crop", description: "Magical evening with dolphins and sunset views." },
@@ -147,7 +203,16 @@ export default function Maldives() {
 
   const regularResorts = resorts.filter((resort) => !isLuxuryResort(resort));
   const luxuryResorts = resorts.filter(isLuxuryResort);
-  const filteredResorts = regularResorts.filter(filterResortByRating);
+  const selectedExperienceOrder = selectedExperienceResortNames
+    ? new Map(selectedExperienceResortNames.map((name, index) => [name, index]))
+    : null;
+  const filteredResorts = regularResorts
+    .filter(filterResortByRating)
+    .filter((resort) => !selectedExperienceOrder || selectedExperienceOrder.has(resort.name))
+    .sort((a, b) => {
+      if (!selectedExperienceOrder) return 0;
+      return selectedExperienceOrder.get(a.name)! - selectedExperienceOrder.get(b.name)!;
+    });
   const filteredLuxuryResorts = luxuryResorts;
 
   return (
@@ -157,9 +222,23 @@ export default function Maldives() {
 
       {/* Hero Section */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '100vh' }}>
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Video Background with preload image /videos/maldives2.png */}
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover" poster={getImagePath("images/maldives/videos/maldives2.png")}>
+        <div
+          className="absolute inset-0 overflow-hidden"
+          style={{
+            backgroundImage: `url(${getImagePath("videos/maldives.webp")})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover"
+            poster={getImagePath("videos/maldives.webp")}
+          >
             <source src="/videos/maldives.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(22,38,96,0.7) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)' }} />
@@ -185,7 +264,12 @@ export default function Maldives() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {experiences.map((exp) => (
-              <div key={exp.id} className="group cursor-pointer">
+              <button
+                key={exp.id}
+                type="button"
+                className="group block w-full cursor-pointer text-left"
+                onClick={() => handleExperienceClick(exp.title)}
+              >
                 <div className="aspect-[4/3] relative overflow-hidden rounded-lg mb-3">
                   <img 
                     src={getImagePath(exp.image)} 
@@ -199,7 +283,7 @@ export default function Maldives() {
                     </h3>
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -227,7 +311,7 @@ export default function Maldives() {
       </section>
 
       {/* Resorts Section */}
-      <section className="py-20" style={{ backgroundColor: '#ffffff' }}>
+      <section id="resorts" className="py-20" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--charcoal)', marginBottom: '1rem' }}>
@@ -242,7 +326,10 @@ export default function Maldives() {
               {["all", "4-star", "5-star"].map((filter) => (
                 <button
                   key={filter}
-                  onClick={() => setSelectedFilter(filter)}
+                  onClick={() => {
+                    setSelectedExperienceResortNames(null);
+                    setSelectedFilter(filter);
+                  }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     selectedFilter === filter
                       ? "bg-blue-600 text-white"
@@ -256,6 +343,7 @@ export default function Maldives() {
               {/* seperate button functionality for luxury, to scroll to luxury resorts id: luxury-resorts*/}
               <button
                 onClick={() => {
+                  setSelectedExperienceResortNames(null);
                   const luxurySection = document.getElementById("luxury-resorts");
                   if (luxurySection) {
                     luxurySection.scrollIntoView({ behavior: "smooth" });
@@ -560,7 +648,7 @@ export default function Maldives() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/nooe/nooe-image-6.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/obluSelect/obluSelect-image-6.webp?w=800&h=600&fit=crop")}
                 alt="Sunny Maldives resort lagoon"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
@@ -575,7 +663,7 @@ export default function Maldives() {
             
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/sheraton/sheraton-image-5.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/hardRock/hardRock-image-4.webp?w=800&h=600&fit=crop")}
                 alt="Maldives resort beach"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
@@ -727,7 +815,7 @@ export default function Maldives() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={getImagePath("images/maldives/resorts/adaaran/adaaran-image-2.webp?w=800&h=600&fit=crop")}
+                src={getImagePath("images/maldives/resorts/hardRock/hardRock-image-2.webp?w=800&h=600&fit=crop")}
                 alt="Private island resort"
                 className="aspect-video w-full rounded-lg object-cover mb-4"
               />
