@@ -4,4 +4,3 @@ dist
 server/public
 *.tar.gz
 .env.local
-vite.config.ts
