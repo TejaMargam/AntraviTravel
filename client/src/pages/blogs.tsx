@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 const blogs = [
   {
@@ -78,16 +78,41 @@ const blogs = [
   },
 ];
 
-const categories = ["All", "Maldives", "Bali", "Thailand"];
+const categories = ["All", "Maldives", "Bali", "Thailand", "General"];
 
 const categoryColors: Record<string, string> = {
   Maldives: "#162660",
   Bali: "#b8860b",
   Thailand: "#1a7a4a",
+  General: "#6b4f9e",
+};
+
+const categorySlug: Record<string, string> = {
+  All: "/blogs",
+  Maldives: "/blogs/maldives",
+  Bali: "/blogs/bali",
+  Thailand: "/blogs/thailand",
+  General: "/blogs/general",
 };
 
 export default function Blogs() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [location] = useLocation();
+
+  const pathToCategory: Record<string, string> = {
+    "/blogs": "All",
+    "/blogs/maldives": "Maldives",
+    "/blogs/bali": "Bali",
+    "/blogs/thailand": "Thailand",
+    "/blogs/general": "General",
+  };
+
+  const [activeCategory, setActiveCategory] = useState(
+    pathToCategory[location] ?? "All"
+  );
+
+  useEffect(() => {
+    setActiveCategory(pathToCategory[location] ?? "All");
+  }, [location]);
 
   const filtered =
     activeCategory === "All"
@@ -135,9 +160,9 @@ export default function Blogs() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((cat) => (
-                <button
+                <Link
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  href={categorySlug[cat]}
                   style={{
                     fontFamily: "var(--font-sans)",
                     fontSize: "0.68rem",
@@ -154,14 +179,16 @@ export default function Blogs() {
                     color: activeCategory === cat ? "#ffffff" : "#6b7280",
                     cursor: "pointer",
                     transition: "all 0.2s",
+                    textDecoration: "none",
+                    display: "inline-block",
                   }}
-                  onMouseEnter={(e) => {
+                  onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
                     if (activeCategory !== cat) {
                       e.currentTarget.style.borderColor = "#162660";
                       e.currentTarget.style.color = "#162660";
                     }
                   }}
-                  onMouseLeave={(e) => {
+                  onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
                     if (activeCategory !== cat) {
                       e.currentTarget.style.borderColor = "#d1d5db";
                       e.currentTarget.style.color = "#6b7280";
@@ -169,7 +196,7 @@ export default function Blogs() {
                   }}
                 >
                   {cat}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

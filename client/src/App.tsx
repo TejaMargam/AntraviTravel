@@ -58,6 +58,22 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
     title: "Travel Blog | Antravi - Luxury Travel Insights",
     description: "Explore Antravi's travel blog for expert guides, destination insights, and luxury travel tips for Maldives, Bali, and Thailand.",
   },
+  "/blogs/maldives": {
+    title: "Maldives Travel Blog | Antravi",
+    description: "Read Antravi's Maldives travel guides — overwater villas, best seasons, resort picks, and honeymoon tips.",
+  },
+  "/blogs/bali": {
+    title: "Bali Travel Blog | Antravi",
+    description: "Discover Bali through Antravi's travel journal — hidden gems, honeymoon itineraries, and luxury stay recommendations.",
+  },
+  "/blogs/thailand": {
+    title: "Thailand Travel Blog | Antravi",
+    description: "Explore Thailand with Antravi — island hopping guides, food journeys, and private tour inspiration.",
+  },
+  "/blogs/general": {
+    title: "General Travel Tips & Insights | Antravi Blog",
+    description: "Travel tips, packing guides, visa advice, and general luxury travel insights from the Antravi team.",
+  },
   "/contact": {
     title: "Contact Antravi",
     description: "Contact Antravi to plan your custom luxury vacation.",
@@ -134,6 +150,10 @@ function Router() {
         <Route path="/destinations/bali" component={Bali} />
         <Route path="/destinations/thailand" component={Thailand} />
         <Route path="/blogs" component={Blogs} />
+        <Route path="/blogs/maldives" component={Blogs} />
+        <Route path="/blogs/bali" component={Blogs} />
+        <Route path="/blogs/thailand" component={Blogs} />
+        <Route path="/blogs/general" component={Blogs} />
         <Route path="/terms" component={TermsAndConditions} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/thankyou" component={ThankYou} />
