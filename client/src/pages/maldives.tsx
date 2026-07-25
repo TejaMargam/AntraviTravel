@@ -13,9 +13,6 @@ import { TravelForm } from "@/components/TravelForm";
 import resortsData from "@/data/maldives/resorts.json";
 import faqsData from "@/data/maldives/faqs.json";
 import { getImagePath } from "@/utils/paths";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
 
 interface Resort {
   id: string;
@@ -479,29 +476,25 @@ export default function Maldives() {
               Brands We Work With
             </h2>
           </div>
-          <div className="overflow-hidden">
-            <Swiper
-              modules={[Autoplay]}
-              loop
-              speed={2600}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              grabCursor
-              spaceBetween={18}
-              slidesPerView={2}
-              breakpoints={{
-                640: { slidesPerView: 3, spaceBetween: 20 },
-                768: { slidesPerView: 4, spaceBetween: 22 },
-                1024: { slidesPerView: 5, spaceBetween: 24 },
-                1280: { slidesPerView: 6, spaceBetween: 24 },
-              }}
-              className="py-2"
-            >
+          <div className="overflow-hidden py-2">
+            <style>{`
+              @keyframes marquee-scroll {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .marquee-track {
+                display: flex;
+                width: max-content;
+                animation: marquee-scroll 28s linear infinite;
+              }
+              .marquee-track:hover { animation-play-state: paused; }
+            `}</style>
+            <div className="marquee-track">
               {[...brandLogos, ...brandLogos].map((brand, index) => (
-                <SwiperSlide key={`${brand.name}-${index}`}>
+                <div
+                  key={`${brand.name}-${index}`}
+                  style={{ minWidth: "160px", marginRight: "18px" }}
+                >
                   <div className="h-24 rounded-lg border border-gray-200 bg-white px-6 flex items-center justify-center">
                     <img
                       src={getImagePath(brand.image)}
@@ -510,9 +503,9 @@ export default function Maldives() {
                       loading="lazy"
                     />
                   </div>
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
+            </div>
           </div>
         </div>
       </section>
