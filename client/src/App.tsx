@@ -19,6 +19,7 @@ const TermsAndConditions = lazy(() => import("@/pages/TermsAndConditions"));
 const ThankYou = lazy(() => import("@/pages/thankyou"));
 const Bali = lazy(() => import("@/pages/bali"));
 const Thailand = lazy(() => import("@/pages/thailand"));
+const Blogs = lazy(() => import("@/pages/blogs"));
 
 // Loading component for lazy loaded routes
 const LoadingFallback = () => (
@@ -52,6 +53,10 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
   "/destinations/thailand": {
     title: "Thailand Private Tours | Antravi",
     description: "Plan Thailand private tours with Antravi, including Bangkok, Phuket, Krabi, Pattaya, island stays, and premium travel support.",
+  },
+  "/blogs": {
+    title: "Travel Blog | Antravi - Luxury Travel Insights",
+    description: "Explore Antravi's travel blog for expert guides, destination insights, and luxury travel tips for Maldives, Bali, and Thailand.",
   },
   "/contact": {
     title: "Contact Antravi",
@@ -128,6 +133,7 @@ function Router() {
         <Route path="/destinations/maldives" component={Resorts} />
         <Route path="/destinations/bali" component={Bali} />
         <Route path="/destinations/thailand" component={Thailand} />
+        <Route path="/blogs" component={Blogs} />
         <Route path="/terms" component={TermsAndConditions} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/thankyou" component={ThankYou} />

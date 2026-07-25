@@ -1,0 +1,330 @@
+import { useState } from "react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { Link } from "wouter";
+
+const blogs = [
+  {
+    id: 1,
+    slug: "best-time-to-visit-maldives",
+    title: "Best Time to Visit the Maldives",
+    excerpt:
+      "The Maldives is a year-round destination, but knowing when to go can make your trip truly extraordinary. Discover the ideal seasons for diving, honeymooning, and whale shark spotting.",
+    image:
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
+    category: "Maldives",
+    date: "July 10, 2025",
+    readTime: "5 min read",
+  },
+  {
+    id: 2,
+    slug: "hidden-gems-of-bali",
+    title: "Hidden Gems of Bali Beyond the Tourist Trail",
+    excerpt:
+      "Step away from the crowds and discover Bali's secret temples, quiet rice terraces, and secluded beach coves that only the well-travelled know about.",
+    image:
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    category: "Bali",
+    date: "June 22, 2025",
+    readTime: "6 min read",
+  },
+  {
+    id: 3,
+    slug: "thailand-luxury-island-hopping",
+    title: "Thailand Island Hopping: A Luxury Guide",
+    excerpt:
+      "From Phuket's vibrant energy to the tranquil shores of Koh Lanta, this guide helps you design the perfect Thailand island-hopping itinerary with private charters and premium stays.",
+    image:
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
+    category: "Thailand",
+    date: "May 15, 2025",
+    readTime: "7 min read",
+  },
+  {
+    id: 4,
+    slug: "overwater-villas-guide",
+    title: "A Complete Guide to Overwater Villas in the Maldives",
+    excerpt:
+      "Overwater villas are iconic — but not all are created equal. We break down what to look for, which resorts lead the pack, and how to get the most out of your stay.",
+    image:
+      "https://images.unsplash.com/photo-1573843981267-be1480760ef8?w=800&q=80",
+    category: "Maldives",
+    date: "April 30, 2025",
+    readTime: "8 min read",
+  },
+  {
+    id: 5,
+    slug: "bali-honeymoon-itinerary",
+    title: "The Perfect Bali Honeymoon Itinerary",
+    excerpt:
+      "Seven days, two hearts, and one unforgettable island. Our curated honeymoon itinerary covers romantic dinners, private pool villas, couples' spa rituals, and sunset cruises.",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    category: "Bali",
+    date: "March 18, 2025",
+    readTime: "6 min read",
+  },
+  {
+    id: 6,
+    slug: "thailand-street-food-to-fine-dining",
+    title: "Thailand's Food Journey: Street Stalls to Fine Dining",
+    excerpt:
+      "Thailand's culinary scene is one of the world's greatest. Explore how to experience everything from Bangkok's legendary street food to Michelin-starred Thai cuisine.",
+    image:
+      "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    category: "Thailand",
+    date: "February 5, 2025",
+    readTime: "5 min read",
+  },
+];
+
+const categories = ["All", "Maldives", "Bali", "Thailand"];
+
+const categoryColors: Record<string, string> = {
+  Maldives: "#162660",
+  Bali: "#b8860b",
+  Thailand: "#1a7a4a",
+};
+
+export default function Blogs() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filtered =
+    activeCategory === "All"
+      ? blogs
+      : blogs.filter((b) => b.category === activeCategory);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <title>Travel Blog | Antravi - Luxury Travel Insights</title>
+      <meta
+        name="description"
+        content="Explore Antravi's travel blog for expert guides, destination insights, and luxury travel tips for Maldives, Bali, and Thailand."
+      />
+
+      <Navbar />
+
+      <main className="pt-20">
+        {/* Hero */}
+        <section className="py-20 bg-[#162660] text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.7rem",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "var(--luxury-gold)",
+                marginBottom: "1rem",
+              }}
+            >
+              Stories & Insights
+            </p>
+            <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
+              Travel Journal
+            </h1>
+            <p className="text-xl md:text-2xl font-light tracking-wider opacity-85">
+              Expert guides, destination secrets, and inspiration for your next
+              luxury escape
+            </p>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-10 border-b border-gray-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.68rem",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                    padding: "0.5rem 1.5rem",
+                    borderRadius: "2px",
+                    border:
+                      activeCategory === cat
+                        ? "1px solid #162660"
+                        : "1px solid #d1d5db",
+                    backgroundColor:
+                      activeCategory === cat ? "#162660" : "transparent",
+                    color: activeCategory === cat ? "#ffffff" : "#6b7280",
+                    cursor: "pointer",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (activeCategory !== cat) {
+                      e.currentTarget.style.borderColor = "#162660";
+                      e.currentTarget.style.color = "#162660";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (activeCategory !== cat) {
+                      e.currentTarget.style.borderColor = "#d1d5db";
+                      e.currentTarget.style.color = "#6b7280";
+                    }
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Grid */}
+        <section className="py-20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {filtered.map((blog) => (
+                <article
+                  key={blog.id}
+                  className="group flex flex-col"
+                  style={{ cursor: "pointer" }}
+                >
+                  {/* Image */}
+                  <div
+                    className="overflow-hidden mb-5"
+                    style={{ borderRadius: "2px", aspectRatio: "16/10" }}
+                  >
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <span
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "0.6rem",
+                        letterSpacing: "0.15em",
+                        textTransform: "uppercase",
+                        color: categoryColors[blog.category] ?? "#162660",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {blog.category}
+                    </span>
+                    <span style={{ color: "#d1d5db", fontSize: "0.6rem" }}>
+                      •
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "0.6rem",
+                        letterSpacing: "0.1em",
+                        color: "#9ca3af",
+                      }}
+                    >
+                      {blog.readTime}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2
+                    className="font-heading font-bold mb-3 group-hover:opacity-70 transition-opacity"
+                    style={{ fontSize: "1.15rem", color: "#162660", lineHeight: 1.35 }}
+                  >
+                    {blog.title}
+                  </h2>
+
+                  {/* Excerpt */}
+                  <p
+                    style={{
+                      fontSize: "0.875rem",
+                      color: "#6b7280",
+                      lineHeight: 1.7,
+                      flexGrow: 1,
+                    }}
+                  >
+                    {blog.excerpt}
+                  </p>
+
+                  {/* Read More */}
+                  <div className="mt-5 flex items-center gap-2">
+                    <span
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "0.65rem",
+                        letterSpacing: "0.15em",
+                        textTransform: "uppercase",
+                        color: "var(--luxury-gold)",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Read Article
+                    </span>
+                    <span style={{ color: "var(--luxury-gold)", fontSize: "0.7rem" }}>
+                      →
+                    </span>
+                  </div>
+
+                  {/* Date */}
+                  <p
+                    className="mt-3"
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: "0.6rem",
+                      letterSpacing: "0.1em",
+                      color: "#9ca3af",
+                    }}
+                  >
+                    {blog.date}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            {filtered.length === 0 && (
+              <div className="text-center py-20 text-gray-400">
+                No articles found for this category.
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-2xl mx-auto px-4 text-center">
+            <p
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.68rem",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "var(--luxury-gold)",
+                marginBottom: "1rem",
+              }}
+            >
+              Ready to Travel?
+            </p>
+            <h2
+              className="font-heading font-bold mb-4"
+              style={{ fontSize: "2rem", color: "#162660" }}
+            >
+              Turn Inspiration into Your Journey
+            </h2>
+            <p className="text-gray-500 mb-8" style={{ lineHeight: 1.7 }}>
+              Our travel specialists are ready to craft your perfect itinerary.
+            </p>
+            <Link
+              href="/contact"
+              className="btn-editorial"
+              style={{ display: "inline-block" }}
+            >
+              Plan With Antravi
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
