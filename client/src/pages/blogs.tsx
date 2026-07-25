@@ -5,6 +5,18 @@ import { Link, useLocation } from "wouter";
 
 const blogs = [
   {
+    id: 0,
+    slug: "travel-leisure-worlds-best-awards-2026",
+    title: "Travel + Leisure World's Best Awards 2026: Four Maldives Resorts in the Top 100",
+    excerpt:
+      "Baros, JOALI, Waldorf Astoria Maldives Ithaafushi and Vakkaru have all been ranked among the world's top 100 hotels. Here's what sets each apart — and how to choose the right one for you.",
+    image:
+      "https://images.unsplash.com/photo-1573843981267-be1480760ef8?w=800&q=80",
+    category: "Maldives",
+    date: "July 25, 2026",
+    readTime: "5 min read",
+  },
+  {
     id: 1,
     slug: "best-time-to-visit-maldives",
     title: "Best Time to Visit the Maldives",
@@ -207,10 +219,11 @@ export default function Blogs() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filtered.map((blog) => (
-                <article
+                <Link
                   key={blog.id}
+                  href={`/blogs/${blog.slug}`}
                   className="group flex flex-col"
-                  style={{ cursor: "pointer" }}
+                  style={{ textDecoration: "none", cursor: "pointer" }}
                 >
                   {/* Image */}
                   <div
@@ -238,9 +251,7 @@ export default function Blogs() {
                     >
                       {blog.category}
                     </span>
-                    <span style={{ color: "#d1d5db", fontSize: "0.6rem" }}>
-                      •
-                    </span>
+                    <span style={{ color: "#d1d5db", fontSize: "0.6rem" }}>•</span>
                     <span
                       style={{
                         fontFamily: "var(--font-sans)",
@@ -287,9 +298,7 @@ export default function Blogs() {
                     >
                       Read Article
                     </span>
-                    <span style={{ color: "var(--luxury-gold)", fontSize: "0.7rem" }}>
-                      →
-                    </span>
+                    <span style={{ color: "var(--luxury-gold)", fontSize: "0.7rem" }}>→</span>
                   </div>
 
                   {/* Date */}
@@ -304,7 +313,7 @@ export default function Blogs() {
                   >
                     {blog.date}
                   </p>
-                </article>
+                </Link>
               ))}
             </div>
 

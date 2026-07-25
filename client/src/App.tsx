@@ -20,6 +20,7 @@ const ThankYou = lazy(() => import("@/pages/thankyou"));
 const Bali = lazy(() => import("@/pages/bali"));
 const Thailand = lazy(() => import("@/pages/thailand"));
 const Blogs = lazy(() => import("@/pages/blogs"));
+const BlogTravelLeisure2026 = lazy(() => import("@/pages/blog-travel-leisure-2026"));
 
 // Loading component for lazy loaded routes
 const LoadingFallback = () => (
@@ -73,6 +74,10 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
   "/blogs/general": {
     title: "General Travel Tips & Insights | Antravi Blog",
     description: "Travel tips, packing guides, visa advice, and general luxury travel insights from the Antravi team.",
+  },
+  "/blogs/travel-leisure-worlds-best-awards-2026": {
+    title: "Travel + Leisure World's Best Awards 2026: Top Maldives Resorts | Antravi",
+    description: "Discover why Baros, JOALI, Waldorf Astoria Maldives Ithaafushi and Vakkaru were ranked among the world's best hotels in Travel + Leisure World's Best Awards 2026.",
   },
   "/contact": {
     title: "Contact Antravi",
@@ -154,6 +159,7 @@ function Router() {
         <Route path="/blogs/bali" component={Blogs} />
         <Route path="/blogs/thailand" component={Blogs} />
         <Route path="/blogs/general" component={Blogs} />
+        <Route path="/blogs/travel-leisure-worlds-best-awards-2026" component={BlogTravelLeisure2026} />
         <Route path="/terms" component={TermsAndConditions} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/thankyou" component={ThankYou} />
