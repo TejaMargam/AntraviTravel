@@ -88,8 +88,7 @@ export default function Blogs() {
               Travel Journal
             </h1>
             <p className="text-xl md:text-2xl font-light tracking-wider opacity-85">
-              Expert guides, destination secrets, and inspiration for your next
-              luxury escape
+              Expert guides, destination secrets, and inspiration before you reserve next travel
             </p>
           </div>
         </section>
