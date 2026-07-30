@@ -5,57 +5,52 @@ import { useState } from "react";
 
 const reasons = [
   {
+    icon: "fa-hotel",
+    title: "Hospitality-Led Experience",
+    body: "Built on real hospitality industry experience with a strong understanding of guest expectations and service excellence.",
+  },
+  {
     icon: "fa-compass",
-    title: "Personally Curated, Every Time",
-    body: "No two journeys look alike. We design each itinerary around your preferences, pace, and people — not a template.",
+    title: "Personalised Travel Planning",
+    body: "Every itinerary is thoughtfully tailored to your travel style, preferences, budget, and expectations.",
   },
   {
     icon: "fa-handshake",
-    title: "Direct Resort Relationships",
-    body: "Years of partnerships with the finest resorts in the Maldives, Bali, and Thailand mean better rooms, added benefits, and genuine priority for our guests.",
+    title: "Carefully Selected Partners",
+    body: "Access to carefully chosen hotels, resorts, and trusted travel partners that align with our guests' travel needs.",
   },
   {
-    icon: "fa-shield-alt",
-    title: "End-to-End Ownership",
-    body: "From the first enquiry to your return home, one dedicated specialist handles every detail. No call centres, no hand-offs.",
+    icon: "fa-comment-alt",
+    title: "Transparent Recommendations",
+    body: "Honest advice and reliable guidance focused on helping you make informed travel decisions.",
   },
   {
-    icon: "fa-clock",
-    title: "24/7 On-Trip Support",
-    body: "We stay reachable throughout your journey — not just before departure. If anything needs attention, we handle it before it reaches you.",
-  },
-  {
-    icon: "fa-tags",
-    title: "Transparent Pricing",
-    body: "What you are quoted is what you pay. No hidden charges, no last-minute surprises, no fine print that changes the number.",
-  },
-  {
-    icon: "fa-star",
-    title: "Trusted by Discerning Travellers",
-    body: "Our guests return — and more importantly, they send their closest friends. That trust is the standard we hold every booking to.",
+    icon: "fa-user-tie",
+    title: "Dedicated Guest Relations",
+    body: "Personal support before, during, and after your journey to ensure a seamless travel experience.",
   },
 ];
 
 const timeline = [
   {
     year: "2021",
-    heading: "The Beginning",
-    body: "Antravi was founded with a single focus: crafting unforgettable journeys to the Maldives. With a small circle of trusted resort partners and an uncompromising commitment to detail, our first guests set out to truly Live Their Moments.",
+    heading: "Where It Began",
+    body: "Began my career in the hospitality industry, gaining hands-on experience in guest service, hotel operations, and delivering memorable guest experiences.",
   },
   {
     year: "2023",
-    heading: "Growing Trust",
-    body: "Word spread. Bali and Thailand were added to our portfolio as guests returned and brought their closest circle. Each new destination followed the same principle — personally experienced before ever being recommended.",
+    heading: "Going International",
+    body: "Expanded my experience internationally by working at a resort in the Maldives, developing a deeper understanding of guest expectations, personalised service, and operational excellence.",
   },
   {
     year: "2025",
-    heading: "Recognition & Refinement",
-    body: "Four Maldivian resorts featured by Antravi were ranked among Travel + Leisure's World's Best Hotels 2026, validating what our guests had long known. We deepened our resort relationships and strengthened our team to match growing demand.",
+    heading: "Founding Antravi",
+    body: "Founded Antravi with a vision to bring a more transparent, personalised, and guest-focused approach to travel planning.",
   },
   {
     year: "Today & Beyond",
     heading: "The Journey Continues",
-    body: "We continue to grow — not in scale for its own sake, but in depth. More destinations, stronger partnerships, and an unwavering focus on the thing that has always driven us: helping our guests live their moments to the fullest.",
+    body: "Continuing to combine hospitality experience, destination knowledge, and genuine care to help guests travel with confidence and create memories that last a lifetime.",
   },
 ];
 
@@ -68,45 +63,63 @@ export default function About() {
 
       <main className="pt-20">
 
-        {/* ── 1. HERO — About Antravi ─────────────────────────────────── */}
+        {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <section
           style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}
         >
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
-              Who We Are
+              About Antravi
             </span>
             <div className="editorial-divider" style={{ backgroundColor: "var(--luxury-gold)" }} />
             <h1
               style={{
                 fontFamily: "var(--font-serif)",
-                fontSize: "clamp(2.8rem, 6vw, 4.5rem)",
+                fontSize: "clamp(2.4rem, 5vw, 4rem)",
                 fontWeight: 400,
                 color: "#ffffff",
-                lineHeight: 1.1,
+                lineHeight: 1.15,
                 marginBottom: "1.5rem",
               }}
             >
-              About Antravi
+              We believe travel is about creating experiences that become lifelong memories.
             </h1>
-            <p
-              style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: "clamp(1rem, 2vw, 1.15rem)",
-                color: "rgba(255,255,255,0.75)",
-                lineHeight: 1.8,
-                maxWidth: "38rem",
-                margin: "0 auto",
-              }}
-            >
-              We are a boutique luxury travel consultancy dedicated to one pursuit —
-              designing journeys that feel effortless, personal, and genuinely extraordinary.
-            </p>
           </div>
         </section>
 
-        {/* ── 2. WHY GUESTS CHOOSE ANTRAVI ────────────────────────────── */}
+        {/* ── 2. OUR STORY — brand philosophy paragraphs ──────────────── */}
         <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center" style={{ marginBottom: "3rem" }}>
+              <span className="section-label">Our Story</span>
+              <div className="editorial-divider" />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+              {[
+                "Every journey is thoughtfully planned around our guests' preferences, ensuring each itinerary is personalised, meaningful, and memorable. Our focus is on helping guests choose the right experience with confidence through honest guidance, thoughtful planning, and genuine care.",
+                "Antravi was founded with a vision to bring a more transparent, knowledge-driven, and guest-centric approach to travel. Rather than offering one-size-fits-all packages, we take the time to understand each guest's travel purpose, budget, interests, and expectations before recommending the destinations, hotels, resorts, and experiences that best suit their journey.",
+                "We believe every journey is unique, and so should be the planning behind it. Our role is not simply to arrange travel, but to guide our guests in making informed decisions that lead to meaningful experiences from the very beginning.",
+                "As we continue to grow, our vision is to become one of India's most trusted travel brands by combining hospitality experience, destination knowledge, and personalised travel planning. Whether it's a honeymoon, family holiday, a hotel or resort event, a milestone celebration, or a memorable getaway, our commitment is to create journeys that leave lasting memories and experiences that truly matter.",
+              ].map((para, i) => (
+                <p
+                  key={i}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.975rem",
+                    color: "var(--mid-gray)",
+                    lineHeight: 1.9,
+                    textAlign: "center",
+                  }}
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 3. WHY GUESTS CHOOSE ANTRAVI ────────────────────────────── */}
+        <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "3.5rem" }}>
               <span className="section-label">Our Difference</span>
@@ -124,76 +137,28 @@ export default function About() {
               </h2>
             </div>
 
+            {/* 5 cards — 3 on top row, 2 centred below */}
             <div
-              className="grid md:grid-cols-2 lg:grid-cols-3"
+              className="grid md:grid-cols-3"
+              style={{ gap: "2rem", marginBottom: "2rem" }}
+            >
+              {reasons.slice(0, 3).map(({ icon, title, body }) => (
+                <ReasonCard key={title} icon={icon} title={title} body={body} />
+              ))}
+            </div>
+            <div
+              className="grid md:grid-cols-2 max-w-2xl mx-auto"
               style={{ gap: "2rem" }}
             >
-              {reasons.map(({ icon, title, body }) => (
-                <div
-                  key={title}
-                  style={{
-                    border: "1px solid var(--warm-border)",
-                    borderRadius: "4px",
-                    padding: "2rem",
-                    backgroundColor: "#ffffff",
-                    transition: "border-color 0.3s ease, box-shadow 0.3s ease",
-                  }}
-                  onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = "var(--luxury-gold)";
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 24px rgba(0,0,0,0.06)";
-                  }}
-                  onMouseLeave={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = "var(--warm-border)";
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "2.75rem",
-                      height: "2.75rem",
-                      border: "1px solid var(--warm-border)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "#ffffff",
-                      marginBottom: "1.25rem",
-                    }}
-                  >
-                    <i
-                      className={`fas ${icon}`}
-                      style={{ color: "var(--luxury-gold)", fontSize: "1rem" }}
-                    />
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "1.2rem",
-                      fontWeight: 500,
-                      color: "var(--charcoal)",
-                      marginBottom: "0.6rem",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.875rem",
-                      color: "var(--mid-gray)",
-                      lineHeight: 1.8,
-                    }}
-                  >
-                    {body}
-                  </p>
-                </div>
+              {reasons.slice(3).map(({ icon, title, body }) => (
+                <ReasonCard key={title} icon={icon} title={title} body={body} />
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 3. MEET THE FOUNDER ──────────────────────────────────────── */}
-        <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
+        {/* ── 4. MEET THE FOUNDER ──────────────────────────────────────── */}
+        <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2" style={{ gap: "4rem", alignItems: "center" }}>
 
@@ -213,7 +178,7 @@ export default function About() {
                     style={{ aspectRatio: "4/5", display: "block" }}
                   />
                 </div>
-                {/* Gold accent block */}
+                {/* Gold accent */}
                 <div
                   style={{
                     position: "absolute",
@@ -246,72 +211,42 @@ export default function About() {
                   Meet the Founder
                 </h2>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.95rem",
-                      color: "var(--mid-gray)",
-                      lineHeight: 1.85,
-                    }}
-                  >
-                    Antravi was born from a conviction that most people settle for a holiday when
-                    they deserve a genuine experience. Yashodar Reddy founded Antravi to change that —
-                    building a consultancy where every booking is handled with the same care he gives
-                    to his own travels.
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.95rem",
-                      color: "var(--mid-gray)",
-                      lineHeight: 1.85,
-                    }}
-                  >
-                    Having personally explored the resorts, routes, and rhythms of the Maldives, Bali,
-                    and Thailand, Yashodar brings firsthand knowledge to every conversation —
-                    not brochure copy, but genuine familiarity with what makes each destination worth
-                    the journey.
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.95rem",
-                      color: "var(--mid-gray)",
-                      lineHeight: 1.85,
-                    }}
-                  >
-                    His philosophy is simple: every guest deserves a journey that feels designed
-                    just for them — because with Antravi, it is.
-                  </p>
-                </div>
-
-                {/* Quote */}
-                <div
+                {/* Opening quote */}
+                <p
                   style={{
-                    borderLeft: "2px solid var(--luxury-gold)",
-                    paddingLeft: "1.5rem",
-                    marginTop: "2rem",
-                    marginBottom: "2rem",
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.05rem",
+                    fontStyle: "italic",
+                    color: "var(--charcoal)",
+                    lineHeight: 1.75,
+                    marginBottom: "1.5rem",
                   }}
                 >
-                  <p
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "1.15rem",
-                      fontStyle: "italic",
-                      color: "var(--charcoal)",
-                      lineHeight: 1.75,
-                    }}
-                  >
-                    "I started Antravi because I saw too many people settle for ordinary
-                    when extraordinary was within reach. Every guest who books with us
-                    deserves a journey that feels designed just for them."
-                  </p>
+                  Every meaningful journey begins with understanding what matters most to our guests.
+                </p>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+                  {[
+                    "I founded Antravi with a simple belief: travel planning should be thoughtful, honest, and centred around the guest. Rather than focusing on selling packages, I wanted to build a travel company that listens first, understands each traveller's needs, and creates journeys that are carefully planned from start to finish.",
+                    "Every recommendation we make is guided by transparency, attention to detail, and a genuine commitment to helping our guests create unforgettable memories. These values continue to shape every journey we plan and every relationship we build.",
+                    "Thank you for considering Antravi to be part of your journey. I look forward to helping you create experiences that truly matter.",
+                  ].map((para, i) => (
+                    <p
+                      key={i}
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "0.9rem",
+                        color: "var(--mid-gray)",
+                        lineHeight: 1.85,
+                      }}
+                    >
+                      {para}
+                    </p>
+                  ))}
                 </div>
 
                 {/* Signature */}
-                <div>
+                <div style={{ marginTop: "2rem" }}>
                   <p
                     style={{
                       fontFamily: "var(--font-serif)",
@@ -328,7 +263,7 @@ export default function About() {
                   <p
                     style={{
                       fontFamily: "var(--font-sans)",
-                      fontSize: "0.75rem",
+                      fontSize: "0.72rem",
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
                       color: "var(--luxury-gold)",
@@ -342,10 +277,10 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── 4. THE JOURNEY BEHIND ANTRAVI ────────────────────────────── */}
-        <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
+        {/* ── 5. THE JOURNEY BEHIND ANTRAVI — timeline ─────────────────── */}
+        <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+            <div className="text-center" style={{ marginBottom: "1.5rem" }}>
               <span className="section-label">Our History</span>
               <div className="editorial-divider" />
               <h2
@@ -355,10 +290,23 @@ export default function About() {
                   fontWeight: 400,
                   color: "var(--charcoal)",
                   lineHeight: 1.2,
+                  marginBottom: "1rem",
                 }}
               >
                 The Journey Behind Antravi
               </h2>
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.9rem",
+                  color: "var(--mid-gray)",
+                  lineHeight: 1.8,
+                  maxWidth: "36rem",
+                  margin: "0 auto 3rem",
+                }}
+              >
+                My journey in the hospitality industry began with a passion for creating exceptional guest experiences and understanding the importance of thoughtful service.
+              </p>
             </div>
 
             {/* Timeline */}
@@ -386,7 +334,7 @@ export default function About() {
                       className="md:grid md:grid-cols-2"
                       style={{ gap: "3rem", alignItems: "center", position: "relative" }}
                     >
-                      {/* Dot on the line */}
+                      {/* Dot */}
                       <div
                         className="hidden md:block"
                         style={{
@@ -399,17 +347,14 @@ export default function About() {
                           borderRadius: "50%",
                           backgroundColor: "var(--luxury-gold)",
                           zIndex: 1,
-                          border: "2px solid #ffffff",
+                          border: "2px solid var(--warm-cream)",
                           boxShadow: "0 0 0 1px var(--luxury-gold)",
                         }}
                       />
 
-                      {/* Year card — alternates sides on desktop */}
+                      {/* Year + heading */}
                       <div
-                        style={{
-                          textAlign: isLeft ? "right" : "left",
-                          order: isLeft ? 1 : 2,
-                        }}
+                        style={{ textAlign: isLeft ? "right" : "left", order: isLeft ? 1 : 2 }}
                         className={isLeft ? "md:pr-8" : "md:pl-8"}
                       >
                         <div
@@ -447,12 +392,9 @@ export default function About() {
                         </h3>
                       </div>
 
-                      {/* Body text */}
+                      {/* Body */}
                       <div
-                        style={{
-                          order: isLeft ? 2 : 1,
-                          paddingLeft: isLeft ? undefined : undefined,
-                        }}
+                        style={{ order: isLeft ? 2 : 1 }}
                         className={isLeft ? "md:pl-8" : "md:pr-8"}
                       >
                         <p
@@ -471,10 +413,25 @@ export default function About() {
                 })}
               </div>
             </div>
+
+            {/* Closing line */}
+            <p
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: "1.1rem",
+                fontStyle: "italic",
+                color: "var(--mid-gray)",
+                textAlign: "center",
+                marginTop: "3.5rem",
+                lineHeight: 1.75,
+              }}
+            >
+              Every journey tells a story, and every memorable experience begins with thoughtful planning.
+            </p>
           </div>
         </section>
 
-        {/* ── 5. LIVE YOUR MOMENTS — closing CTA ──────────────────────── */}
+        {/* ── 6. LIVE YOUR MOMENTS — closing CTA ──────────────────────── */}
         <section style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
@@ -491,7 +448,7 @@ export default function About() {
                 marginBottom: "1.25rem",
               }}
             >
-              Live Your Moments
+              Antravi. Live Your Moments.
             </h2>
             <p
               style={{
@@ -499,21 +456,21 @@ export default function About() {
                 fontSize: "0.95rem",
                 color: "rgba(255,255,255,0.7)",
                 lineHeight: 1.8,
-                maxWidth: "34rem",
+                maxWidth: "36rem",
                 margin: "0 auto 2.5rem",
               }}
             >
-              Every extraordinary journey starts with a single conversation.
-              Tell us where you want to go and we will take care of everything else.
+              Whether you're planning your honeymoon, a family holiday, a celebration, or your next unforgettable getaway, we're here to help you travel with confidence and create moments that last a lifetime.
             </p>
             <button
               onClick={() => setIsFormOpen(true)}
               className="btn-editorial-white"
             >
-              Plan With Antravi
+              Reserve with Antravi
             </button>
           </div>
         </section>
+
       </main>
 
       <Footer />
@@ -522,6 +479,66 @@ export default function About() {
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
       />
+    </div>
+  );
+}
+
+/* ─── Reusable reason card ─────────────────────────────────────────────── */
+function ReasonCard({ icon, title, body }: { icon: string; title: string; body: string }) {
+  return (
+    <div
+      style={{
+        border: "1px solid var(--warm-border)",
+        borderRadius: "4px",
+        padding: "2rem",
+        backgroundColor: "#ffffff",
+        transition: "border-color 0.3s ease, box-shadow 0.3s ease",
+      }}
+      onMouseEnter={e => {
+        (e.currentTarget as HTMLDivElement).style.borderColor = "var(--luxury-gold)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 24px rgba(0,0,0,0.06)";
+      }}
+      onMouseLeave={e => {
+        (e.currentTarget as HTMLDivElement).style.borderColor = "var(--warm-border)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+      }}
+    >
+      <div
+        style={{
+          width: "2.75rem",
+          height: "2.75rem",
+          border: "1px solid var(--warm-border)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#ffffff",
+          marginBottom: "1.25rem",
+        }}
+      >
+        <i className={`fas ${icon}`} style={{ color: "var(--luxury-gold)", fontSize: "1rem" }} />
+      </div>
+      <h3
+        style={{
+          fontFamily: "var(--font-serif)",
+          fontSize: "1.2rem",
+          fontWeight: 500,
+          color: "var(--charcoal)",
+          marginBottom: "0.6rem",
+          lineHeight: 1.3,
+        }}
+      >
+        {title}
+      </h3>
+      <p
+        style={{
+          fontFamily: "var(--font-sans)",
+          fontSize: "0.875rem",
+          color: "var(--mid-gray)",
+          lineHeight: 1.8,
+        }}
+      >
+        {body}
+      </p>
     </div>
   );
 }
