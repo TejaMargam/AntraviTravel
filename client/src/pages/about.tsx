@@ -22,7 +22,7 @@ const reasons = [
   {
     icon: "fa-comment-alt",
     title: "Transparent Recommendations",
-    body: "Honest advice and reliable guidance focused on helping you make informed travel decisions.",
+    body: "Reliable guidance focused on helping you make informed travel decisions.",
   },
   {
     icon: "fa-user-tie",
@@ -38,8 +38,8 @@ const timeline = [
     body: "Began my career in the hospitality industry, gaining hands-on experience in guest service, hotel operations, and delivering memorable guest experiences.",
   },
   {
-    year: "2023",
-    heading: "Going International",
+    year: "2024",
+    heading: "Moving International",
     body: "Expanded my experience internationally by working at a resort in the Maldives, developing a deeper understanding of guest expectations, personalised service, and operational excellence.",
   },
   {
@@ -50,9 +50,11 @@ const timeline = [
   {
     year: "Today & Beyond",
     heading: "The Journey Continues",
-    body: "Continuing to combine hospitality experience, destination knowledge, and genuine care to help guests travel with confidence and create memories that last a lifetime.",
+    body: "Continuing to combine our experience, destination knowledge, and genuine care to advise our guest's travel with confidence and create memories that last a lifetime.",
   },
 ];
+
+const sectionLabelSize = "clamp(2.2rem, 5vw, 3.5rem)";
 
 export default function About() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -68,7 +70,10 @@ export default function About() {
           style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}
         >
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
+            <span
+              className="section-label"
+              style={{ color: "var(--luxury-gold)", fontSize: sectionLabelSize }}
+            >
               About Antravi
             </span>
             <div className="editorial-divider" style={{ backgroundColor: "var(--luxury-gold)" }} />
@@ -91,15 +96,15 @@ export default function About() {
         <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "3rem" }}>
-              <span className="section-label">Our Story</span>
+              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our Story</span>
               <div className="editorial-divider" />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {[
-                "Every journey is thoughtfully planned around our guests' preferences, ensuring each itinerary is personalised, meaningful, and memorable. Our focus is on helping guests choose the right experience with confidence through honest guidance, thoughtful planning, and genuine care.",
+                "Every journey is thoughtfully planned around our guests' preferences, ensuring each itinerary is personalised, meaningful, and memorable. Our focus is on guiding our guest's choose the right experience with confidence through honest guidance, thoughtful planning, and care.",
                 "Antravi was founded with a vision to bring a more transparent, knowledge-driven, and guest-centric approach to travel. Rather than offering one-size-fits-all packages, we take the time to understand each guest's travel purpose, budget, interests, and expectations before recommending the destinations, hotels, resorts, and experiences that best suit their journey.",
                 "We believe every journey is unique, and so should be the planning behind it. Our role is not simply to arrange travel, but to guide our guests in making informed decisions that lead to meaningful experiences from the very beginning.",
-                "As we continue to grow, our vision is to become one of India's most trusted travel brands by combining hospitality experience, destination knowledge, and personalised travel planning. Whether it's a honeymoon, family holiday, a hotel or resort event, a milestone celebration, or a memorable getaway, our commitment is to create journeys that leave lasting memories and experiences that truly matter.",
+                "As we continue to grow, our vision is to become one of India's most trusted travel brands by combining hospitality experience, destination knowledge, and personalised Travel Planning. Whether it's a honeymoon, family holiday, a hotel or resort event, a milestone celebration, or a memorable getaway, our commitment is to create journeys that leave lasting memories and experiences that truly matter.",
               ].map((para, i) => (
                 <p
                   key={i}
@@ -118,11 +123,11 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── 3. WHY GUESTS CHOOSE ANTRAVI ────────────────────────────── */}
+        {/* ── 3. WHY GUEST'S CHOOSE ANTRAVI ───────────────────────────── */}
         <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "3.5rem" }}>
-              <span className="section-label">Our Difference</span>
+              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our Difference</span>
               <div className="editorial-divider" />
               <h2
                 style={{
@@ -133,7 +138,7 @@ export default function About() {
                   lineHeight: 1.2,
                 }}
               >
-                Why Guests Choose Antravi
+                Why Guest's Choose Antravi
               </h2>
             </div>
 
@@ -159,120 +164,88 @@ export default function About() {
 
         {/* ── 4. MEET THE FOUNDER ──────────────────────────────────────── */}
         <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2" style={{ gap: "4rem", alignItems: "center" }}>
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center" style={{ marginBottom: "2.5rem" }}>
+              <span className="section-label" style={{ fontSize: sectionLabelSize }}>
+                The Person Behind the Brand
+              </span>
+              <div className="editorial-divider" />
+              <h2
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontWeight: 400,
+                  color: "var(--charcoal)",
+                  lineHeight: 1.2,
+                  marginBottom: "1.75rem",
+                }}
+              >
+                Meet the Founder
+              </h2>
+            </div>
 
-              {/* Image column */}
-              <div className="relative order-2 lg:order-1">
-                <div
-                  className="overflow-hidden"
-                  style={{
-                    borderRadius: "4px",
-                    boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
-                  }}
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face"
-                    alt="Yashodar Reddy — Founder, Antravi"
-                    className="w-full object-cover"
-                    style={{ aspectRatio: "4/5", display: "block" }}
-                  />
-                </div>
-                {/* Gold accent */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-1.5rem",
-                    left: "-1.5rem",
-                    width: "6rem",
-                    height: "6rem",
-                    backgroundColor: "var(--luxury-gold)",
-                    opacity: 0.12,
-                    zIndex: 0,
-                    borderRadius: "2px",
-                  }}
-                />
-              </div>
+            {/* Opening quote */}
+            <p
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: "1.05rem",
+                fontStyle: "italic",
+                color: "var(--charcoal)",
+                lineHeight: 1.75,
+                marginBottom: "1.5rem",
+                textAlign: "center",
+              }}
+            >
+              Every meaningful journey begins with understanding what matters most to our guests.
+            </p>
 
-              {/* Text column */}
-              <div className="order-1 lg:order-2">
-                <span className="section-label">The Person Behind the Brand</span>
-                <div className="editorial-divider-left" />
-                <h2
-                  style={{
-                    fontFamily: "var(--font-serif)",
-                    fontSize: "clamp(2rem, 4vw, 3rem)",
-                    fontWeight: 400,
-                    color: "var(--charcoal)",
-                    lineHeight: 1.2,
-                    marginBottom: "1.75rem",
-                  }}
-                >
-                  Meet the Founder
-                </h2>
-
-                {/* Opening quote */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+              {[
+                "I founded Antravi with a simple belief: travel planning should be thoughtful, and centred around the guest. Rather than focusing on selling packages, I wanted to build a travel company that listens first, understands each traveller's needs, and creates journeys that are carefully planned from start to finish.",
+                "Every recommendation we make is guided by transparency, attention to detail, and a genuine commitment to assisting our guests in creating unforgettable memories. These values continue to shape every journey we plan and every relationship we build.",
+                "Thank you for considering Antravi to be part of your journey. I look forward to assisting you in creating experiences that truly matter.",
+              ].map((para, i) => (
                 <p
+                  key={i}
                   style={{
-                    fontFamily: "var(--font-serif)",
-                    fontSize: "1.05rem",
-                    fontStyle: "italic",
-                    color: "var(--charcoal)",
-                    lineHeight: 1.75,
-                    marginBottom: "1.5rem",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.9rem",
+                    color: "var(--mid-gray)",
+                    lineHeight: 1.85,
+                    textAlign: "center",
                   }}
                 >
-                  Every meaningful journey begins with understanding what matters most to our guests.
+                  {para}
                 </p>
+              ))}
+            </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
-                  {[
-                    "I founded Antravi with a simple belief: travel planning should be thoughtful, honest, and centred around the guest. Rather than focusing on selling packages, I wanted to build a travel company that listens first, understands each traveller's needs, and creates journeys that are carefully planned from start to finish.",
-                    "Every recommendation we make is guided by transparency, attention to detail, and a genuine commitment to helping our guests create unforgettable memories. These values continue to shape every journey we plan and every relationship we build.",
-                    "Thank you for considering Antravi to be part of your journey. I look forward to helping you create experiences that truly matter.",
-                  ].map((para, i) => (
-                    <p
-                      key={i}
-                      style={{
-                        fontFamily: "var(--font-sans)",
-                        fontSize: "0.9rem",
-                        color: "var(--mid-gray)",
-                        lineHeight: 1.85,
-                      }}
-                    >
-                      {para}
-                    </p>
-                  ))}
-                </div>
-
-                {/* Signature */}
-                <div style={{ marginTop: "2rem" }}>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "1.5rem",
-                      fontWeight: 500,
-                      fontStyle: "italic",
-                      color: "var(--charcoal)",
-                      lineHeight: 1.2,
-                      marginBottom: "0.3rem",
-                    }}
-                  >
-                    Yashodar Reddy
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.72rem",
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "var(--luxury-gold)",
-                    }}
-                  >
-                    Founder
-                  </p>
-                </div>
-              </div>
+            {/* Signature */}
+            <div style={{ marginTop: "2rem", textAlign: "center" }}>
+              <p
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: sectionLabelSize,
+                  fontWeight: 500,
+                  fontStyle: "italic",
+                  color: "var(--charcoal)",
+                  lineHeight: 1.2,
+                  marginBottom: "0.3rem",
+                }}
+              >
+                Yashodar Reddy
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: sectionLabelSize,
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  color: "var(--luxury-gold)",
+                }}
+              >
+                Founder
+              </p>
             </div>
           </div>
         </section>
@@ -281,7 +254,7 @@ export default function About() {
         <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "1.5rem" }}>
-              <span className="section-label">Our History</span>
+              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our History</span>
               <div className="editorial-divider" />
               <h2
                 style={{
@@ -434,7 +407,10 @@ export default function About() {
         {/* ── 6. LIVE YOUR MOMENTS — closing CTA ──────────────────────── */}
         <section style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
+            <span
+              className="section-label"
+              style={{ color: "var(--luxury-gold)", fontSize: sectionLabelSize }}
+            >
               Begin Your Journey
             </span>
             <div className="editorial-divider" style={{ backgroundColor: "var(--luxury-gold)" }} />
@@ -460,7 +436,7 @@ export default function About() {
                 margin: "0 auto 2.5rem",
               }}
             >
-              Whether you're planning your honeymoon, a family holiday, a celebration, or your next unforgettable getaway, we're here to help you travel with confidence and create moments that last a lifetime.
+              Whether you're planning your honeymoon, a family holiday, a celebration, or your next unforgettable getaway, we're here to guide you travel with confidence and create moments that last a lifetime.
             </p>
             <button
               onClick={() => setIsFormOpen(true)}
