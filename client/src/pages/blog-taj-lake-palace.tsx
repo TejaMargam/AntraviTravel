@@ -297,6 +297,28 @@ export default function BlogTajLakePalace() {
                 — Yashodar Reddy, Founder, Antravi
               </p>
             </div>
+
+            {/* Room interior photo */}
+            <div className="mt-6">
+              <img
+                src="/blog-images/taj-lake-palace-room.png"
+                alt="Royal suite interior at Taj Lake Palace — four-poster bed and Rajasthani arched windows"
+                className="w-full rounded-sm"
+                style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "480px" }}
+              />
+              <p
+                className="text-center mt-3"
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.62rem",
+                  letterSpacing: "0.1em",
+                  color: "#9ca3af",
+                  fontStyle: "italic",
+                }}
+              >
+                A royal suite at Taj Lake Palace — handcrafted four-poster bed, intricate arches and authentic Rajasthani décor
+              </p>
+            </div>
           </section>
 
           {/* MICHELIN Three Keys */}
