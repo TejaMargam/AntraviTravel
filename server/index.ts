@@ -65,8 +65,6 @@ if (isDevelopment) {
   // In development, never cache JS/CSS so Vite HMR updates are always served fresh
   if (app.get("env") === "development") {
     res.setHeader('Cache-Control', 'no-store');
-    // Wipe any stale cached bundles in the browser immediately
-    res.setHeader('Clear-Site-Data', '"cache"');
   } else if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year for static assets
   } else {
