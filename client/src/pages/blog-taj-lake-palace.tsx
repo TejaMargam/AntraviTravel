@@ -199,6 +199,28 @@ export default function BlogTajLakePalace() {
             </p>
           </section>
 
+          {/* Palace photo */}
+          <div className="mb-12">
+            <img
+              src="/blog-images/taj-lake-palace-pool.png"
+              alt="Taj Lake Palace marble pool and courtyard, Udaipur"
+              className="w-full rounded-sm"
+              style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "480px" }}
+            />
+            <p
+              className="text-center mt-3"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.62rem",
+                letterSpacing: "0.1em",
+                color: "#9ca3af",
+                fontStyle: "italic",
+              }}
+            >
+              The iconic marble pool and courtyard at Taj Lake Palace, Udaipur
+            </p>
+          </div>
+
           {/* Why This Recognition Matters */}
           <section className="mb-12">
             <h2 className="font-heading font-bold mb-5" style={{ fontSize: "1.5rem", color: "#162660" }}>
