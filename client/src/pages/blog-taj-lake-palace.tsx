@@ -145,8 +145,8 @@ export default function BlogTajLakePalace() {
         {/* Hero image */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10">
           <img
-            src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200&h=600&fit=crop"
-            alt="Taj Lake Palace floating on Lake Pichola, Udaipur"
+            src="/blog-images/taj-lake-palace-michelin.png"
+            alt="Taj Lake Palace — MICHELIN Guide Three Keys, Udaipur India"
             className="w-full rounded-sm"
             style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "460px" }}
           />
