@@ -68,7 +68,7 @@ if (isDevelopment) {
   } else if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year for static assets
   } else {
-    res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate'); // 1 hour for HTML
+    res.setHeader('Cache-Control', 'no-cache'); // always revalidate HTML so deploys are instant
   }
   
   // Compression and performance headers
