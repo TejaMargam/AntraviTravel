@@ -15,6 +15,17 @@ const blogs = [
     date: "July 25, 2026",
     readTime: "5 min read",
   },
+  {
+    id: 1,
+    slug: "taj-lake-palace-michelin-guide-three-keys",
+    title: "Taj Lake Palace: India's Floating Palace Honored with the MICHELIN Guide Three Keys Distinction",
+    excerpt:
+      "Rising from the calm waters of Lake Pichola, Taj Lake Palace has earned the MICHELIN Guide Three Keys — the highest hotel recognition. Discover the history, experience and why it belongs on every luxury traveller's list.",
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&h=500&fit=crop",
+    category: "General",
+    date: "July 30, 2026",
+    readTime: "6 min read",
+  },
 ];
 
 const categories = ["All", "Maldives", "Bali", "Thailand", "General"];
