@@ -1,0 +1,1 @@
+- [Vite HMR config](vite-hmr-config.md) — HMR must be configured in server/vite.ts serverOptions, not vite.config.ts (serverOptions fully overrides it).
