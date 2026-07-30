@@ -41,7 +41,11 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
   },
   "/about": {
     title: "About Antravi | Luxury Travel Planning",
-    description: "Meet Antravi, a boutique luxury travel consultancy designing personalized Maldives, Bali, and Thailand vacations.",
+    description: "Meet Antravi — a boutique luxury travel consultancy designing personalized Maldives, Bali, and Thailand vacations, founded by Yashodar Reddy.",
+  },
+  "/about-us": {
+    title: "About Antravi | Luxury Travel Planning",
+    description: "Meet Antravi — a boutique luxury travel consultancy designing personalized Maldives, Bali, and Thailand vacations, founded by Yashodar Reddy.",
   },
   "/destinations/maldives": {
     title: "Maldives Resorts & Packages | Antravi",
@@ -150,6 +154,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/about-us" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/destinations/maldives" component={Resorts} />
         <Route path="/destinations/bali" component={Bali} />
