@@ -6,17 +6,6 @@ import { Link, useLocation } from "wouter";
 const blogs = [
   {
     id: 0,
-    slug: "travel-leisure-worlds-best-awards-2026",
-    title: "Travel + Leisure World's Best Awards 2026: Four Maldives Resorts in the Top 100",
-    excerpt:
-      "Baros, JOALI, Waldorf Astoria Maldives Ithaafushi and Vakkaru have all been ranked among the world's top 100 hotels. Here's what sets each apart — and how to choose the right one for you.",
-    image: "/blog-images/tl2026-baros.png",
-    category: "Maldives",
-    date: "July 25, 2026",
-    readTime: "5 min read",
-  },
-  {
-    id: 1,
     slug: "taj-lake-palace-michelin-guide-three-keys",
     title: "Taj Lake Palace: India's Floating Palace Honored with the MICHELIN Guide Three Keys Distinction",
     excerpt:
@@ -25,6 +14,17 @@ const blogs = [
     category: "General",
     date: "July 30, 2026",
     readTime: "6 min read",
+  },
+  {
+    id: 1,
+    slug: "travel-leisure-worlds-best-awards-2026",
+    title: "Travel + Leisure World's Best Awards 2026: Four Maldives Resorts in the Top 100",
+    excerpt:
+      "Baros, JOALI, Waldorf Astoria Maldives Ithaafushi and Vakkaru have all been ranked among the world's top 100 hotels. Here's what sets each apart — and how to choose the right one for you.",
+    image: "/blog-images/tl2026-baros.png",
+    category: "Maldives",
+    date: "July 25, 2026",
+    readTime: "5 min read",
   },
 ];
 
