@@ -62,10 +62,12 @@ if (isDevelopment) {
 }
   
   // Performance and Caching Headers
-  if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
+  // In development, never cache JS/CSS so Vite HMR updates are always served fresh
+  if (app.get("env") === "development") {
+    res.setHeader('Cache-Control', 'no-store');
+  } else if (req.path.match(/\.(js|css|woff|woff2|png|jpg|jpeg|gif|ico|svg)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year for static assets
   } else {
-    // Better caching for HTML pages
     res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate'); // 1 hour for HTML
   }
   
