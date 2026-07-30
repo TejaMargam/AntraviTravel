@@ -54,7 +54,6 @@ const timeline = [
   },
 ];
 
-const sectionLabelSize = "clamp(2.2rem, 5vw, 3.5rem)";
 
 export default function About() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -70,10 +69,7 @@ export default function About() {
           style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}
         >
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span
-              className="section-label"
-              style={{ color: "var(--luxury-gold)", fontSize: sectionLabelSize }}
-            >
+            <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
               About Antravi
             </span>
             <div className="editorial-divider" style={{ backgroundColor: "var(--luxury-gold)" }} />
@@ -96,7 +92,7 @@ export default function About() {
         <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "3rem" }}>
-              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our Story</span>
+              <span className="section-label">Our Story</span>
               <div className="editorial-divider" />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -127,7 +123,7 @@ export default function About() {
         <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "3.5rem" }}>
-              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our Difference</span>
+              <span className="section-label">Our Difference</span>
               <div className="editorial-divider" />
               <h2
                 style={{
@@ -166,7 +162,7 @@ export default function About() {
         <section style={{ backgroundColor: "#ffffff", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "2.5rem" }}>
-              <span className="section-label" style={{ fontSize: sectionLabelSize }}>
+              <span className="section-label">
                 The Person Behind the Brand
               </span>
               <div className="editorial-divider" />
@@ -225,7 +221,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontSize: sectionLabelSize,
+                  fontSize: "1.5rem",
                   fontWeight: 500,
                   fontStyle: "italic",
                   color: "var(--charcoal)",
@@ -238,7 +234,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontSize: sectionLabelSize,
+                  fontSize: "0.72rem",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "var(--luxury-gold)",
@@ -254,7 +250,7 @@ export default function About() {
         <section style={{ backgroundColor: "var(--warm-cream)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center" style={{ marginBottom: "1.5rem" }}>
-              <span className="section-label" style={{ fontSize: sectionLabelSize }}>Our History</span>
+              <span className="section-label">Our History</span>
               <div className="editorial-divider" />
               <h2
                 style={{
@@ -407,10 +403,7 @@ export default function About() {
         {/* ── 6. LIVE YOUR MOMENTS — closing CTA ──────────────────────── */}
         <section style={{ backgroundColor: "var(--navy)", paddingTop: "5rem", paddingBottom: "5rem" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span
-              className="section-label"
-              style={{ color: "var(--luxury-gold)", fontSize: sectionLabelSize }}
-            >
+            <span className="section-label" style={{ color: "var(--luxury-gold)" }}>
               Begin Your Journey
             </span>
             <div className="editorial-divider" style={{ backgroundColor: "var(--luxury-gold)" }} />
