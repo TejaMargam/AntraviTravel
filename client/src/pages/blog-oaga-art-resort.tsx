@@ -309,6 +309,16 @@ export default function BlogOagaArtResort() {
             </p>
           </section>
 
+          {/* Dining image */}
+          <div className="mb-12">
+            <img
+              src="/blog-images/oaga-art-resort-dining.jpg"
+              alt="Dining experience at Oaga Art Resort's Kaa Kada restaurant"
+              className="w-full rounded-sm"
+              style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "480px" }}
+            />
+          </div>
+
           {/* Dining Gets an Upgrade */}
           <section className="mb-12">
             <h2 className="font-heading font-bold mb-5" style={{ fontSize: "1.5rem", color: "#162660" }}>
@@ -361,6 +371,16 @@ export default function BlogOagaArtResort() {
               These spaces encourage guests to enjoy live performances, storytelling and community experiences instead of spending every evening inside their villas.
             </p>
           </section>
+
+          {/* Lounge image */}
+          <div className="mb-12">
+            <img
+              src="/blog-images/oaga-art-resort-lounge.jpg"
+              alt="Raa Baa entertainment lounge at Oaga Art Resort"
+              className="w-full rounded-sm"
+              style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "480px" }}
+            />
+          </div>
 
           {/* Founder quote block */}
           <section className="mb-12">
@@ -450,6 +470,16 @@ export default function BlogOagaArtResort() {
               If you're looking for a resort where creativity, storytelling and Maldivian culture are just as important as white-sand beaches and turquoise lagoons, Oaga Art Resort offers a refreshing alternative.
             </p>
           </section>
+
+          {/* Pool image */}
+          <div className="mb-12">
+            <img
+              src="/blog-images/oaga-art-resort-pool.jpg"
+              alt="Mural pool at Oaga Art Resort — the Maldives' largest"
+              className="w-full rounded-sm"
+              style={{ border: "1px solid #e5e7eb", objectFit: "cover", maxHeight: "480px" }}
+            />
+          </div>
 
           {/* FAQs */}
           <section className="mb-12">
