@@ -83,6 +83,22 @@ export default function Navbar() {
               Blogs
             </Link>
             <Link
+              href="/about-us"
+              className="transition-colors"
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.7rem',
+                fontWeight: 500,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.85)',
+              }}
+              onMouseEnter={(e: MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = '#ffffff')}
+              onMouseLeave={(e: MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
+            >
+              About Us
+            </Link>
+            <Link
               href="/contact"
               className="transition-colors"
               style={{
@@ -154,6 +170,21 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Blogs
+              </Link>
+              <Link
+                href="/about-us"
+                className="block w-full"
+                style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.7rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.85)',
+                }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
               </Link>
               <Link
                 href="/contact"
