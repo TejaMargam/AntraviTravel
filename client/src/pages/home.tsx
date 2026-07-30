@@ -74,6 +74,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Destinations />
+      <About />
       <Testimonials />
       <ContactCTA />
       <FAQ faqsData={[
