@@ -6,6 +6,17 @@ import { Link, useLocation } from "wouter";
 const blogs = [
   {
     id: 0,
+    slug: "oaga-art-resort-reimagined-2026",
+    title: "Oaga Art Resort Reimagined: A Colorful New Chapter Begins in the Maldives",
+    excerpt:
+      "Beginning 1 August 2026, Oaga Art Resort unveils refreshed villas, new overwater accommodation and upgraded dining. Discover why this homegrown Maldivian resort is one of the most creative and memorable stays in the islands.",
+    image: "/blog-images/oaga-art-resort-hero.jpg",
+    category: "Maldives",
+    date: "July 31, 2026",
+    readTime: "7 min read",
+  },
+  {
+    id: 1,
     slug: "taj-lake-palace-michelin-guide-three-keys",
     title: "Taj Lake Palace: India's Floating Palace Honored with the MICHELIN Guide Three Keys Distinction",
     excerpt:
@@ -16,7 +27,7 @@ const blogs = [
     readTime: "6 min read",
   },
   {
-    id: 1,
+    id: 2,
     slug: "travel-leisure-worlds-best-awards-2026",
     title: "Travel + Leisure World's Best Awards 2026: Four Maldives Resorts in the Top 100",
     excerpt:
