@@ -72,13 +72,26 @@ export function serveStatic(app: Express) {
   }
 
   app.use(express.static(distPath));
+}
 
-  // fall through to index.html for SPA routes, but never for missing assets
-  app.use("*", (req, res) => {
-    if (path.extname(req.path)) {
+// SPA fallback: must be registered AFTER API routes so it only catches unmatched GETs.
+// Call this once at the very end of server setup.
+export function serveSpaFallback(app: Express) {
+  const distPath = path.resolve(import.meta.dirname, "public");
+
+  app.get("*", (req, res) => {
+    // Strip optional trailing slash before checking for a file extension,
+    // so both /about-us and /about-us/ are treated the same way.
+    const cleanPath = req.path.length > 1 && req.path.endsWith("/")
+      ? req.path.slice(0, -1)
+      : req.path;
+
+    // Requests for actual static assets that weren't found → 404, not index.html
+    if (path.extname(cleanPath)) {
       return res.status(404).end();
     }
 
-    res.sendFile(path.resolve(distPath, "index.html"));
+    // All SPA routes: return index.html with an explicit 200
+    res.status(200).sendFile(path.resolve(distPath, "index.html"));
   });
 }

@@ -1,6 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
+import { setupVite, serveStatic, serveSpaFallback, log } from "./vite";
 
 const app = express();
 
@@ -125,8 +125,14 @@ app.use((req, res, next) => {
     await serveStatic(app);
   }
 
-  // Register API routes after static/Vite setup
+  // Register API routes after static file middleware
   const server = await registerRoutes(app);
+
+  // SPA fallback must come AFTER API routes so it only catches unmatched GETs.
+  // In development Vite already handles this; only needed in production.
+  if (app.get("env") !== "development") {
+    serveSpaFallback(app);
+  }
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
