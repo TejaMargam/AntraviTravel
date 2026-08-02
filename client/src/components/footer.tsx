@@ -116,6 +116,49 @@ export default function Footer() {
             </address>
           </div>
 
+          {/* Quick Links */}
+          <div>
+            <h3
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.65rem',
+                fontWeight: 600,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: 'rgba(184,150,62,0.85)',
+                marginBottom: '1.25rem',
+              }}
+            >
+              Quick Links
+            </h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <Link
+                href="/about-us"
+                style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = '#ffffff')}
+                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+              >
+                About Us
+              </Link>
+              <Link
+                href="/blogs"
+                style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = '#ffffff')}
+                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+              >
+                Blogs
+              </Link>
+              <Link
+                href="/contact"
+                style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = '#ffffff')}
+                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
           {/* Legal */}
           <div>
             <h3
