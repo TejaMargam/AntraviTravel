@@ -23,6 +23,7 @@ const Blogs = lazy(() => import("@/pages/blogs"));
 const BlogTravelLeisure2026 = lazy(() => import("@/pages/blog-travel-leisure-2026"));
 const BlogTajLakePalace = lazy(() => import("@/pages/blog-taj-lake-palace"));
 const BlogOagaArtResort = lazy(() => import("@/pages/blog-oaga-art-resort"));
+const Destinations = lazy(() => import("@/pages/destinations"));
 
 // Loading component for lazy loaded routes
 const LoadingFallback = () => (
@@ -158,6 +159,7 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/about-us" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/destinations" component={Destinations} />
         <Route path="/destinations/maldives" component={Resorts} />
         <Route path="/destinations/bali" component={Bali} />
         <Route path="/destinations/thailand" component={Thailand} />
