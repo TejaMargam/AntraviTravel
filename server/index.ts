@@ -5,7 +5,6 @@ import { setupVite, serveStatic, serveSpaFallback, log } from "./vite";
 const app = express();
 
 const noIndexPaths = new Set([
-  "/contact",
   "/privacy",
   "/terms",
   "/thankyou",

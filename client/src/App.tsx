@@ -86,25 +86,33 @@ const routeSeo: Record<string, { title: string; description: string; robots?: st
     title: "Travel + Leisure World's Best Awards 2026: Top Maldives Resorts | Antravi",
     description: "Discover why Baros, JOALI, Waldorf Astoria Maldives Ithaafushi and Vakkaru were ranked among the world's best hotels in Travel + Leisure World's Best Awards 2026.",
   },
+  "/destinations": {
+    title: "Luxury Destinations — Maldives, Bali & Thailand | Antravi",
+    description: "Explore Antravi's curated luxury destinations — Maldives overwater villas, Bali private pool stays, and Thailand island retreats. Tailor-made travel for discerning travellers.",
+  },
+  "/blogs/oaga-art-resort-reimagined-2026": {
+    title: "Oaga Art Resort Reimagined 2026 | Antravi",
+    description: "Discover the reimagined Oaga Art Resort in the Maldives — a sanctuary of art, design, and island luxury curated by Antravi.",
+  },
+  "/blogs/taj-lake-palace-michelin-guide-three-keys": {
+    title: "Taj Lake Palace Earns Michelin Guide Three Keys | Antravi",
+    description: "The iconic Taj Lake Palace in Udaipur has been awarded Three Keys by the Michelin Guide — a testament to its unmatched luxury and heritage.",
+  },
   "/contact": {
     title: "Contact Antravi",
     description: "Contact Antravi to plan your custom luxury vacation.",
-    robots: "noindex, follow",
   },
   "/privacy": {
     title: "Privacy Policy | Antravi",
     description: "Antravi privacy policy.",
-    robots: "noindex, follow",
   },
   "/terms": {
     title: "Terms & Conditions | Antravi",
     description: "Antravi terms and conditions.",
-    robots: "noindex, follow",
   },
   "/thankyou": {
     title: "Thank You | Antravi",
     description: "Thank you for contacting Antravi.",
-    robots: "noindex, follow",
   },
 };
 
@@ -135,7 +143,6 @@ function SeoManager() {
     const seo = routeSeo[location] ?? {
       title: "Antravi - Luxury Travel Experiences",
       description: "Luxury travel experiences and custom vacation planning with Antravi.",
-      robots: "noindex, follow",
     };
 
     document.title = seo.title;
