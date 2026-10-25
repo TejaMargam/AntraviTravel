@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src="/images/hero/hero.webp"
+          src="/images/hero/anantara-kihavah-aerial.webp"
           alt="Antravi - Live Your Moments"
           className="w-full h-full object-cover aerial-drift"
         />
