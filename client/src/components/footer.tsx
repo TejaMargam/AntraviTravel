@@ -71,14 +71,14 @@ export default function Footer() {
             <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.75)' }}>
               <i className="fas fa-phone mr-2" style={{ color: 'rgba(184,150,62,0.7)' }}></i>
               <a
-                href={isMobile ? "tel:+919849981075" : undefined}
+                href={isMobile ? "tel:+918341021075" : undefined}
                 onClick={(e) => { if (!isMobile) e.preventDefault(); }}
                 style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={e => ((e.target as HTMLElement).style.color = '#ffffff')}
                 onMouseLeave={e => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.75)')}
                 data-testid="link-phone"
               >
-                +91 9849981075
+                +91 8341021075
               </a>
             </p>
             <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.75)' }}>

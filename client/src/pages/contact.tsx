@@ -54,10 +54,10 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Speak directly with our experts
                 </p>
-                <a href="tel:+919849981075" 
+                <a href="tel:+918341021075" 
                    className="text-[#162660] hover:text-luxury-gold transition-colors"
                    data-testid="link-phone">
-                  +91 9849981075
+                  +91 8341021075
                 </a>
               </div>
               
