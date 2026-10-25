@@ -53,7 +53,7 @@ export default function Hero() {
           Live Your Moments
         </p>
 
-        <div className="cinematic-cta">
+        <div className="cinematic-cta home-hero-cta">
           <button onClick={handlePlanClick} className="btn-editorial-white">
             Enquire Now
           </button>

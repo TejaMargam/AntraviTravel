@@ -253,6 +253,11 @@
     opacity: 0;
   }
 
+  .home-hero-cta {
+    position: relative;
+    top: clamp(16px, 2.4vh, 26px);
+  }
+
   /* Swiper overrides */
   .swiper-pagination-bullet {
     background: var(--navy) !important;
