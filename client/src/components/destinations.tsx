@@ -19,7 +19,7 @@ export default function Destinations() {
   ];
 
   const baliImage = "/images/bali/bali-cover.webp?w=800&h=600&fit=crop";
-  const thailandImage = "/images/thailand/thailand-cover.webp?w=800&h=600&fit=crop";
+  const thailandImage = "/images/thailand/thailand-home-wat-arun.webp";
 
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
