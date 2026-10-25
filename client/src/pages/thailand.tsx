@@ -20,7 +20,7 @@ export default function Thailand() {
     { title: 'Language', value: 'Thai' },
     { title: 'Best Season', value: 'Year-round' },
     { title: 'Buddhist Temples', value: '34,000+' },
-    { title: 'Visa for Indians', value: '60 days visa-free, TDAC required' },
+    { title: 'Visa for Indians', value: '30 days visa-free, TDAC required' },
   ];
 
   const cuisineCards = [
@@ -171,17 +171,6 @@ export default function Thailand() {
             <div className="mb-12 text-center">
               <span className="section-label">Fast Facts</span>
               <div className="editorial-divider" />
-              <h2
-                style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.75rem)',
-                  fontWeight: 400,
-                  color: 'var(--charcoal)',
-                  marginBottom: '1rem',
-                }}
-              >
-                Actual content starts
-              </h2>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
