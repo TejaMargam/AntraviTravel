@@ -255,7 +255,7 @@
 
   .home-hero-cta {
     position: relative;
-    top: clamp(24px, 3.6vh, 38px);
+    top: clamp(32px, 4.8vh, 50px);
   }
 
   /* Swiper overrides */
